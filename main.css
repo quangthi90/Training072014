@@ -1,71 +1,101 @@
 .content{
-	background-color: #808080;
-	margin-left: 20%;
-	margin-right: 20%;
-	border: 1px solid #CDCDCD;
+	background-color: #a0a0a0;
+	margin: auto;
+	width: 980px;
+	padding: 60px 15px 10px 25px;
 }
+	.main-content{
+		background-color: #ffffff;
+	}
+ 		.content-header{
+ 			height: 196px;
+ 			background-color: #f2f2f2;
+		}
+			.content-header > a{
+				float: left;
+				width: 20%;
+				height: 100%;
+				line-height: 240px;
+				text-align: center;
+				cursor: pointer;
+			}
+			.content-header > a:first-child{
+				background-color: #505050;
+			}
+			.content-header > a:hover{
+				background-color: red;
+				margin-top: -10px;
+				height: 206px;
+				line-height: 260px;
+			}
+		.content-body{
+			overflow: auto;
+			margin-top: 40px;
+			font-family:'poiret One', cursive, serif;
+		}
+			.content-body > div{
+				float: left;
+			}
+			.content-body > div:first-child{
+				width: 60%;
+			}
+			.content-body > div:nth-child(2){
+				width: 40%;
+			}
+				.content-body > div > div{
+					margin-left: 40px;
+				}
+			.content-body .title{
+				font-size: 25px;
+				color: #00001f;
+				font-weight: bold;
+			}
 
- .head{
- 	margin-top: 50px;
-	margin-left: 20px;
-	margin-right: 10px;
-	height: 150px;
-	clear: both;
-	background-color: #ffffff;
-}
-.left{
-	margin-left: 20px;
-	margin-top: 0px;
-	float: left;
-	height: auto;
-	width: 62%;
-	background-color: #ffffff;
-}
-
-.right{
-	margin-right: 10px;
-	margin-top: 0px;
-	float: right;
-	height: auto;
-	width: 35%;
-	background-color: #ffffff;
-}
-.iconHome{
-	width: 20%;
-	height: 150px;
-	float: left;
-	background-color: #000000;
-}
-
-.iconUser{
-	width: 20%;
-	height: 150px;
-	float: left;
-	background-color: #c0c0c0;
-}
-.iconProfile{
-	width: 20%;
-	height: 150px;
-	float: left;
-	background-color: #c0c0c0;
-}
-.iconResume{
-	width: 20%;
-	height: 150px;
-	float: left;
-	background-color: #c0c0c0;
-}
-.iconMail{
-	width: 20%;
-	height: 150px;
-	float: right;
-	background-color: #c0c0c0;
-}
-.title{
-	font-family:'poiret One', cursive, serif;
-	font-size: 17px;
-	color: #000000;
-	float: left;
-	margin-left: 25px;
-	margin-top: 30px;
-}
+			.content-body .career-item{
+				margin-top: 40px;
+			}
+				.content-body .career-item .col{
+					float: left;
+				}
+				.content-body .career-item .logo{
+					position: relative;
+					left: 120px;
+					top: 50px;
+					z-index: 100;
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					text-align: center;
+					border-radius: 25px;
+					border: 5px solid #eeeeee;
+					background-color: white;
+					z-index: 100;
+				}
+				.content-body .career-item .datetime{
+					color: #2a0000;
+					font-weight: bold;
+					margin-right: 38px;
+				}
+				.content-body .career-item .description{
+					width: 343px;
+					padding-left: 55px;
+					border-left: 5px solid #eeeeee;
+				}
+				.content-body .career-item .heading{
+					line-height: 40px;
+					height: 40px;
+					border-bottom: 3px solid #d9d9d9
+				}
+				.content-body .career-item .heading > div:first-child{
+					float: left;
+					color: #2a0000;
+					font-size: 20px;
+					font-weight: bold;
+				}
+				.content-body .career-item .heading > div:nth-child(2){
+					float: right;
+					color: #838585;
+				}
+				.content-body .career-item .description-content{
+					margin-top: 10px;
+				}
