@@ -238,6 +238,56 @@ height: 45px;
   font-family: 'Oswald';
   margin: 5px;
 }
+.inner-widget-2
+{
+  width: 940px;
+  margin: 0px auto;
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.menu_space_1
+{
+  height: 3px;
+  background-color: #c5c6c6;
+}
+.menu_space_2
+{
+  height: 3px;
+  background-color: #f0f1f1;
+}
+#div_menu
+{
+  height: 67px;
+  background-color: #eeefef;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.centerbox-outer
+{
+  margin: 0px auto;
+  float: left;
+  left: 50%;
+  position: relative;
+}
+.centerbox-inner
+{
+  float: left;
+  position: relative;
+  right: 50%;
+}
+#ul_menu
+{
+  height: 67px;
+  line-height: 67px;
+}
+
+
+
+
+
+
+
 
 
 
