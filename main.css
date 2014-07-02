@@ -1,0 +1,71 @@
+.content{
+	background-color: #808080;
+	margin-left: 20%;
+	margin-right: 20%;
+	border: 1px solid #CDCDCD;
+}
+
+ .head{
+ 	margin-top: 50px;
+	margin-left: 20px;
+	margin-right: 10px;
+	height: 150px;
+	clear: both;
+	background-color: #ffffff;
+}
+.left{
+	margin-left: 20px;
+	margin-top: 0px;
+	float: left;
+	height: auto;
+	width: 62%;
+	background-color: #ffffff;
+}
+
+.right{
+	margin-right: 10px;
+	margin-top: 0px;
+	float: right;
+	height: auto;
+	width: 35%;
+	background-color: #ffffff;
+}
+.iconHome{
+	width: 20%;
+	height: 150px;
+	float: left;
+	background-color: #000000;
+}
+
+.iconUser{
+	width: 20%;
+	height: 150px;
+	float: left;
+	background-color: #c0c0c0;
+}
+.iconProfile{
+	width: 20%;
+	height: 150px;
+	float: left;
+	background-color: #c0c0c0;
+}
+.iconResume{
+	width: 20%;
+	height: 150px;
+	float: left;
+	background-color: #c0c0c0;
+}
+.iconMail{
+	width: 20%;
+	height: 150px;
+	float: right;
+	background-color: #c0c0c0;
+}
+.title{
+	font-family:'poiret One', cursive, serif;
+	font-size: 17px;
+	color: #000000;
+	float: left;
+	margin-left: 25px;
+	margin-top: 30px;
+}
