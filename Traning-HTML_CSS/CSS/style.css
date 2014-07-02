@@ -1,0 +1,243 @@
+#container
+{
+  width: 970px;
+  margin: 40px auto 40px;;
+  background-color: #59BBE8;
+}
+#content
+{
+  width: 970px;
+  background-color: #59BBE8;
+  padding:10px 0;
+  border-radius: 5px;
+  position:relative;
+}
+.before
+{
+    z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 12px;
+  left: 10px;
+  width: 100%;
+  top: 95%;
+  max-width: 300px;
+  background-color: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 12px;
+  right: 10px;
+  left: auto;
+  width: 100%;
+  top: 95%;
+  max-width: 300px;
+  background-color: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+}
+.outer-widget-1
+{
+  width: 952px;
+  margin: 0 auto;
+  background-color: #8bcfef;
+  border-radius: 5px;
+  padding: 1px 0;
+}
+.outer-widget
+{
+  width: 950px;
+  margin: 0 auto;
+  background-color: #438CAE;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+.inner-widget
+{
+  width: 940px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  overflow: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.home
+{
+  display: none;
+}
+#widget-container
+{
+  float: left;
+  background: #333333;
+  position: relative;
+  right: 640px;
+}
+.slidebar_left
+{
+  float: left;
+  width: 300px;
+  background-color: #333333;
+  border-top-left-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  left: 640px;
+}
+.slidebar_right
+{
+  float: left;
+  width: 640px;
+  background-color: #FFFFFF;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  left: 640px;
+}
+.widget-left
+{
+  margin: 45px 20px 30px;
+}
+.line
+{
+  margin-top: 15px;
+  margin-bottom: 30px;
+  height: 4px;
+  background-color: #56b9e4;
+  width: 50px;
+}
+.p_desc_left
+{
+  margin-bottom: 50px;
+}
+.title_background_left
+{
+  font-size: 24px;
+  color: #59BBE8;
+  font-weight: 300px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.left_icon_bg
+{
+  background-color: #59BBE8;
+  width: 45px;
+  padding: 0px;
+  height: 45px;
+  display: inline-block;
+}
+.icon_bg_shadow
+{
+  background: url("Image/icon_shadow.png");
+  width: 46px;
+  height: 6px;
+  display: block;
+  position: relative;
+  top: 19px;
+  left: 0px;
+}
+.icon_award_left
+{
+  background: url("Image/award_icon.png");
+  width: 26px;
+  height: 26px;
+  display: block;
+  margin-right: 10px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.clean
+{
+  clear: both;
+}
+.ul_questions_2
+{
+  margin-bottom: 40px;
+}
+.border-center-contain-2
+{
+  color: #575757;
+  font-size: 11px;
+  font-family: "PT Sans";
+  font-style: normal;
+}
+.plus_minus_active 
+{
+  background: url("images/plusminus.png") no-repeat scroll center top transparent;
+  width: 19px;
+  height: 7px;
+  display: block;
+  float: left;
+  top: 7px;
+  position: relative;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.icon_reference_left
+{
+  background: url("Image/reference_icon.png");
+  width: 26px;
+  height: 26px;
+  display: block;
+  margin-right: 10px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.margin-top
+{
+  margin-top: 45px;
+}
+.icon_design_skills
+{
+  background: url("Image/design_skills_icon.png");
+  width: 26px;
+  height: 26px;
+  display: block;
+  margin-right: 10px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.title_background {
+background-color: #333333;
+display: inline-block;
+margin-left: 0px;
+height: 45px;
+position: relative;
+line-height: 45px;
+border-left: 1px solid #2d2d2d;
+border-right: 0px solid #3a3a3a;
+font-weight: auto;
+height: 45px;
+}
+.title_background_text
+{
+  display: block;
+  font-size: 24px;
+  color: #59BBE8;
+  text-align: center;
+  float: left;  
+  font-family: 'Oswald';
+  margin: 5px;
+}
+
+
+
