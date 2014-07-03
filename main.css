@@ -5,6 +5,32 @@
 	padding: 60px 15px 10px 25px;
 	height: auto;
 }
+.font{
+	float: right;
+	background-color: white;
+	height: 25px;
+	margin-top: -59px;
+	margin-right: -14px;
+}
+.font > a{
+	float: left;
+	width: 30px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+}
+.font > a i {
+    color: #0e0e0e;
+}
+.font > a:first-child{
+				background-color: white;
+			}
+			.font > a:hover{
+				background-color: #f6f6f6;
+				margin-bottom: -10px;
+				height: 25px;
+				line-height: 25px;
+			}
 	.main-content{
 		background-color: #ffffff;
 	}
@@ -52,18 +78,25 @@
 				color: #00001f;
 				font-weight: bold;
 				clear: both;
+
 			}
 
 			.content-body .career-item{
-				margin-top: 0px;
+				margin-top: 30px;
+				clear: both;
+			}
 			}
 				.content-body .career-item .col{
 					float: left;
 				}
+				.content-body .career-item .dislay{
+					display: inline;
+					margin-top: 30px;
+				}
 				.content-body .career-item .logo{
 					position: relative;
 					left: 120px;
-					top: 40px;
+					top: -58px;
 					z-index: 100;
 					width: 40px;
 					height: 40px;
@@ -73,7 +106,7 @@
 					border: 5px solid #eeeeee;
 					background-color: white;
 					z-index: 100;
-					clear: both;
+					margin-top: 107px;
 				}
 				.content-body .career-item .datetime{
 					color: #2a0000;
@@ -81,12 +114,16 @@
 					margin-right: 38px;
 					clear: both;
 					font-size: 17px;
+					width: 120px;
 				}
 				.content-body .career-item .description{
 					width: 343px;
 					padding-left: 55px;
 					border-left: 5px solid #eeeeee;
 					float: right;
+					clear: both;
+					margin-top: -132px;
+					padding-bottom: 30px;
 				}
 				.content-body .career-item .heading{
 					line-height: 40px;
@@ -133,14 +170,62 @@
 					margin-top: 10px;
 					clear: both;
 					display: inline;
+					margin-bottom: 30px;
+					width: 100%;
 				}
 				.content-body .skill-item .program .col-program{
 					float: left;
 					color: #2a0000;
+					width: 40%;
 					font-weight: bold;
 					margin-right: 50px;
 					clear: both;
 					font-size: 13px;
 					margin-top: 5px;
+					margin-bottom: 5px;
+					display: inline;
+				}
+				.content-body .skill-item .program .col-level{
+					float: left;
+					margin-top: -18px;
+					margin-left: 140px;
+					width: 40%;
+				}
+				.content-body .skill-item .program .col-level .radius-level{
+					position: relative;
+					float: left;
+					z-index: 100;
+					width: 12px;
+					height: 12px;
+					line-height: 10px;
+					text-align: center;
+					border-radius: 12px;
+					background-color: black;
+					display: inline;
+					margin-left: 5px;
+				}
+				.content-body .skill-item .program .col-level .radius-level-emty{
+					position: relative;
+					float: left;
+					z-index: 100;
+					width: 12px;
+					height: 12px;
+					line-height: 10px;
+					text-align: center;
+					border-radius: 12px;
+					background-color:#f6f6f6;
+					display: inline;
+					margin-left: 5px;
+				}
+				.content-body .skill-item .program .graphic-odd{
+					width: 80%;
+					height: 30px;
+					background-color: #505050;
+					margin-bottom: 5px;
+				}
+				.content-body .skill-item .program .graphic-even{
+					width: 80%;
+					height: 30px;
+					background-color: #303030;
 					margin-bottom: 5px;
 				}
