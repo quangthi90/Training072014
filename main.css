@@ -3,6 +3,7 @@
 	margin: auto;
 	width: 980px;
 	padding: 60px 15px 10px 25px;
+	height: auto;
 }
 	.main-content{
 		background-color: #ffffff;
@@ -23,7 +24,7 @@
 				background-color: #505050;
 			}
 			.content-header > a:hover{
-				background-color: red;
+				background-color: white;
 				margin-top: -10px;
 				height: 206px;
 				line-height: 260px;
@@ -31,6 +32,7 @@
 		.content-body{
 			overflow: auto;
 			margin-top: 40px;
+			height: auto;
 			font-family:'poiret One', cursive, serif;
 		}
 			.content-body > div{
@@ -46,13 +48,14 @@
 					margin-left: 40px;
 				}
 			.content-body .title{
-				font-size: 25px;
+				font-size: 20px;
 				color: #00001f;
 				font-weight: bold;
+				clear: both;
 			}
 
 			.content-body .career-item{
-				margin-top: 40px;
+				margin-top: 0px;
 			}
 				.content-body .career-item .col{
 					float: left;
@@ -60,7 +63,7 @@
 				.content-body .career-item .logo{
 					position: relative;
 					left: 120px;
-					top: 50px;
+					top: 40px;
 					z-index: 100;
 					width: 40px;
 					height: 40px;
@@ -70,26 +73,31 @@
 					border: 5px solid #eeeeee;
 					background-color: white;
 					z-index: 100;
+					clear: both;
 				}
 				.content-body .career-item .datetime{
 					color: #2a0000;
 					font-weight: bold;
 					margin-right: 38px;
+					clear: both;
+					font-size: 17px;
 				}
 				.content-body .career-item .description{
 					width: 343px;
 					padding-left: 55px;
 					border-left: 5px solid #eeeeee;
+					float: right;
 				}
 				.content-body .career-item .heading{
 					line-height: 40px;
 					height: 40px;
-					border-bottom: 3px solid #d9d9d9
+					border-bottom: 1px solid #d9d9d9;
+					background: #f6f6f6;
 				}
 				.content-body .career-item .heading > div:first-child{
 					float: left;
 					color: #2a0000;
-					font-size: 20px;
+					font-size: 17px;
 					font-weight: bold;
 				}
 				.content-body .career-item .heading > div:nth-child(2){
@@ -97,5 +105,42 @@
 					color: #838585;
 				}
 				.content-body .career-item .description-content{
+					background: #f6f6f6;
+					border-radius: 4px;
+					line-height: 1.8;
+					font-size: 14px;
+					padding-top: 5px;
+				}
+			.content-body .skill-item{
+				margin-top: 40px;
+			}	
+				.content-body .skill-item .title{
+					display: inline;
+					margin-left: 5px;
+					font-size: 17px;
+				}
+				.content-body .skill-item .heading{
+					line-height: 40px;
+					height: 40px;
+					font-size: 17px;
+					float: left;
+					clear: both;
+					width: 80%;
+					border-bottom: 1px solid #d9d9d9;
+				}
+				.content-body .skill-item .program{
+					float: left;
 					margin-top: 10px;
+					clear: both;
+					display: inline;
+				}
+				.content-body .skill-item .program .col-program{
+					float: left;
+					color: #2a0000;
+					font-weight: bold;
+					margin-right: 50px;
+					clear: both;
+					font-size: 13px;
+					margin-top: 5px;
+					margin-bottom: 5px;
 				}
