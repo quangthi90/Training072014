@@ -170,6 +170,7 @@
 .ul_questions_2
 {
   margin-bottom: 40px;
+  display:block;
 }
 .border-center-contain-2
 {
@@ -208,6 +209,18 @@
 .icon_design_skills
 {
   background: url("Image/design_skills_icon.png");
+  width: 26px;
+  height: 26px;
+  display: block;
+  margin-right: 10px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.icon_personal_info
+{
+  background: url("Image/personal_info_icon.png");
   width: 26px;
   height: 26px;
   display: block;
@@ -275,19 +288,143 @@ height: 45px;
   float: left;
   position: relative;
   right: 50%;
+
 }
 #ul_menu
 {
   height: 67px;
   line-height: 67px;
+  margin-top: 10px;
+}
+#ul_menu li {
+float: left;
+margin-right: 25px;
+display:block;
+}
+.image_home
+{
+  background: url("Image/home.jpg");
+  width: 100px;
+  height: 55px;
+  display: inline-block;
+  position: relative;
+}
+.image_contact
+{
+  background: url("Image/contact.jpg");
+  width: 120px;
+  height: 55px;
+  display: inline-block;
+  position: relative;
+}
+.image_resume
+{
+  background: url("Image/resume.png");
+  width: 130px;
+  height: 57px;
+  display: inline-block;
+  position: relative;
+}
+.image_temp
+{
+  background: url("Image/Capture1.jpg");
+  width: 130px;
+  height: 53px;
+  display: inline-block;
+  position: relative;
+}
+.image_about
+{
+  background: url("Image/about.jpg");
+  width: 100px;
+  height: 55px;
+  display: inline-block;
+  position: relative;
+}
+.image_PROTFO
+{
+  background: url("Image/PROTFO.jpg");
+  width: 120px;
+  height: 55px;
+  display: inline-block;
+  position: relative;
+}
+.border-center-contain
+{
+  font-size: 20px;
+  font-family: "PT Sans";
+  width: 80%;
 }
 
+.ul_question
+{
+  margin-bottom: 20px;
+}
 
+.plus_minus
+{
+  background: url("Image/plusminus.png");
+width: 19px;
+height: 8px;
+display: block;
+float: left;
+top: 5px;
+position: relative;
+margin-right: 15px;
+cursor: pointer;
+}
+.title
+{
+  background-color: #ffffff;
+  height: 19px;
+  line-height: 19px;
+  padding: 0 10px 0 0;
+  font-weight: 700;
+  font-family: "PT Sans";
+}
+.experience_active
+{
+  float: right;
+  background-color: #444444;
+  color: #ffffff;
+  font-size: 12px;
+  height:16px;
+}
+.answer_title
+{
+  padding-left: 35px;
 
-
-
-
-
-
-
-
+}
+.bar_container
+{
+  width: 80%;
+  height: 22px;
+  background-color: #ebebeb;
+  border-radius: 4px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.bar
+{
+  background-color: #59bbe8;
+  height: 22px;
+  border-radius: 4px;
+  text-align: right;
+  line-height: 22px;
+}
+.answer_test
+{
+  line-height: 1.5;
+  color: #808080;
+  font-style: italic;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+.info
+{
+  float: right;
+  color: #000;
+  background-color: #ffffff;
+  font-size: 16px;
+  height:16px;
+}
