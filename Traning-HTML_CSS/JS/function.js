@@ -86,8 +86,8 @@ function isInvalid()
 }
 function checkNumber()
 {
-	var x1 = document.getElementById("text1").value;
-   	var x2 = document.getElementById("text2").value;
+	var x1 = parseInt(document.getElementById("text1").value);
+   	var x2 = parseInt(document.getElementById("text2").value);
 	if(document.getElementById("text3").value == (x1+x2))
 	{
 		return true;
