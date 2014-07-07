@@ -301,53 +301,12 @@ float: left;
 margin-right: 25px;
 display:block;
 }
-.image_home
+
+.menuItem
 {
-  background: url("Image/home.jpg");
-  width: 100px;
-  height: 55px;
-  display: inline-block;
-  position: relative;
-}
-.image_contact
-{
-  background: url("Image/contact.jpg");
+  background-color: #c7e2ed;
   width: 120px;
   height: 55px;
-  display: inline-block;
-  position: relative;
-}
-.image_resume
-{
-  background: url("Image/resume.png");
-  width: 130px;
-  height: 57px;
-  display: inline-block;
-  position: relative;
-}
-.image_temp
-{
-  background: url("Image/Capture1.jpg");
-  width: 130px;
-  height: 53px;
-  display: inline-block;
-  position: relative;
-}
-.image_about
-{
-  background: url("Image/about.jpg");
-  width: 100px;
-  height: 55px;
-  display: inline-block;
-  position: relative;
-}
-.image_PROTFO
-{
-  background: url("Image/PROTFO.jpg");
-  width: 120px;
-  height: 55px;
-  display: inline-block;
-  position: relative;
 }
 .border-center-contain
 {
@@ -393,7 +352,6 @@ cursor: pointer;
 .answer_title
 {
   padding-left: 35px;
-
 }
 .bar_container
 {
@@ -427,4 +385,38 @@ cursor: pointer;
   background-color: #ffffff;
   font-size: 16px;
   height:16px;
+}
+.bar_padding
+{}
+.contact-contain
+{
+  margin: 2px;
+  margin-left: 70px;
+  margin-top: 10px;
+  width: 80%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid;
+  height: 560px;
+}
+#inquiry-text-left
+{
+  width: 55%;
+  float: left;
+  overflow:hidden;
+}
+#contact-text-right
+{
+  width: 25%px;
+  float: left;
+  margin-left:5%;
+  overflow: hidden;
+}
+#scroll
+{
+  height: 30px;
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width:45px;
 }
