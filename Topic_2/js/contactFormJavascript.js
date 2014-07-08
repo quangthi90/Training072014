@@ -24,28 +24,33 @@ function securityCheck() {
 	// body...
 	var x = parseInt(document.getElementById("no1").value);
 	var y = parseInt(document.getElementById("no2").value);
-	var sum = document.getElementById("res").value;
-	var res = x + y;
-	console.log(typeof(x));
-	console.log(y);
-	console.log(sum);
-	console.log(res);
-	if (sum == res) {
-		return 1;
+	var res = document.getElementById("res").value;
+	var sum = x + y;
+	// console.log(typeof(x));
+	// console.log(y);
+	// console.log(sum);
+	// console.log(res);
+	if (res == sum) {
+		return true;
 	}
 	else{
-		if(typeof(sum) == 'undefined' || sum == null || sum == ''){
-			return 0;
-		}
-		else{
-			return -1;
-		}
+		return false;
 	}
 }
-function isValid(id){
-	var val = document.getElementById(id).value;
-	console.log(val);
-	if (typeof(val) == 'undefined' || val == null || val == '') {
+function isValidFullName(){
+	var full_name = document.getElementById("fullname").value;
+	//console.log(val);
+	if (typeof(full_name) == 'undefined' || full_name == null || full_name == '') {
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+function isValidCompay(){
+	var company = document.getElementById("company").value;
+	//console.log(val);
+	if (typeof(company) == 'undefined' || company == null || company == '') {
 		return false;
 	}
 	else{
@@ -56,86 +61,114 @@ function isValidEmail () {
 	// body...
 	var test_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	var emailadd = document.getElementById("email").value;
-	if (!test_email.test(emailadd)){
+	if (!test_email.test(emailadd) || typeof(emailadd) == 'undefined' || emailadd == null || emailadd == ''){
 		return false;
 	}
-	return true;
+	else{
+		return true;
 }
 function isValidMessage () {
 	// body...
-	var messlength = (document.getElementById("email").value).length;
-	if (messlength>=50 && messlength <= 2000){
-		return true;
+	var mess = document.getElementById("message").value;
+	var messlength = (document.getElementById("message").value).length;
+	if (messlength <=50 || messlength >= 2000 || typeof(mess) == 'undefined' || mess == null || mess == ''){
+		return false;
 	}
 	else{
-		return false;
+		return true;
 	}
 }
 function sendContact(){
 	// validate full name
-	var full_name = isValid("fullname");
-	var company_name = isValid("company");
-	var email_add1 = isValid("email");
-	var email_add2 = isValidEmail("email");
-	var mess1 = isValid("message");
-	var mess2 = isValidMessage("message");
+	var full_name = isValidFullName();
+	var company_name = isValidCompay();
+	var email = isValidEmail();
+	var mess = isValidMessage();
 	var security_check = securityCheck();
+	if (full_name === true && company_name === true && email === true && mess === true && security_check === true){
 
-	// validate full name
-	if (full_name === true) {
-		showValid('#namerequire');
+		var objectPerson = {FullName:document.getElementById("fullname").value,
+								Company:document.getElementById("company").value,
+								Email:document.getElementById("email").value,
+								Message:document.getElementById("message").value };
+		alert(objectPerson);
 	}
 	else{
-		showRequire('#namerequire');
-	}
-
-	// validate company name
-	if (company_name === true) {
-		showValid('#companyrequire');
-	}
-	else{
-		showRequire('#companyrequire');
-	}
-
-	// validate email address
-	if (email_add1 === true && email_add2 === true) {
-		showValid('#emailrequire');
-	}
-	else{
-		if(email_add1 === false){
-			showRequire('#emailrequire');
+		if (full_name === false) {
+			showRequire('#namerequire');
 		}
-		if(email_add2 === false){
-			showAlertEmail('#emailrequire');
+		if(company_name === false){
+				showRequire('#companyrequire');
 		}
-		
-	}
-
-	// validate message
-	if (mess1 === true && mess2 === true) {
-		showValid('#messrequire');
-	}
-	else{
-		if(mess1 === false){
-			showRequire('#messrequire');
+		if (email === false){
+			showAlertEmail('#companyrequire');
 		}
-		if (mess2 === false) {
+		if (mess === false){
 			showAlertMessage('#messrequire');
 		}
-	}
-
-	// validate security check
-	switch(security_check){
-		case -1:
-			showResult('#securityrequire');
-			break;
-		case 0:
+		if(security_check === false){
 			showRequire('#securityrequire');
-			break;
-		case 1:
-			showValid('#securityrequire');
-			break;
+		}
 	}
+}
+
+	// // validate full name
+	// if (full_name === true) {
+	// 	showValid('#namerequire');
+	// }
+	// else{
+	// 	showRequire('#namerequire');
+	// }
+
+	// // validate company name
+	// if (company_name === true) {
+	// 	showValid('#companyrequire');
+	// }
+	// else{
+	// 	showRequire('#companyrequire');
+	// }
+
+	// // validate email address
+	// if (email_add1 === true && email_add2 === true) {
+	// 	showValid('#emailrequire');
+	// }
+	// else{
+	// 	if(email_add1 === false){
+	// 		showRequire('#emailrequire');
+	// 	}
+	// 	if(email_add2 === false){
+	// 		showAlertEmail('#emailrequire');
+	// 	}
+		
+	// }
+
+	// // validate message
+
+	// switch()
+	// // if (mess1 === true && mess2 === true) {
+	// // 	showValid('#messrequire');
+	// // }
+	// // else{
+	// // 	if(mess1 === false){
+	// // 		showRequire('#messrequire');
+	// // 	}
+	// // 	if (mess2 === false) {
+	// // 		showAlertMessage('#messrequire');
+	// // 	}
+	// // }
+
+	// // validate security check
+	// switch(security_check){
+	// 	case -1:
+	// 		showResult('#securityrequire');
+	// 		break;
+	// 	case 0:
+	// 		showRequire('#securityrequire');
+	// 		break;
+	// 	case 1:
+	// 		showValid('#securityrequire');
+	// 		break;
+	// }
 
 
 	// if (security_check === 1) {
@@ -183,4 +216,3 @@ function sendContact(){
 		
 	// 	}
 	
-}
