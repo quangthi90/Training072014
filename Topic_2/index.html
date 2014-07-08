@@ -56,6 +56,10 @@
                 if(validator.form()){
                     //hợp lệ
                     //do something
+                    var objectInfoPerson = {FullName:$("#fullname").val(),
+                							Company:$("#company").val(),
+                							Email:$("#email").val(),
+               								 Message:$("#message").val() };
                     alert('Valid');
                 }
                 else{
@@ -278,19 +282,19 @@
 		                    <h2>INQUIRY</h2>
 
 		                    <div class="textfield">Full name <span class="rq" style="color:green;">*</span></div>
-		                    <div class="textfield-content"><input type="text" class="require error" id="fullname" name="fullname" placeholder="Enter your name"></div>
+		                    <div class="textfield-content"><input type="text" class="require" id="fullname" name="fullname" placeholder="Enter your name"></div>
 		                    <span for="fullname" generated="true" class="error" id="namerequire"></span>
 
 		                    <div>Company <span class="rq" style="color:green;">*</span></div>
-		                    <div><input type="text" class="require error" id="company" name="company" placeholder="Where do you work?"></div>
+		                    <div><input type="text" class="require" id="company" name="company" placeholder="Where do you work?"></div>
 		                    <span for="company" generated="true" class="error" id="companyrequire"></span>
 
 		                    <div>Email address <span class="rq" style="color:green;">*</span></div>
-		                    <div><input type="text" class="required email error" id="email" name="email" placeholder="e.g info@envato.com"></div>
+		                    <div><input type="text" class="required email" id="email" name="email" placeholder="e.g info@envato.com"></div>
 		                    <span for="email" generated="true" class="error" id="emailrequire"></span>
 
 		                    <div>Message <span class="rq" style="color:green;">*</span></div>
-		                    <div><input type="textarea" class="required error"  minlength="50" maxlength="2000" id="message" name="message" placeholder=""></div>
+		                    <div><input type="textarea" class="required"  minlength="50" maxlength="2000" id="message" name="message" placeholder=""></div>
 		                    <span for="message" generated="true" class="error" id="messrequire"></span>
 
 		                    <div>Security check <span style="color:green;">*</span></div>
@@ -300,7 +304,7 @@
 							<input type="text" disabled="disable" id="no2" name="no2" placeholder="No2">
 							<script>document.getElementById('no2').value = Math.floor((Math.random() * 100) + 1);</script>					
 							=
-							<input type="text" class="digit error" id="res" name="res" placeholder="Your result is: "></div>
+							<input type="text" class="digit" id="res" name="res" placeholder="Your result is: "></div>
 		                    <span for="res" generated="true" class="error" id="securityrequire"></span>
 		                    <br>
 
