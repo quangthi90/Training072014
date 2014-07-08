@@ -3,7 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title> FrozenNguyen Profile</title>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<link rel="stylesheet" href="main.css" type="text/css">
+		<link rel="stylesheet" href="jquery.validate.js" type="text/css">
+		<link rel="stylesheet" href="jquery.validate.min.js" type="text/css">
 		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
 		<link rel="stylesheet" href="css/font-awesome.css" type="text/css">
 	</head>
@@ -284,9 +287,233 @@
 						</div>
 					</div>
 				</div>
+				<div class="content-contact">
+					<div class="Inquiry">
+						<div ><b>INQUIRY</b></div>
+						<div class="inquiry-content">
+							<form action="#"  id= "form-contact" name="form-contact" onsubmit="return validateForm()" method="post">
+								<div >
+									<label>Full name <span class="required">*</span></label><br/>
+									<input class="form-contact" type="text" name="name" id="name" placeholder="Enter your name" width ="30px" size= "50px"required>
+								</div>
+
+								<div >
+									<label for="company">Company<span class="required">*</span></label><br/>
+									<input type="text" name="company" id="company" placeholder="Where do you work?" class="form-contact" required> 
+								</div>
+
+								<div >
+									<label for="email">Email address<span class="required">*</span></label><br/>
+									<input class="form-contact" type="email" name="email" id="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" placeholder="e.g. info@envato.com" required>
+								</div>
+								<div >
+									<label for="Message">Message<span class="required">*</span></label><br/>
+									<textarea name="Message"  id="message" cols="65" rows="6" required></textarea><br/>
+									<p class="result" id="result"></p>
+								</div>
+								<div >
+									<label for="Security check">Security check</label><br/>
+
+									<input class="input-number" name="input-number1" id="input-number1" type="text" readonly="readonly" value="">
+									
+									<span class="pheptinh">+ </span>
+									<input class="input-number" name="input-number2" id="input-number2" type="text" readonly="readonly" value="">
+									
+									<span class="pheptinh">= </span>
+									<input class="input-number" name="ket-qua" id="ket-qua" ><br/>
+									<p class="result" id="ket-qua" ></p>
+									
+								</div>
+								<div>
+									<input type="submit" name="Send" class="submit" value="SEND">
+									<input type="button" name="Validate" class="submit" id="jq-validate" value="VALIDATE JQ">
+								</div>
+								<div>
+									<input type="button" name="top" class="button" value="TOP">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="Contact">
+						<div><b>CONTACT</b></div>
+						
+							<div class="ct-address">
+								<b>Jonathan Doe</b><br/>
+								Flinders St 35<br/>
+								23456 Melburne<br/>
+								Australia<br/>
+							</div>
+						
+						
+							<div class="ct-address">
+								<b>E-Mail Contact</b><br/>
+								<a>spam@rocketthemes.net</a>
+							</div>
+
+						
+					</div>
+				</div>
 			</div>
+			
 		</div>
 	</body>
 	<footer>
 	</footer>
+	<script type="text/javascript">
+		$(".iconMail").click(function() {
+			$('html,body').animate({
+				scrollTop: $(".inquiry-content").offset().top},
+				2000);
+			$(".button").show(2000);
+		});
+	</script>
+	<script type="text/javascript">
+		$(".button").click(function(){
+			$('html,body').animate({
+				scrollTop: $(".content").offset().top}
+			,2000);
+
+		});
+	</script>
+	<script type="text/javascript">
+		$(".content-contact").mousemove(function(){
+			$(".button").show(1000);
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(".iconMail").mousemove(function(){
+
+		});
+	</script>
+	
+
+	<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){ 
+			 
+			
+			    //cài đặt sự kiện click cho button
+			    $('#jq-validate').click(function(){
+			    	
+			    var validator = $("#form-contact").validate({ 
+			        rules: { 
+			            
+							 name: "required", 
+				            company: { 
+				                required: true, 
+				                minlength: 2, 
+				            }, 
+				            message: { 
+				                required: true, 
+				                minlength: 50, 
+				                maxlength:2000,
+
+				            }, 
+				            email: { 
+				                required: true, 
+				                email: true
+				            }
+
+				        }, 
+				        messages: { 
+				            name: "Hãy điền tên đăng nhập.", 
+				            company: { 
+				                required: "Hãy điền tên công ty",
+				            }, 
+				            message: { 
+				                equalTo: "message không đủ độ dài" 
+				            }, 
+				            email: { 
+				                required: "Hãy nhập 1 địa chỉ email hợp lệ", 
+				                email:"Địa chỉ email không hợp lệ"
+				            }
+			        }
+			    }); 
+			      var x1 = parseInt($("#input-number1").val());
+			      var x2 = parseInt($("#input-number2").val());
+			      var x3 = $("#ket-qua").val();
+			      if ((x1 + x2) != x3)
+			      {
+			        $(".result").text("Number Security is not valid ");
+			        $(".result").css("color", "red");
+			        return;
+			      }
+			      else{
+			      	$(".result").text("Number Security is valid ");
+			        $(".result").css("color", "blue");
+			        return;
+			      }
+			        if(validator.form()){
+			            var objectInfoPerson = {FullName:$("#name").val(),
+			                Company:$("#company").val(),
+			                Email:$("#email").val(),
+			                Message:$("#message").val() };
+			            alert(objectInfoPerson.Fullname + " " + objectInfoPerson.Company + " " + objectInfoPerson.Email + " " + objectInfoPerson.Message);
+			        }
+			    })
+
+			});
+
+</script>
+	<script>
+		function validateForm() {
+	
+ 
+			
+			var textBox = document.getElementById("message");
+			var textLength = textBox.value.length;
+			if(textLength < 50 )
+			{
+				//alert("Text length in between 50 -2000");
+				document.getElementById("result").innerHTML = "Text length in between 50 -2000";
+				document.getElementById("message").focus();
+				return false;
+			}
+			
+			if(textLength > 2000 )
+			{
+				//alert("Text length in between 50 -2000");
+				document.getElementById("result").innerHTML = "Text length in between 50 -2000";
+				document.getElementById("message").focus();
+				return false;
+			}
+ 			var a = parseInt(document.getElementById("input-number1").value);
+ 			var b = parseInt(document.getElementById("input-number2").value);
+			var ketqua = parseInt(document.getElementById("ket-qua").value);
+			var kq = a + b;
+			if( kq != ketqua)
+				{
+					alert("Result is incorrect");
+					//document.getElementById("ket-qua").innerHTML = "Result is incorrect";
+					document.getElementById("ket-qua").focus();
+					return false;
+				}
+			var person = 
+			{
+				Fullname : document.getElementById("name").value,
+				Company : document.getElementById("company").value,
+				Email : document.getElementById("email").value,
+				Message : document.getElementById("message").value,
+				Ketquatinh : document.getElementById("ket-qua").value
+			};
+			alert(person.Fullname + " " + person.Company + " " + person.Email + " " + person.Message + " " + person.Ketquatinh);
+			return true;
+ 		}
+
+		
+	</script>
+	
+	<script>
+		$( document ).ready(function() {
+			var x = Math.floor((Math.random() * 100) + 1);
+			document.getElementById("input-number1").value = x;
+			var y = Math.floor((Math.random() * 100) + 1);
+			document.getElementById("input-number2").value = y;
+			
+		});
+	 
+	</script>
+	
+ 	
+
 </html>
