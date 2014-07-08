@@ -1,0 +1,323 @@
+
+#main {
+    background-color: #fff;
+    margin: auto;
+    min-height: 900px;
+    width: 991px;
+}
+#main >div{ /*element style*/
+	 background: none repeat scroll 0 0 #7f8c8d;
+    padding: 3px 10px 10px 20px;
+}
+#header {
+    height: 200px;
+    width: 100%;
+}
+
+#main.bar{
+    width: 100%;
+    height: 25px;
+}
+#main .bar .connect{
+    float:right;
+    background-color: #fff;
+    padding-left: 5px;
+    width: 110px;
+    height: 25px;
+}
+#header .cell {
+    color: #fff;
+    float: left;
+    height: 100%;
+    line-height: 200px;
+    text-align: center;
+    width: 20%;
+}
+.home-selected { /* tag home*/
+    background: none repeat scroll 0 0 #2c3e50;
+
+}
+
+.user-selected { /*tag user*/
+	background: none repeat scroll 0 0 #3498db;
+}
+.suitcase-selected { /*tag suitcase*/
+	background: none repeat scroll 0 0 #2980b9;
+}
+.resume-selected { /*the resume*/
+    background: none repeat scroll 0 0 white;
+    color: #34495e !important;
+}
+.email-selected { /* The email*/
+    background: none repeat scroll 0 0 #2c3e50;
+}
+.content{ /* tag conten*/
+	background: none repeat scroll 0 0 white;
+    overflow: auto;
+    padding-top: 20px;
+}
+.content>div:first-child{
+	width: 55%;
+}
+.content>div{
+	float: left;
+    padding-left: 40px;
+}
+
+
+.content .heading {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.content.career-content{ /*element.style*/
+	width: 452px;
+
+}
+
+.content .career-item {
+    width: 100%;
+}
+.content .career-item:first-child {
+    margin-top: 30px;
+}
+.career-content > div {
+    float: left;
+}
+.content .career-item > div {
+    float: left;
+}
+.datetime {
+    margin-right: 35px;
+}
+
+.content .career-item > div {
+    float: left;
+}
+
+.description {
+    float: right;
+    border-left: 5px solid #eeeeee;
+    padding-bottom: 30px;
+    padding-left: 35px;
+    width: 295px; /*295px*/
+}
+.content .description .heading {
+    border-bottom: 2px solid #d9d9d9;
+    height: 40px;
+    line-height: 40px;
+}
+
+.content .heading .des-head-left {
+    float: left;
+}
+.content .heading .des-head-right {
+    color: #85807b;
+    float: right;
+    font-size: 15px;
+}
+.content .heading > div {
+    font-size: 18px;
+    text-transform: none;
+}
+
+.content .heading {
+    font-weight: bold;
+}
+.des-body{ /* element.style*/
+	margin-top: 10px;
+}
+.logo{ /*element.style*/
+	 background: none repeat scroll 0 0 white;
+    border: 5px solid rgb(238, 238, 238);
+    border-radius: 25px;
+    height: 40px;
+    width: 40px;
+}
+.content .career-item .logo {
+    left: 90px;
+    position: relative;
+    top: -142px;
+    z-index: 100;
+}
+.content .career-item > div {
+    float: left;
+}
+
+
+
+.career-content > div {
+    float: left;
+}
+
+/* ------------------------------------*/
+.content .skill{
+	width: 300px;
+}
+.content .skill .des{ /* tiêu đề thành phần trong my skill*/
+
+	border-bottom: thin groove #3498db;
+	font-size: 20px;
+	font-weight: bold;
+	width: 300px;
+	margin-top: 25px;
+	margin-bottom: 20px;
+	
+}
+
+.content .skill .bar{
+	float: left;
+	height: 25px;
+    width: 300px;
+	color: #fff;
+	padding-left: 5px;
+	border-radius: 5px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	background-color: #fafafa;
+
+}
+.content .skill .bar .bar-right{
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+
+}
+.content .skill .bar .bar-left{
+    float: left;
+    height: 100%;
+    border-radius:5px;
+    background-color: #3498db;
+
+}
+.content .skill .bar .circle-invi{
+    float: right;
+    height: 12px;
+    width: 10px;
+    border-radius: 100%;
+    padding-left: 5px;
+    margin-left: 3px;
+    background-color: #f2f2f2;  
+}
+.content .skill .bar .circle-vi{
+    float: right;
+    height: 12px;
+    width: 10px;
+    border-radius: 100%;
+    padding-left: 5px;
+    margin-left: 3px;
+    background-color: #3498db;  
+}
+.icon{
+    color: #3498db;
+    background-color: #3498db;
+    font-size: 200%;
+}
+/* ////////////////////////////////////Topic 2///////////////////////*/
+.content .user{ /* dung de add fom inquiry */
+    width: 100%;
+    height: 700px;
+
+}
+.content .user .left{
+    float: left;
+    width: 60%;
+}
+.content .user .left .in{ /*  input*/
+    float: left;
+    height: 40px;
+    width: 520px;
+    margin-right: 40px;
+    border: 1px solid #ddd;
+    font-size: 15;
+    margin-bottom: 15px;
+
+}
+.content .user .submit{
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    margin-top: 30px;
+ 
+}
+.content .user .so{
+    height: 30px;
+    width: 70px;
+    margin-right: 20px; 
+    margin-left: 20px;
+    text-align: center;
+
+}
+
+.content .user #so1{
+    height: 30px;
+    width: 70px;
+    margin-right: 20px; 
+    margin-left: 20px;
+
+}
+.content .user #so2{
+    height: 30px;
+    width: 70px;
+    margin-right: 20px; 
+    margin-left: 20px;
+
+}
+.content .user #kq-so{
+    height: 30px;
+    width: 70px;
+    margin-right: 20px; 
+    margin-left: 20px;
+
+}
+.content #error-kqso{
+    height: 30px;
+    width: 520px;
+    font-size: 13px;
+    float: left;
+    color: #0099FF;
+}
+.content #error-name{
+    height: 30px;
+    width: 520px;
+    font-size: 13px;
+    float: left;
+    color: #0099FF;
+}
+.content #error-company{
+    height: 30px;
+    width: 520px;
+    font-size: 13px;
+    float: left;
+    color: #0099FF;
+}
+.content #error-email{
+    height: 30px;
+    width: 520px;
+    font-size: 13px;
+    float: left;
+    color: #0099FF;
+}
+.content #error-sms{
+    height: 30px;
+    width: 520px;
+    font-size: 13px;
+    float: left;
+    color: #0099FF;
+}
+.content .user .right{
+    float: right;
+    width: 35%;
+}
+.content .user .right .email{
+    float: left;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
