@@ -166,13 +166,11 @@ function testInquiryJQuery(){
 
 function scroll_AboutMe(){
 	loca = $(this).scrollTop();
-	alert(loca);
-	$(".main").animate({top: loca});
-	$(this).scrollTop(loca);
+	$(".right").animate({top: loca});
 }
 function scroll_Contect(){
 	loca = $(this).scrollTop();
-	alert(loca);
-	//range = 868 - loca;
-	$(".main").animate({top: loca});	
+	range = 868 - loca;
+	$(".right").animate({top: '-'+range});	
+	$(this).scrollTop(559);
 }
