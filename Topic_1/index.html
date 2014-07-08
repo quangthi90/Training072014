@@ -5,65 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-        <script type="text/javascript" src="js/jquery.scrollToTop.js"></script>
-        <script type="text/javascript" src="js/contactFormJavascript.js"></script>
-        <script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
-
-        <script>
-        $(document).ready(function(){
-            
-            var validator = $("#contact-form").validate({ 
-                rules: { 
-                    fullname: "required",
-                    company: "required",
-                    message: { 
-                        required: true, 
-                        minlength: 50,
-                        maxlength: 2000
-                    },
-                    res: {
-                    	required: true,
-                    	digit: true,
-                    }, 
-                    
-                    email: { 
-                        required: true, 
-                        email: true
-                    }
-                    //agree: "required"
-                }, 
-         
-                messages: { 
-                    fullname: "Please insert your name.",
-                    company: "Please input your Company name.",
-                    message: { 
-                        required: "Please insert your message.", 
-                        minlength: "Your message must be least 50 character",
-                        maxlength: "Your message had more 2000 character"
-                    }, 
-                   	res:{
-                   		required: "Please just insert integer number"
-                   	},
-                    email: { 
-                        required: "Please provide us a valid email address.", 
-                        email:"Invalid Email!"
-                    }
-                }
-            }); 
-            $('#btnsendJQ').click(function(){
-                if(validator.form()){
-                    //hợp lệ
-                    //do something
-                    alert('Valid');
-                }
-                else{
-                    alert('Invalis');
-                }
-            });
-        });                
- 		</script>
+		
 
 </head>
 <body>
