@@ -2,25 +2,21 @@
 	font-family:'poiret One', cursive, serif;
 }
 .main{
-<<<<<<< HEAD
 	width: 1120px;
 	margin: auto;
 	position: relative;
 }
 .main .left{
 	width: 250px;
-=======
 	width: 1100px;
 	margin: auto;
 }
 .main .left{
-	width: 230px;
->>>>>>> a2770dca87dfc1f2a73b228bd30189b287a3ead6
+	width: 250px;
 	background-color: #2b2b2b;
 	float: left;
 	text-align: center;
 	color: white;
-<<<<<<< HEAD
 	position: fixed;
 }
 .main .right{
@@ -33,7 +29,6 @@
 .left .menu{
 	min-height: 400px;
 	margin-top: 10px;
-=======
 }
 .main .right{
 	float: left;
@@ -42,7 +37,6 @@
 }
 .left .menu{
 	height: 500px;
->>>>>>> a2770dca87dfc1f2a73b228bd30189b287a3ead6
 }
 table{
 	margin: auto;
@@ -50,10 +44,7 @@ table{
 .menu td{
 	background-color: #303030;
 	padding: 4px 10px;
-<<<<<<< HEAD
 	cursor: pointer;
-=======
->>>>>>> a2770dca87dfc1f2a73b228bd30189b287a3ead6
 }
 .inf_td{
 	width: 500px;
@@ -66,14 +57,11 @@ table{
 }
 .left .footer{
 	width: 100%;
-<<<<<<< HEAD
 	height: 40px;
 	background-color: #202020;
 	padding-top: 6px;
-=======
 	height: 35px;
 	background-color: #202020;
->>>>>>> a2770dca87dfc1f2a73b228bd30189b287a3ead6
 }
 .footer td, .bottomright td{
 	min-width: 60px;
@@ -106,12 +94,7 @@ table{
 .divxanhnhat,.divxanhdam {
 	padding: 5px 10px;
 	color: white;
-	font-size: 16px;
-<<<<<<< HEAD
-
-=======
->>>>>>> a2770dca87dfc1f2a73b228bd30189b287a3ead6
-	
+	font-size: 16px;	
 	margin: -3px;
 }
 td .divxanhnhat{
@@ -122,9 +105,6 @@ td .divxanhdam{
 	background-color: #03bb7a;
 	float: left;
 }
-/*.div_intro{
-	padding: 3px 2px;
-}*/
 .text_title, .text_comment{
 	display: block;
 	
@@ -136,9 +116,7 @@ td .text_title{
 }
 td .text_comment{
 	font-size: 14px;
-	font-style: italic;
-	/*text-align: left;*/
-	
+	font-style: italic;	
 }
 .info_img{
 	color: #FFF;
@@ -149,7 +127,6 @@ td .text_comment{
 	bottom: 0;
 	padding: 2px 15px;
 	height: 170px;
-<<<<<<< HEAD
 }
 
 /*****************Contact**************************/
@@ -201,6 +178,4 @@ td .text_comment{
 }
 .inquiry, .infContact{
 	font-size: 14px;
-=======
->>>>>>> a2770dca87dfc1f2a73b228bd30189b287a3ead6
 }
