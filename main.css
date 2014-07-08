@@ -30,6 +30,7 @@
 				margin-bottom: -10px;
 				height: 25px;
 				line-height: 25px;
+				 transition: all 275ms ease-in-out 0s;
 			}
 	.main-content{
 		background-color: #ffffff;
@@ -54,6 +55,7 @@
 				margin-top: -10px;
 				height: 206px;
 				line-height: 260px;
+				 transition: all 275ms ease-in-out 0s;
 			}
 		.content-body{
 			overflow: auto;
@@ -227,21 +229,19 @@
 					font-size: 12px;
 					color: white;
 				}
-				.content-body .skill-item .program.graphic .graphic-odd >div :first-child{
-					background-color: #f6f6f6;
-				}
-				.content-body .skill-item .program.graphic .graphic-odd> div :hover{
-					background-color: white;
-					width: 80%;
-					height: 30%;
-					margin-top: -10px;
-				}
+
+				
 				.content-body .skill-item .program .graphic-odd{
 					background-color: #505050;
 					float: left;
 					position: relative;
 					border-radius: 5px;
 					cursor: no-drop;
+					 transition: all 275ms ease-in-out 0s;
+				}
+
+				.content-body .skill-item .program .graphic-odd:hover{
+					background-color: #a0a0a0;
 				}
 
 				.content-body .skill-item .program .graphic-even{
@@ -250,5 +250,118 @@
 					float: left;
 					cursor: no-drop;
 					border-radius: 5px;
+					 transition: all 275ms ease-in-out 0s;
+				}
+				.content-body .skill-item .program .graphic-even:hover{
+					background-color: #a0a0a0;
+				}
+
+
+				
+				.content-contact{
+					overflow: auto;
+					margin-top: 40px;
+					height: auto;
+					font-family:'poiret One', cursive, serif;
+					vertical-align: middle;
+					border-top: 1px solid #eeeeee;
+					border-bottom: 1px solid #eeeeee;
+					border-left: 1px solid #eeeeee;
+					border-right: 1px solid #eeeeee;
+		}
+			.content-contact > div{
+				float: left;
+			}
+			.content-contact > div:first-child{
+				width: 60%;
+			}
+			.content-contact > div:nth-child(2){
+				width: 40%;
+			}
+				.content-contact > div > div{
+					margin-left: 40px;
 				}
 				
+				.content-contact .inquiry-content{
+					margin-top: 40px;
+					clear: both;
+					height: auto;
+
+				}
+				.inquiry-content .pheptinh{
+					float: left;
+					margin-right: 20px;
+				}
+				.content-contact .inquiry-content .form-contact{
+					float: left;
+					width: 100%;
+					height: 30px;
+					clear: both;
+					margin-bottom: 20px;
+					font-family: 'poiret One', cursive, serif;
+				}
+				.content-contact .inquiry-content .input-number{
+					float: left;
+					width: 70px;
+					height: 30px;
+					display: inline;
+					margin-right: 30px;
+					font-family: 'poiret One', cursive, serif;
+				}
+				.content-contact .inquiry-content .submit{
+					background-color: black;
+					color: white;
+					height: 40px;
+					margin-top: 40px;
+					float: left;
+					border-radius: 5px;
+					clear: both;
+					font-family: 'poiret One', cursive, serif;
+				}
+				.content-contact .inquiry-content .submit:hover{
+					background-color: #a0a0a0;
+					 transition: all 275ms ease-in-out 0s;
+				}
+				.content-contact  .button{
+					background-color: black;
+					color: white;
+					width: 70px;
+					height: 40px;
+					margin-top: 40px;
+					float: right;
+					border-radius: 5px;
+					font-family: 'poiret One', cursive, serif;
+					display: none;
+				}
+				.content-contact  .button:hover{
+					background-color: #a0a0a0;
+					 transition: all 275ms ease-in-out 0s;
+				}
+				.content-contact .required{
+					color: red;
+				}
+
+				.content-contact  .ct-address{
+					font-size: 17px;
+					float: left;
+					clear: both;
+					margin-top: 30px;
+				}
+				.content-contact  .ct-address a   {
+					border-radius: 4px;
+					background-color: black;
+					color: white;
+					cursor: pointer;
+					text-decoration: none;
+					font-size: 12px;
+					padding-left: 15px;
+					padding-right: 15px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					float: left;
+				}
+				.content-contact .ct-address a:hover{
+					background-color: #a0a0a0;
+					 transition: all 275ms ease-in-out 0s;
+				}
+
