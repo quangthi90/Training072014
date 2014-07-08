@@ -166,20 +166,13 @@ function testInquiryJQuery(){
 		$('#cmt_sum').text("Sum is incorrect!");
 }
 
-// var option_before = ".fa-user";
-
 function click_AboutMe(){
 	loca = $(this).scrollTop();
 	$(".right").animate({top: loca});
-	// $(".fa-user").css("color","#03cc85");
-	// option_before = ".fa-user";
 }
 function click_Contect(){
 	loca = $(this).scrollTop();
 	range = 868 - loca;
 	$(".right").animate({top: '-'+range});	
 	$(this).scrollTop(559);
-	// $(".fa-calendar").css("color","#03cc85");
-	// $(option_before).css("color", "white");
-	// option_before = ".fa-calendar"; //cho nay gan rui mà ra ngoài nó rẫn là .fa-user
 }
