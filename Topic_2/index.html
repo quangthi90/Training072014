@@ -113,7 +113,7 @@
 		                            </a>
 		                        </li>
 		                        <li>
-		                            <a name="contactFrom" href="#contact-form">
+		                            <a name="contact-form" href="#contactform">
 		                                <span class="icon"><i class="fa fa-calendar"></i></span>
 		                                <span class="text">Contact &amp; Meet me</span>
 		                            </a>
@@ -272,7 +272,54 @@
                             </div>
                         </div>
                 </div><!--end education-->
-                
+                <div id="contactform" class="contactform">
+        			<form id="contact-form" name="cotactForm" method="post">
+		                <div class="inquiry">
+		                    <h2>INQUIRY</h2>
+
+		                    <div class="textfield">Full name <span class="rq" style="color:green;">*</span></div>
+		                    <div class="textfield-content"><input type="text" class="require error" id="fullname" name="fullname" placeholder="Enter your name"></div>
+		                    <span for="fullname" generated="true" class="error" id="namerequire"></span>
+
+		                    <div>Company <span class="rq" style="color:green;">*</span></div>
+		                    <div><input type="text" class="require error" id="company" name="company" placeholder="Where do you work?"></div>
+		                    <span for="company" generated="true" class="error" id="companyrequire"></span>
+
+		                    <div>Email address <span class="rq" style="color:green;">*</span></div>
+		                    <div><input type="text" class="required email error" id="email" name="email" placeholder="e.g info@envato.com"></div>
+		                    <span for="email" generated="true" class="error" id="emailrequire"></span>
+
+		                    <div>Message <span class="rq" style="color:green;">*</span></div>
+		                    <div><input type="textarea" class="required error"  minlength="50" maxlength="2000" id="message" name="message" placeholder=""></div>
+		                    <span for="message" generated="true" class="error" id="messrequire"></span>
+
+		                    <div>Security check <span style="color:green;">*</span></div>
+		                    <div><input type="text" disabled="disable" id="no1" name="no1" placeholder="No1">
+							<script>document.getElementById('no1').value = Math.floor((Math.random() * 100) + 1);</script>
+							+ 
+							<input type="text" disabled="disable" id="no2" name="no2" placeholder="No2">
+							<script>document.getElementById('no2').value = Math.floor((Math.random() * 100) + 1);</script>					
+							=
+							<input type="text" class="digit error" id="res" name="res" placeholder="Your result is: "></div>
+		                    <span for="res" generated="true" class="error" id="securityrequire"></span>
+		                    <br>
+
+		                    <input type="button" id="btnsend" name="btnSend" value="SEND" onclick="sendContact()">
+		                    <input type="button" id="btnsendJQ" class="btTxt submit" name="send" value="Send with JQuery">
+		                </div>
+
+
+		                <div class="contact">
+		                    <h2>CONTACT</h2>
+		                    <h3>Jonathan Doe</h3>
+		                    <h3>Flinder St 35</h3>
+		                    <h3>23456 Melbourne</h3>
+		                    <h3>Australia</h3>
+		                    <h3>E-Mail Contact</h3>
+		                    <input type="button" id="contactmail" name="contactMail" value="spam@rocketthemes.net" onclick="abc();">
+		                </div>
+		            </form>                
+                </div>
 
 		</div>
 	<!-- </div> -->

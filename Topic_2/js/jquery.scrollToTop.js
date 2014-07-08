@@ -1,16 +1,17 @@
 //scroll contact form
 $(function () {
 	//catch click on a tag
-	$("a").click(function(){
+	$("#contact").click(function(){
+		//console.log(this.hash);
 		//check if has hash
 		if (this.hash) {
 			//get rid of the # sign
 			var hash = this.hash.substr(1);
-
+					//console.log(this.hash);
 			//get the position of the <a name>
 			var $toElement = $("a[name=" + hash +"]");
-			var toPosition = $toElement.position().top;
-
+			var toPosition = $toElement.offset().top;
+				console.log($toElement);
 			// scroll to the element
 			$("body, html").animate({
 				scrollTop : toPosition
