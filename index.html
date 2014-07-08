@@ -3,25 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Thao</title>
-<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="layout.css"/>
 	<link rel="stylesheet" type="text/css" href="font-awesome-4.1.0/css/font-awesome.css"/>
-=======
 	<link rel="stylesheet" type="text/css" href="layout.css">
->>>>>>> a2770dca87dfc1f2a73b228bd30189b287a3ead6
 </head>
 <body>
 	<div class="main">
 		<div class="left">
 			<img src="img1.png" class="left_img" />
-<<<<<<< HEAD
 			<h2 style="margin-top: -7px; margin-bottom: -1px">Jennifer Doe</h2>
 				<font style="color:grey">Staford Iniversity</font>
 			<div class="menu">
 				<table>
 				<tr>
 					<td><i class="fa fa-user fa-2x" style="color:#03cc85"></i></td>
-					<td class="inf_td"><a onclick="scroll_AboutMe()"> About me</a></td>
+					<td class="inf_td"><a onclick="click_AboutMe()"> About me</a></td>
 				</tr>
 				<tr>
 					<td><i class="fa fa-book fa-2x"></i></td>
@@ -41,59 +37,20 @@
 				</tr>
 				<tr>
 					<td><i class="fa fa-calendar fa-2x"></i></td>
-					<td class="inf_td"><a onclick="scroll_Contect()">Contact & Meet Me</a></td>
+					<td class="inf_td"><a onclick="click_Contect()">Contact & Meet Me</a></td>
 				</tr>
 				<tr>
 					<td><i class="fa fa-download fa-2x"></i></td>
 					<td class="inf_td"><a>Download CV</a></td>
-=======
-			<h2>Jennifer Doe</h2>
-				<font color="grey;">Staford Iniversity</font>
-			<div class="menu">
-				<table>
-				<tr>
-					<td><img src="n1.png"/></td>
-					<td class="inf_td"><a href=""> About me</a></td>
-				</tr>
-				<tr>
-					<td><img src="n2.png"/></td>
-					<td class="inf_td"><a href="">Research</a></td>
-				</tr>
-				<tr>
-					<td><img src="n3.png"/></td>
-					<td class="inf_td"><a href="">Publications</a></td>
-				</tr>
-				<tr>
-					<td><img src="n4.png"/></td>
-					<td class="inf_td"><a href="">Teaching</a></td>
-				</tr>
-				<tr>
-					<td><img src="n5.png"/></td>
-					<td class="inf_td"><a href="">Gallery</a></td>
-				</tr>
-				<tr>
-					<td><img src="n6.png"/></td>
-					<td class="inf_td"><a href="">Contact & Meet Me</a></td>
-				</tr>
-				<tr>
-					<td><img src="n7.png"/></td>
-					<td class="inf_td"><a href="">Download CV</a></td>
->>>>>>> a2770dca87dfc1f2a73b228bd30189b287a3ead6
 				</tr>
 			</table>
 			</div>
 			<div class="footer">
 				<table>
 					<tr>
-<<<<<<< HEAD
 						<td><i class="fa fa-facebook"></i></td>
 						<td><i class="fa fa-twitter"></i></td>
 						<td><i class="fa fa-linkedin"></i></td>
-=======
-						<td><img src="face_icon.png"/></td>
-						<td><img src="twitter_icon.png"/></td>
-						<td><img src="linker_icon.png"/></td>
->>>>>>> a2770dca87dfc1f2a73b228bd30189b287a3ead6
 					</tr>
 				</table>
 			</div>
@@ -171,7 +128,6 @@
 					</tr>
 				</table>
 			</div>
-<<<<<<< HEAD
 			<div class="contact">
 				<div class="inquiry">
 					<h3>INQUIRY</h3>
@@ -202,25 +158,30 @@
 		</div>
 	</div>
 </body>
-<script type="text/javascript" src="contact.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="contact.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("td a").bind("mouseover",function(){
-			$(this).css({"color": "#d8b011", "font-weight": "bold"});
+		$(".inf_td").bind("mouseover",function(){
+			$(this).css({"font-weight": "bold", "background-color":"#03bb7a"});
 		});
-		$("td a").bind("mouseout",function(){
-			$(this).css({"color": "white", "font-weight": "normal"});});
+		$(".inf_td").bind("mouseout",function(){
+			$(this).css({"font-weight": "normal", "background-color":"#303030"});});
 	});
 
 	$(document).ready(function(){
 		$('#num1').val(_random());
 		$('#num2').val(_random());
 	});
+
+	$(document).ready(function(){
+		$('.inf_td').click( function () {
+			$('.fa').css("color", "white");
+			$(this).parents('tr').eq(0).find('.fa').css("color","#03cc85"); // tim the i lien ket voi doi tuong dc click bang cach tim cac the cha cua no la tr, lay the cha dc tim thay dau tien, tim trong do tag i co class fa, roi doi mau cho tag i nay thanh #03cc85
+		});
+	});
 </script>
-=======
 		</div>
 	</div>
 </body>
->>>>>>> a2770dca87dfc1f2a73b228bd30189b287a3ead6
 </html>
