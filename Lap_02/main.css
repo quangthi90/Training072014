@@ -1,9 +1,42 @@
+.IconAsw{
+	float: right;
+	background-color: white;
+	height: 25px;
+	margin-top: -59px;
+	margin-right: -14px;
+}
+.IconAsw > a{
+	float: left;
+	width: 30px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+}
+.IconAsw > a i{
+	color: #0e0e0e;
+}
+.IconAsw > a:first-child{
+				background-color: white;
+			}
+			.IconAsw > a:hover{
+				background-color: #f6f6f6;
+				margin-bottom: -10px;
+				height: 25px;
+				line-height: 25px;
+				 transition: all 275ms ease-in-out 0s;
+			}
 .content{
 	background-color:#38104E;
 	margin: auto;
 	width: 980px;
 	padding: 60px 15px 10px 25px;
 }
+	.main-logo
+	{
+		width: 980px;
+		background-color:#38104E;
+		height: 40px;
+	}
 	.main-content{
 		background-color: #ffffff;
 	}
@@ -152,10 +185,38 @@
 				}
 				.content-body .skill-itemp .skill .skilllogoPro{
 					float: left;
+					height: 21px;
+				}
+				.content-body .skill-itemp .skill .skilllogoPro .radius-pro{
+					position: relative;
+					float: left;
+					z-index: 100;
+					width: 13px;
+					height: 13px;
+					line-height: 10px;
+					text-align: center;
+					border-radius: 12px;
+					background-color: #093;
+					display: inline;
+					margin-left: 5px;
+				}
+				.content-body .skill-itemp .skill .skilllogoPro .radius-nopro{
+					position: relative;
+					float: left;
+					z-index: 100;
+					width: 12px;
+					height: 12px;
+					line-height: 10px;
+					text-align: center;
+					border-radius: 12px;
+					background-color:#f6f6f6;
+					display: inline;
+					margin-left: 5px;
 				}
 				.content-body .skill-itemp .skillGra{
 					float: left;
 					height: 30px;
+					border-radius: 5px;
 					font-size: 18px;
 					text-align:left;
 					margin-top:5px;
