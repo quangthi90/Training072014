@@ -340,6 +340,9 @@
 				.content-contact .required{
 					color: red;
 				}
+				.content-contact .result{
+					color: red;
+				}
 
 				.content-contact  .ct-address{
 					font-size: 17px;

@@ -294,21 +294,25 @@
 							<form action="#"  id= "form-contact" name="form-contact" onsubmit="return validateForm()" method="post">
 								<div >
 									<label>Full name <span class="required">*</span></label><br/>
-									<input class="form-contact" type="text" name="name" id="name" placeholder="Enter your name" width ="30px" size= "50px"required>
+									<input class="form-contact" type="text" name="name" id="name" placeholder="Enter your name" width ="30px" size= "50px">
+									<p class="result" id="result-name"></p>
 								</div>
 
 								<div >
 									<label for="company">Company<span class="required">*</span></label><br/>
-									<input type="text" name="company" id="company" placeholder="Where do you work?" class="form-contact" required> 
+									<input type="text" name="company" id="company" placeholder="Where do you work?" class="form-contact" > 
+									<p class="result" id="result-company"></p>
 								</div>
 
 								<div >
 									<label for="email">Email address<span class="required">*</span></label><br/>
-									<input class="form-contact" type="email" name="email" id="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" placeholder="e.g. info@envato.com" required>
+									<input class="form-contact" type="text" name="email" id="email"  placeholder="e.g. info@envato.com" >
+									<!-- <input class="form-contact" type="text" name="email" id="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" placeholder="e.g. info@envato.com" > -->
+									<p class="result" id="result-email"></p>
 								</div>
 								<div >
 									<label for="Message">Message<span class="required">*</span></label><br/>
-									<textarea name="Message"  id="message" cols="65" rows="6" required></textarea><br/>
+									<textarea name="Message"  id="message" cols="65" rows="6" ></textarea><br/>
 									<p class="result" id="result"></p>
 								</div>
 								<div >
@@ -321,7 +325,7 @@
 									
 									<span class="pheptinh">= </span>
 									<input class="input-number" name="ket-qua" id="ket-qua" ><br/>
-									<p class="result" id="ket-qua" ></p>
+									<p class="result" id="re-ket-qua" ></p>
 									
 								</div>
 								<div>
@@ -359,6 +363,10 @@
 	</body>
 	<footer>
 	</footer>
+
+	<!--> Dùng jquery để sroll <-->
+
+
 	<script type="text/javascript">
 		$(".iconMail").click(function() {
 			$('html,body').animate({
@@ -386,80 +394,136 @@
 
 		});
 	</script>
-	
 
-	<script type="text/javascript" charset="utf-8">
-			$(document).ready(function(){ 
-			 
-			
-			    //cài đặt sự kiện click cho button
-			    $('#jq-validate').click(function(){
-			    	
-			    var validator = $("#form-contact").validate({ 
-			        rules: { 
-			            
-							 name: "required", 
-				            company: { 
-				                required: true, 
-				                minlength: 2, 
-				            }, 
-				            message: { 
-				                required: true, 
-				                minlength: 50, 
-				                maxlength:2000,
+	<!--> Validate with jquey <-->
+	<script type="text/javascript"><!--//
+		$( document ).ready(function() {
+			$("#jq-validate").click(function(){
+				// minh se viet lenh validate form tai cho nay de thay cho ham chi su dung javascript thuan kia
+				// validateForm(); day la code java script thuan, gio minh viet bang jquery tuong tu vay voi cac input tiep theo e lam dc ko :D oke anh :D
+				// xoa tat ca ca error message truoc do
+				$("#result-company").html("");
+				$("#result-name").html("");
+				$("#result-email").html("");
+				$("#result").html("");
 
-				            }, 
-				            email: { 
-				                required: true, 
-				                email: true
-				            }
+				var name = $('#name').val();
+				if (name =="") {
+					$("#result-name").html("Enter your name");
+					$("#name").focus();
+					return false;
+				};
+				var company = $('#company').val();
+				if (company =="") {
+					$("#result-company").html("Enter your company");
+					$("#company").focus();
+					return false;
+				};
+				var email = $('#email').val();
+				if (email =="") {
+					$("#result-email").html("Enter your email");
+					$("#email").focus();
+					return false;
+				};
 
-				        }, 
-				        messages: { 
-				            name: "Hãy điền tên đăng nhập.", 
-				            company: { 
-				                required: "Hãy điền tên công ty",
-				            }, 
-				            message: { 
-				                equalTo: "message không đủ độ dài" 
-				            }, 
-				            email: { 
-				                required: "Hãy nhập 1 địa chỉ email hợp lệ", 
-				                email:"Địa chỉ email không hợp lệ"
-				            }
-			        }
-			    }); 
-			      var x1 = parseInt($("#input-number1").val());
+				function validateEmail(mail) { 
+				    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				    	return re.test(mail);
+				}
+				if(validateEmail(email) == false) {
+					$("#result-email").html ("Your email is incorrect");
+					$("#email").focus();
+					return false;
+				}
+
+				var textBox = $("#message").val().length;
+				//var textLength = textBox.val().length;
+				if(textBox < 50 )
+				{
+					//alert("Text length in between 50 -2000");
+					$("#result").html("Text length in between 50 -2000")  ;
+					$("#message").focus();
+					return false;
+				}
+				
+				if(textBox > 2000 )
+				{
+					//alert("Text length in between 50 -2000");
+					$("#result").html("Text length in between 50 -2000")  ;
+					$("#message").focus();
+					return false;
+				}
+				var x1 = parseInt($("#input-number1").val());
 			      var x2 = parseInt($("#input-number2").val());
 			      var x3 = $("#ket-qua").val();
 			      if ((x1 + x2) != x3)
 			      {
-			        $(".result").text("Number Security is not valid ");
-			        $(".result").css("color", "red");
+			        $("#re-ket-qua").text("Number Security is not valid ");
+			        $("#re-ket-qua").css("color", "red");
 			        return;
 			      }
 			      else{
-			      	$(".result").text("Number Security is valid ");
-			        $(".result").css("color", "blue");
+			      	$("#re-ket-qua").text("Number Security is valid ");
+			        $("#re-ket-qua").css("color", "blue");
 			        return;
-			      }
-			        if(validator.form()){
-			            var objectInfoPerson = {FullName:$("#name").val(),
-			                Company:$("#company").val(),
-			                Email:$("#email").val(),
-			                Message:$("#message").val() };
-			            alert(objectInfoPerson.Fullname + " " + objectInfoPerson.Company + " " + objectInfoPerson.Email + " " + objectInfoPerson.Message);
-			        }
-			    })
+			    }
+
+			 var person = 
+			{
+				Fullname : $("#name").val(),
+				Company : $("#company").val(),
+				Email : $("#email").val(),
+				Message : $("#message").val(),
+			};
+			alert(person.Fullname + " " + person.Company + " " + person.Email + " " + person.Message );
+			return true;
 
 			});
+		});
+	//--></script>
 
-</script>
-	<script>
+
+	<!-- Validate with javascript -->
+
+	<script type="text/javascript">
 		function validateForm() {
 	
- 
-			
+ 				document.getElementById("result-name").innerHTML = "";
+ 				document.getElementById("result-company").innerHTML = "";
+ 				document.getElementById("result-email").innerHTML = "";
+ 				document.getElementById("result").innerHTML = "";
+ 				document.getElementById("re-ket-qua").innerHTML = "";
+			var name = document.getElementById("name").value;
+			if (name =="") {
+				document.getElementById("result-name").innerHTML = "Enter your name";
+				document.getElementById("name").focus();
+				return false;
+			};
+			//document.getElementById("result-name").innerHTML = "";
+			var company = document.getElementById("company").value;
+			if (company =="") {
+				document.getElementById("result-company").innerHTML = "Enter your company";
+				document.getElementById("company").focus();
+				return false;
+			};
+			//document.getElementById("result-company").innerHTML = "";
+			var email = document.getElementById("email").value;
+			if (email =="") {
+				document.getElementById("result-email").innerHTML = "Enter your email";
+				document.getElementById("email").focus();
+				return false;
+			};
+			//document.getElementById("result-email").innerHTML = "";
+			function validateEmail(mail) { 
+		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    	return re.test(mail);
+			}
+			if(validateEmail(email) == false) {
+				document.getElementById("result-email").innerHTML = "Your email is incorrect";
+				document.getElementById("email").focus();
+				return false;
+			}
+			//document.getElementById("result-email").innerHTML = "";
 			var textBox = document.getElementById("message");
 			var textLength = textBox.value.length;
 			if(textLength < 50 )
@@ -477,17 +541,19 @@
 				document.getElementById("message").focus();
 				return false;
 			}
+			//document.getElementById("result").innerHTML = "";
  			var a = parseInt(document.getElementById("input-number1").value);
  			var b = parseInt(document.getElementById("input-number2").value);
 			var ketqua = parseInt(document.getElementById("ket-qua").value);
 			var kq = a + b;
 			if( kq != ketqua)
 				{
-					alert("Result is incorrect");
-					//document.getElementById("ket-qua").innerHTML = "Result is incorrect";
+					//alert("Result is incorrect");
+					document.getElementById("re-ket-qua").innerHTML = "Result is incorrect";
 					document.getElementById("ket-qua").focus();
 					return false;
 				}
+				//document.getElementById("re-ket-qua").innerHTML = "";
 			var person = 
 			{
 				Fullname : document.getElementById("name").value,
@@ -502,7 +568,11 @@
 
 		
 	</script>
-	
+
+
+	<!-- Dùng jquery phát sinh 2 số ngầu nhiên -->
+
+
 	<script>
 		$( document ).ready(function() {
 			var x = Math.floor((Math.random() * 100) + 1);
