@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS common */
+/*-----------------------------------------------------------------------*/
+.warper {
+	width: 100%;
+	overflow: hidden;	
+}
+#header-warper {
+	background: #ffffff;
+	border-top: 5px solid #4b86b3;
+}
