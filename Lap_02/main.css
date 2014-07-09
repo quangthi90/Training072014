@@ -1,0 +1,164 @@
+.content{
+	background-color:#38104E;
+	margin: auto;
+	width: 980px;
+	padding: 60px 15px 10px 25px;
+}
+	.main-content{
+		background-color: #ffffff;
+	}
+ 		.content-header{
+ 			height: 196px;
+ 			background-color: #f2f2f2;
+		}
+			.content-header > a{
+				float: left;
+				width: 20%;
+				height: 100%;
+				line-height: 240px;
+				text-align: center;
+				cursor: pointer;
+			}
+			.content-header > a:first-child{
+				background-color: #505050;
+			}
+			.content-header > a:hover{
+				background-color: white;
+				margin-top: -10px;
+				height: 206px;
+				line-height: 260px;
+			}
+		.content-body{
+			overflow: auto;
+			margin-top: 40px;
+			font-family:'poiret One', cursive, serif;
+		}
+			.content-body > div{
+				float: left;
+			}
+			.content-body > div:first-child{
+				width: 60%;
+			}
+			.content-body > div:nth-child(2){
+				width: 40%;
+			}
+				.content-body > div > div{
+					margin-left: 40px;
+				}
+			.content-body .title{
+				margin-top:20px;
+				font-size: 25px;
+				color: #00001f;
+				font-weight: bold;
+			}
+			.content-body .contact {
+				border: medium;
+				width: 98%;;
+				height: 520px;
+				border: 1px solid;
+				border-color: #000;
+				padding-left:1%;
+				
+				}
+				.content-body .contact .left{
+					float:left;
+					width:60%;
+					height:500px;
+					
+				}
+				.content-body .contact .right{
+					float:left;
+					width:30%;
+					height:500px;
+				}
+			.content-body .career-margin{
+				margin-top: 40px;
+			}
+			content-body .career-main
+			{
+				margin-top: 40px;
+			}
+			.content-body .career-main .career-item{
+				height: 220px;
+			}
+				.content-body .career-main .career-item .col{
+					float: left;
+				}
+				.content-body .career-main .career-item .logo{
+					position: relative;
+					left: 120px;
+					top: 40px;
+					z-index: 100;
+					width: 40px;
+					height: 40px;
+					line-height: 50px;
+					text-align: center;
+					border-radius: 25px;
+					border: 5px solid #eeeeee;
+					background-color: white;
+					z-index: 100;
+				}
+				.content-body .career-main .career-item .datetime{
+					color: #2a0000;
+					font-weight: bold;
+					margin-right: 38px;
+					width: 104px;
+				}
+				.content-body .career-main .career-item .description{
+					width: 343px;
+					padding-left: 55px;
+					border-left: 5px solid #eeeeee;
+				}
+				.content-body .career-main .career-item .heading{
+					line-height: 40px;
+					height: 40px;
+					border-bottom: 3px solid #d9d9d9
+				}
+				.content-body .career-main .career-item .heading > div:first-child{
+					float: left;
+					color: #2a0000;
+					font-size: 20px;
+					font-weight: bold;
+				}
+				.content-body .career-main .career-item .heading > div:nth-child(2){
+					float: right;
+					color: #838585;
+				}
+				.content-body .career-main .career-item .description-content{
+					margin-top: 10px;
+					background-color:#EFEFEF;
+				}
+				.content-body .skill-itemp{
+					margin-top: 40px;
+					height: 250px;
+					margin-right:40px;
+				}
+				.content-body .skill-itemp .heading {
+					line-height: 40px;
+					height: 40px;
+					font-size: 20px;
+					font-weight: bold;
+					border-bottom: 3px solid #33CC33;
+				}
+				.content-body .skill-itemp .skill{
+					margin-top: 5px;
+				}
+				.content-body .skill-itemp .skill .skillname{
+					font-size: 15px;
+					font-weight: bold;
+					float: left;
+					margin-right: 30px;
+					width: 100px;
+				}
+				.content-body .skill-itemp .skill .skilllogoPro{
+					float: left;
+				}
+				.content-body .skill-itemp .skillGra{
+					float: left;
+					height: 30px;
+					font-size: 18px;
+					text-align:left;
+					margin-top:5px;
+					color: #FFF;
+				}
+				
