@@ -35,6 +35,29 @@ header .hotline .hotline_p span { font-size: 20px; font-weight: bold; color: #bb
 #content .column-left .linker-block ul.linker-block-main li span { width: 153px; height: 33px; float: left; padding-left: 7px; position: absolute; left: 0px; top: 44px; background: url(../img/linker_span_bg_2.png) left top no-repeat; text-align: left; line-height: 33px; color: #ffffff; }
 #content .column-left .linker-block ul.linker-block-main li:first-child span { width: 154px; height: 33px; position: absolute; left: 37px; padding-right: 6px; padding-left: 0px; top: 44px; background: url(../img/linker_span_bg_1.png) right top no-repeat; float: left; text-align: right; line-height: 33px; color: #ffffff; }
 
+#content .content-block { width: 100%; float: left; background: url(../img/content_block_bg.jpg) left top repeat-x; }
+#content .content-block .content-block-header { width: 100%; float: left; border-bottom: 2px solid #cccccc; margin-left: -1px; padding: 9px 13px 5px 20px; }
+#content .content-block .content-block-header h4 { width: 90%; float: left; margin: 0; margin-top: 1px; margin-bottom: 1px; border-left: 5px solid #4b85b2; padding-left: 9px; font-size: 16px; color: #bc3f3f; line-height: 24px; }
+#content .content-block .content-block-main { width: 100%; float: left; padding-top: 20px; }
+
+#content .main-content {}
+#content .main-content .main-content-header {}
+#content .main-content .main-content-header h4 {}
+#content .main-content .main-content-header .detail-btn { width: 72px; float: right; }
+#content .main-content .main-content-main { padding-left: 21px; padding-right: 31px; }
+#content .main-content .main-content-main p { color: #333333; margin-bottom: 12px; }
+#content .main-content .main-content-main .main-content-main-p-1 { width: 70%; float: left; }
+#content .main-content .main-content-main .main-content-main-p-1 p { width: 100%; float: left; margin-bottom: 12px; }
+#content .main-content .main-content-main .main-content-main-img { width: 219px; float: right; margin-right: -11px; }
+#content .main-content .main-content-main .main-content-main-p-2 { width: 100%; float: left; margin-top: 5px; }
+#content .main-content .main-content-main .main-content-main-p-2 p { width: 100%; float: left; }
+#content .main-content .main-content-main .main-content-main-p-2 p span { background: url(../img/main_content_main_p_2_prefix_img.png) left center no-repeat; padding-left: 16px; color: #4b85b2; font-weight: bold; }
+
+#content .gallery-block { margin-top: 20px; }
+#content .gallery-block .gallery-block-header .detail-btn { width: 72px; float: right; }
+#content .gallery-block .gallery-block-main { padding-top: 2px; padding-left: 20px; padding-right: 20px; padding-bottom: 22px; }
+#content .gallery-block .gallery-block-main .gallery-block-main-img { float: left; margin-top: 18px; text-align: center; }
+
 #support-warper { background-color: #cccccc; margin-bottom: 18px; padding-top: 8px; padding-bottom: 8px; }
 #support-warper .support-block { float: left; background-color: #ffffff; padding: 18px 8px 12px 12px; border-radius: 4px; }
 #support-warper .support-block-1 { float: right; margin-top: 1px; }
