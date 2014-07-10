@@ -1,4 +1,4 @@
-function showRequire (id) {// nó bắt lỗi ở đây,chả hiểu vì sao chỗ này lõi :(
+function showRequire (id) {
 	$(id).text(" is required! ");
     $(id).css("color", "red");
 }
@@ -81,7 +81,6 @@ function isValidMessage () {
 }
 function sendContact(){
 	// validate full name
-	alert("abc");
 	var full_name = isValidFullName();
 	var company_name = isValidCompay();
 	var email = isValidEmail();
