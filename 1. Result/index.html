@@ -11,6 +11,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="fav.ico"/>-->
 <!--css-->
 <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+<link href="js/plugins/nivoslider/nivo-slider.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="js/plugins/nivoslider/themes/default/default.css" type="text/css" />
 <link href="css/index.css" type="text/css" rel="stylesheet"/>
 </head>
 <body id="index">
@@ -18,17 +20,23 @@
   <header class="container">
     <div class="row">
       <div class="col-md-8">
-        <div class="row"> <a class="company-name"><img class="logo" src="img/gkv_logo.png" alt="Logo"/></a> </div>
+        <div class="row">
+          <div class="col-md-12"><a class="company-name"><img class="logo" src="img/gkv_logo.png" alt="Logo"/></a> </div>
+        </div>
       </div>
       <div class="col-md-4">
         <div class="row">
-          <form class="language-form">
-            <a href="#" class="language-btn"><img src="img/language_btn_vi.png" alt="Vietnamese"/></a> <a href="#" class="language-btn"><img src="img/language_btn_jp.png" alt="Japanese"/></a>
-          </form>
+          <div class="col-md-12">
+            <form class="language-form">
+              <a href="#" class="language-btn"><img src="img/language_btn_vi.png" alt="Vietnamese"/></a> <a href="#" class="language-btn"><img src="img/language_btn_jp.png" alt="Japanese"/></a>
+            </form>
+          </div>
         </div>
         <div class="row">
-          <div class="hotline"> <img class="hotline_img" src="img/hotline_icon.png" alt="Hotline"/>
-            <p class="hotline_p"> Hotline: <span>+(84)-935-176-850</span> </p>
+          <div class="col-md-12">
+            <div class="hotline"> <img class="hotline_img" src="img/hotline_icon.png" alt="Hotline"/>
+              <p class="hotline_p"> Hotline: <span>+(84)-935-176-850</span> </p>
+            </div>
           </div>
         </div>
       </div>
@@ -37,99 +45,108 @@
 </div>
 <nav id="topmenu-warper" class="navbar navbar-default" role="navigation">
   <div class="container">
-    <div class="row">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topmenu"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      </div>
-      <div class="collapse navbar-collapse" id="topmenu">
-        <div class="row">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">TRANG CHỦ</a></li>
-            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">GIỚI THIỆU <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">LINK</a></li>
-                <li><a href="#">LINK</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">SẢN PHẨM - DỊCH VỤ <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">LINK</a></li>
-                <li><a href="#">LINK</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">HỖ TRỢ KHÁCH HÀNG <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">LINK</a></li>
-                <li><a href="#">LINK</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- /.navbar-collapse --> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topmenu"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
     </div>
+    <div class="collapse navbar-collapse" id="topmenu">
+      <div class="row">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">TRANG CHỦ</a></li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">GIỚI THIỆU <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">LINK</a></li>
+              <li><a href="#">LINK</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">SẢN PHẨM - DỊCH VỤ <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">LINK</a></li>
+              <li><a href="#">LINK</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">HỖ TRỢ KHÁCH HÀNG <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">LINK</a></li>
+              <li><a href="#">LINK</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse --> 
   </div>
-  <!-- /.container-fluid --> 
+  <!-- /.container --> 
 </nav>
 <div class="warper" id="content-warper">
   <div id="content" class="container">
     <div class="row">
-      <div class="slide"> </div>
+      <div class="col-md-12">
+      <div class="slider-wrapper theme-default">
+    <div class="ribbon"></div>
+        <div id="slider" class="nivoSlider"> <img src="img/slide1.jpg" alt="" /> <a href="http://dev7studios.com"><img src="img/slide2.jpg" alt="" title="#htmlcaption" /></a> <img src="img/slide3.jpg" alt="" title="This is an example of a caption" /> <img src="img/slide4.jpg" alt="" /> </div>
+        <div id="htmlcaption" class="nivo-html-caption"> <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. </div>
+      </div>
+      </div>
     </div>
     <div class="row">
-      <div class="column-left col-md-3">
-        <div class="video-block block row">
-          <h4>VIDEO GIỚI THIỆU CÔNG TY</h4>
-          <div class="video-block-main block-main">
-            <iframe width="200" height="162" src="//www.youtube.com/embed/I4Peyhk7ZS8" frameborder="0" allowfullscreen></iframe>
+      <div class="col-md-3">
+        <div class="column-left">
+          <div class="video-block block">
+            <h4>VIDEO GIỚI THIỆU CÔNG TY</h4>
+            <div class="video-block-main block-main">
+              <iframe width="200" height="162" src="//www.youtube.com/embed/I4Peyhk7ZS8" frameborder="0" allowfullscreen></iframe>
+            </div>
           </div>
-        </div>
-        <div class="linker-block block row">
-          <h4>CÁC LIÊN KẾT</h4>
-          <ul class="linker-block-main block-main">
-            <li><a href="#"><img src="img/linker_img_1.jpg" alt="NHÀ MÁY LILAMA" /><span>NHÀ MÁY LILAMA</span></a></li>
-            <li><a href="#"><img src="img/linker_img_2.jpg" alt="Công ty cổ phần GKJ" /><span>Công ty cổ phần GKJ</span></a></li>
-            <li><a href="#"><img src="img/linker_img_3.jpg" alt="Công ty cổ phần GKD" /><span>Công ty cổ phần GKD</span></a></li>
-            <li><a href="#"><img src="img/linker_img_4.jpg" alt="Công ty GTS" /><span>Công ty GTS</span></a></li>
-          </ul>
+          <div class="linker-block block">
+            <h4>CÁC LIÊN KẾT</h4>
+            <ul class="linker-block-main block-main">
+              <li><a href="#"><img src="img/linker_img_1.jpg" alt="NHÀ MÁY LILAMA" /><span>NHÀ MÁY LILAMA</span></a></li>
+              <li><a href="#"><img src="img/linker_img_2.jpg" alt="Công ty cổ phần GKJ" /><span>Công ty cổ phần GKJ</span></a></li>
+              <li><a href="#"><img src="img/linker_img_3.jpg" alt="Công ty cổ phần GKD" /><span>Công ty cổ phần GKD</span></a></li>
+              <li><a href="#"><img src="img/linker_img_4.jpg" alt="Công ty GTS" /><span>Công ty GTS</span></a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="col-md-9">
-        <div class="content-block main-content row">
-          <div class="content-block-header main-content-header">
-            <h4>GIỚI THIỆU</h4>
-            <a class="detail-btn" href="#"><img src="img/main_content_header_detail_btn_img.png" alt="Chi tiết" /></a> </div>
-          <div class="content-block-main main-content-main">
-            <div class="main-content-main-p-1">
-              <p>Công ty TNHH GIFU KOGYO VIỆT NAM (GKV) được thành lập vào tháng 02 năm 2007 với 100% vốn đầu tư Nhật Bản. Trụ sở chính đặt tại “Công Viên Phần Mềm Quang Trung” Quận 12. Chúng tôi hiện có 50 nhân viên, gần một nửa đã được đào tạo chuyên môn bên công ty mẹ tại Nhật với thời gian từ 1~2 năm, nên có thể giao tiếp hoàn toàn bằng tiếng Nhật.</p>
-              <p>Công ty hiện tổ chức lớp học tiếng Nhật hàng ngày để đào tạo cho những nhân viên mới. Kết quả đạt được là những cuộc họp hàng ngày vào buổi sáng, các buổi hội nghị, thảo luận về tiến độ công việc... tất cả đều sử dụng tiếng Nhật để thực hiện. Hiện công ty kinh doanh ở 2 lĩnh vực... </p>
-            </div>
-            <div class="main-content-main-img"><img src="img/main_content_main_img_1.png" alt="Công ty TNHH GIFU VIỆT NAM" /></div>
-            <div class="main-content-main-p-2">
-            <p><span>Lĩnh vực 1: </span>riển khai bản vẽ kỹ thuật trong lĩnh vực cơ khí, xây dựng, cầu đường và kiến trúc.v.v.... Công ty chúng tôi đang hợp tác với nhà máy LILAMA 18 để sản xuất ra sản phẩm khung đổ bê tông đường hầm (Formwork), cầu... để xuất khẩu ra Malaysia, Cambodia...</p>
-            <p><span>Lĩnh vực 2: </span>Với mục tiêu đem lại hiệu quả kinh tế cao nhất cho doanh nghiệp bằng khả năng tự quản lý nguồn lực một cách tối ưu nhất. Công ty chúng tôi cũng chuyên thiết kế phần mềm quản lý và thiết kế website theo yêu cầu của khách hàng nhằm nâng cao chất lượng quản lý cho doanh nghiệp.</p>
+        <div class="content-block main-content">
+          <div class="content-block-bg">
+            <div class="content-block-header main-content-header">
+              <h4>GIỚI THIỆU</h4>
+              <a class="detail-btn" href="#"><img src="img/main_content_header_detail_btn_img.png" alt="Chi tiết" /></a> </div>
+            <div class="content-block-main main-content-main">
+              <div class="main-content-main-p-1">
+                <p><span class="main-content-main-img"><img src="img/main_content_main_img_1.png" alt="Công ty TNHH GIFU VIỆT NAM" /></span>Công ty TNHH GIFU KOGYO VIỆT NAM (GKV) được thành lập vào tháng 02 năm 2007 với 100% vốn đầu tư Nhật Bản. Trụ sở chính đặt tại “Công Viên Phần Mềm Quang Trung” Quận 12. Chúng tôi hiện có 50 nhân viên, gần một nửa đã được đào tạo chuyên môn bên công ty mẹ tại Nhật với thời gian từ 1~2 năm, nên có thể giao tiếp hoàn toàn bằng tiếng Nhật.<br /><br />
+                Công ty hiện tổ chức lớp học tiếng Nhật hàng ngày để đào tạo cho những nhân viên mới. Kết quả đạt được là những cuộc họp hàng ngày vào buổi sáng, các buổi hội nghị, thảo luận về tiến độ công việc... tất cả đều sử dụng tiếng Nhật để thực hiện. Hiện công ty kinh doanh ở 2 lĩnh vực... </p>
+              </div>
+              <div class="main-content-main-p-2">
+                <p><span>Lĩnh vực 1: </span>Triển khai bản vẽ kỹ thuật trong lĩnh vực cơ khí, xây dựng, cầu đường và kiến trúc.v.v.... Công ty chúng tôi đang hợp tác với nhà máy LILAMA 18 để sản xuất ra sản phẩm khung đổ bê tông đường hầm (Formwork), cầu... để xuất khẩu ra Malaysia, Cambodia...</p>
+                <p><span>Lĩnh vực 2: </span>Với mục tiêu đem lại hiệu quả kinh tế cao nhất cho doanh nghiệp bằng khả năng tự quản lý nguồn lực một cách tối ưu nhất. Công ty chúng tôi cũng chuyên thiết kế phần mềm quản lý và thiết kế website theo yêu cầu của khách hàng nhằm nâng cao chất lượng quản lý cho doanh nghiệp.</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="content-block gallery-block row">
-        	<div class="content-block-header gallery-block-header">
-            	<h4>TRẠNG THÁI CÔNG TY</h4>
-                <a class="detail-btn" href="#"><img src="img/main_content_header_detail_btn_img.png" alt="Chi tiết" /></a>
-            </div>
+        <div class="content-block gallery-block">
+          <div class="content-block-bg">
+            <div class="content-block-header gallery-block-header">
+              <h4>TRẠNG THÁI CÔNG TY</h4>
+              <a class="detail-btn" href="#"><img src="img/main_content_header_detail_btn_img.png" alt="Chi tiết" /></a> </div>
             <div class="content-block-main gallery-block-main">
-            	<div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_1.png" alt="TRẠNG THÁI CÔNG TY" /></div>
-            	<div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_2.png" alt="TRẠNG THÁI CÔNG TY" /></div>
-            	<div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_3.png" alt="TRẠNG THÁI CÔNG TY" /></div>
-            	<div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_4.png" alt="TRẠNG THÁI CÔNG TY" /></div>
-            	<div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_1.png" alt="TRẠNG THÁI CÔNG TY" /></div>
-            	<div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_2.png" alt="TRẠNG THÁI CÔNG TY" /></div>
-            	<div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_3.png" alt="TRẠNG THÁI CÔNG TY" /></div>
-            	<div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_4.png" alt="TRẠNG THÁI CÔNG TY" /></div>
+              <div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_1.png" alt="TRẠNG THÁI CÔNG TY" /></div>
+              <div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_2.png" alt="TRẠNG THÁI CÔNG TY" /></div>
+              <div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_3.png" alt="TRẠNG THÁI CÔNG TY" /></div>
+              <div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_4.png" alt="TRẠNG THÁI CÔNG TY" /></div>
+              <div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_1.png" alt="TRẠNG THÁI CÔNG TY" /></div>
+              <div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_2.png" alt="TRẠNG THÁI CÔNG TY" /></div>
+              <div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_3.png" alt="TRẠNG THÁI CÔNG TY" /></div>
+              <div class="gallery-block-main-img col-md-3"><img src="img/gallery_block_main_img_4.png" alt="TRẠNG THÁI CÔNG TY" /></div>
             </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
 <div class="warper" id="support-warper">
@@ -174,6 +191,12 @@
 </div>
 <!--js--> 
 <script src="js/jquery.1.11.1.min.js" type="text/javascript"></script> 
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script> 
+<script src="js/plugins/nivoslider/jquery.nivo.slider.pack.js" type="text/javascript"></script> 
+<script type="text/javascript">
+	$(window).load(function() {
+		$('#slider').nivoSlider();
+	});
+</script>
 </body>
 </html>
