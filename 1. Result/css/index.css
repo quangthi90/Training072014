@@ -46,6 +46,8 @@ header .hotline .hotline_p span {
 	margin-bottom: 25px;
 }
 #topmenu {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 #topmenu ul {
 	background: url(../img/menu_separate.jpg) left top no-repeat;
@@ -54,6 +56,9 @@ header .hotline .hotline_p span {
 #topmenu ul li {
 	background: url(../img/menu_separate.jpg) right top no-repeat;
 	padding-right: 2px;
+}
+#topmenu.in ul li a {
+	background: url(../img/menu_bg.jpg) repeat-x;
 }
 #topmenu ul li.active a, #topmenu ul li.open a, #topmenu ul li:hover a {
 	background: url(../img/menu_bg_active.jpg) left top repeat-x;
@@ -275,67 +280,40 @@ header .hotline .hotline_p span {
 #support-warper {
 	background-color: #cccccc;
 	margin-bottom: 18px;
-	padding-top: 8px;
 	padding-bottom: 8px;
 }
 #support-warper .support-block {
+	width: 100%;
 	float: left;
 	background-color: #ffffff;
-	padding: 18px 8px 12px 12px;
+	margin-top: 8px;
+	padding-top: 18px;
+	padding-bottom: 12px;
 	border-radius: 4px;
 }
-#support-warper .support-block-1 {
-	float: right;
-	margin-top: 1px;
-}
-#support-warper .support-block-2 {
-}
-#support-warper .support-block .support-block-p {
-	width: 118px;
-	float: left;
-}
-#support-warper .support-block-1 .support-block-p-1 {
-	width: 118px;
+#support-warper .support-block-1 {}
+#support-warper .support-block-2 {}
+#support-warper .support-block .support-block-p { text-align: center; }
+#support-warper .support-block-p .support-block-p-1 {
+	width: 100%;
 	float: left;
 	margin-bottom: 12px;
 	color: #4b85b2;
 	font-weight: bold;
 }
-#support-warper .support-block-1 .support-block-p-2 {
-	width: 118px;
+#support-warper .support-block-p .support-block-p-2 {
+	width: 100%;
 	float: left;
 	margin-bottom: 0px;
 	font-size: 16px;
 	color: #bc3f3f;
 	font-weight: 200;
-}
-#support-warper .support-block-2 .support-block-p-1 {
-	width: 118px;
-	float: left;
-	margin-bottom: 6px;
-	color: #4b85b2;
-	font-weight: bold;
-}
-#support-warper .support-block-2 .support-block-p-2 {
-	width: 99px;
-	float: left;
-	margin-bottom: 0px;
-	padding-right: 19px;
-	line-height: 18px;
-	font-size: 16px;
-	font-weight: 200;
-	color: #bc3f3f;
 }
 #support-warper .support-block .support-block-yahoo {
-	width: 73px;
-	float: left;
-	margin-left: 41px;
-	margin-right: 17px;
+	text-align: center;
 }
 #support-warper .support-block .support-block-skype {
-	width: 185px;
-	float: left;
-	margin-top: 6px;
+	text-align: center;
 }
 ul#bottommenu {
 	float: left;
