@@ -261,6 +261,7 @@ header .hotline .hotline_p span {
 	margin-left: 30px;
 	margin-right: -12px;
 	margin-top: 19px;
+	margin-bottom: 12px;
 	transform: rotate(8deg);
 	-ms-transform: rotate(8deg);
 	-webkit-transform: rotate(8deg);
