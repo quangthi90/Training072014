@@ -59,7 +59,6 @@ header .hotline .hotline_p span {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	float: none;
-	display: inline-block;
 	background: #e5e5e5;
 }
 #topmenu ul {
@@ -381,4 +380,16 @@ ul#bottommenu li:first-child a {
 	padding: 11px 0px 16px 0px;
 	line-height: 15px;
 	letter-spacing: 0.1px;
+}
+
+@media (max-width: 768px) {
+	#topmenu-warper .navbar-header a {
+		display: inline-block;
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) {
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+}
+@media (min-width: 1200px) {
 }
