@@ -45,15 +45,16 @@ header .hotline .hotline_p span {
 	border: none;
 	border-radius: 0;
 	margin-bottom: 25px;
-	-webkit-box-shadow: 5px 0 10px 0px #BBB6B6;
-	box-shadow: 5px 0 10px 0px #BBB6B6;
+	-webkit-box-shadow: 5px 0 10px 0px #666565;
+	box-shadow: 5px 0 10px 0px #666565;
 }
 #topmenu-warper .navbar-header {
 	padding-top: 3px;
 	text-align: center;
 }
 #topmenu-warper .navbar-header a.collapsed {
-	background: #ffffff;}
+	background: #ffffff;
+}
 #topmenu-warper .navbar-header a, #topmenu-warper .navbar-header a:hover {
 	margin-right: 0px;
 	margin-top: 0px;
@@ -257,9 +258,12 @@ header .hotline .hotline_p span {
 #content .main-content .main-content-main .main-content-main-img {
 	width: 219px;
 	float: right;
-	margin-left: 20px;
-	margin-right: -11px;
-	margin-top: 5px;
+	margin-left: 30px;
+	margin-right: -12px;
+	margin-top: 19px;
+	transform: rotate(8deg);
+	-ms-transform: rotate(8deg);
+	-webkit-transform: rotate(8deg);
 }
 #content .main-content .main-content-main .main-content-main-p-2 {
 	width: 100%;
@@ -294,17 +298,17 @@ header .hotline .hotline_p span {
 }
 #content .gallery-block .gallery-block-main .gallery-block-main-img {
 	/*float: left;*/
-	background-color:#cccccc;
+	background-color: #cccccc;
 	display: inline-block;
-	transform:rotate(-6deg);
-	-ms-transform:rotate(-6deg); /* IE 9 */
-	-webkit-transform:rotate(-6deg); /* Opera, Chrome, and Safari */
+	transform: rotate(-6deg);
+	-ms-transform: rotate(-6deg); /* IE 9 */
+	-webkit-transform: rotate(-6deg); /* Opera, Chrome, and Safari */
 }
 #content .gallery-block .gallery-block-main .gallery-block-main-img img {
 	border: 5px solid #ffffff;
-	transform:rotate(6deg);
-	-ms-transform:rotate(6deg); /* IE 9 */
-	-webkit-transform:rotate(6deg); /* Opera, Chrome, and Safari */
+	transform: rotate(6deg);
+	-ms-transform: rotate(6deg); /* IE 9 */
+	-webkit-transform: rotate(6deg); /* Opera, Chrome, and Safari */
 	-webkit-box-shadow: 1px 1px 5px 1px #cccccc;
 	box-shadow: 1px 1px 5px 1px #cccccc;
 }
@@ -327,7 +331,6 @@ header .hotline .hotline_p span {
 #support-warper .support-block-2 {
 }
 #support-warper .support-block .support-block-p {
-	
 }
 #support-warper .support-block-p .support-block-p-1 {
 	width: 100%;
@@ -382,23 +385,26 @@ ul#bottommenu li:first-child a {
 	letter-spacing: 0.1px;
 }
 
-@media (max-width: 768px) {	
-	header a.company-name {
-		text-align: center;
-	}
-	#topmenu-warper .navbar-header a {
-		display: inline-block;
-	}
+@media (max-width: 768px) {
+header a.company-name {
+	text-align: center;
 }
+#topmenu-warper .navbar-header a {
+	display: inline-block;
+}
+}
+
 @media (min-width: 768px) and (max-width: 992px) {
-	#topmenu ul li a {
-		padding: 0 20px 0 20px;
-	}
+#topmenu ul li a {
+	padding: 0 20px 0 20px;
 }
-@media (min-width: 992px) and (max-width: 1200px) {	
-	#topmenu ul li a {
-		padding: 0 20px 0 20px;
-	}
 }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+#topmenu ul li a {
+	padding: 0 20px 0 20px;
+}
+}
+
 @media (min-width: 1200px) {
 }
