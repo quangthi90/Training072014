@@ -61,7 +61,6 @@ table{
 	background-color: #202020;
 	padding-top: 6px;
 	height: 35px;
-	background-color: #202020;
 }
 .footer td, .bottomright td{
 	min-width: 60px;
@@ -92,10 +91,12 @@ table{
 	border-bottom: 1px ridge #cccac3;
 }
 .divxanhnhat,.divxanhdam {
+	width: 30px;
+	height: 30px;
 	padding: 5px 10px;
 	color: white;
 	font-size: 16px;	
-	margin: -3px;
+	/*margin: -3px;*/
 }
 td .divxanhnhat{
 	background-color: #03cc85;
