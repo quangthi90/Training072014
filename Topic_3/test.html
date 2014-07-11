@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Daisy's Resume Page</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollToTop.js"></script>
+        <script type="text/javascript" src="js/contactFormJavascript.js"></script>
+        <script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+
+        <script>
+        $(document).ready(function(){
+            
+            var validator = $("#contact-form").validate({ 
+                rules: { 
+                    fullname: "required",
+                    company: "required",
+                    message: { 
+                        required: true, 
+                        minlength: 50,
+                        maxlength: 2000
+                    },
+                    res: {
+                    	required: true,
+                    	digit: true,
+                    }, 
+                    
+                    email: { 
+                        required: true, 
+                        email: true
+                    }
+                    //agree: "required"
+                }, 
+         
+                messages: { 
+                    fullname: "Please insert your name.",
+                    company: "Please input your Company name.",
+                    message: { 
+                        required: "Please insert your message.", 
+                        minlength: "Your message must be least 50 character",
+                        maxlength: "Your message had more 2000 character"
+                    }, 
+                   	res:{
+                   		required: "Please just insert integer number"
+                   	},
+                    email: { 
+                        required: "Please provide us a valid email address.", 
+                        email:"Invalid Email!"
+                    }
+                }
+            }); 
+            $('#btnsendJQ').click(function(){
+                if(validator.form()){
+                    //hợp lệ
+                    //do something
+                    var objectInfoPerson = {FullName:$("#fullname").val(),
+                							Company:$("#company").val(),
+                							Email:$("#email").val(),
+               								 Message:$("#message").val() };
+                    alert('Valid');
+                }
+                else{
+                    alert('Invalid');
+                }
+            });
+        });                
+ 		</script>
+
+</head>
+<body>
+	<!-- <div class="container"> -->
+	<div class="row">
+		<div class="col-md-3 navigation-bar"> 
+			<div class="navbar-container">
+
+		                <!--Navigation bar-->
+		                <div>
+		                    <div class="information">
+		                        <div class="img"></div>
+		                        <div class="remark">
+		                            <h2> Ha Thi Thao</h2>
+		                            <h3>University of Science</h3>                       
+		                        </div>
+		                    </div>
+		                    <ul class=".nav-stacked">
+		                        <li>
+		                            <a href="#AboutMe" style="color:#fff">
+		                                <span class="icon" style="color:#03cc85; " ><i class="fa fa-user"></i></span>
+		                                <span class="text" style="font-weight:bold">About me</span>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="#Research">
+		                                <span class="icon"><i class="fa fa-book"></i></span>
+		                                <span class="text">Research</span>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="#Public">
+		                                <span class="icon"><i class="fa fa-edit"></i></span>
+		                                <span class="text">Publications</span>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="#Teach">
+		                                <span class="icon"><i class="fa fa-clock-o"></i></span>
+		                                <span class="text">Teaching</span>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="#Gallery">
+		                                <span class="icon"><i class="fa fa-picture-o"></i></span>
+		                                <span class="text">Gallery</span>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a name="contact-form" href="#contactform">
+		                                <span class="icon"><i class="fa fa-calendar"></i></span>
+		                                <span class="text">Contact &amp; Meet me</span>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="#Download">
+		                                <span class="icon"><i class="fa fa-download"></i></span>
+		                                <span class="text">Download CV</span>
+		                            </a>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <!--Social bar-->
+		                <div class="social-bar">
+			                <div>
+			                    <ul>
+			                        <li>
+			                            <a href="https://www.facebook.com/tinhvu.luu">
+			                                <i class="fa fa-facebook"></i>
+			                            </a>
+			                        </li>
+			                        <li>
+			                            <a href="https://twitter.com/LuuTinhVuAnh">
+			                                <i class="fa fa-twitter"></i>
+			                            </a>
+			                        </li>
+			                        <li>
+			                            <a href="https://www.linkedin.com/home?trk=nav_responsive_tab_home">
+			                                <i class="fa fa-linkedin"></i>
+			                            </a>
+			                        </li>
+			                    </ul>
+			                 </div>
+		                </div>
+				</div>
+		</div> <!-- navigation-bar -->
+
+		<div class="col-md-9 content-page">
+			<div class="row bio">
+				<!-- <div class="row bio"> -->
+				<div class="col-md-4 profile">
+					<div class="profile-content" >
+						<img class="image" src="img/daisyha.jpg" />
+						<div class="overlay">
+				            <h1>Ha Thi Thao</h1>
+				            
+			                <ul>
+			                    <li>Graduate Information System</li>
+			                    <li>Faculty Information Technology</li>
+			                    <li>University of Science</li>
+			                </ul>  
+				        </div> <!-- end overlay -->
+					</div>	<!-- end profile content -->
+			    </div>  <!-- end profile --> 
+				<div class="col-md-8 description">
+	                <h3>Bio</h3>
+                    <ul>
+                        <li>Fullname: Ha Thi Thao</li>
+                        <li>Faculty: Information Technology</li>
+                        <li>University of Science</li>
+                        <li>Email: <a href="hoathachthao1606@gmail.com">hoathachthao1606@gmail.com</a></li>
+                        <li>Mobile: 0165 533 57 28</li>
+                        <li>I would like to be a web senior because web developing, web api is my interest.</li>
+                    </ul>
+                    
+                    <h4>Object</h4> 
+                    <ul style="list-style: circle;">
+                        <li>Finding a job in a professional environment, respectful.</li>
+                        <li>Opportunity to work directly with customers. </li>
+                        <li>Improving my skills in high pressure working enviroment</li>
+                        <li>Becoming project manager after 5 years</li>
+                    </ul>
+		        </div> <!-- end des -->
+			</div> <!-- end row bio -->
+
+			<div class="row education">
+				<div class="col-md-6 experience">
+                    <div>
+                       	<h3>Experience</h3>
+                   	</div>
+	                <ul>
+                    	<li><br>
+                    		<div class="dates">
+                    			<span>02/2012</span>
+                    			<span>06/2012</span>
+                    		</div>
+                    		<div class="content">
+                    			<h4>Library Management Software:</h4>
+                    			<p><em>C#</em><br><em>Design Database</em></p>
+                    		</div>
+                    	</li>
+                    	<li>
+                    		<div class="dates">
+                    			<span >10/2012</span>
+                    			<span >12/2012</span>
+                    		</div>
+                    		<div class="content">
+                    			<h4>Vietnamtravel</h4>
+                    			<p><em>C#</em><br><em>Design Database, GUI</em><br><em>Code features</em></p>
+                    		</div>
+                    	</li>
+                    	<li>
+                    		<div class="dates">
+                    			<span>02/2013</span>
+                    			<span >06/2013</span>
+                    		</div>
+                    		<div class="content">
+                    			<h4>Smarter Hotel Booking System</h4>
+                    			<p><em>PHP</em><br><em>Design Database,GUI</em></p>
+                    		</div>
+                    	</li>
+                    	<li>
+                    		<div class="dates">
+                    			<span >05/2014</span>
+                    			<span >06/2014</span>
+                    		</div>
+                    		<div class="content">
+                    			<h4>Sample Mart</h4>
+                    			<p><em>Java</em><br><em>Analysing data</em><br><em>Design Database</em><br><em>Code features</em></p>
+                    		</div>
+                    	</li>
+                    </ul>	                            
+                </div>
+                <div class="col-md-6 experience">
+                    <div>
+                        <h3>Education and Training</h3>
+                    </div>
+                    <ul>
+                        <li><br>
+                            <div class="dates">
+                                <span>Present</span>
+                                <span>07/2014</span>
+                            </div>
+                            <div class="content">
+                                <h4>Intern</h4>
+                                <p style="border-bottom: 1px solid #ccc;"><em><b>BmDesign</b></em><br>
+                                <em>Web Deveoper</em></p>
+                            </div>
+                        </li>
+                        <li style="padding-top: 1px;">
+                            <div class="dates">
+                                <span>07/2014</span>
+                                <span>09/2010</span>
+                            </div>
+                            <div class="content">
+                                <h4>University of Science</h4>
+                                <p style="border-bottom: 1px solid #ccc;"><em><b>Faculty Information Technology</b></em><br>
+                                <em>Information System</em></p>
+                            </div>
+                        </li>
+                    </ul>
+                 </div>
+            </div>
+
+			<div class="row contactform" id="contactform">
+				<div class="col-md-12">
+					<form id="contact-form" name="cotactForm" method="post">
+		                <div class="inquiry">
+		                    <h2>INQUIRY</h2>
+
+		                    <div class="textfield">Full name <span class="rq" style="color:green;">*</span></div>
+		                    <div class="textfield-content"><input type="text" class="require" id="fullname" name="fullname" placeholder="Enter your name"></div>
+		                    <span for="fullname" generated="true" class="error" id="namerequire"></span>
+
+		                    <div>Company <span class="rq" style="color:green;">*</span></div>
+		                    <div><input type="text" class="require" id="company" name="company" placeholder="Where do you work?"></div>
+		                    <span for="company" generated="true" class="error" id="companyrequire"></span>
+
+		                    <div>Email address <span class="rq" style="color:green;">*</span></div>
+		                    <div><input type="text" class="required email" id="email" name="email" placeholder="e.g info@envato.com"></div>
+		                    <span for="email" generated="true" class="error" id="emailrequire"></span>
+
+		                    <div>Message <span class="rq" style="color:green;">*</span></div>
+		                    <div><textarea rows="4" cols="50" class="required" id="message" name="message"></textarea></div>
+		                    <span for="message" generated="true" class="error" id="messrequire"></span>
+
+		                    <div>Security check <span style="color:green;">*</span></div>
+		                    <div><input type="text" disabled="disable" id="no1" name="no1" placeholder="No1">
+							<script>document.getElementById('no1').value = Math.floor((Math.random() * 100) + 1);</script>
+							+ 
+							<input type="text" disabled="disable" id="no2" name="no2" placeholder="No2">
+							<script>document.getElementById('no2').value = Math.floor((Math.random() * 100) + 1);</script>					
+							=
+							<input type="text" class="digit" id="res" name="res" placeholder="Your result is: "></div>
+		                    <span for="res" generated="true" class="error" id="securityrequire"></span>
+		                    <br>
+
+		                    <input type="button" id="btnsend" name="btnSend" value="SEND" onclick="sendContact();">
+		                    <input type="button" id="btnsendJQ" class="btTxt submit" name="send" value="Send with JQuery">
+		                </div>
+
+
+		                <div class="contact">
+		                    <h2>CONTACT</h2>
+		                    <h3>Jonathan Doe</h3>
+		                    <h3>Flinder St 35</h3>
+		                    <h3>23456 Melbourne</h3>
+		                    <h3>Australia</h3>
+		                    <h3>E-Mail Contact</h3>
+		                    <input type="button" id="contactmail" name="contactMail" value="spam@rocketthemes.net" onclick="abc();">
+		                </div>
+		            </form>
+				</div>
+			</div>
+		</div> <!-- end col 9 -->
+	</div> <!-- end row content -->
+</body>
+</html>
