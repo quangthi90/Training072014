@@ -284,10 +284,26 @@ header .hotline .hotline_p span {
 	padding-top: 2px;
 	padding-bottom: 22px;
 }
-#content .gallery-block .gallery-block-main .gallery-block-main-img {
+#content .gallery-block .gallery-block-main .gallery-block-main-img-warper {
+	margin-top: 32px;
 	float: left;
-	margin-top: 18px;
 	text-align: center;
+}
+#content .gallery-block .gallery-block-main .gallery-block-main-img {
+	/*float: left;*/
+	background-color:#cccccc;
+	display: inline-block;
+	transform:rotate(-6deg);
+	-ms-transform:rotate(-6deg); /* IE 9 */
+	-webkit-transform:rotate(-6deg); /* Opera, Chrome, and Safari */
+}
+#content .gallery-block .gallery-block-main .gallery-block-main-img img {
+	border: 5px solid #ffffff;
+	transform:rotate(6deg);
+	-ms-transform:rotate(6deg); /* IE 9 */
+	-webkit-transform:rotate(6deg); /* Opera, Chrome, and Safari */
+	-webkit-box-shadow: 1px 1px 5px 1px #cccccc;
+	box-shadow: 1px 1px 5px 1px #cccccc;
 }
 #support-warper {
 	background-color: #cccccc;
