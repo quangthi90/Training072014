@@ -416,9 +416,9 @@ input#btnsendJQ{
 	color: white;
 	text-align: center;
 }
-span#securityrequire {
+/*span#securityrequire {
 	padding: 250px;
-}
+}*/
 .contactform form .contact{
 	width: 20%;
 	float: left;
