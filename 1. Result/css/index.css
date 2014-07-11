@@ -46,9 +46,15 @@ header .hotline .hotline_p span {
 	border-radius: 0;
 	margin-bottom: 25px;
 }
-#topmenu {
-	padding-left: 0px;
-	padding-right: 0px;
+#topmenu-warper .navbar-header {
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
+#topmenu-warper .navbar-header button {
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
 }
 #topmenu ul {
 	background: url(../img/menu_separate.jpg) left top no-repeat;
@@ -126,12 +132,10 @@ header .hotline .hotline_p span {
 	background: #ffffff;
 	margin-bottom: 0px;
 }
-
 #content .column-left .video-block .video-block-main {
 	padding-top: 10px;
 	padding-bottom: 11px;
 }
-
 #content .column-left .linker-block ul.linker-block-main {
 	padding-left: 0px;
 	padding-bottom: 12px;
@@ -146,6 +150,7 @@ header .hotline .hotline_p span {
 #content .column-left .linker-block ul.linker-block-main li a {
 	padding-right: 5px;
 	padding-bottom: 5px;
+	padding-left: 0px;
 	display: inline-block;
 	position: relative;
 	-webkit-box-shadow: 5px 5px 7px 1px #dedede;
@@ -168,7 +173,7 @@ header .hotline .hotline_p span {
 	width: 154px;
 	height: 33px;
 	position: absolute;
-	left: 37px;
+	right: 5px;
 	padding-right: 6px;
 	padding-left: 0px;
 	top: 44px;
@@ -177,6 +182,7 @@ header .hotline .hotline_p span {
 	text-align: right;
 	line-height: 33px;
 	color: #ffffff;
+	left: initial;
 }
 #content .content-block {
 	width: 100%;
@@ -292,9 +298,13 @@ header .hotline .hotline_p span {
 	padding-bottom: 12px;
 	border-radius: 4px;
 }
-#support-warper .support-block-1 {}
-#support-warper .support-block-2 {}
-#support-warper .support-block .support-block-p { text-align: center; }
+#support-warper .support-block-1 {
+}
+#support-warper .support-block-2 {
+}
+#support-warper .support-block .support-block-p {
+	text-align: center;
+}
 #support-warper .support-block-p .support-block-p-1 {
 	width: 100%;
 	float: left;

@@ -1,9 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta http-equiv="Content-Script-Type" content="text/javascript"/>
 <meta http-equiv="Content-Style-Type" content="text/css"/>
+<meta content="width=device-width, initial-scale=1" name="viewport">
 <meta name="keywords" content="GKV"/>
 <meta name="description" content="GKV"/>
 <title>Toppage GKV</title>
@@ -45,31 +46,33 @@
 </div>
 <nav id="topmenu-warper" class="navbar navbar-default" role="navigation">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topmenu"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-    </div>
-    <div class="collapse navbar-collapse" id="topmenu">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">TRANG CHỦ</a></li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">GIỚI THIỆU <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">LINK</a></li>
-            <li><a href="#">LINK</a></li>
-          </ul>
-        </li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">SẢN PHẨM - DỊCH VỤ <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">LINK</a></li>
-            <li><a href="#">LINK</a></li>
-          </ul>
-        </li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">HỖ TRỢ KHÁCH HÀNG <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">LINK</a></li>
-            <li><a href="#">LINK</a></li>
-          </ul>
-        </li>
-      </ul>
+    <div class="row">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topmenu"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+      <div class="collapse navbar-collapse" id="topmenu">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">TRANG CHỦ</a></li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">GIỚI THIỆU <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">LINK</a></li>
+              <li><a href="#">LINK</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">SẢN PHẨM - DỊCH VỤ <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">LINK</a></li>
+              <li><a href="#">LINK</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">HỖ TRỢ KHÁCH HÀNG <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">LINK</a></li>
+              <li><a href="#">LINK</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
     <!-- /.navbar-collapse --> 
   </div>
@@ -100,10 +103,10 @@
           <div class="linker-block block">
             <h4>CÁC LIÊN KẾT</h4>
             <ul class="linker-block-main block-main">
-              <li><a href="#"><img src="img/linker_img_1.jpg" alt="NHÀ MÁY LILAMA" /><span>NHÀ MÁY LILAMA</span></a></li>
-              <li><a href="#"><img src="img/linker_img_2.jpg" alt="Công ty cổ phần GKJ" /><span>Công ty cổ phần GKJ</span></a></li>
-              <li><a href="#"><img src="img/linker_img_3.jpg" alt="Công ty cổ phần GKD" /><span>Công ty cổ phần GKD</span></a></li>
-              <li><a href="#"><img src="img/linker_img_4.jpg" alt="Công ty GTS" /><span>Công ty GTS</span></a></li>
+              <li><a class="col-xs-10 col-xs-offset-1" href="#"><img width="100%" src="img/linker_img_1.jpg" alt="NHÀ MÁY LILAMA" /><span>NHÀ MÁY LILAMA</span></a></li>
+              <li><a class="col-xs-10 col-xs-offset-1" href="#"><img width="100%" src="img/linker_img_2.jpg" alt="Công ty cổ phần GKJ" /><span>Công ty cổ phần GKJ</span></a></li>
+              <li><a class="col-xs-10 col-xs-offset-1" href="#"><img width="100%" src="img/linker_img_3.jpg" alt="Công ty cổ phần GKD" /><span>Công ty cổ phần GKD</span></a></li>
+              <li><a class="col-xs-10 col-xs-offset-1" href="#"><img width="100%" src="img/linker_img_4.jpg" alt="Công ty GTS" /><span>Công ty GTS</span></a></li>
             </ul>
           </div>
         </div>
@@ -197,6 +200,14 @@
 <script type="text/javascript">
 	$(window).load(function() {
 		$('#slider').nivoSlider();
+	});
+	$( document ).ready(function(e) {
+		if ($('.video-block-main iframe').length > 0) {
+        $('.video-block-main iframe').height($('.video-block-main iframe').width());}
+    });
+	$( window ).resize(function() {
+		if ($('.video-block-main iframe').length > 0) {
+        $('.video-block-main iframe').height($('.video-block-main iframe').width());}
 	});
 </script>
 </body>
