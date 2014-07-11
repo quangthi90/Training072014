@@ -50,13 +50,17 @@ header .hotline .hotline_p span {
 }
 #topmenu-warper .navbar-header {
 	padding-top: 3px;
-	padding-bottom: 2px;
+	text-align: center;
 }
-#topmenu-warper .navbar-header button {
+#topmenu-warper .navbar-header a.collapsed {
+	background: #ffffff;}
+#topmenu-warper .navbar-header a, #topmenu-warper .navbar-header a:hover {
 	margin-right: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	text-align: center;
+	float: none;
+	display: inline-block;
+	background: #e5e5e5;
 }
 #topmenu ul {
 	background: url(../img/menu_separate.jpg) left top no-repeat;
