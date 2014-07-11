@@ -92,11 +92,9 @@ table{
 }
 .divxanhnhat,.divxanhdam {
 	width: 30px;
-	height: 30px;
 	padding: 5px 10px;
 	color: white;
 	font-size: 16px;	
-	/*margin: -3px;*/
 }
 td .divxanhnhat{
 	background-color: #03cc85;

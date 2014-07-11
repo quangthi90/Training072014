@@ -7,38 +7,57 @@
     <link rel="stylesheet" type="text/css" href="bootstrap-3.2.0-dist/css/bootstrap-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="font-awesome-4.1.0/css/font-awesome.css"/>
 	<link rel="stylesheet" type="text/css" href="css/layout_bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-3 col-xs-4">
+			<div class="col-md-3">
 				<div class="menu">
-					<img src="img/img1.1.png"/>
-					<h2>Jennifer Doe</h2>
-					<div style="color:grey">Staford Iniversity</div>
-					<ul class="nav nav-pills nav-stacked" style="margin-top: 30px; margin-bottom: 150px;">
-						<li><i class="fa fa-user fa-2x" style="color:#03cc85; "></i>About me</li>
-						<li><i class="fa fa-book fa-2x"></i>Research</li>
-						<li><i class="fa fa-edit fa-2x"></i>Publications</li>
-						<li><i class="fa fa-clock-o fa-2x"></i>Teaching</li>
-						<li><i class="fa fa-photo fa-2x"></i>Gallery</li>
-						<li><i class="fa fa-calendar fa-2x"></i>Contact & Meet Me</li>
-						<li><i class="fa fa-download fa-2x"></i>Download CV</li>
-					</ul>
-					<div class="panel-footer" >
-						<i class="fa fa-facebook"></i>
-						<i class="fa fa-twitter"></i>
-						<i class="fa fa-linkedin"></i>
+					<img src="img/img1.1.png" class="center-block" />
+					<h2 class="text-center">Jennifer Doe</h2>
+					<div class="text-center text-muted">Staford Iniversity</div>
+					<div class="navbar-inverse navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu_bar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					 <div class="collapse navbar-collapse" id="menu_bar">
+						<ul class="nav nav-pills nav-stacked" style="margin-top: 30px; margin-bottom: 150px;">
+							<li><i class="fa fa-user fa-2x" style="color:#03cc85; "></i>About me</li>
+							<li><i class="fa fa-book fa-2x"></i>Research</li>
+							<li><i class="fa fa-edit fa-2x"></i>Publications</li>
+							<li><i class="fa fa-clock-o fa-2x"></i>Teaching</li>
+							<li><i class="fa fa-photo fa-2x"></i>Gallery</li>
+							<li><i class="fa fa-calendar fa-2x"></i>Contact & Meet Me</li>
+							<li><i class="fa fa-download fa-2x"></i>Download CV</li>
+						</ul>
+					</div>
+					<div class="panel-footer">
+						<div class="text-center">
+							<div class="row">
+								<div class="col-md-4 col-xs-4"><i class="fa fa-facebook"></i></div>
+								<div class="col-md-4 col-xs-4"><i class="fa fa-twitter"></i></div>
+								<div class="col-md-4 col-xs-4"><i class="fa fa-linkedin"></i></div>
+							</div>
+						</div>
 					</div>
 					</div>
 			</div>
-			<div class="col-md-9 col-xs-8">
+			<div class="col-md-9">
 				<div class="row" style="background-color: #f3f3f3">
-					<div class="col-md-4 col-xs-3">
-						<img src="img/img2.jpg"/>
+					<div class="col-md-4" style="position:relative; padding: 20px">
+						<img src="img/img2.jpg" class="img-responsive" alt="Reponsive image" style="width:350px" />
+						<div class="img_inf">
+							<h1 style="color: white">Jennifer Doe</h1>
+							<p>Graduate School of Business Knight Management Center Stanford University</p>
+						</div>
 					</div>
-					<div class="col-md-8 col-xs-5">
-						<h2>Bio</h2><hr>
+					<div class="col-md-8">
+						<div class="page-header"><h1>Bio</h1></div>
 						<p>A social psychologist and marketer, Jennifer Doe is the General Atlantic Professor of Marketing and Ormond Family Faculty at Stanford University’s Graduate School of Business. Her research spans time, money and happiness. She focuses on questions such as: What actually makes people happy, as opposed to what they think makes them happy? 
 						</p>
 						<p>
@@ -48,54 +67,58 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<h2>Academic Position</h2><hr>
-						<div><label class="divxanhnhat">Present</label>Genneral Atlantic Professor</div>
+						<div class="page-header"><h3>Academic Position</h3></div>
+						<div><label class="divxanhnhat">Present</label><span>Genneral Atlantic Professor</span></div>
 						<div><label class="divxanhdam">2005</label><i>Stanford University, Graduate School od Business</i></div>
 						<br>
-						<div><label class="divxanhnhat">2005</label>Full Professor</div>
+						<div><label class="divxanhnhat">2005</label><span>Full Professor</span></div>
 						<div><label class="divxanhdam">2004</label><i>Stanford University, Graduate School od Business</i></div>
 						<br>
-						<div><label class="divxanhnhat">2004</label>Assistane Professor</div>
+						<div><label class="divxanhnhat">2004</label><span>Assistane Professor</span></div>
 					</div>
 					<div class="col-md-6">
-						<h2>Education & Training</h2><hr>
-						<div><label class="divxanhdam">Ph.D.</label><label class="divxanhnhat">1995</label>
-							<p>Ph.D. in Marketting<br>
+						<div class="page-header"><h3>Education & Training</h3></div>
+						<div><label class="divxanhdam">Ph.D.</label><label class="divxanhnhat">1995</label><br><br>
+							<span>Ph.D. in Marketting</span><br>
 								<i>Stanford University, Graduate School of Business</i>
-							</p>
-						</div>
+						</div><br>
 						
 						<div><label class="divxanhdam">M.B.A</label><label class="divxanhnhat">1993</label></div>
 					</div>
 				</div>
 				<hr>
 				<div class="row">
-					<div class="col-md-8 col-xs-8">
-						<h3>INQUIRY</h3>
+					<div class="col-md-8 col-xs-8" style="padding-right: 30px">
+						<h4>INQUIRY</h4>
 						<form>
 							<div class="form-group">
-								<label for="fullname">Fullname</label>
+								<label for="fullname">Fullname</label><span class="text-danger">*</span>
 								<input type="text" class="form-control" id="fullname" placeholder="Enter your name">
+								<div class="bg-warning"></div>
 							</div>
 							<div class="form-group">
-								<label for="company">Company</label>
+								<label for="company">Company</label><span class="text-danger">*</span>
 								<input type="text" class="form-control" id="company" placeholder="What do you work?">
+								<div class="bg-warning"></div>
 							</div>
 							<div class="form-group">
-								<label for="email">Email address</label>
+								<label for="email">Email address</label><span class="text-danger">*</span>
 								<input type="email" class="form-control" id="email" placeholder="e.g. info@envato.com">
+								<div class="bg-warning"></div>
 							</div>
 							<div class="form-group">
-								<label for="message">Message</label>
+								<label for="message">Message</label><span class="text-danger">*</span>
 								<textarea class="form-control" id="message" rows="4"></textarea>
+								<div class="bg-warning"></div>
 							</div>
 							<div class="form-group">
-								<label\>Security check</label>
-								<div class="col-xs-1"><input type="text" readonly id="num1"></div><span>+</span>
-								<!-- <div class="col-xs-1">+</div> -->
+								<label>Security check</label>
+								<div class="col-xs-1"><input type="text" readonly id="num1"></div><!-- <span>+</span> -->
+								 <div class="col-xs-1">+</div> 
 								<div class="col-xs-1"><input type="text" readonly id="num2"></div>
 								<div class="col-xs-1">=</div>
 								<div class="col-xs-1"><input type="text" readonly id="sum"></div>
+								<div class="bg-warning"></div>
 							</div>
 							<div class="form-group">
 								<button type="button" class="btn btn-primary" style="background:black">SEND WITH JS</button>
@@ -104,14 +127,13 @@
 						</form>	
 					</div>
 					<div class="col-md-4 col-xs-4">
-						<h3>CONTACT</h3>
+						<h4>CONTACT</h4>
 						<address>
-							<strong>Jonathan Doe</strong><br>
+							<strong>Jonathan Doe</strong><br><br>
 							Filinders St 35<br>
 							23456 Mekbourne<br>
-							Australia<br>
-							<strong>E-mail Contact:</strong>
-							<!-- <a href="">spam@rockerthems.net</a> -->
+							Australia<br><br>
+							<strong>E-mail Contact:</strong><br>
 							<button type="button" class="btn btn-primary" style="background:black">spam@rockerthems.net</button>
 						</address>
 					</div>
@@ -120,5 +142,7 @@
 		</div>
 	</div>
 </body>
-</html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+</html>
+
