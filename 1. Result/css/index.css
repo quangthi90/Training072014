@@ -382,7 +382,10 @@ ul#bottommenu li:first-child a {
 	letter-spacing: 0.1px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {	
+	header a.company-name {
+		text-align: center;
+	}
 	#topmenu-warper .navbar-header a {
 		display: inline-block;
 	}
