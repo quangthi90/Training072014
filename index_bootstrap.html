@@ -39,9 +39,9 @@
 					<div class="panel-footer">
 						<div class="text-center">
 							<div class="row">
-								<div class="col-md-4 col-xs-4"><i class="fa fa-facebook"></i></div>
-								<div class="col-md-4 col-xs-4"><i class="fa fa-twitter"></i></div>
-								<div class="col-md-4 col-xs-4"><i class="fa fa-linkedin"></i></div>
+								<i class=" col-md-4 col-xs-4 fa fa-facebook"></i>								
+								<i class="col-md-4 col-xs-4 fa fa-twitter"></i>								
+								<i class="col-md-4 col-xs-4 fa fa-linkedin"></i>
 							</div>
 						</div>
 					</div>
@@ -49,14 +49,14 @@
 			</div>
 			<div class="col-md-9">
 				<div class="row" style="background-color: #f3f3f3">
-					<div class="col-md-4" style="position:relative; padding: 20px">
-						<img src="img/img2.jpg" class="img-responsive" alt="Reponsive image" style="width:350px" />
+					<div class="col-md-4 col-sm-4" style="position:relative; padding: 20px">
+						<img src="img/img2.jpg" class="img-responsive" style="width:100%" />
 						<div class="img_inf">
 							<h1 style="color: white">Jennifer Doe</h1>
 							<p>Graduate School of Business Knight Management Center Stanford University</p>
 						</div>
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-8 col-sm-8">
 						<div class="page-header"><h1>Bio</h1></div>
 						<p>A social psychologist and marketer, Jennifer Doe is the General Atlantic Professor of Marketing and Ormond Family Faculty at Stanford University’s Graduate School of Business. Her research spans time, money and happiness. She focuses on questions such as: What actually makes people happy, as opposed to what they think makes them happy? 
 						</p>
@@ -66,7 +66,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-7 col-sm-7 exper">
 						<div class="page-header"><h3>Academic Position</h3></div>
 						<div><label class="divxanhnhat">Present</label><span>Genneral Atlantic Professor</span></div>
 						<div><label class="divxanhdam">2005</label><i>Stanford University, Graduate School od Business</i></div>
@@ -76,7 +76,7 @@
 						<br>
 						<div><label class="divxanhnhat">2004</label><span>Assistane Professor</span></div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-5 col-ms-5 exper">
 						<div class="page-header"><h3>Education & Training</h3></div>
 						<div><label class="divxanhdam">Ph.D.</label><label class="divxanhnhat">1995</label><br><br>
 							<span>Ph.D. in Marketting</span><br>
@@ -94,35 +94,36 @@
 							<div class="form-group">
 								<label for="fullname">Fullname</label><span class="text-danger">*</span>
 								<input type="text" class="form-control" id="fullname" placeholder="Enter your name">
-								<div class="bg-warning"></div>
+								<div class="bg-warning text-danger" id="cmt_fullname"></div>
 							</div>
 							<div class="form-group">
 								<label for="company">Company</label><span class="text-danger">*</span>
 								<input type="text" class="form-control" id="company" placeholder="What do you work?">
-								<div class="bg-warning"></div>
+								<div class="bg-warning text-danger" id="cmt_company"></div>
 							</div>
 							<div class="form-group">
 								<label for="email">Email address</label><span class="text-danger">*</span>
 								<input type="email" class="form-control" id="email" placeholder="e.g. info@envato.com">
-								<div class="bg-warning"></div>
+								<div class="bg-warning text-danger" id="cmt_email"></div>
 							</div>
 							<div class="form-group">
 								<label for="message">Message</label><span class="text-danger">*</span>
 								<textarea class="form-control" id="message" rows="4"></textarea>
-								<div class="bg-warning"></div>
+								<div class="bg-warning text-danger" id="cmt_message"></div>
 							</div>
 							<div class="form-group">
-								<label>Security check</label>
-								<div class="col-xs-1"><input type="text" readonly id="num1"></div><!-- <span>+</span> -->
-								 <div class="col-xs-1">+</div> 
-								<div class="col-xs-1"><input type="text" readonly id="num2"></div>
-								<div class="col-xs-1">=</div>
-								<div class="col-xs-1"><input type="text" readonly id="sum"></div>
-								<div class="bg-warning"></div>
+								<label>Security check</label><br>
+								<input type="text" readonly id="num1" class="col-xs-2  text-center"/>
+								<div class="col-xs-1 text-center">+</div> 
+								<input type="text" readonly id="num2" class="col-xs-2  text-center">
+								<div class="col-xs-1  text-center">=</div>
+								<input type="text" id="sum" class="col-xs-2  text-center">
+								<div class="bg-warning text-danger" id="cmt_sum"  style="clear:both"></div>
+								<br>
 							</div>
 							<div class="form-group">
-								<button type="button" class="btn btn-primary" style="background:black">SEND WITH JS</button>
-								<button type="button" class="btn btn-primary"  style="background:black">SEND WITH JQ</button>
+								<button type="button" class="btn btn-primary" style="background:black" onclick="testInquiryJS()">SEND WITH JS</button>
+								<button type="button" class="btn btn-primary"  style="background:black" onclick="testInquiryJQuery()">SEND WITH JQ</button>
 							</div>
 						</form>	
 					</div>
@@ -144,5 +145,12 @@
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#num1').val(_random());
+		$('#num2').val(_random());
+	});
+</script>
 </html>
 

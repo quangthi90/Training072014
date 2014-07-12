@@ -21,7 +21,7 @@ li .fa{
 	padding: 5px 10px;
 	color: white;
 	font-size: 16px;
-	min-width: 80px;
+	min-width: 83px;
 	text-align: center;
 	margin: 0px;	
 }
@@ -41,7 +41,8 @@ li .fa{
 	background: black;
 	padding: 35px 15px;
 	opacity: 0.6;
+	height: 50%;
 }
-.col-md-6 >div >span, .col-md-6 >div >i{
+.exper >div >span, .exper >div >i{
 	margin-left: 10px;
 }
