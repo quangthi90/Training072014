@@ -1,0 +1,126 @@
+.radius-pro
+{
+	position: relative;
+	float: left;
+	z-index: 100;
+	width: 15px;
+	height: 15px;
+	line-height: 10px;
+	text-align: center;
+	border-radius: 12px;
+	background-color: #093;
+	display: inline;
+	margin-left: 5px;
+}
+.radius-nopro{
+	position: relative;
+	float: left;
+	z-index: 100;
+	width: 15px;
+	height: 15px;
+	line-height: 10px;
+	text-align: center;
+	border-radius: 12px;
+	background-color:#f6f6f6;
+	display: inline;
+	margin-left: 5px;
+}
+.logo{
+	position: relative;
+	width: 54px;
+	height: 54px;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 25px;
+	border: 5px solid #eeeeee;
+	background-color: white;
+	z-index: 100;
+}
+.skillGra{
+	float: left;
+	height: 30px;
+	border-radius: 10px;
+	font-size: 18px;
+	text-align:left;
+	margin-top:5px;
+	color: #FFF;
+}
+.description{
+	width: 80%;
+	padding-left: 55px;
+	border-left: 5px solid #eeeeee;
+}
+.description-content{
+	background-color:#EFEFEF;
+}
+.heading{
+	line-height: 40px;
+	height: 40px;
+	border-bottom: 3px solid #d9d9d9
+}
+	.heading > div:first-child{
+		float: left;
+		color: #2a0000;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.heading > div:nth-child(2){
+		float: right;
+		color: #838585;
+	}
+.headingskill{
+	line-height: 40px;
+	height: 40px;
+	border-bottom: 3px solid #0C3;
+	color: #2a0000;
+	font-size: 20px;
+	font-weight: bold;
+}
+.header{
+		height: 196px;
+		background-color: #f2f2f2;
+}
+	.header > a{
+		float: left;
+		width: 20%;
+		height: 100%;
+		line-height: 240px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.header > a:hover{
+		background-color: white;
+		margin-top: -10px;
+		height: 206px;
+		line-height: 260px;
+	}
+.footer{
+	padding-top: 10px;
+}
+.Icon{
+	float: right;
+	background-color: white;
+	height: 25px;
+	margin-top: -59px;
+	margin-right: -14px;
+}
+.Icon > a{
+	float: left;
+	width: 30px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	background-color: #0F9;
+}
+.Icon > a i {
+    color:#00C;
+}
+.Icon > a:first-child{
+				background-color: #0F9;
+			}
+			.Icon > a:hover{
+				background-color: #f6f6f6;
+				margin-bottom: -10px;
+				height: 25px;
+				line-height: 25px;
+			}

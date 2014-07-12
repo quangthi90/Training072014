@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Herry</title>
+		<link rel="stylesheet" href="main.css" type="text/css">
+	</head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  	<script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+    
+    <script type="text/javascript">			
+			function showRequire (id) {
+			$(id).text(" is required! ");
+			$(id).css("color", "red");
+			}
+			function showValid (id) {
+				$(id).text(" is valid! ");
+				$(id).css("color", "blue");
+			}
+			function showResult (id) {
+				$(id).text(" Your result was wrong! ");
+				$(id).css("color", "yellowgreen");
+			}
+			function showAlertEmail (id) {
+				$(id).text(" Please provide a valid email address! ");
+				$(id).css("color", "orange");
+			}
+			function showAlertMessage (id) {
+				// body...
+				$(id).text(" The length of message is btween 50 and 2000 characters! ");
+				$(id).css("color", "orange");
+			}
+			function contact()
+			{
+				var fullname = document.getElementById('txtfullname').value;
+				var company = document.getElementById('txtcompany').value;
+				var email = document.getElementById('txtemail').value;
+				var message = document.getElementById('txtmessage').value;
+				var soA = parseInt(document.getElementById('txtsoA').value);
+				var soB = parseInt(document.getElementById('txtsoB').value);
+				var sum = document.getElementById('txtTong').value;		
+				if (typeof(fullname) == 'undefined' || fullname == null || fullname == '') 
+				{
+					showRequire('#namerequire');
+				}
+				else
+				{
+					showValid('#namerequire');
+				}
+				
+				if (typeof(company) == 'undefined' || company == null || company == '') 
+				{
+						showRequire('#companyrequire');
+				}
+				else{
+						showValid('#companyrequire');
+				}
+				
+				
+				var test_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				if (!test_email.test(email)){
+					showAlertEmail (emailrequire);
+				}
+				if (typeof(email) == 'undefined' || email == null || email == '') 
+				{
+						showRequire('#emailrequire');
+				}
+				else{
+					if (!test_email.test(email)){
+							showAlertEmail ('#emailrequire');
+						}
+					else{
+						showValid('#emailrequire');
+					}
+				}
+
+				
+				if (typeof(message) == 'undefined' || message == null || message == '') {
+						showRequire('#messrequire');
+				}
+				else{
+					if(message.length >= 20 && message.length <=2000){
+						showValid('#messrequire');
+					}
+					else{
+						showAlertMessage('#messrequire');
+					}
+				}				
+				var res = soA + soB;
+				if(typeof(sum) == 'undefined' || sum == null || sum == ''){
+						showRequire('#securityrequire');
+					}
+				else{
+					if(sum == res){
+						showValid('#securityrequire');
+					}
+					else{
+						showResult('#securityrequire');
+					}
+				}
+			}
+    </script>
+	<body>
+		<div class="content">
+			<div class="main-logo">
+				<div class="IconAsw">
+					<div class="Icon">
+						<a class="" href="#"title="Facebook" >
+							<i class="fa fa-facebook"></i>
+						</a>
+						<a href="#" class="" title="Twitter">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<a href="#" class="" title="Googleplus">
+							<i class="fa fa-google"></i>
+						</a>
+						<a href="#" class="" title="Dribbble">
+							<i class="fa fa-dribbble"></i>
+						</a>
+						<a href="#" class="" title="Behance">
+							<i class="fa fa-behance"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="main-content">
+				<div class="content-header">
+					<a class="iconHome">
+						<img src="image/header.png" width="100%" height="100%" />
+					</a>
+					<a class="iconUser">
+						<img src="image/header2.png" width="100%" height="100%" />
+					</a>
+					<a class="iconProfile">
+						<img src="image/header3.png" width="100%" height="100%"/>
+					</a>
+					<a class="iconResume">
+						<img src="image/header4.png" width="100%" height="100%"/>
+					</a>
+					<a class="iconMail">
+						<img src="image/header5.png" width="100%" height="100%"/>
+					</a>
+				</div>
+				<div class="content-body">
+
+					<div class="left-body">
+						<div>
+							<div class="title">MY CAREER</div>
+							<div>
+							<div class="career-main">
+									<div class="career-item">
+										<div class="logo"><img src="image/icon1.png" width="50%" height="50%" /></div>
+										<div class="col datetime">2012 - 2013</div>
+										<div class="col description">
+											<div class="heading">
+												<div>Frontend Developer</div>
+												<div>Example Inc.</div>
+											</div>
+											<div class="description-content">Lorem ipsum dolor sit amet, cum in prompta voluptaria repudiandae. Ipsum ubique verterem cu vis. In feugiat salutandi inciderint vel, est duis inani explicari ex.</div>
+										</div>
+									</div>
+									<div class="career-item">
+									  <div class="logo"><img src="image/icon1.png" width="50%" height="50%" /></div>
+									  <div class="col datetime">2012 </div>
+										<div class="col description">
+											<div class="heading">
+												<div>Javascript Ninja</div>
+												<div>Google Inc.</div>
+											</div>
+											<div class="description-content">Lorem ipsum dolor sit amet, cum in prompta voluptaria repudiandae. Voluptas, officia, recusandeae quam laudantium eos et laboriosam aut vel ipsam commodi voluptatem sit repellendus blanditiis nobis elus!</div>
+										</div>
+									</div>
+									<div class="career-item">
+										<div class="logo"><img src="image/icon1.png" width="50%" height="50%" /></div>
+										<div class="col datetime">2010-2011 </div>
+										<div class="col description">
+											<div class="heading">
+												<div>Junior Frontend</div>
+												<div>Facebook Inc.</div>
+											</div>
+											<div class="description-content">Lorem ipsum dolor sit amet, cum in prompta voluptaria repudiandae. Voluptas, officia, recusandeae quam laudantium eos et laboriosam aut vel ipsam commodi voluptatem sit repellendus blanditiis nobis elus!</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="title">MY EDUCATION</div>
+							<div>
+							<div class="career-main">
+									<div class="career-item">
+										<div class="logo"><img src="image/icon1.png" width="50%" height="50%" /></div>
+										<div class="col datetime">2009-2010</div>
+										<div class="col description">
+											<div class="heading">
+												<div>Frontend Developer</div>
+												<div>Example Inc.</div>
+											</div>
+											<div class="description-content">Lorem ipsum dolor sit amet, cum in prompta voluptaria repudiandae. Ipsum ubique verterem cu vis. In feugiat salutandi inciderint vel, est duis inani explicari ex.</div>
+										</div>
+									</div>
+									<div class="career-item">
+									  <div class="logo"><img src="image/icon1.png" width="50%" height="50%" /></div>
+									  <div class="col datetime"> 2005-2009 </div>
+										<div class="col description">
+											<div class="heading">
+												<div>Javascript Ninja</div>
+												<div>Google Inc.</div>
+											</div>
+											<div class="description-content">Lorem ipsum dolor sit amet, cum in prompta voluptaria repudiandae. Voluptas, officia, recusandeae quam laudantium eos et laboriosam aut vel ipsam commodi voluptatem sit repellendus blanditiis nobis elus!</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right-body">
+						<div>
+							<div class="title">MY SKILLS</div>
+							<div class="skill-itemp"> 
+								<div class="heading"> Programming </div>
+								<div class="skill">
+									<div class="skillname">HTML</div>
+									<div class="skilllogoPro">
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+									</div>
+								</div>
+                                <div class="skill">
+									<div class="skillname">CSS</div>
+									<div class="skilllogoPro">
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class="radius-pro"></div>
+										<div class="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+									</div>
+								</div>
+                                <div class="skill">
+									<div class="skillname">JAVASCRIPT</div>
+									<div class="skilllogoPro">
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class="radius-pro"></div>
+										<div class="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+									</div>
+								</div>
+                                <div class="skill">
+									<div class="skillname">PHP</div>
+									<div class="skilllogoPro">
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+									</div>
+								</div>
+                                <div class="skill">
+									<div class="skillname">iOS</div>
+									<div class="skilllogoPro">
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+									</div>
+								</div>
+                                <div class="skill">
+									<div class="skillname">Ruby on Rails</div>
+									<div class="skilllogoPro">
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class ="radius-pro"></div>
+										<div class="radius-pro"></div>
+										<div class="radius-nopro"></div>
+										<div class="radius-nopro"></div>
+									</div>
+								</div>	
+							</div>
+							<div class="skill-itemp"> 
+								<div class="heading"> Graphic Design</div>
+                                <div class="skillGra" style=" position: relative; width:90%; background-color: #3C3; z-index: 1;">PhotoShop | 90%</div>
+								<div class="skillGra" style="width:80%; background-color: #063;">Inlustartor | 80%</div>
+                                <div class="skillGra" style="width:85%; background-color: #3C3;">InDesign | 85%</div>
+                                <div class="skillGra" style="width:90%; background-color: #063;">Firework | 90%</div>
+                                <div class="skillGra" style="width:85%; background-color: #3C3;">After Efects | 85%</div>
+                                <div class="skillGra" style="width:100%; background-color: #063;">Cinerma 4D | 100%</div>
+							</div>
+							<div class="skill-itemp"> 
+								<div class="heading"> Other skill
+								</div>
+                                <div class="skillGra" style="width:92%; background-color: #3C3;">Web Desing| 92%
+                                </div>
+								<div class="skillGra" style="width:96%; background-color: #063;">Web Development | 96%
+								</div>
+                                <div class="skillGra" style="width:84%; background-color: #3C3;">Logo Branding | 84%
+                                </div>
+                                <div class="skillGra" style="width:85%; background-color: #063;">WordPress | 85%
+                                </div>
+                                <div class="skillGra" style="width:81%; background-color: #3C3;">Grapic Design | 81%
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="contact">
+
+					    <div class="left">
+							<form name="form1" id="form1" method="post" action="">
+						  		<p><b>INQUIRY</b></p>
+						  		<p>Full name *</p>
+						  		<p>
+						    		<label for="txtfullname"></label>
+						    		<input type="text" style="width:300px;" name="fullname" id="txtfullname" placeholder="Enter your name">
+						    		<span for="fullname" generated="true" class="error" id="namerequire"></span>
+						  		</p>
+  
+					      		<p>Company *</p>
+						  		<p>
+						    		<label for="txtcompany"></label>
+						   			<input type="text" style="width:300px;" name="company" id="txtcompany" placeholder="Where do you work?">
+					        		<span for="company" generated="true" class="error" id="companyrequire"></span>
+						  		</p>
+					      		<p>Email address *</p>
+						  		<p>
+						    		<label for="txtemail"></label>
+						    		<input type="text" style="width:300px;" name="myemail" id="txtemail" placeholder="e.g. info@envato.com">
+					        		<span for="email" generated="true" class="error" id="emailrequire"></span>
+						  		</p>
+					      		<p>Message *</p>
+						  		<p>
+						    		<label for="txtmessage"></label>
+						    		<input type="text" style="width:300px; height:50px" name="mymessage" id="txtmessage">
+					        		<span for="message" generated="true" class="error" id="messrequire"></span>
+						  		</p> 
+						  		<p>Security check</p>
+						  		<p>
+						   	 		<label for="txtsoA"></label>
+						    		<input type="text" style="width:50px;" name="txtsoA" id="txtsoA">
+					        		<script>document.getElementById('txtsoA').value = Math.floor((Math.random() * 10) + 1);</script>
+					        			+
+					        		<label for="txtsoB"></label>
+						    		<input type="text" style="width:50px;" name="txtsoB" id="txtsoB">
+					        		<script> document.getElementById('txtsoB').value = Math.floor((Math.random() * 10) + 1);</script>	
+					        			=
+					       			<label for="txtTong"></label>
+						    		<input type="text" style="width:50px;" name="mysecuritycheck" id="txtTong">
+					        		<span for="res" generated="true" class="error" id="securityrequire"></span>
+					        
+						  		</p>
+					      		<p>
+					      			<input name="bntSend" style="background:#000; color:#FFF" type="button" value="SEND" onclick="contact()">
+					      			<input type="button" name="btnSendJQ" class="btnSendJQ" id="btnSendJQ" value="Send with Jquery" style="background:#000; color:#FFF;">
+					      			<input type="button" name="btnTop" class="btnTop" id="btnTop" value="Top" style="background:#000; color:#FFF;">
+					      		</p>
+							</form>
+					    </div>
+					    <div class="right">
+					    	<p> <b>CONTACT</b></p>
+					        <P><b>Jonathan Doe</b>
+					        	<br />Flinders St 35
+					        	<br />23456 Melbourne
+					        	<br />Australia
+					        	<br />
+					        	<b>E-Mail Contact</b>
+					        </p>
+					    	<input type="button" name="emailcontact" value="spam@rocketthemes.net" style="background:#000; color:#FFF" />
+					    </div>
+	    			</div>
+				</div>
+			</div>
+		</div>	
+	</body>
+    <script type="text/javascript">
+		$(".iconUser").click(function() {
+			$('html,body').animate(
+				{scrollTop: $(".left").offset().top
+			},1000);
+			$(".btnTop").show(1000);
+		});
+		$(".btnTop").click(function(){
+			$('html,body').animate(
+				{scrollTop: $(".content").offset().top
+			},1000);
+		});
+		$(".btnSendJQ").click(function() {
+            $("#form1").validate({
+				errorElement: "span",
+				});	
+        });
+		
+		var validator = $("#form1").validate({
+			errorElement: "span",
+			rules:{
+				company: {
+					required: true,
+				},
+				fullname:{
+					required: true,
+				},
+				myemail:{
+					required: true,
+					email: true
+				},
+				mymessage:{
+					required: true,
+					rangelength: [50,2000] ,
+				},
+				mysecuritycheck:{
+					required: true,
+				}	
+			},
+			messages: {
+				company: {
+					required: "Vui lòng nhập",
+				},
+				fullname:{
+					required: "Vui lòng nhập",
+				},
+				myemail:{
+					email: "Địa chỉ email không hợp lệ",
+					required: "Vui lòng nhập",
+				},
+				mymessage:{
+					required: "Vui lòng nhập",
+					rangelength:"Hãy nhập từ 50 đến 2000 kí tự",
+				},
+				mysecuritycheck:{
+					required: "Vui lòng nhập",
+				}
+			},
+			onfocusout: false,
+			onkeyup: false,
+			onclick: false,
+        });
+		
+		$("#btnSendJQ").click(function(){
+			var x = parseInt($("#txtsoA").val());
+			var y = parseInt($("#txtsoB").val());
+			var sum = x + y;
+			
+			validator.form();
+
+			var tong = $("#txtTong").val();
+			if(sum == tong)
+			{
+				$("#securityrequire").text("Chính Xác");
+			}
+			else
+				$("#securityrequire").text("Sai");
+		});
+	</script>
+	<footer>
+	</footer>
+</html>
