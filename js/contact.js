@@ -48,21 +48,24 @@ function testInquiryJS(){
 		result = 0;
 	}
 	//Cac ki tu sau @ chi co the la tu a-z va dau => chua duoc
-	else if(inquiry.email.match(/@[^a-z. ]/g) != null){
+	else
+	{
+		//Email chi co the co 1 chu @
+		var count = 0;
+		for (var i = inquiry.email.length - 1; i >= 0; i--)
+			if(inquiry.email[i] === '@')
+				count ++;
+		if(count != 1){
+			document.getElementById('cmt_email').innerHTML = "Email not correct!";
+			result = 0;	
+		}
+	}
+
+	if(inquiry.email.match(/@[^a-z]./g) != null){
 		document.getElementById('cmt_email').innerHTML = "Email not correct!";
 		result = 0;	
 	}
-	//Email chi co the co 1 chu @
-	var count = 0;
-	for (var i = inquiry.email.length - 1; i >= 0; i--){
-		if(inquiry.email[i] === '@'){
-			count ++;
-			if(count != 1){
-				document.getElementById('cmt_email').innerHTML = "Email not correct!";
-				result = 0;	
-			}
-		}
-	}
+	
 	len_mss = inquiry.message.length;
 	if(inquiry.message === ""){
 		document.getElementById('cmt_message').innerHTML = "Message can not empty!";
@@ -181,16 +184,14 @@ function click_Contact(){
 function click_AboutMe_bstr(){
 	psi_ele = $("#posi_aboutme").position();
 	posi = Math.round(psi_ele.top);
-	$('html').scrollTop("posi");	
-	$('html').animate({top: posi});
+	var body = $("html, body");
+	body.animate({scrollTop:posi}, '500', 'swing', function() {});
 	
 }
 function click_Contact_bstr(){
 	psi_ele = $("#posi_contact").position();
-	posi = Math.round(psi_ele.top);
-	$('html').scrollTop(posi);	
-	$('html').animate({bottom: '-'+posi});
-
-
-	
+	psi_body = $('body').position();
+	posi = Math.round(psi_body.top + psi_ele.top);
+	var body = $("html, body");
+	body.animate({scrollTop:posi}, '500', 'swing', function() {});
 }
