@@ -1,85 +1,52 @@
+.connect{
+	background-color: #fff;
+	height: 25px;
+	float:right;
+;
+}
+.cell{
+	height: 200px;
+	float: left;
 
-#main {
-    background-color: #fff;
-    margin: auto;
-    min-height: 900px;
-    width: 991px;
+	line-height: 200px;
+	text-align: center;
 }
-#main >div{ /*element style*/
-	 background: none repeat scroll 0 0 #7f8c8d;
-    padding: 3px 10px 10px 20px;
-}
-#header {
-    height: 200px;
-    width: 100%;
-}
-
-#main.bar{
-    width: 100%;
-    height: 25px;
-}
-#main .bar .connect{
-    float:right;
-    background-color: #fff;
-    padding-left: 5px;
-    width: 110px;
-    height: 25px;
-}
-#header .cell {
-    color: #fff;
-    float: left;
-    height: 100%;
-    line-height: 200px;
-    text-align: center;
-    width: 20%;
-}
-.home-selected { /* tag home*/
-    background: none repeat scroll 0 0 #2c3e50;
+.home{
+	background-color: #2c3e50;
+	color: white;
 
 }
-
-.user-selected { /*tag user*/
-	background: none repeat scroll 0 0 #3498db;
+.user{
+	background-color: #3498db;
+	color: white;
 }
-.suitcase-selected { /*tag suitcase*/
+.suitcase{ /*tag suitcase*/
 	background: none repeat scroll 0 0 #2980b9;
+	color: white;
 }
-.resume-selected { /*the resume*/
+.resume{ /*the resume*/
     background: none repeat scroll 0 0 white;
     color: #34495e !important;
 }
-.email-selected { /* The email*/
+.email{ /* The email*/
     background: none repeat scroll 0 0 #2c3e50;
+    color: white;
 }
-.content{ /* tag conten*/
-	background: none repeat scroll 0 0 white;
-    overflow: auto;
-    padding-top: 20px;
-}
-.content>div:first-child{
-	width: 55%;
-}
-.content>div{
-	float: left;
-    padding-left: 40px;
-}
-
-
-.content .heading {
-    font-size: 25px;
+/*
+heading;*/
+.heading{
+	font-size: 25px;
     font-weight: bold;
     margin-bottom: 30px;
     text-transform: uppercase;
 }
-.content.career-content{ /*element.style*/
+.career-content{
 	width: 452px;
-
 }
-
-.content .career-item {
+.career-item {
     width: 100%;
 }
-.content .career-item:first-child {
+ .career-item:first-child {
     margin-top: 30px;
 }
 .career-content > div {
@@ -92,7 +59,7 @@
     margin-right: 35px;
 }
 
-.content .career-item > div {
+ .career-item > div {
     float: left;
 }
 
@@ -101,61 +68,25 @@
     border-left: 5px solid #eeeeee;
     padding-bottom: 30px;
     padding-left: 35px;
-    width: 295px; /*295px*/
+    width: 400px; /*295px*/
 }
-.content .description .heading {
+.description .heading {
     border-bottom: 2px solid #d9d9d9;
     height: 40px;
     line-height: 40px;
 }
 
-.content .heading .des-head-left {
+ .heading .des-head-left {
     float: left;
+    font-size: 18px;
+    text-transform: none;
 }
-.content .heading .des-head-right {
+.heading .des-head-right {
     color: #85807b;
     float: right;
     font-size: 15px;
 }
-.content .heading > div {
-    font-size: 18px;
-    text-transform: none;
-}
-
-.content .heading {
-    font-weight: bold;
-}
-.des-body{ /* element.style*/
-	margin-top: 10px;
-}
-.logo{ /*element.style*/
-	 background: none repeat scroll 0 0 white;
-    border: 5px solid rgb(238, 238, 238);
-    border-radius: 25px;
-    height: 40px;
-    width: 40px;
-}
-.content .career-item .logo {
-    left: 90px;
-    position: relative;
-    top: -142px;
-    z-index: 100;
-}
-.content .career-item > div {
-    float: left;
-}
-
-
-
-.career-content > div {
-    float: left;
-}
-
-/* ------------------------------------*/
-.content .skill{
-	width: 300px;
-}
-.content .skill .des{ /* tiêu đề thành phần trong my skill*/
+ .skill .des{ /*  my skill*/
 
 	border-bottom: thin groove #3498db;
 	font-size: 20px;
@@ -166,7 +97,7 @@
 	
 }
 
-.content .skill .bar{
+.skill .bar{
 	float: left;
 	height: 25px;
     width: 300px;
@@ -178,20 +109,20 @@
 	background-color: #fafafa;
 
 }
-.content .skill .bar .bar-right{
+.skill .bar .bar-right{
     float: left;
     height: 100%;
     background-color: #f2f2f2;
 
 }
-.content .skill .bar .bar-left{
+.skill .bar .bar-left{
     float: left;
     height: 100%;
     border-radius:5px;
     background-color: #3498db;
 
 }
-.content .skill .bar .circle-invi{
+.skill .bar .circle-invi{
     float: right;
     height: 12px;
     width: 10px;
@@ -200,7 +131,7 @@
     margin-left: 3px;
     background-color: #f2f2f2;  
 }
-.content .skill .bar .circle-vi{
+.skill .bar .circle-vi{
     float: right;
     height: 12px;
     width: 10px;
@@ -214,11 +145,32 @@
     background-color: #3498db;
     font-size: 200%;
 }
-/* ////////////////////////////////////Topic 2///////////////////////*/
- /* dung de add fom inquiry */
+.contact{ /* dung de add fom inquiry */
+    width: 100%;
+    height: 700px;
 
-.content  .submit{
+}
+.left{
+    float: left;
+    width: 60%;
+    height: 700px;
+
+}
+.left .in{ /*  input*/
+    float: left;
+    height: 40px;
+    width: 520px;
+    margin-right: 40px;
+    border: 1px solid #ddd;
+    font-size: 15;
+    margin-bottom: 15px;
+
+}
+.submit{
+    height: 30px;
+    width: 70px;
     border-radius: 5px;
+    background-color: #000;
     color: #fff;
     margin-top: 30px;
  
@@ -239,57 +191,62 @@
     margin-left: 20px;
 
 }
-#so2{
+ #so2{
     height: 30px;
     width: 70px;
     margin-right: 20px; 
     margin-left: 20px;
 
 }
-.content .user #kq-so{
+#kq-so{
     height: 30px;
     width: 70px;
     margin-right: 20px; 
     margin-left: 20px;
 
 }
-.content #error-kqso{
+ #error-kqso{
     height: 30px;
     width: 520px;
     font-size: 13px;
     float: left;
     color: #0099FF;
 }
-.content #error-name{
+#error-name{
     height: 30px;
     width: 520px;
     font-size: 13px;
     float: left;
     color: #0099FF;
 }
-.content #error-company{
+#error-company{
     height: 30px;
     width: 520px;
     font-size: 13px;
     float: left;
     color: #0099FF;
 }
-.content #error-email{
+ #error-email{
     height: 30px;
     width: 520px;
     font-size: 13px;
     float: left;
     color: #0099FF;
 }
-.content #error-sms{
+ #error-sms{
     height: 30px;
     width: 520px;
     font-size: 13px;
     float: left;
     color: #0099FF;
 }
+.right{
+    float: right;
+    width: 35%;
+    height: 700px;
 
-.content  .email{
+}
+.right .email{
     float: left;
     height: 30px;
     width: 200px;
