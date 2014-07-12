@@ -179,22 +179,17 @@ function click_Contact(){
 
 //Animate when click About me & Contact in index_bootstrap.html
 function click_AboutMe_bstr(){
-	// $('html').scrollTop("0px");	
-	// $('#content').animate({top: "0"});
-	var body = $("body, html");
-	var top = body.scrollTop();
-	if(top != 0){
-		body.animate({scrollTop:0}, '500',function(){
-			alert("hihi");
-		});
-	}
+	psi_ele = $("#posi_aboutme").position();
+	posi = Math.round(psi_ele.top);
+	$('html').scrollTop("posi");	
+	$('html').animate({top: posi});
 	
 }
 function click_Contact_bstr(){
 	psi_ele = $("#posi_contact").position();
 	posi = Math.round(psi_ele.top);
 	$('html').scrollTop(posi);	
-	$('#content').animate({bottom: posi});
+	$('html').animate({bottom: '-'+posi});
 
 
 	

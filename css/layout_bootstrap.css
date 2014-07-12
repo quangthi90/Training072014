@@ -1,6 +1,7 @@
 .menu{
 	background-color: #2b2b2b;
 	color: white;
+	/*position: fixed;*/
 }
 .menu li{
 	cursor: pointer;
