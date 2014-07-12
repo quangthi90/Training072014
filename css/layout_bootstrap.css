@@ -11,7 +11,7 @@ li .fa{
 
 .nav li{
 	background-color: #303030;
-	padding: 12px 15px;
+	padding: 10px 15px;
 }
 .panel-footer{
 	background-color: #202020;
@@ -24,6 +24,8 @@ li .fa{
 	min-width: 83px;
 	text-align: center;
 	margin: 0px;	
+
+
 }
 .divxanhnhat{
 	background-color: #03cc85;

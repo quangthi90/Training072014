@@ -166,13 +166,15 @@ function testInquiryJQuery(){
 		$('#cmt_sum').text("Sum is incorrect!");
 }
 
-function click_AboutMe(){
+function click_AboutMe(classname){
 	loca = $(this).scrollTop();
-	$(".right").animate({top: loca});
+	$(classname).animate({top: loca});
 }
-function click_Contect(){
+function click_Contact(classname){
 	loca = $(this).scrollTop();
+	// alert(loca);
 	range = 868 - loca;
-	$(".right").animate({top: '-'+range});	
+	// range = 868 - loca;
+	$(classname).animate({top: '-'+range});	
 	$(this).scrollTop(559);
 }

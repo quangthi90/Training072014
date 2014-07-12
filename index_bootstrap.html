@@ -27,12 +27,12 @@
 					</div>
 					 <div class="collapse navbar-collapse" id="menu_bar">
 						<ul class="nav nav-pills nav-stacked" style="margin-top: 30px; margin-bottom: 150px;">
-							<li><i class="fa fa-user fa-2x" style="color:#03cc85; "></i>About me</li>
+							<li onclick="click_AboutMe('.col-md-9')"><i class="fa fa-user fa-2x" style="color:#03cc85; "></i>About me</li>
 							<li><i class="fa fa-book fa-2x"></i>Research</li>
 							<li><i class="fa fa-edit fa-2x"></i>Publications</li>
 							<li><i class="fa fa-clock-o fa-2x"></i>Teaching</li>
 							<li><i class="fa fa-photo fa-2x"></i>Gallery</li>
-							<li><i class="fa fa-calendar fa-2x"></i>Contact & Meet Me</li>
+							<li onclick="click_Contact('.col-md-9')"><i class="fa fa-calendar fa-2x"></i>Contact & Meet Me</li>
 							<li><i class="fa fa-download fa-2x"></i>Download CV</li>
 						</ul>
 					</div>
@@ -47,7 +47,7 @@
 					</div>
 					</div>
 			</div>
-			<div class="col-md-9">
+			<div class="col-md-9 right">
 				<div class="row" style="background-color: #f3f3f3">
 					<div class="col-md-4 col-sm-4" style="position:relative; padding: 20px">
 						<img src="img/img2.jpg" class="img-responsive" style="width:100%" />
@@ -150,6 +150,18 @@
 	$(document).ready(function(){
 		$('#num1').val(_random());
 		$('#num2').val(_random());
+	});
+
+	$(document).ready(function(){
+		$('.nav li').click( function () {
+			$('.fa').css("color", "white");
+			$('.nav li').animate({left:'0px'},"fast");
+			$('.nav li').css({"font-weight":"normal", "font-size":"13px"});
+
+			$(this).find('.fa').css("color","#03cc85"); 
+			$(this).animate({left:'20px'},"slow");
+			$(this).css({"font-weight":"bold", "font-size":"18px"}); 
+		});
 	});
 </script>
 </html>
