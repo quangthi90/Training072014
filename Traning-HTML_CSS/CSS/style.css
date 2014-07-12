@@ -75,7 +75,7 @@
   width: 940px;
   margin: 0 auto;
   background-color: #FFFFFF;
-  overflow: auto;
+  overflow: hidden;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -93,22 +93,18 @@
 .slidebar_left
 {
   float: left;
-  width: 300px;
   background-color: #333333;
   border-top-left-radius: 5px;
   overflow: hidden;
-  position: relative;
-  left: 640px;
+  position: initial;
 }
 .slidebar_right
 {
   float: left;
-  width: 640px;
   background-color: #FFFFFF;
   border-top-right-radius: 5px;
   overflow: hidden;
-  position: relative;
-  left: 640px;
+  position: initial;
 }
 .widget-left
 {
@@ -271,7 +267,6 @@ height: 45px;
 }
 #div_menu
 {
-  height: 67px;
   background-color: #eeefef;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
