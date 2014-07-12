@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid" style="position:relative">
 		<div class="row">
 			<div class="col-md-3">
 				<div class="menu">
@@ -27,12 +27,12 @@
 					</div>
 					 <div class="collapse navbar-collapse" id="menu_bar">
 						<ul class="nav nav-pills nav-stacked" style="margin-top: 30px; margin-bottom: 150px;">
-							<li onclick="click_AboutMe('.col-md-9')"><i class="fa fa-user fa-2x" style="color:#03cc85; "></i>About me</li>
+							<li onclick="click_AboutMe_bstr()"><i class="fa fa-user fa-2x" style="color:#03cc85; "></i>About me</li>
 							<li><i class="fa fa-book fa-2x"></i>Research</li>
 							<li><i class="fa fa-edit fa-2x"></i>Publications</li>
 							<li><i class="fa fa-clock-o fa-2x"></i>Teaching</li>
 							<li><i class="fa fa-photo fa-2x"></i>Gallery</li>
-							<li onclick="click_Contact('.col-md-9')"><i class="fa fa-calendar fa-2x"></i>Contact & Meet Me</li>
+							<li onclick="click_Contact_bstr()"><i class="fa fa-calendar fa-2x"></i>Contact & Meet Me</li>
 							<li><i class="fa fa-download fa-2x"></i>Download CV</li>
 						</ul>
 					</div>
@@ -47,8 +47,8 @@
 					</div>
 					</div>
 			</div>
-			<div class="col-md-9 right">
-				<div class="row" style="background-color: #f3f3f3">
+			<div class="col-md-9" id="content" style="pisition:absolute">
+				<div class="row" style="background-color: #f3f3f3" id="posi_aboutme">
 					<div class="col-md-4 col-sm-4" style="position:relative; padding: 20px">
 						<img src="img/img2.jpg" class="img-responsive" style="width:100%" />
 						<div class="img_inf">
@@ -86,8 +86,8 @@
 						<div><label class="divxanhdam">M.B.A</label><label class="divxanhnhat">1993</label></div>
 					</div>
 				</div>
-				<hr>
-				<div class="row">
+				<div class="row" id="posi_contact">
+					<hr>
 					<div class="col-md-8 col-xs-8" style="padding-right: 30px">
 						<h4>INQUIRY</h4>
 						<form>
@@ -130,10 +130,7 @@
 					<div class="col-md-4 col-xs-4">
 						<h4>CONTACT</h4>
 						<address>
-							<strong>Jonathan Doe</strong><br><br>
-							Filinders St 35<br>
-							23456 Mekbourne<br>
-							Australia<br><br>
+							<strong>Jonathan Doe</strong><br><br>Filinders St 35<br>23456 Mekbourne<br>Australia<br><br>
 							<strong>E-mail Contact:</strong><br>
 							<button type="button" class="btn btn-primary" style="background:black">spam@rockerthems.net</button>
 						</address>
@@ -163,6 +160,12 @@
 			$(this).css({"font-weight":"bold", "font-size":"18px"}); 
 		});
 	});
+	
+	// $(document).ready(function(){
+	// 	posi = $(this).scrollTop();
+	// 	$("#menu").offset({top:posi; left:0});
+	// });
+
 </script>
 </html>
 

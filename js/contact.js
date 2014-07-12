@@ -166,15 +166,36 @@ function testInquiryJQuery(){
 		$('#cmt_sum').text("Sum is incorrect!");
 }
 
-function click_AboutMe(classname){
+function click_AboutMe(){
 	loca = $(this).scrollTop();
-	$(classname).animate({top: loca});
+	$('.right').animate({top: loca});
 }
-function click_Contact(classname){
+function click_Contact(){
 	loca = $(this).scrollTop();
-	// alert(loca);
 	range = 868 - loca;
-	// range = 868 - loca;
-	$(classname).animate({top: '-'+range});	
+	$('.right').animate({top: '-'+range});	
 	$(this).scrollTop(559);
+}
+
+//Animate when click About me & Contact in index_bootstrap.html
+function click_AboutMe_bstr(){
+	// $('html').scrollTop("0px");	
+	// $('#content').animate({top: "0"});
+	var body = $("body, html");
+	var top = body.scrollTop();
+	if(top != 0){
+		body.animate({scrollTop:0}, '500',function(){
+			alert("hihi");
+		});
+	}
+	
+}
+function click_Contact_bstr(){
+	psi_ele = $("#posi_contact").position();
+	posi = Math.round(psi_ele.top);
+	$('html').scrollTop(posi);	
+	$('#content').animate({bottom: posi});
+
+
+	
 }
