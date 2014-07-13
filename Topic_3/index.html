@@ -87,7 +87,7 @@
 			                            <h3>University of Science</h3>                       
 			                        </div>
 			                    </div>
-			                    <ul class=".nav-stacked">
+			                    <ul class="nav-stacked">
 			                        <li>
 			                            <a href="#AboutMe" style="color:#fff">
 			                                <span class="icon" style="color:#03cc85; " ><i class="fa fa-user"></i></span>
@@ -304,14 +304,14 @@
 
 				                    <div class="form-group">
 				                    	<label for="textfield">Security check <span style="color:green;">*</span></label>
-				                    	<input type="text" disabled="disable" id="no1" name="no1" placeholder="No1">
+				                    	<div><input type="text" disabled="disable" id="no1" name="no1" placeholder="No1">
 										<script>document.getElementById('no1').value = Math.floor((Math.random() * 100) + 1);</script>
 										+ 
-										<input type="number" disabled="disable" id="no2" name="no2" placeholder="No2">
+										<input type="text" disabled="disable" id="no2" name="no2" placeholder="No2">
 										<script>document.getElementById('no2').value = Math.floor((Math.random() * 100) + 1);</script>					
 										=
-										<input type="number" class="digit  form-control" id="res" name="res" placeholder="Your result is: ">
-					                    <span for="res" generated="true" class="error" id="securityrequire"></span>
+										<input type="text" class="digit" id="res" name="res" placeholder="Your result is: ">
+					                    <span for="res" generated="true" class="error" id="securityrequire"></span></div>
 					                </div>
 				                    <button type="button" id="btnsend" name="btnSend" value="SEND" onclick="sendContact();">SEND</button>
 				                    <button type="button" id="btnsendJQ" class="btTxt submit" name="send">Send with JQuery</button>
