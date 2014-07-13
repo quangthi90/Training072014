@@ -106,17 +106,19 @@ ul .menu li a .text{
 	display:inline;
 	border-right: 1px solid #3d3d3d;
 	box-sizing: border-box;
+	color: white;
 }
-.navigation-bar .navbar-container div .social-bar{
+.navigation-bar div .social-bar{
 	position: absolute;
 	bottom: 0px;
 	left: 0;
 	background: #202020;
 	border-top: 1px solid #1A1A1A;
+	border-right: 1px solid #1A1A1A;
 	z-index: 2;
-	
+	/*bottom: 100%;*/
 }
-.navigation-bar .navbar-container div .social-bar div{
+.navigation-bar div .social-bar div{
 	/*width: 250px;*/
 }
 .social-bar div ul li{
@@ -129,10 +131,12 @@ ul .menu li a .text{
 width: 33%;
 padding: 10px;
 text-align: center;
+
 }
 
 .social-bar div {
 background: #303030;
+bottom: 100%;
 }
 
 .social-bar div ul li i{
@@ -144,7 +148,7 @@ opacity:1;
 }
 
 
-.social-bar span i{
+.social-bar i{
 	font-size: 16px;
 }
 
@@ -156,7 +160,7 @@ opacity:1;
 	bottom: 0;
 	background: #f7f7f7;
 	overflow: auto;
-	max-height: 850px;
+	max-height: 920px;
 }
 .content-page .bio{
 	position: static;
