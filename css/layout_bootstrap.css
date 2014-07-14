@@ -1,7 +1,6 @@
 .menu{
 	background-color: #2b2b2b;
 	color: white;
-	/*position: fixed;*/
 }
 .menu li{
 	cursor: pointer;
@@ -25,8 +24,6 @@ li .fa{
 	min-width: 83px;
 	text-align: center;
 	margin: 0px;	
-
-
 }
 .divxanhnhat{
 	background-color: #03cc85;

@@ -1,0 +1,6 @@
+@media (min-width: 700px){
+	.menu{
+		width: 22%;
+		position: fixed;
+	}
+}
