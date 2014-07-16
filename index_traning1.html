@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Thao</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.1.0/css/font-awesome.css"/>
+</head>
+<body>
+	<div class="main">
+		<div class="left">
+			<img src="img/img1.png" class="left_img" />
+			<h2 style="margin-top: -7px; margin-bottom: -1px">Jennifer Doe</h2>
+				<font style="color:grey">Staford Iniversity</font>
+			<div class="menu">
+				<table>
+				<tr>
+					<td><i class="fa fa-user fa-2x" style="color:#03cc85"></i></td>
+					<td class="inf_td"><a onclick="click_AboutMe()"> About me</a></td>
+				</tr>
+				<tr>
+					<td><i class="fa fa-book fa-2x"></i></td>
+					<td class="inf_td"><a>Research</a></td>
+				</tr>
+				<tr>
+					<td><i class="fa fa-edit fa-2x"></i></td>
+					<td class="inf_td"><a>Publications</a></td>
+				</tr>
+				<tr>
+					<td><i class="fa fa-clock-o fa-2x"></i></td>
+					<td class="inf_td"><a>Teaching</a></td>
+				</tr>
+				<tr>
+					<td><i class="fa fa-photo fa-2x"></i></td>
+					<td class="inf_td"><a>Gallery</a></td>
+				</tr>
+				<tr>
+					<td><i class="fa fa-calendar fa-2x"></i></td>
+					<td class="inf_td"><a onclick="click_Contact()">Contact & Meet Me</a></td>
+				</tr>
+				<tr>
+					<td><i class="fa fa-download fa-2x"></i></td>
+					<td class="inf_td"><a>Download CV</a></td>
+				</tr>
+			</table>
+			</div>
+			<div class="footer">
+				<table>
+					<tr>
+						<td><i class="fa fa-facebook"></i></td>
+						<td><i class="fa fa-twitter"></i></td>
+						<td><i class="fa fa-linkedin"></i></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="right">
+			<div class="topright">
+				<table>
+					<tr>
+						<td >
+							<div style="position: relative">
+							<img src="img/img2.jpg"/>
+							<div class="info_img">
+								<h1>Jennifer Doe</h1>
+								<p>Graduate School of Business Knight Management Center Stanford University</p>
+							</div>
+							<div>
+						</td>
+						<td style="width: 440px;">
+							<h2>Bio</h2>
+							<p>
+								A social psychologist and marketer, Jennifer Doe is the General Atlantic Professor of Marketing and Ormond Family Faculty at Stanford University’s Graduate School of Business. Her research spans time, money and happiness. She focuses on questions such as: What actually makes people happy, as opposed to what they think makes them happy? 
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="bottomright">
+				<table class="bottomright_top">
+					<tr>
+						<td width="300px"><h2>Academic Position</h2></td>
+						<td width="300px"><h2>Education & Training</h2></td>
+					</tr>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td class="divxanhnhat" style="border-bottom: 3px solid #03bb7a">Present</td>
+									<td class="text_title">Genneral Atlantic Professor</td>
+									<td class="divxanhdam">2005</td>
+									<td class="text_comment">Stanford University, Graduate School od Business</td>
+								</tr>
+
+								<tr>
+									<td class="divxanhnhat" style="border-bottom: 3px solid #03bb7a">2005</td>
+									<td class="text_title">Full Professor</td>
+									<td class="divxanhdam">2004</td>
+									<td class="text_comment">Stanford University, Graduate School od Business</td>
+								</tr>
+
+								<tr>
+									<td class="divxanhnhat">2004</td>
+									<td class="text_title">Assistane Professor</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table style="margin-top: -100px;">
+								<tr>
+								<td class="divxanhdam">Ph.D.</td>
+								<td class="divxanhnhat">1995</td>
+								</tr>
+								<tr>
+									<td class="text_title" style="padding-left: 15px;">Ph.D. in Marketting</td>
+									<td class="text_comment">Stanford University, Graduate School of Business</td>
+								</tr>
+								<tr>
+								<td class="divxanhdam">M.B.A</td>
+								<td class="divxanhnhat">1993</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="contact">
+				<div class="inquiry">
+					<h3>INQUIRY</h3>
+					<form class="_input_text">
+						Full name<font class="star_madatory">*</font><br/><input type="text" name="fullname" placeholder ="Enter your name" id="fullname"/><br/><div id="cmt_fullname" class="font_cmtError_Inquiry"></div><br/>
+						Company<font class="star_madatory">*</font><br/><input type="text" name="company" placeholder="Where do you work?" id="company"/><br/><div id="cmt_company" class="font_cmtError_Inquiry"></div><br/>
+						Email address<font class="star_madatory">*</font><br/><input type="text" name="email" placeholder="e.g. info@envato.com" id="email"><br/><div id="cmt_email" class="font_cmtError_Inquiry"></div><br/>
+						Message<font class="star_madatory">*</font><br/><textarea rows="4" cols="40" name="message"  id="message"></textarea><br/><div id="cmt_message" class="font_cmtError_Inquiry"></div><br/>
+					</form>
+				<div class="_input_sec_check" style="margin-bottom: 20px;">
+					Security check<br/>
+					<input type="text" name="num1" style="margin-left: 0" readonly id="num1"/>+
+					<input type="text" name="num2" readonly id="num2"/>=
+					<input type="text" name="sum" id="sum" /><br/>
+					<div id="cmt_sum" class="font_cmtError_Inquiry"></div>
+					</div>
+					<input type="submit" name="send_js" class="_button" value="SEND WITH JS" onclick="testInquiryJS();"/>
+					<input type="submit" name="send_jquery" class="_button" value="SEND WITH JQUERY" onclick="testInquiryJQuery();"/>
+				</div>
+				<div class="infContact">
+					<h3>CONTACT</h3>
+					<h4>Jonathan Doe</h4>
+					<p>Flinders St 35<br/>23456 Melbourne<br/>Australia</p>
+					<h4>E-mail Contact:</h4>
+					<a href="mailto:spam@rocketthemes.net" class="_button" style="text-decoration: none;"><font size="1px">spam@rocketthemes.net</font></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".inf_td").bind("mouseover",function(){
+			$(this).css({"font-weight": "bold", "background-color":"#03bb7a"});
+		});
+		$(".inf_td").bind("mouseout",function(){
+			$(this).css({"font-weight": "normal", "background-color":"#303030"});});
+	});
+
+	$(document).ready(function(){
+		$('#num1').val(_random());
+		$('#num2').val(_random());
+	});
+
+	$(document).ready(function(){
+		$('.inf_td').click( function () {
+			$('.fa').css("color", "white");
+			$(this).parents('tr').eq(0).find('.fa').css("color","#03cc85"); 
+		});
+	});
+</script>
+</html>
