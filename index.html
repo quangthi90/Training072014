@@ -81,8 +81,8 @@
 							<tbody data-bind="foreach: listwork">
 							<!-- ko if: !isEditing() && !isNew()-->
 								<tr>
-									<td data-bind="text: $parent.countWork().tofixed(2)" ></td>
-									<td><span data-bind="text: activity"></span></td>
+									<td data-bind="text: $index() + 1" ></td>
+									<td data-bind="text: activity"></span></td>
 									<td data-bind="text: date"></td>
 									<td data-bind="text: hfrom"></td>
 									<td data-bind="text: hto"></td>
@@ -96,7 +96,7 @@
 								<!-- /ko -->
 								<!-- ko if: isEditing() && !isNew() -->
 								<tr>
-									<td></td>
+									<td data-bind="text: $index() + 1"></td>
 									<td><input data-bind="value: activity" /></td>
 									<td data-bind="text: date"/></td>
 									<td><input  data-bind="value: hfrom" style="width: 100%"/></td>
@@ -111,7 +111,7 @@
 								<!-- /ko -->	
 								<!-- ko if: isEditing() && isNew() -->
 								<tr>
-									<td></td>
+									<td data-bind="text: $index() + 1"></td>
 									<td><input data-bind="value: activity" /></td>
 									<td><input data-bind="value: date" /></td>
 									<td><input  data-bind="value: hfrom" style="width: 100%"/></td>
@@ -153,11 +153,10 @@
 								</tr>
 							</thead>
 							<tbody data-bind="foreach: listwork">
-
 							<!-- ko if: !isEditing() && !isNew() && isSearch-->
 								<tr>
-									<td></td>
-									<td><span data-bind="text: activity"></span></td>
+									<td data-bind="text: $index() + 1"></td>
+									<td data-bind="text: activity"></td>
 									<td data-bind="text: date"></td>
 									<td data-bind="text: hfrom"></td>
 									<td data-bind="text: hto"></td>
@@ -171,7 +170,7 @@
 								<!-- /ko -->
 								<!-- ko if: isEditing() && !isNew() -->
 								<tr>
-									<td></td>
+									<td data-bind="text: $index() + 1"></td>
 									<td><input data-bind="value: activity" /></td>
 									<td data-bind="text: date"/></td>
 									<td><input  data-bind="value: hfrom" style="width: 100%"/></td>
@@ -186,7 +185,7 @@
 								<!-- /ko -->	
 								<!-- ko if: isEditing() && isNew() -->
 								<tr>
-									<td></td>
+									<td data-bind="text: $index() + 1"></td>
 									<td><input data-bind="value: activity" /></td>
 									<td><input data-bind="value: date" /></td>
 									<td><input  data-bind="value: hfrom" style="width: 100%"/></td>
