@@ -1,0 +1,16 @@
+._search{
+	padding-bottom: -20px;
+	padding-top: 10px;
+}
+.doing_list{
+/*	border-bottom: 3px solid green;*/
+	/*padding-bottom: 10px;*/
+
+}
+@media (min-width: 900px){
+	.doing_list{
+			border-right: 3px solid green;
+/*			border-bottom: none;
+			padding-bottom: 0;*/
+		}
+}
