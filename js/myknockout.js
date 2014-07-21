@@ -14,16 +14,14 @@ function ItemWork(data){
 		return ko.toJS(data);
 	};
 
-	item.updateValue = function(data){
-		item.activity = ko.observable(data.activity || "");
-		item.date = ko.observable(data.date || "");
-		item.hfrom = ko.observable(data.hfrom || "");
-		item.hto = ko.observable(data.hto || "");
-		item.status = ko.observable(data.status || "");
-		item.note = ko.observable(data.note || "");
-		item.isEditing = ko.observable(data.isEditing || false);
-		item.isNew = ko.observable(data.isNew || false);
-		item.isSearch = ko.observable(data.isSearch || false);
+	item.updateValueBackup = function(data){
+		item.activity = ko.observable(data.activity());
+		item.date = ko.observable(data.date());
+		item.hfrom = ko.observable(data.hfrom());
+		item.hto = ko.observable(data.hto());
+		item.status = ko.observable(data.status());
+		item.note = ko.observable(data.note());
+		item.isSearch = ko.observable(data.isSearch);
 	};
 }
 
@@ -33,7 +31,11 @@ function Task_ListWork(name, time, item_work){
 	self.time = time;
 	self.listwork = ko.observableArray(item_work);
 	self.amountWork = ko.observable(0);
-	self.itemBackup = {};
+	self.itemBackup = ko.observable();
+
+	function cloneObservable(observableObject) {
+	    return ko.mapping.fromJS(ko.toJS(observableObject));
+	}
 
 	self.addWork = function () {
 		self.listwork.push(new ItemWork({ isNew : true, isEditing : true }));
@@ -48,7 +50,7 @@ function Task_ListWork(name, time, item_work){
 
 	self.editWork = function(item){
 		item.isEditing(!item.isEditing());	
-		self.itemBackup = item.toJS();
+		self.itemBackup(cloneObservable(item));
 	};
 
 	self.saveWork = function(item){
@@ -57,9 +59,8 @@ function Task_ListWork(name, time, item_work){
 	};
 
 	self.cancelEdit = function(item){			
-		item.updateValue(self.itemBackup);
-		console.log(self.itemBackup);
-		console.log(item.activity());
+		item.updateValueBackup(self.itemBackup());
+		self.saveWork(item);
 	};
 
 	self.cancelNew = function(item){
