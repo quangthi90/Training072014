@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Knockout JS</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2 todo-list" id="listwork">
+				<p class="lead">MY TO-DO LIST</p>
+				<h4>To-dos of&nbsp;<b style="color:green">TODAY</b></h4>
+                <ul id="listwork" data-bind="foreach: work">
+                	<li>
+                		<span data-bind="text:time"></span> : <span data-bind="text:content"></span>
+                	</li>                	
+                </ul>
+			</div>
+			<div class="col-md-10 main">
+
+				<form class="form" role="form">					
+					<div class="row">
+						<div class="col-md-2">
+							<label>Total (<span class="badges" data-bind="text: $data.works().length"></span>)</label>
+						</div>
+
+						<div class="col-md-10">
+							<div class="form-group">
+								<input type="search" class="form-control" id="keyword" placeholder="Enter you key work what you want to search...." data-bind="value: query, valueUpdate='keyup'" autocomplete="off">
+							</div>
+							<p>Search</p>
+						</div>
+						
+							<!-- </div> --> <!-- /end form-group -->
+						<!-- </div> -->
+					</div> <!-- /end row 1 -->
+				
+
+					<div class="form-group">
+						<div class="row">
+						<span class="badges" data-bind="text: $data.works().length"></span>
+							<div class="container table-reponsive" id="work">
+								<table class="table" data-bind="visible: $data.works().length > 0">
+									<thead style="background:rgb(103, 163, 10);">
+										<tr>
+											<th>No</th>
+											<th>Activity</th>
+											<th>Date</th>
+											<th>From(h)</th>
+											<th>To(h)</th>
+											<th>Status</th>
+											<th>Notes</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody data-bind="foreach: works" style="border: 1px;">
+										<tr>
+											<td><input class="required number" data-bind="value: no, uniqueName: true"/></td>
+											<td><input class="required" data-bind="value: activity"/></td>
+											<td><input class="required" data-bind="value: date"/></td>
+											<td><input class="required number" data-bind="value: from"/></td>
+											<td><input class="required number" data-bind="value: to"/></td>
+											<td><input class="required" data-bind="value: status"/></td>
+											<td><input class="required" data-bind="value: notes"/></td>
+											<td><a href="#" data-bind="click: ">Edit</a>| <a href="#" data-bind="click: $root.removeWork">Delete</a></td>
+										</tr>
+									</tbody>								
+								</table>
+								<button data-bind="click: addWork">Add new</button>
+							</div>
+						</div> <!-- /end row 2 -->
+					</div>
+
+				</form>
+
+			</div>
+		</div> <!-- /end row of container -->
+	</div> <!-- /end container-fliud -->
+
+	<!-- Js script -->
+	<script type="text/javascript" src="js/knockout-3.1.0.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
+
+</body>
+</html>

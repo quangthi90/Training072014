@@ -1,0 +1,30 @@
+body{
+	padding-top: 20px;
+}
+
+div.todo-list {
+	text-align: center;
+	color: blue;
+	border-right: 1px solid green;
+
+}
+
+div.todo-list p {
+	font-weight: bold;
+	border-bottom: 1px solid green;
+}
+
+div.todo-list h4 {
+	color: grey;
+}
+
+div.todo-list ul {
+	list-style: none;
+}
+div.todo-list ul li {
+	margin-left: -50px;
+}
+
+div.main {
+
+}
