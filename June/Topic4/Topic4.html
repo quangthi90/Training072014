@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset = "UTF-8">
+		<title>Topic4</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+ 	<link rel="stylesheet" href="css/bootstrap-theme.css">
+</head>
+<style type="text/css" media="screen">
+	input {
+		width: 110px;
+	}
+</style>
+
+
+<body>
+ 	<div class="container" style="background-color: #fafafa; margin-top: 30px;">
+ 	<div class = "row" style="border-bottom:thin groove #003;" >
+ 		<div class = "col-md-3" style = " padding: 20px 20px 20px 20px;">
+ 			<div class="col-md-2"> 
+ 				
+ 			</div>
+ 			<div class = "col-md-10">
+ 				
+ 			</div>
+ 			<div class = "heading" style="color: green; float: left;">
+ 				<strong> My to-do list</strong>
+ 			</div> 
+ 		</div>
+ 		<div class="col-md-9" style="border-left: 3px solid green; padding: 20px 20px 20px 20px;">
+ 			<div class = "heading" style="color: green; float: left;">
+ 				<strong style = "font-size: 25px;"> Total task</strong>
+ 			</div>
+ 			<form class="form-inline" role = "form" style="float:right; color:green;">
+ 			<input type="text" style="width: 200px; height: 35px;" data-bind = "value: keyWord" placeholder = " Nhập từ cần tìm kiếm...">
+ 			<button type="text" class = "btn" style="background-color: #fafafa; color: green;" data-bind = "click: search"> Search</button>
+ 			</form>
+ 		</div>
+ 		
+ 	</div>
+ 	<div class="row" >
+ 		<div class="col-md-3">
+	 		<div class = "heading" style="color: green; float: left; align-text = center; width:100% ">
+	 			 <strong> Todo of today</strong>
+	 		 </div>
+	 		<div >
+		<table id="demo1"class = "table" style="background-color:#fff;">
+		    <thead>
+		    	<tr>
+			        <th>Time </th><th>Activity</th>
+			    </tr>
+		    </thead>
+	    	<Todo: Generate table body >
+		    <tbody data-bind="foreach: toDayTodoList">
+			    <tr>
+			        <td data-bind="text: from() + 'h'"></td>
+			        <td data-bind="text: activity"></td>
+			    </tr>    
+			</tbody>
+		</table>
+	</div>
+
+ 		</div>
+ 		<div class="col-md-9" style="background-color: #fff; border-left: 3px solid green; ">
+
+	 			<table id = "demo2" class="table" style="margin-top: 20px;">
+	 				<thead style="background-color: #0099FF
+;">
+	 					<tr>
+	 						<th>No.</th><th> Activity</th><th> Date </th><th> From(h) </th><th> To(h) </th><th> Status </th><th> Notes </th><th> Action</th>
+	 					</tr>
+	 				</thead>
+	 				<tbody data-bind="foreach: listitems"> 
+	 				<!-- Task hien thi o dang binh thuong-->
+	 					<!-- ko if: !isEditing() && !isNew()-->
+	 					<tr>
+	 						<td data-bind = "text: $index() + 1"></td>
+	 						<td data-bind = "text: activity"></td>
+	 						<td data-bind = "text: date"></td>
+	 						<td data-bind = "text: from"></td>
+	 						<td data-bind = "text: to"></td>
+	 						<td data-bind = "text: status"></td>
+	 						<td data-bind = "text: notes"></td>
+	 						<td> 
+	 							<a data-bind = "click: $parent.editTodo"> Edit</a> |
+	 						 	<a data-bind = "click: $parent.removeTodo" > Delete</a>
+ 						 	</td>
+	 					</tr>
+
+	 					<!-- /ko -->
+	 					<!-- ko if: isEditing() && !isNew() -->
+	 					<tr>
+	 						<td data-bind = "text: $index() + 1"></td>
+	 						<td>
+	 							<input type="text" data-bind="value: activity">
+	 						</td>
+	 						<td data-bind="text: date">
+	 						</td>
+
+	 						<td>  <input type = "text" style = "width:30px;" data-bind = "value: from"></td>
+	 						<td>  <input type = "text" style = "width:30px;" data-bind = "value: to"></td>
+	 						<td>  <input type = "text" data-bind = "value: status"></td>
+
+	 						<td data-bind = "text: notes"></td>
+	 						<td> 
+	 							<a data-bind = "click: $parent.saveTodo"> Save</a> |
+	 						 	<a data-bind = "click: $parent.cancelEdit" > Cancel</a>
+ 						 	</td>
+	 					</tr>
+	 					<!-- /ko -->
+
+	 					<!-- ko if: isEditing() && isNew() -->
+	 					<tr>
+	 						<td data-bind = "text: $index() + 1"></td>
+	 						<td>
+	 							<input type="text" data-bind="value: activity">
+	 						</td>
+	 						<td data-bind="text: date">
+	 						</td>
+
+	 						<td>  <input type = "text" style = "width:30px;" data-bind = "value: from"></td>
+	 						<td>  <input type = "text" style = "width:30px;" data-bind = "value: to"></td>
+	 						<td>  <input type = "text"  data-bind = "value: status"></td>
+	 						<td> <input type = "text" data-bind = "value: notes"></td>
+	 						<td> 
+	 							<a data-bind = "click: $parent.saveTodo"> Save</a> |
+	 						 	<a data-bind = "click: $parent.cancelNew" > Cancel</a>
+ 						 	</td>
+	 					</tr>
+	 					<!-- /ko -->
+	 				</tbody>
+	 			</table>
+	 			<!-- Button thêm task mới // Ham addNewTodo ở ngoài form binding nên ko cần phải dùng $parent dể gọi -->
+	 			<a data-bind = "click: addNewTodo" class="btn btn-primary" style="float: right;"> Add new</a>
+ 			
+ 		</div>
+ 		
+ 	</div>
+ 		
+ 	</div>
+ 	<script type = "text/javascript" src="js/jquery.js"></script>
+ 		<script type = "text/javascript" src="js/knockout.js"></script>
+	<script type = "text/javascript" src="js/topic4.js"></script>
+	<script type = "text/javascript" src="js/ko-mapping.js"></script>
+	
+</body>
+</html> 
