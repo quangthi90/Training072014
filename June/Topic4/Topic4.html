@@ -88,23 +88,6 @@
 	 						 	<a data-bind = "click: $parent.removeTodo" > Delete</a>
  						 	</td>
 	 					</tr>
-	 					<!-- /ko -->
-
-	 					<!-- ko if: isSearch() -->
-	 					<tr style="color: blue;">
-	 						<td data-bind = "text: $index() + 1"></td>
-	 						<td data-bind = "text: activity"></td>
-	 						<td data-bind = "text: date"></td>
-	 						<td data-bind = "text: from"></td>
-	 						<td data-bind = "text: to"></td>
-	 						<td data-bind = "text: status"></td>
-	 						<td data-bind = "text: notes"></td>
-	 						<td> 
-	 							<a data-bind = "click: $parent.editTodo"> Edit</a> |
-	 						 	<a data-bind = "click: $parent.removeTodo" > Delete</a>
- 						 	</td>
-	 					</tr>
-
 
 	 					<!-- /ko -->
 	 					<!-- ko if: isEditing() && !isNew() -->

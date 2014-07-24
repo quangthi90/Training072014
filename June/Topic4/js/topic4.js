@@ -113,6 +113,7 @@ var TodoViewModel = function() {
      self.saveTodo = function(TodoItem){
      	//Don gian la tat che do edit
     	TodoItem.isEditing(false);
+        TodoItem.isNew(false);
     };
 	
     self.cancelEdit = function(TodoItem){
