@@ -10,7 +10,6 @@ function TodoItem( initItem) {
     self.notes = ko.observable(initItem.notes);
     self.isEditing = ko.observable(false);
     self.isNew = ko.observable(false);
-    self.isSearch = ko.observable(false);
 
 
 
@@ -30,7 +29,6 @@ function TodoItem( initItem) {
 // Overall viewmodel for this screen, along with initial state
 var TodoViewModel = function() {
     var self = this;    
-    self.isSearch = ko.observable(false); 
     self.keyWord = ko.observable('');
     self.viewModel = ko.observable();  
 
@@ -114,7 +112,7 @@ var TodoViewModel = function() {
      	//Don gian la tat che do edit
     	TodoItem.isEditing(false);
         TodoItem.isNew(false);
-    };
+    }; 
 	
     self.cancelEdit = function(TodoItem){
     	TodoItem.itemBackup(self.viewModel());
