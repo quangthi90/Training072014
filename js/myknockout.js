@@ -9,6 +9,7 @@ function ItemWork(data){
 	item.isEditing = ko.observable(data.isEditing || false);
 	item.isNew = ko.observable(data.isNew || false);
 	item.isSearch = ko.observable(data.isSearch || false);
+	item.itemBackup = ko.observable();
 
 	item.toJS = function(){
 		return ko.toJS(data);
@@ -31,7 +32,7 @@ function Task_ListWork(name, time, item_work){
 	self.time = time;
 	self.listwork = ko.observableArray(item_work);
 	self.amountWork = ko.observable(0);
-	self.itemBackup = ko.observable();
+	
 
 	function cloneObservable(observableObject) {
 	    return ko.mapping.fromJS(ko.toJS(observableObject));
@@ -50,7 +51,7 @@ function Task_ListWork(name, time, item_work){
 
 	self.editWork = function(item){
 		item.isEditing(!item.isEditing());	
-		self.itemBackup(cloneObservable(item));
+		item.itemBackup(cloneObservable(item));
 	};
 
 	self.saveWork = function(item){
@@ -59,7 +60,7 @@ function Task_ListWork(name, time, item_work){
 	};
 
 	self.cancelEdit = function(item){			
-		item.updateValueBackup(self.itemBackup());
+		item.updateValueBackup(item.itemBackup());
 		self.saveWork(item);
 	};
 
