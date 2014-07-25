@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2014 at 10:04 AM
+-- Generation Time: Jul 25, 2014 at 10:17 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `IDPost` int(11) NOT NULL,
   `UserCmt` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `Date` datetime NOT NULL,
-  `Content` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Content` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`IDPost`,`Date`),
   KEY `User` (`UserCmt`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -72,7 +72,7 @@ INSERT INTO `comment` (`IDPost`, `UserCmt`, `Date`, `Content`) VALUES
 CREATE TABLE IF NOT EXISTS `post` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Date` datetime NOT NULL,
-  `Content` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Content` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `UserPost` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_post_account` (`UserPost`)
