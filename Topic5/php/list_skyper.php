@@ -6,16 +6,19 @@
 				<ul class='nav nav-pills nav-stacked text-left'>";
 	while ($row = mysql_fetch_array($result)) {
 		if($row['status'] != 0)
-			$str_echo = $str_echo."<div id='SkypeButton_Call_SalmDo_1'>
+		{
+			$id = "SkypeButton_Call_$row[skype_name]";
+			$str_echo = $str_echo."<div id='$id'>
 					  <script type='text/javascript'>
 					    Skype.ui({
 					      'name': 'dropdown',
-					      'element': 'SkypeButton_Call_SalmDo_1',
+					      'element': '$id',
 					      'participants': ['$row[skype_name]'],
 					      'imageSize': 20,
 					    });
 					  </script>
 				</div>";
+		}
 	}
 	$str_echo = $str_echo."</ul>";
 	echo $str_echo;
