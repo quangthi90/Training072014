@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2014 at 05:39 PM
+-- Generation Time: Jul 25, 2014 at 10:17 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -29,8 +29,6 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `account` (
   `Username` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `Password` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `skype_name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `status` bit(1) NOT NULL,
   PRIMARY KEY (`Username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -38,9 +36,9 @@ CREATE TABLE IF NOT EXISTS `account` (
 -- Dumping data for table `account`
 --
 
-INSERT INTO `account` (`Username`, `Password`, `skype_name`, `status`) VALUES
-('thuy', '12345', 'thuong', b'0'),
-('trang', '12345', 'huyen', b'0');
+INSERT INTO `account` (`Username`, `Password`) VALUES
+('thuy', '12345'),
+('trang', '12345');
 
 -- --------------------------------------------------------
 
@@ -76,18 +74,16 @@ CREATE TABLE IF NOT EXISTS `post` (
   `Date` datetime NOT NULL,
   `Content` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `UserPost` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `Title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_post_account` (`UserPost`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `post`
 --
 
-INSERT INTO `post` (`ID`, `Date`, `Content`, `UserPost`, `Title`) VALUES
-(1, '2014-07-22 00:00:00', 'Sao cung dc nhi?!', 'thuy', 'Cam nghi'),
-(2, '2014-07-08 07:00:00', '121212121', 'trang', 'hok bik');
+INSERT INTO `post` (`ID`, `Date`, `Content`, `UserPost`) VALUES
+(1, '2014-07-22 00:00:00', 'Sao cung dc nhi?!', 'thuy');
 
 --
 -- Constraints for dumped tables
