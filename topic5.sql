@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2014 at 10:17 AM
+-- Generation Time: Jul 25, 2014 at 03:50 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -74,16 +74,17 @@ CREATE TABLE IF NOT EXISTS `post` (
   `Date` datetime NOT NULL,
   `Content` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `UserPost` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `Title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_post_account` (`UserPost`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `post`
 --
 
-INSERT INTO `post` (`ID`, `Date`, `Content`, `UserPost`) VALUES
-(1, '2014-07-22 00:00:00', 'Sao cung dc nhi?!', 'thuy');
+INSERT INTO `post` (`ID`, `Date`, `Content`, `UserPost`, `Title`) VALUES
+(1, '2014-07-22 00:00:00', 'Sao cung dc nhi?!', 'thuy', '');
 
 --
 -- Constraints for dumped tables
