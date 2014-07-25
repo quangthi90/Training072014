@@ -11,8 +11,8 @@
 					    Skype.ui({
 					      'name': 'dropdown',
 					      'element': 'SkypeButton_Call_SalmDo_1',
-					      'participants': [$row[skype_name]],
-					      'imageSize': 32
+					      'participants': ['$row[skype_name]'],
+					      'imageSize': 20,
 					    });
 					  </script>
 				</div>";
