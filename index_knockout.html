@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<title>Phuong Thao - Topic 4</title>
+		<meta charset="UTF-8">
+		<meta name=description content="">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style type="text/css">
+			body{
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+			footer{padding-left: 10px;}
+		</style>
+		<!-- Bootstrap CSS -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" type="text/css" href="css/myknockout.css" media="(min-width: 900px)">
+	</head>
+	<body>
+		<h1 class="text-danger text-center" style="margin-bottom:20px">Phuong Thao - Topic 04</h1>
+	<div class="container-fluid">
+		<div class="col-md-3 col-lg-3 doing_list" >
+			<div class="row" style="border-bottom: 2px solid green">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+					<h3> MY DOING LIST</h3>
+				</div>	
+			</div>
+			<div class="row" style="margin-top: 10px">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+					<nav class="navbar navbar-default" role="navigation" style="background-color:#ffcc00; padding-bottom: 10px">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<h5>To-dos of TODAY  with KNOCKOUT</h5>
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse navbar-ex1-collapse">
+							<ul class="nav nav-pills nav-stacked text-left" data-bind="foreach: ListTask">
+								<li data-bind=" css: { selected: name == $root.chosenTask() }, click:$root.gotoTask">
+									<a href="#" style="cursor: pointer; padding: 10px 10px;" class="bg-warning .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25))">
+									<strong data-bind="text: time"></strong>:
+									<span data-bind="text: name"></span>
+									</a>
+								</li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</nav>	
+				</div>	
+			</div>
+		</div>
+		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+			<div class="row" style="border-bottom: 2px solid green">
+				<div class="col-xs-3 col-sm-4 col-md-5 col-lg-5"><h3>Tatal</h3></div>
+				<div class="col-xs-7 col-sm-6 col-md-5 col-lg-5 _search"><input class="form-control" data-bind="value: keySearch"></div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 _search"><button type="button" class="btn btn-primary" data-bind="click: searchWork">Search</button></div>
+			</div>
+			<!-- ko if: !$root.Search() -->
+			<div class="row" data-bind="with: chosenTask">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h3 class="text-warning">You have 5 activity for a work!</h3>
+					<div class="table-responsive">
+						<table class="table table-bordered table-hover" style="margin-top: 20px">
+							<thead>
+								<tr class="danger">
+									<th class="col-md-1 text-center">No.</th>
+									<th class="col-md-2 text-center">Activity</th>
+									<th class="col-md-2 text-center">Date</th>
+									<th class="col-md-1 text-center">From(h)</th>							
+									<th class="col-md-1 text-center">To(h)</th>
+									<th class="col-md-1 text-center">Status</th>
+									<th class="col-md-2 text-center">Notes</th>
+									<th class="col-md-2 text-center">Action</th>
+								</tr>
+							</thead>
+							<tbody data-bind="foreach: listwork">
+							<!-- ko if: !isEditing() && !isNew()-->
+								<tr>
+									<td data-bind="text: $index() + 1" ></td>
+									<td data-bind="text: activity"></span></td>
+									<td data-bind="text: date"></td>
+									<td data-bind="text: hfrom"></td>
+									<td data-bind="text: hto"></td>
+									<td data-bind="text: status"></td>
+									<td data-bind="text: note"></td>
+									<td>
+										<button type="button" class="col-md-5  btn btn-info" style="margin-left: 3px" data-bind="click: $parent.editWork">Edit</button>
+										<button type="button" class="col-md-5 col-md-push-1 btn btn-warning" style="margin-right: 3px" data-bind="click: $parent.deleteWork">Delete</button>
+									</td>
+								</tr>
+								<!-- /ko -->
+								<!-- ko if: isEditing() && !isNew() -->
+								<tr>
+									<td data-bind="text: $index() + 1"></td>
+									<td><input data-bind="value: activity" /></td>
+									<td data-bind="text: date"/></td>
+									<td><input  data-bind="value: hfrom" style="width: 100%"/></td>
+									<td><input  data-bind="value: hto" style="width: 100%"/></td>
+									<td><input data-bind="value: status" style="width: 100%"/></td>
+									<td data-bind="text: note"/></td>
+									<td>
+										<button data-bind="click: $parent.saveWork" type="button" class="col-md-5  btn btn-success" style="margin-left: 3px">Save</button>
+										<button data-bind="click: $parent.cancelEdit"  type="button" class="col-md-5 col-md-push-1 btn btn-warning" style="margin-right: 3px">Cancel</button>
+									</td>
+								</tr>
+								<!-- /ko -->	
+								<!-- ko if: isEditing() && isNew() -->
+								<tr>
+									<td data-bind="text: $index() + 1"></td>
+									<td><input data-bind="value: activity" /></td>
+									<td><input data-bind="value: date" /></td>
+									<td><input  data-bind="value: hfrom" style="width: 100%"/></td>
+									<td><input  data-bind="value: hto" style="width: 100%"/></td>
+									<td><input data-bind="value: status" style="width: 100%"/></td>
+									<td><input data-bind="value: note" style="width: 100%"/></td>
+									<td>
+										<button data-bind="click: $parent.saveWork" type="button" class="col-md-5  btn btn-success" style="margin-left: 3px">Save</button>
+										<button data-bind="click: $parent.cancelNew"  type="button" class="col-md-5 col-md-push-1 btn btn-warning" style="margin-right: 3px">Cancel</button>
+									</td>
+								</tr>
+								<!-- /ko -->							
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 pull-right">
+					<button type="button" class="btn btn-large btn-block btn-danger" data-bind="click: addWork, enable: listwork().length < 5">Add new</button>
+				</div>
+			</div>
+			<!-- /ko -->
+			<!-- ko if: $root.Search() -->
+			<div class="row" data-bind="foreach: ListTask">
+			<!-- ko if: countSearch() > 0 -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="table-responsive">
+						<h4 class="text-warning" data-bind="text: name"></h4>
+						<table class="table table-bordered table-hover" style="margin-top: 20px">
+							<thead>
+								<tr class="danger">
+									<th class="col-md-1 text-center">No.</th>
+									<th class="col-md-2 text-center">Activity</th>
+									<th class="col-md-2 text-center">Date</th>
+									<th class="col-md-1 text-center">From(h)</th>							
+									<th class="col-md-1 text-center">To(h)</th>
+									<th class="col-md-1 text-center">Status</th>
+									<th class="col-md-2 text-center">Notes</th>
+									<th class="col-md-2 text-center">Action</th>
+								</tr>
+							</thead>
+							<tbody data-bind="foreach: listwork">
+							<!-- ko if: !isEditing() && !isNew() && isSearch-->
+								<tr>
+									<td data-bind="text: $index() + 1"></td>
+									<td data-bind="text: activity"></td>
+									<td data-bind="text: date"></td>
+									<td data-bind="text: hfrom"></td>
+									<td data-bind="text: hto"></td>
+									<td data-bind="text: status"></td>
+									<td data-bind="text: note"></td>
+									<td>
+										<button type="button" class="col-md-5  btn btn-info" style="margin-left: 3px" data-bind="click: $parent.editWork">Edit</button>
+										<button type="button" class="col-md-5 col-md-push-1 btn btn-warning" style="margin-right: 3px" data-bind="click: $parent.deleteWork">Delete</button>
+									</td>
+								</tr>
+								<!-- /ko -->
+								<!-- ko if: isEditing() && !isNew() -->
+								<tr>
+									<td data-bind="text: $index() + 1"></td>
+									<td><input data-bind="value: activity" /></td>
+									<td data-bind="text: date"/></td>
+									<td><input  data-bind="value: hfrom" style="width: 100%"/></td>
+									<td><input  data-bind="value: hto" style="width: 100%"/></td>
+									<td><input data-bind="value: status" style="width: 100%"/></td>
+									<td data-bind="text: note"/></td>
+									<td>
+										<button data-bind="click: $parent.saveWork" type="button" class="col-md-5  btn btn-success" style="margin-left: 3px">Save</button>
+										<button data-bind="click: $parent.cancelEdit"  type="button" class="col-md-5 col-md-push-1 btn btn-warning" style="margin-right: 3px">Cancel</button>
+									</td>
+								</tr>
+								<!-- /ko -->	
+								<!-- ko if: isEditing() && isNew() -->
+								<tr>
+									<td data-bind="text: $index() + 1"></td>
+									<td><input data-bind="value: activity" /></td>
+									<td><input data-bind="value: date" /></td>
+									<td><input  data-bind="value: hfrom" style="width: 100%"/></td>
+									<td><input  data-bind="value: hto" style="width: 100%"/></td>
+									<td><input data-bind="value: status" style="width: 100%"/></td>
+									<td><input data-bind="value: note" style="width: 100%"/></td>
+									<td>
+										<button data-bind="click: $parent.saveWork" type="button" class="col-md-5  btn btn-success" style="margin-left: 3px">Save</button>
+										<button data-bind="click: $parent.cancelNew"  type="button" class="col-md-5 col-md-push-1 btn btn-warning" style="margin-right: 3px">Cancel</button>
+									</td>
+								</tr>
+								<!-- /ko -->							
+							</tbody>
+						</table>
+					</div>
+				</div>
+			<!-- /ko -->
+			</div>
+			<!-- /ko -->
+		</div>
+	</div>
+		<!-- jQuery -->
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/knockout-3.1.0.js"></script>
+		<script type="text/javascript" src="js/myknockout.js"></script>
+		<script type="text/javascript" src="js/myknockout_binding.js"></script>
+		<script type="text/javascript" src="js/knockout.mapping-latest.js"></script>
+	</body>
+	<footer>
+		<hr>@PhuongThao_Topic04
+	</footer>
+</html>
