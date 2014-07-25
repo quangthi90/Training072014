@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
 				<div class="page-header">
-				  <h1>Topic - 5</h1>
+				  <h1><a href="index.php">Topic - 5</h1>
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
