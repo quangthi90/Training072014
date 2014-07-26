@@ -18,6 +18,7 @@
 				$dbpass = $row['Password'];
 			}
 			if ($username == $dbuser && $password == $dbpass) {
+				$strSQl = mysql_query("UPDATE `account` SET `status`= 1 WHERE `Username` = '$username'") or die("Query failed");
 				# code...
 				session_start();
 				$_SESSION['sess_user'] = $username;
