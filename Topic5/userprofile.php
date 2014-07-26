@@ -1,15 +1,11 @@
 <?php
 	session_start();
-	if (!isset($_SESSION["sess_user"])) {
-		# code...
-		header("location:userprofile.php");
-	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Topic-5</title>
+	<title><a href="index.php">Topic - 5</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
     <link rel="stylesheet" type="text/css" href="font-awesome-4.1.0/css/font-awesome.css"/>
