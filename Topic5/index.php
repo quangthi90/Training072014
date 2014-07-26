@@ -58,7 +58,7 @@
 				</nav>	
 			</div>
 			<div class="col-sm-8 col-md-8 col-lg-8">
-				< <ul class="list-group">
+				<ul class="list-group">
 				  <!--li class="list-group-item">
 				  	<h4><strong style="float:left">User 1</strong>
 				  		<h3 class="text-center">Title</h3>
@@ -68,15 +68,21 @@
 				  </li-->
 				
 				 <li class="list-group-item">
-				 		<form action="php/poststatus.php" method="get"> 
-				 			<textarea style="width:100%; border-radius: 5px; " row = "3" id = "status" name="status" placeholder = " Bạn đang nghĩ gì?" ></textarea>
-				 			<input class="btn-primary" type="submit" value="post">
-				 			
-				 		</form>
-				 	
+			 		<form action="php/poststatus.php" method="get"> 
+			 			<textarea style="width:100%; border-radius: 5px; " row = "3" id = "status" name="status" placeholder = " Bạn đang nghĩ gì?" ></textarea>
+			 			<input class="btn-primary" type="submit" value="post">
+			 		</form>
 				 </li>
 				 </ul> 
-				<?php include "php/content.php"; ?>
+				<?php
+					 if(!isset($_REQUEST['user_page']))
+				 		include "php/content.php";
+				 	else{
+				 		$session_user = $_REQUEST['user_page'];
+				 		include "php/list_post_user.php";
+				 	}
+
+				  ?>
 			</div>
 			<div class="col-sm-2 col-md-2 col-lg-2">
 				<nav class="navbar navbar-default" role="navigation" style="background-color:#ffcc00; padding-bottom: 10px">
