@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="font-awesome-4.1.0/css/font-awesome.css"/>
 </head>
 <body>
-	<div <div class="container-fluid">
+	<div <div class="container">
 		<div class="row">
 			<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
 				<div class="page-header">
@@ -74,8 +74,8 @@
 			</div>
 			<div class="col-sm-8 col-md-8 col-lg-8">
 				<?php
-					include"php/addpostform.php";
-					if(!isset($_REQUEST['user_page']))
+				//include"php/addpostform.php";
+					 if(!isset($_REQUEST['user_page']))
 				 		include "php/content.php";
 				 	else{
 				 		$session_user = $_REQUEST['user_page'];

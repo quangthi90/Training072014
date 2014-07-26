@@ -19,7 +19,7 @@ if(isset($_POST["titlepost"]) && isset($_POST["status"])){
 	// gán thử
 	//$_SESSION['Username'] = 'thuy';
 	$user = $_SESSION['sess_user'];
-	echo $user;
+	//echo $user;
 	$stt = $_REQUEST["status"];
 	$tt = $_REQUEST["titlepost"];
 	$date = getdate();
@@ -43,7 +43,7 @@ if(isset($_POST["titlepost"]) && isset($_POST["status"])){
     <link rel="stylesheet" type="text/css" href="font-awesome-4.1.0/css/font-awesome.css"/>
 </head>
 <body>
-	<div <div class="container-fluid">
+	<div <div class="container">
 		<div class="row">
 			<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
 				<div class="page-header">
@@ -60,8 +60,8 @@ if(isset($_POST["titlepost"]) && isset($_POST["status"])){
 				<ul class=list-group>
 				 <li class=list-group-item>
 			 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" > 
-			 			<input type="text" style="width:100%; border-radius: 5px;" id="titlepost" name = "titlepost" placeholder =  'Nhập tiều đề bài viết'>
-			 			<textarea style="width:100% border-radius: 5px margin-top: 5px;" row = "3" id = "status" name= "status" placeholder =  'Nhập nội dung bài viết? '></textarea>
+			 			<input type="text" style="width:100%; border-radius: 5px;"  name = "titlepost" placeholder =  'Nhập tiều đề bài viết'>
+			 			<textarea style="width:100%; border-radius: 5px; margin-top: 5px;" row = "3"  name= "status" placeholder =  'Nhập nội dung bài viết? '></textarea>
 			 			<input class="btn-primary" type="submit"  value="post">
 			 		</form>
 				 </li>
