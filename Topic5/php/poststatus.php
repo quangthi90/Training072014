@@ -1,3 +1,35 @@
+<?php
+ 
+  // bắt đầu session
+	session_start();
+	// kết nối db
+
+//// exit; // a exit cho nay roi, o duoi se ko chay duoc nua
+	$connection = mysql_connect("localhost","root", "");
+	if(!$connection) {
+	    die ('Not connect: '.mysql_error());
+	    
+	}
+
+	$IsSuccess = mysql_selectdb("topic5", $connection);
+	if(!$IsSuccess){
+	    die('Cannot selected db: '.mysql_error());
+	    echo "ket noi that bai";
+	}
+	// gán thử
+	$_SESSION['Username'] = 'thuy';
+	$user = $_SESSION['Username'];
+	$stt = $_REQUEST["status"];
+	$date = getdate();
+	$datepost = "$date[year]".'-'."$date[mon]".'-'."$date[mday]".'  '."$date[hours]".':'."$date[minutes]".':'."$date[seconds]";
+	
+	$insert_data = "insert into post values ('null','$datepost','$stt','$user')";
+	echo $insert_data;
+	mysql_query($insert_data) or die ("Query failed");
+
+//exit;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +52,11 @@
 					<div class="col-md-7">
 						<div class="input-group" style="margin: 10px 5px">
 							<span class="input-group-addon">User name</span>
-							<input type="text" class="form-control" placeholder="Username" id="username">
+							<input type="text" class="form-control" placeholder="Username">
 						</div>
 						<div class="input-group"  style="margin: 10px 5px">
 							<span class="input-group-addon">Password</span>
-							<input type="text" class="form-control" placeholder="Password" id="password">
+							<input type="text" class="form-control" placeholder="Password">
 						</div>	
 					</div>
 					<div class="col-md-3">
@@ -59,10 +91,28 @@
 			</div>
 			<div class="col-sm-8 col-md-8 col-lg-8">
 				<ul class="list-group">
+
+
+				<!-- June add -->
+
+
+				 <li class="list-group-item">
+				 		<form action="poststatus.php" method="get"> 
+				 			<textarea style="width:100%; border-radius: 5px; " row = "3" id = "status" name="status" placeholder = " Bạn đang nghĩ gì?" ></textarea>
+				 			<input class="btn-primary" type="submit" value="post">
+				 			
+				 		</form>
+				 	
+				 </li>
+				 <div id = "formStatus" style = "height: 40px; width: 40px;">
+				 		
+				 	</div>	
 				  <li class="list-group-item">
-				  	<h4><strong>User 1</strong></h4>
-				  	<p>Content Post</p>
-				  	<h5><small>Date post</small></h5>
+				  	<h4><strong> <?php echo $user ?></strong></h4>
+				  	<?php
+				  	echo $stt;
+				  	?>
+				  	<h5><small>Date post: <?php echo $datepost?></small></h5>
 				  </li>
 	
 					<li class="list-group-item">
