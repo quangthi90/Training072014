@@ -92,9 +92,7 @@
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse navbar-ex2-collapse">
-						<ul class="nav nav-pills nav-stacked text-left">
-							<li><i style="color: red; margin: 5px" class="fa fa-heart fa-2x"></i> User1<li>
-						</ul>
+						<?php include "php/list_skyper.php"; ?>
 					</div><!-- /.navbar-collapse -->
 				</nav>
 			</div>
