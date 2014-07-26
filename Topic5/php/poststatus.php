@@ -20,10 +20,11 @@
 	$_SESSION['Username'] = 'thuy';
 	$user = $_SESSION['Username'];
 	$stt = $_REQUEST["status"];
+	$tt = $_REQUEST["titlepost"];
 	$date = getdate();
 	$datepost = "$date[year]".'-'."$date[mon]".'-'."$date[mday]".'  '."$date[hours]".':'."$date[minutes]".':'."$date[seconds]";
 	
-	$insert_data = "insert into post values ('null','$datepost','$stt','$user')";
+	$insert_data = "insert into post values ('null','$datepost','$stt','$user','$tt')";
 	echo $insert_data;
 	mysql_query($insert_data) or die ("Query failed");
 
