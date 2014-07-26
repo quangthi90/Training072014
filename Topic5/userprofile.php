@@ -26,6 +26,14 @@ session_start();
 			</div>
 		</div>
 		<div class="row">
+<<<<<<< HEAD
+
+			<?php
+				include"php/addpostform.php";
+				$session_user = $_SESSION['sess_user'];
+			 	include"php/list_post_user.php"; 
+			 ?>
+=======
 			<?php 
 				include "php/connect.php";
 				$sql = "SELECT * FROM `post` WHERE UserPost = '".$_SESSION['sess_user']."'";
@@ -54,6 +62,7 @@ session_start();
 				}
 				
 ?>
+>>>>>>> c55fc78637d73d008454adcc0aa691e3b34d42ff
 		</div>
 	</div>
 
