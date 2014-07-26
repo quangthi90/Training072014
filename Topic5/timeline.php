@@ -1,34 +1,13 @@
 <?php
- 
-  // bắt đầu session
-	session_start();
-	// kết nối db
-
-//// exit; // a exit cho nay roi, o duoi se ko chay duoc nua
-	$connection = mysql_connect("localhost","root", "");
-	if(!$connection) {
-	    die ('Not connect: '.mysql_error());
-	    
+	$user = 'root';
+	$pass ='';
+	$db = 'topic_5';
+	$link = mysql_connect("localhost",$user,$pass);
+	if (!$link) {
+		die("could'nt connect to MySQL");
 	}
+	mysql_select_db($db) or die("Couldn't open $db: ".mysql_error());
 
-	$IsSuccess = mysql_selectdb("topic5", $connection);
-	if(!$IsSuccess){
-	    die('Cannot selected db: '.mysql_error());
-	    echo "ket noi that bai";
-	}
-	// gán thử
-	//$_SESSION['Username'] = 'thuy';
-	$user = $_SESSION['Username'];
-	$stt = $_REQUEST["status"];
-	$tt = $_REQUEST["titlepost"];
-	$date = getdate();
-	$datepost = "$date[year]".'-'."$date[mon]".'-'."$date[mday]".'  '."$date[hours]".':'."$date[minutes]".':'."$date[seconds]";
-	
-	$insert_data = "insert into post values ('null','$datepost','$stt','$user','$tt')";
-	echo $insert_data;
-	mysql_query($insert_data) or die ("Query failed");
-
-//exit;
 ?>
 
 <!DOCTYPE html>
@@ -90,9 +69,41 @@
 					</div><!-- /.navbar-collapse -->
 				</nav>	
 			</div>
-			<div class="col-sm-8 col-md-8 col-lg-8">
-				<ul class="list-group">
+			<div class="col-sm-2 col-md-2 col-lg-2">
+				<?php
+						$table = "post";
+						$userCmt = $_SESSION["username"];
+						$query1 = "SELECT `ID`, year(`Date`) year_post, MONTH(`Date`) month_post ,DATE_FORMAT(`Date`,'%m/%y') time_post, `Title` FROM `post` WHERE `UserPost` =  '$userCmt'" 
 
+						$result1 = mysql_query($query1) or die ("Query failed");
+						$nam = $result1[0]['year_post'];
+						$thang = $result1[0]['month_post'];
+						$str_echo = "<ul><li>$nam
+										<ul><li>$thang<ul>";
+
+						while ($row = mysql_fetch_array($result1)) {
+							if($row['year_post'] != $nam){
+								$nam = $row['year_post'];
+								$str_echo = $str_echo."</ul><ul>$nam";
+							}
+							if($row['month_post'] != $thang){
+								$thang = $row['month_post'];
+								$str_echo = $str_echo."</ul></li></ul><ul><li>$thang<ul>";
+							}
+
+							$time = $row['time_post'];
+							$title = $row['Title'];
+							  $str_echo = $str_echo."<li>$time: $title</li>";
+						}
+
+						$str_echo = $str_echo."</ul></li></ul></li></ul>";
+						echo $str_echo;
+					
+
+				?>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<ul class="list-group">
 
 				<!-- June add -->
 
@@ -103,6 +114,11 @@
 				 			<input class="btn-primary" type="submit" value="post">
 				 			
 				 		</form>
+						<form action="addComment.php" method="get"> 
+					        <input style="width:100%; border-radius: 5px; "  type="text" id = "enterComment" name="enterComment" placeholder = " Enter comment" ></textarea>
+					        <input class="btn-primary" type="submit" value="Comment">
+					        
+					     </form>
 				 	
 				 </li>
 				 <div id = "formStatus" style = "height: 40px; width: 40px;">
@@ -156,3 +172,4 @@
 	<hr>Topic 5
 </footer>
 </html>
+

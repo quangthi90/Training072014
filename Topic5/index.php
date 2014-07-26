@@ -1,3 +1,7 @@
+<?php
+	ob_start();
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +21,8 @@
 			</div>
 			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
 				<div class="row">
+					<?php if (!isset($_SESSION["sess_user"])) { ?>
+
 					<form action="Login.php" method="post">
 						<div class="col-md-7">
 							<div class="input-group" style="margin: 10px 5px">
@@ -25,7 +31,7 @@
 							</div>
 							<div class="input-group"  style="margin: 10px 5px">
 								<span class="input-group-addon">Password</span>
-								<input type="text" class="form-control" placeholder="Password" id="password" name="password">
+								<input type="password" class="form-control" placeholder="Password" id="password" name="password">
 							</div>	
 						</div>
 						<div class="col-md-3">
@@ -33,6 +39,21 @@
 							<a href="Register.php" style="margin: 15px">Register</a>
 						</div>
 					</form>
+
+
+
+					<?php } else { ?>
+						<div class="col-md-7">
+							<div class="input-group" style="margin: 10px 5px">
+								<h4> Welcome, <?php echo ($_SESSION["sess_user"]);?>!
+								<a href="Logout.php">Logout</a>
+								
+							</div>
+	
+						</div>
+						
+
+					<?php }; ?>
 				</div>
 				
 			</div>
