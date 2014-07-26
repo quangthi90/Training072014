@@ -7,6 +7,7 @@
 		include "php/connect.php";
 
 		$query = mysql_query("SELECT * FROM account WHERE username= '".$username."' AND password='".$password."'");
+
 		$numrows = mysql_num_rows($query);
 
 		if ($numrows!= 0) {
