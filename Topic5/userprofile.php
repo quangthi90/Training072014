@@ -2,6 +2,37 @@
 session_start();
 ?>
 
+
+<?php
+if(isset($_POST["titlepost"]) && isset($_POST["status"])){
+	$connection = mysql_connect("localhost","root", "");
+	if(!$connection) {
+	    die ('Not connect: '.mysql_error());
+	    
+	}
+
+	$IsSuccess = mysql_selectdb("topic5", $connection);
+	if(!$IsSuccess){
+	    die('Cannot selected db: '.mysql_error());
+	    echo "ket noi that bai";
+	}
+	// gán thử
+	//$_SESSION['Username'] = 'thuy';
+	$user = $_SESSION['sess_user'];
+	echo $user;
+	$stt = $_REQUEST["status"];
+	$tt = $_REQUEST["titlepost"];
+	$date = getdate();
+	$datepost = "$date[year]".'-'."$date[mon]".'-'."$date[mday]".'  '."$date[hours]".':'."$date[minutes]".':'."$date[seconds]";
+	
+	$insert_data = "INSERT INTO post () VALUES ('null','$datepost','$stt','$user','$tt')";
+	//echo $insert_data;
+	mysql_query($insert_data) or die ("Query failed");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,17 +57,25 @@ session_start();
 			</div>
 		</div>
 		<div class="row">
-<<<<<<< HEAD
+				<ul class=list-group>
+				 <li class=list-group-item>
+			 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" > 
+			 			<input type="text" style="width:100%; border-radius: 5px;" id="titlepost" name = "titlepost" placeholder =  'Nhập tiều đề bài viết'>
+			 			<textarea style="width:100% border-radius: 5px margin-top: 5px;" row = "3" id = "status" name= "status" placeholder =  'Nhập nội dung bài viết? '></textarea>
+			 			<input class="btn-primary" type="submit"  value="post">
+			 		</form>
+				 </li>
+				 </ul> 
 
 			<?php
-				include"php/addpostform.php";
+				//include"php/addpostform.php";
 				$session_user = $_SESSION['sess_user'];
 			 	include"php/list_post_user.php"; 
 			 ?>
-=======
+
 			<?php 
 				include "php/connect.php";
-				$sql = "SELECT * FROM `post` WHERE UserPost = '".$_SESSION['sess_user']."'";
+				$sql = "SELECT * FROM `post` WHERE UserPost = '".$_SESSION['sess_user']."' ORDER BY ID DESC";
 				$result = mysql_query($sql) or die ("Query failed");
 				$numrows = mysql_num_rows($result);
 				if ($numrows == 0) {
@@ -62,7 +101,6 @@ session_start();
 				}
 				
 ?>
->>>>>>> c55fc78637d73d008454adcc0aa691e3b34d42ff
 		</div>
 	</div>
 
