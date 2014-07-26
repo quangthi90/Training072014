@@ -96,8 +96,10 @@
 				$str_echo = $str_echo."</ul>
 				<div class='list-group'>
 					<h5>Add Comment</h5>
+					<form action = 'addComment.php' method ='get'>
 					<textarea class='form-control' rows='3'></textarea>
-					<button type='button' class='btn btn-warning pull-right' style='margin: 10px; padding: 5px 40px'>Add</button>
+					<input type='submit' class='btn btn-warning pull-right' style='margin: 10px; padding: 5px 40px' value = 'Comment'/>
+					</form>
 				</div>";
 				echo $str_echo;
 			?>

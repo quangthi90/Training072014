@@ -57,6 +57,16 @@ if(isset($_POST["titlepost"]) && isset($_POST["status"])){
 			</div>
 		</div>
 		<div class="row">
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+			<?php
+				include"php/addpostform.php";
+				$session_user = $_SESSION['sess_user'];
+			 	include"php/list_post_user.php"; 
+			 ?>
+=======
+=======
 				<ul class=list-group>
 				 <li class=list-group-item>
 			 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" > 
@@ -73,6 +83,7 @@ if(isset($_POST["titlepost"]) && isset($_POST["status"])){
 			 	include"php/list_post_user.php"; 
 			 ?>
 
+>>>>>>> 2b8d5eee437d4d8d5cbd56b639a1410c7d29c79b
 			<?php 
 				include "php/connect.php";
 				$sql = "SELECT * FROM `post` WHERE UserPost = '".$_SESSION['sess_user']."' ORDER BY ID DESC";
@@ -101,6 +112,7 @@ if(isset($_POST["titlepost"]) && isset($_POST["status"])){
 				}
 				
 ?>
+>>>>>>> c55fc78637d73d008454adcc0aa691e3b34d42ff
 		</div>
 	</div>
 
