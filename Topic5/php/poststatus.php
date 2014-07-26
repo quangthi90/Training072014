@@ -17,7 +17,7 @@
 	    echo "ket noi that bai";
 	}
 	// gán thử
-	//$_SESSION['Username'] = 'thuy';
+	$_SESSION['Username'] = 'thuy';
 	$user = $_SESSION['Username'];
 	$stt = $_REQUEST["status"];
 	$tt = $_REQUEST["titlepost"];
