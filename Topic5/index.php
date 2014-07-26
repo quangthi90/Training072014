@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="font-awesome-4.1.0/css/font-awesome.css"/>
 </head>
 <body>
-	<div <div class="container">
+	<div <div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
 				<div class="page-header">

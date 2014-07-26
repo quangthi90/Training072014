@@ -14,7 +14,6 @@
 		}
 		else
 			$str_echo = $str_echo."<p>$row[Content]</p>";
-		echo $row[ID];
 		$str_echo = $str_echo."<div class='pull-right'><a href='post_detail.php?idPost=$row[ID]'>See more</a></div>
 							<h5><small>$row[Date]</small></h5>
 					  		</li>";
