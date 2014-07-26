@@ -39,20 +39,13 @@
 							<a href="Register.php" style="margin: 15px">Register</a>
 						</div>
 					</form>
-
-
-
 					<?php } else { ?>
 						<div class="col-md-7">
 							<div class="input-group" style="margin: 10px 5px">
 								<h4> Welcome, <?php echo ($_SESSION["sess_user"]);?>!
 								<a href="Logout.php">Logout</a>
-								
 							</div>
-	
 						</div>
-						
-
 					<?php }; ?>
 				</div>
 				
@@ -60,6 +53,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-2 col-md-2 col-lg-2">
+				<a href="index.php" class="btn btn-success pager center-block">Home Page</a>
 				<nav class="navbar navbar-default" role="navigation" style="background-color:#ffcc00; padding-bottom: 10px">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<h5 class="text-danger" style="margin-left: 20px">List user</h5>
@@ -79,16 +73,20 @@
 				</nav>	
 			</div>
 			<div class="col-sm-8 col-md-8 col-lg-8">
+<<<<<<< HEAD
 				
 				<?php
 				include"php/addpostform.php";
+=======
+				<?php
+				//include"php/addpostform.php";
+>>>>>>> 2b8d5eee437d4d8d5cbd56b639a1410c7d29c79b
 					 if(!isset($_REQUEST['user_page']))
 				 		include "php/content.php";
 				 	else{
 				 		$session_user = $_REQUEST['user_page'];
 				 		include "php/list_post_user.php";
 				 	}
-
 				  ?>
 			</div>
 			<div class="col-sm-2 col-md-2 col-lg-2">

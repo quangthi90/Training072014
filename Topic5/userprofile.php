@@ -2,6 +2,37 @@
 session_start();
 ?>
 
+
+<?php
+if(isset($_POST["titlepost"]) && isset($_POST["status"])){
+	$connection = mysql_connect("localhost","root", "");
+	if(!$connection) {
+	    die ('Not connect: '.mysql_error());
+	    
+	}
+
+	$IsSuccess = mysql_selectdb("topic5", $connection);
+	if(!$IsSuccess){
+	    die('Cannot selected db: '.mysql_error());
+	    echo "ket noi that bai";
+	}
+	// gán thử
+	//$_SESSION['Username'] = 'thuy';
+	$user = $_SESSION['sess_user'];
+	//echo $user;
+	$stt = $_REQUEST["status"];
+	$tt = $_REQUEST["titlepost"];
+	$date = getdate();
+	$datepost = "$date[year]".'-'."$date[mon]".'-'."$date[mday]".'  '."$date[hours]".':'."$date[minutes]".':'."$date[seconds]";
+	
+	$insert_data = "INSERT INTO post () VALUES ('null','$datepost','$stt','$user','$tt')";
+	//echo $insert_data;
+	mysql_query($insert_data) or die ("Query failed");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +43,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="font-awesome-4.1.0/css/font-awesome.css"/>
 </head>
 <body>
-	<div <div class="container-fluid">
+	<div <div class="container">
 		<div class="row">
 			<div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
 				<div class="page-header">
@@ -27,6 +58,7 @@ session_start();
 		</div>
 		<div class="row">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 			<?php
 				include"php/addpostform.php";
@@ -34,9 +66,27 @@ session_start();
 			 	include"php/list_post_user.php"; 
 			 ?>
 =======
+=======
+				<ul class=list-group>
+				 <li class=list-group-item>
+			 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" > 
+			 			<input type="text" style="width:100%; border-radius: 5px;"  name = "titlepost" placeholder =  'Nhập tiều đề bài viết'>
+			 			<textarea style="width:100%; border-radius: 5px; margin-top: 5px;" row = "3"  name= "status" placeholder =  'Nhập nội dung bài viết? '></textarea>
+			 			<input class="btn-primary" type="submit"  value="post">
+			 		</form>
+				 </li>
+				 </ul> 
+
+			<?php
+				//include"php/addpostform.php";
+				$session_user = $_SESSION['sess_user'];
+			 	include"php/list_post_user.php"; 
+			 ?>
+
+>>>>>>> 2b8d5eee437d4d8d5cbd56b639a1410c7d29c79b
 			<?php 
 				include "php/connect.php";
-				$sql = "SELECT * FROM `post` WHERE UserPost = '".$_SESSION['sess_user']."'";
+				$sql = "SELECT * FROM `post` WHERE UserPost = '".$_SESSION['sess_user']."' ORDER BY ID DESC";
 				$result = mysql_query($sql) or die ("Query failed");
 				$numrows = mysql_num_rows($result);
 				if ($numrows == 0) {
