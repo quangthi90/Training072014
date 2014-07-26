@@ -74,7 +74,7 @@
 			</div>
 			<div class="col-sm-8 col-md-8 col-lg-8">
 				<?php
-				//include"php/addpostform.php";
+					include"php/addpostform.php";
 					 if(!isset($_REQUEST['user_page']))
 				 		include "php/content.php";
 				 	else{
