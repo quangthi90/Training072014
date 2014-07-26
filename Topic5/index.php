@@ -73,14 +73,12 @@
 				</nav>	
 			</div>
 			<div class="col-sm-8 col-md-8 col-lg-8">
-<<<<<<< HEAD
-				
 				<?php
-				include"php/addpostform.php";
-=======
+				include"php/addpostform.php";?>
+
 				<?php
 				//include"php/addpostform.php";
->>>>>>> 2b8d5eee437d4d8d5cbd56b639a1410c7d29c79b
+
 					 if(!isset($_REQUEST['user_page']))
 				 		include "php/content.php";
 				 	else{
