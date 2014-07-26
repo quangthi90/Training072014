@@ -73,15 +73,34 @@
 				</nav>	
 			</div>
 			<div class="col-sm-8 col-md-8 col-lg-8">
-				<?php
-					include"php/addpostform.php";
-					if(!isset($_REQUEST['user_page']))
-				 		include "php/content.php";
-				 	else{
-				 		$session_user = $_REQUEST['user_page'];
-				 		include "php/list_post_user.php";
-				 	}
-				  ?>
+			<?php
+				if(!isset($_REQUEST['idPost'])) return;
+				$idPost = $_REQUEST['idPost'];
+				include "php/connect.php";
+				$result = mysql_query("SELECT `ID`, DATE_FORMAT(`Date`,'%d/%m/%y') time, `Content`, `UserPost`, `Title` FROM `post` WHERE `ID` = $idPost") or die ("Query failed");
+				$result1 = mysql_query("SELECT `IDPost`, `UserCmt`, `Date`, `Content` FROM `comment` WHERE `IDPost` = $idPost
+					") or die ("Query failed");
+				$row = mysql_fetch_array($result); 
+				$str_echo = "<div class='page-header text-warning'><h3>$row[Title]</h3></div>
+				<p>$row[Content]</p>
+				<h4><small>$row[time]</small></h4><br>
+				<h4>Comment</h4>
+				<ul class='list-group'>";
+				while ($row1 = mysql_fetch_array($result1)) {
+					$str_echo = $str_echo."<li class='list-group-item'>
+							<p><strong>$row1[UserCmt]</strong>: $row1[Content]</p>
+							<h5><small>$row1[Date]</small></h5>
+						</li>";
+				}
+					
+				$str_echo = $str_echo."</ul>
+				<div class='list-group'>
+					<h5>Add Comment</h5>
+					<textarea class='form-control' rows='3'></textarea>
+					<button type='button' class='btn btn-warning pull-right' style='margin: 10px; padding: 5px 40px'>Add</button>
+				</div>";
+				echo $str_echo;
+			?>
 			</div>
 			<div class="col-sm-2 col-md-2 col-lg-2">
 				<nav class="navbar navbar-default" role="navigation" style="background-color:#ffcc00; padding-bottom: 10px">
