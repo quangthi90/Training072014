@@ -54,6 +54,7 @@ if(isset($_POST["titlepost"]) && isset($_POST["status"])){
 				<h4> Welcome, <?php echo ($_SESSION["sess_user"]);?>!
 					<a href="Logout.php">Logout</a>
 				</h4> 
+				<a href="index.php" class="btn btn-success pager center-block">Home Page</a>
 			</div>
 		</div>
 		<div class="row">
