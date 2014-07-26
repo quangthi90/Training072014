@@ -25,9 +25,10 @@
 	$datepost = "$date[year]".'-'."$date[mon]".'-'."$date[mday]".'  '."$date[hours]".':'."$date[minutes]".':'."$date[seconds]";
 	
 	$insert_data = "insert into post values ('null','$datepost','$stt','$user','$tt')";
-	echo $insert_data;
+	// echo $insert_data;
 	mysql_query($insert_data) or die ("Query failed");
 
+	header("Location: ../index.php");
 //exit;
 ?>
 
