@@ -59,6 +59,7 @@
 			</div>
 			<div class="col-sm-2 col-md-2 col-lg-2">
 				<?php
+						include "php/connect.php";
 						$table = "post";
 						$userCmt = $_SESSION["Username"];
 						$query1 = "SELECT `ID`, year(`Date`) year_post, MONTH(`Date`) month_post ,DATE_FORMAT(`Date`,'%m/%y') time_post, `Title` FROM `post` WHERE `UserPost` =  '$userCmt'" ;

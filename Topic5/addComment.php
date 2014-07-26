@@ -1,12 +1,5 @@
 <?php
-	$user = 'root';
-	$pass ='';
-	$db = 'topic_5';
-	$link = mysql_connect("localhost",$user,$pass);
-	if (!$link) {
-		die("could'nt connect to MySQL");
-	}
-	mysql_select_db($db) or die("Couldn't open $db: ".mysql_error());
+	include "php/connect.php";
 	$table = "comment";
 	session_start(); // Start call PHP session
 	$date = date ("Y-m-d H:i:s", time()); // time() <-- timestamp of now
