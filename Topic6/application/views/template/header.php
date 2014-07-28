@@ -18,22 +18,3 @@
 				  <h1 class="text-danger">Mini Blog</h1>
 				</div>
 			</div>
-			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-				<!-- from login -->
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 bg-danger">
-				<!-- List user  -->
-			</div>
-			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 bg-info">
-				<!-- conntent -->
-				<?php //include "/template/add_post.php"; ?>
-			</div>
-		</div>
-	</div>
-</body>
-<footer class="bg-primary text-center">
-	<p style="padding: 30px 5px">@Topic6</p>
-</footer>
-</html>
