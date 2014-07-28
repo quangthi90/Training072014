@@ -17,8 +17,7 @@
 		     <!-- Collect the nav links, forms, and other content for toggling -->
 		     <div class="collapse navbar-collapse navbar-ex1-collapse">
 		      <?php 
-		      		include(".././Model/connect.php");
-
+		      		include("application/models/connect.php");
 					 $user1 = 'June';
 					 $user2 = 'Salm';
 					 $user3 = 'Daisy';
@@ -31,7 +30,6 @@
 						
 					while ($row = mysql_fetch_array($result)) {
 						echo "<li>$row[username] <li>";
-						code...
 					}
 					echo "</ul>";
 		       ?>
