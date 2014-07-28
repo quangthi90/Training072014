@@ -1,9 +1,12 @@
 <?php
 	while($result)
 	{
-		echo "<div> <>strong>$result[postTitle]</strong></div>";
-		echo "<div> $result[postContent]</div>";
-		echo "<div> $result[postCreate]</div>";
-		echo "<a href='#'> see more</a>";
+		$title = $result["postTitle"];
+		$content = $result["postContent"];
+		$create = $result["postCreate"];
+		echo "<div> <strong>$title</strong></div> </br>";
+		echo "<div> $content</div> </br>";
+		echo "<div stype = 'float: left'>$create</div>";
+		echo "<a href='PostDetail.php' stype = 'float: right'> see more</a>";
 	}
 ?>
