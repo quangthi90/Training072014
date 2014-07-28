@@ -8,11 +8,7 @@
 		
 		public  function __construct()
 		{
-			parent::__construct();
-			// $config['hostname'] = "localhost";
-			// $config['username'] = "root";
-			// $config['password'] = "";
-			// $config['database'] = "topic6";
+			
 			$this->load->database();
 		}
 		public function listpost(){
