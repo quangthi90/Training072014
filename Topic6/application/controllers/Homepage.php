@@ -8,12 +8,12 @@ class homepage extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('template/header.php');
-		$this->load->view('template/login.php');
+		$this->load->view('template/account/signin_view.php');
 		$this->load->view('template/list_user.php');
 		// $this->load->view('content.php');
 		$this->load->model("ListPost");
 		$data['result'] = $this->ListPost->listpost();
-			// $this->load->view("Viewlistpost", $data);
+		$this->load->view("Viewlistpost", $data);
 		$this->load->view('template/footer.php');
 	}
 }

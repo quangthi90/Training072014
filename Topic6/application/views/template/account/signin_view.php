@@ -1,6 +1,6 @@
-<div class="col-md-10">
+<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 	
-	<?php echo form_open("account/login"); ?>
+	<?php// echo form_open("account/login"); ?>
 	
 	<div class="row">
 		<div class="col-md-9">
@@ -13,14 +13,13 @@
 				<input type="password" class="form-control" placeholder="Password" id="password" name="password">
 			</div>
 		</div>
-			
-
 		<div class="col-md-3">
-			<button type="submit" name="login" class="btn btn-success" style="padding: 7px 20px; margin: 10px 5px">Login</button>
-			<a href="Register.php" style="margin: 15px">Register</a>
+			<button type="submit" name="login" class="btn btn-success pull-left" style="padding: 7px 20px; margin: 13px -25px">Login</button>
+			<a href="Register.php" style="margin-top: 30px" >Register</a>
 		</div>
 	</div> <!-- /end row -->
 
-	<?php echo form_close(); ?>
+	<?php// echo form_close(); ?>
 	
-</div> <!-- /end col-md-10 -->
+</div>
+</div>
