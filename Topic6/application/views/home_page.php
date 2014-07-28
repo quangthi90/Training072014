@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Topic6</title>
-	<link rel="stylesheet" type="text/css" href="template/css/bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="template/css/bootstrap-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>application/views/template/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>application/views/template/css/bootstrap-theme.css"/>
 </head>
 <body>
 	<div class="container-fluid">
