@@ -13,26 +13,27 @@
 		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 bg-danger">
 			<nav class="navbar navbar-default" role="navigation" style=" padding-bottom: 10px; margin-top: 10px">
 		     <!-- Brand and toggle get grouped for better mobile display -->
-
+				<h5 class="text-danger" style="margin-left: 20px">List user</h5>
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
 		     <!-- Collect the nav links, forms, and other content for toggling -->
 		     <div class="collapse navbar-collapse navbar-ex1-collapse">
+		     	<ul class='nav nav-pills nav-stacked text-left'>
 		      <?php 
 		      		include("application/models/connect.php");
-					 $user1 = 'June';
-					 $user2 = 'Salm';
-					 $user3 = 'Daisy';
-					 $user4 = 'Nga';
-
-					$query = "SELECT distinct(username) FROM account ";
+					$query = "SELECT username FROM account ";
 					$result = mysql_query($query) or die ("query fail");
-					echo "<strong> List user </strong>";
-					echo "<ul class='nav nav-pills nav-stacked text-left'>";
-						
 					while ($row = mysql_fetch_array($result)) {
-						echo "<li>$row[username] <li>";
+						echo "<li><a href=''>$row[username]</a> <li>";
 					}
-					echo "</ul>";
 		       ?>
+		       </ul>
 		     </div><!-- /.navbar-collapse -->
 		    </nav>
 		</div>
