@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2014 at 09:11 PM
+-- Generation Time: Jul 28, 2014 at 12:33 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `account` (
   `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `avartar` mediumblob NOT NULL,
+  `avatar` varchar(128) NOT NULL,
   `fullname` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `birthday` datetime NOT NULL,
   PRIMARY KEY (`username`)
