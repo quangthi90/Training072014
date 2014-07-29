@@ -44,7 +44,7 @@
 
 			$result = $this->account_model->login($username, $password);
 			if ($result) {
-				 $this->welcome();
+				$this->welcome();
 			}
 			else{
 				 $this->index();
