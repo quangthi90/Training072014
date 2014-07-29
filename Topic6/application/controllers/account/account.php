@@ -23,7 +23,7 @@
 			else{
 				$data['title'] = 'Home';
 				$this->load->view('template/header', $data);
-				$this->load->view('register_view', $data);
+				$this->load->view('template/account/register_view', $data);
 				$this->load->view('template/footer', $data);
 			}
 		}
@@ -32,7 +32,7 @@
 			# code...
 			$data['title'] = 'Welcome';
 			$this->load->view('template/header', $data);
-			$this->load->view('welcome_view', $data);
+			$this->load->view('template/account/welcome_view', $data);
 			$this->load->view('template/footer', $data);
 		}
 		public function login()
