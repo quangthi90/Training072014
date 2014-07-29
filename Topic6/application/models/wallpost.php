@@ -5,14 +5,10 @@
 	class Wallpost extends ACI_Model
 	{
 		
-		function __construct()
+		public function __construct()
 		{
 			# code...
 			parent::__construct();
-		}
-		public  function __construct()
-		{
-			
 			$this->load->database();
 		}
 		public function listpost(){
