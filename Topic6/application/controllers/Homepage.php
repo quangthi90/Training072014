@@ -29,6 +29,9 @@ class homepage extends CI_Controller {
 	}
 
 	public function wall( $username ) {
-		echo ' day la wall ' . $username ;exit();
+		//echo ' day la wall ' . $username ;exit();
+		$this->load->model("Wallpost");
+		$data1['result']= $this->Wallpost->listpost($username);
+		$this->load->view('postwall', $data1);
 	}
 }

@@ -11,9 +11,9 @@
 			$this->load->database();
 		}
 
-		public function listpost(){
+		public function listpost($username){
 			$this->db->select("postId,postAuthor,userWall,postTitle,postContent,postCreate,postUpdate");
-			// $this->db->where("postWall","$user");
+			$this->db->where("userWall", "$username");
 			$query=$this->db->get("post");
 			return $query->result_array();
 		}
