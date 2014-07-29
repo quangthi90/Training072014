@@ -1,6 +1,6 @@
 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 	
-	<?php// echo form_open("account/login"); ?>
+	<?php echo form_open("account/login"); ?>
 	
 	<div class="row">
 		<div class="col-md-9">
@@ -19,7 +19,7 @@
 		</div>
 	</div> <!-- /end row -->
 
-	<?php// echo form_close(); ?>
+	<?php echo form_close(); ?>
 	
 </div>
 </div>

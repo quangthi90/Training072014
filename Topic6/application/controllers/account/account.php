@@ -9,8 +9,8 @@
 		{
 			# code...
 			parent::__construct();
-			$this->load->model('account_model');
-			
+			$this->load->model('account/account_model');
+			$this->load->helper('form');
 		}
 
 		public function index()
@@ -22,18 +22,18 @@
 			}
 			else{
 				$data['title'] = 'Home';
-				$this->load->view('header_view', $data);
-				$this->load->view('register_view', $data);
-				$this->load->view('footer_view', $data);
+				$this->load->view('template/header', $data);
+				$this->load->view('template/account/register_view', $data);
+				$this->load->view('template/footer', $data);
 			}
 		}
 		public function welcome()
 		{
 			# code...
 			$data['title'] = 'Welcome';
-			$this->load->view('header_view', $data);
-			$this->load->view('welcome_view', $data);
-			$this->load->view('footer', $data);
+			$this->load->view('template/header', $data);
+			$this->load->view('template/account/welcome_view', $data);
+			$this->load->view('template/footer', $data);
 		}
 		public function login()
 		{
