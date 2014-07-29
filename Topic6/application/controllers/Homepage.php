@@ -15,5 +15,9 @@ class homepage extends CI_Controller {
 		$data['result'] = $this->ListPost->listpost();
 		$this->load->view("viewlistpost", $data);
 		$this->load->view('template/footer.php');
+
+		$this->load->model("Wallpost");
+		$data1['result']= $this->Wallpost->listpost();
+		$this->load->view('postwall', $data1);
 	}
 }
