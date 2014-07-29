@@ -2,7 +2,7 @@
 	/**
 	* 
 	*/
-	class account extends CI_Controller
+	class Account extends CI_Controller
 	{
 		
 		function __construct(argument)
@@ -10,6 +10,7 @@
 			# code...
 			parent::__construct();
 			$this->load->model('account_model');
+
 			
 		}
 
@@ -25,6 +26,7 @@
 				$this->load->view('header_view', $data);
 				$this->load->view('register_view', $data);
 				$this->load->view('footer_view', $data);
+
 			}
 		}
 		public function welcome()
@@ -37,6 +39,8 @@
 		}
 		public function login()
 		{
+			$this->load->helper('form');
+
 			# code...
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
