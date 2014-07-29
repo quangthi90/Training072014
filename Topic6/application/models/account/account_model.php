@@ -16,7 +16,7 @@
 			parent::__construct();
 		}
 
-		public function login($usename, $password)
+		public function login($username, $password)
 		{
 			# code...
 			$this->db->where("username", $username);
@@ -76,7 +76,7 @@
 				return ($code = md5($this->config->item('salt').$row->username))? true:false;
 			}
 			else{
-				return false
+				return false;
 			}
 		}
 

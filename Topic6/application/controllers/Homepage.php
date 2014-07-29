@@ -9,6 +9,7 @@ class homepage extends CI_Controller {
 	{
 		$this->load->view('template/header.php');
 		$this->load->view('template/account/signin_view.php');
+
 		// GET LIST USER
 		$users = array();
 		$this->load->model("user");
@@ -17,15 +18,11 @@ class homepage extends CI_Controller {
 			$users[$key]['wall_link'] = site_url(array('homepage', 'wall', $user['username']));
 		}
 		$this->load->view('template/list_user.php', array( 'users' => $users));
-		// $this->load->view('content.php');
+		
 		$this->load->model("ListPost");
 		$data['result'] = $this->ListPost->listpost();
 		$this->load->view("viewlistpost", $data);
 		$this->load->view('template/footer.php');
-
-		// $this->load->model("Wallpost");
-		// $data1['result']= $this->Wallpost->listpost();
-		// $this->load->view('postwall', $data1);
 	}
 
 	public function wall( $username ) {
