@@ -2,7 +2,7 @@
 	/**
 	* 
 	*/
-	class Wallpost extends ACI_Model
+	class Wallpost extends CI_Model
 	{
 		
 		public function __construct()
