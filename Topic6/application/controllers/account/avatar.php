@@ -17,10 +17,11 @@ class avatar extends CI_Controller {
 
 	function do_upload()
 	{
-		$_SESSION['username'] = 'aaa';
+		$_SESSION['username'] = 'phuong';
 		$folder_name = $_SESSION['username'];
 
 		$path_upload = BASEPATH . 'images/'."$folder_name";
+		echo BASEPATH;
 		if(!file_exists($path_upload))
 		{
 			$create = mkdir($path_upload, 0777);
