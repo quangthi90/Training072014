@@ -5,7 +5,7 @@
 		<?php foreach($result as $post) { ?>
 		     
 		    <div class="col-md-5 list-group-item" style="margin: 5px 10px; margin-left: 30px">
-				<h5><img src="..." alt="<?php $post['postAuthor']; ?>" class="img-circle">
+				<h5><img src="./../assets/img/avatar1.jpg" class="img-circle"/>
 				<strong><?php echo $post["postAuthor"]; ?></strong>
 				<small><?php echo $post["postCreate"]; ?></small></h5>
 			    <h3 class="text-uppercase"><strong><?php echo $post["postTitle"]; ?></strong></h3>
