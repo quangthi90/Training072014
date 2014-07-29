@@ -15,7 +15,7 @@
 		</div>
 		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 			<button type="submit" name="login" class="btn btn-success pull-left" style="padding: 7px 20px; margin: 13px -25px">Login</button>
-			<a href="Register.php" style="margin: 30px -15px" >Register</a>
+			<a href="application/views/template/account/Register.php" style="margin: 30px -15px" >Register</a>
 		</div>
 	</div> <!-- /end row -->
 
