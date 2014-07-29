@@ -1,7 +1,7 @@
 <?php 
 	if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	if ( ! function_exists('generate_options')){
-		function generate_options($from, $to, $callback=false)
+		public function generate_options($from, $to, $callback=false)
 		{
 			# code...
 			$reverse=false;
@@ -31,20 +31,21 @@
 
 	if (! function_exists('callback_month')) {
 		# code...
-		function callback_month($month)
+		public function callback_month($month)
 		{
 			# code...
-			return date('F', mktime(0,0,0,$month,1));
+			return date('F', mktime(0,0,0,$month,1))
 		}
 	}
 
 	if (! function_exists('format_date')) {
 		# code...
-		function format_date($date)
+		public function format_date($date)
 		{
 			# code...
 			$part = explode('-', $date);
-			return date('F j, Y', mktime(0, 0, 0, $part[1], $part[2], $part[3]));
+			return date('F j, Y', mktime(0, 0, 0, $part[1], $part[2], $part
+				[3]));
 		}
 	}
  ?>
