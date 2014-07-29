@@ -16,7 +16,8 @@
 			$this->load->database();
 		}
 		public function listpost(){
-			$user = $this->session->userdata('username');
+
+			$user = $_REQUEST["user"];
 			$query = $this->db->get("post");
 			$query =$this->db->where("postWall",$user);
 			return $query->result_array();
