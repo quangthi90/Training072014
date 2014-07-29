@@ -7,8 +7,10 @@ class homepage extends CI_Controller {
     }
 	public function index()
 	{
+		$sResgisterLink = site_url( array('account', 'account', 'register') );
+		
 		$this->load->view('template/header.php');
-		$this->load->view('template/account/signin_view.php');
+		$this->load->view('template/account/signin_view.php', array('sResgisterLink' => $sResgisterLink));
 
 		// GET LIST USER
 		$users = array();
@@ -26,6 +28,9 @@ class homepage extends CI_Controller {
 	}
 
 	public function wall( $username ) {
-		echo ' day la wall ' . $username ;exit();
+		//echo ' day la wall ' . $username ;exit();
+		$this->load->model("Wallpost");
+		$data1['result']= $this->Wallpost->listpost($username);
+		$this->load->view('postwall', $data1);
 	}
 }
