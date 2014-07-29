@@ -12,11 +12,14 @@
 			$this->load->database();
 		}
 		public function listpost(){
-
+			/*$sql = "select * from `post` where `userWall` =  '$user'";
+			$query = $this->db->query($sql);*/
 			$user = $_REQUEST["user"];
-			$query = $this->db->get("post");
-			$query =$this->db->where("postWall",$user);
-			return $query->result_array();
+		    $this->db->select("postId, postAuthor, userWall,postTitle, postContent, postCreate,postUpdate");
+	        $this->db->where("postWall","$user");
+	        $query=$this->db->get("post");
+			
+	        return $query->result_array();
 		}
 	}
 	
