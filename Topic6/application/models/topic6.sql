@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `account` (
 -- Dumping data for table `account`
 --
 
-INSERT INTO `account` (`username`, `password`, `email`, `avatar`, `fullname`, `birthday`) VALUES
+INSERT INTO `account` (`username`, `password`, `email`, `avartar`, `fullname`, `birthday`) VALUES
 ('phuong', '123', 'phuong@gmail', '', 'Phuong Huynh', '2014-07-30 00:00:00'),
 ('thao', '123', 'thao@gmail', '', 'thao phuong', '2014-07-15 00:00:00');
 
