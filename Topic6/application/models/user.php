@@ -1,16 +1,10 @@
 <?php
 	class user extends CI_Model
 	{
-		public function __construct()
-		{
-			parent::__construct();
-        	$this->load->database();
-		}
+		public function getAllUsers() {
+			$sQuery = "SELECT username, fullname, avatar, email, birthday FROM Account";
 
-		public function getUsers() {
-			$this->db->select("username, fullname");
-			$query = $this->db->get("account");
-			return $query->result_array();
+			return $this->db->query($sQuery)->result_array();
 		}
 	}
 ?>
