@@ -31,6 +31,15 @@ class homepage extends CI_Controller {
 		//echo ' day la wall ' . $username ;exit();
 		$this->load->model("Wallpost");
 		$data1['result']= $this->Wallpost->listpost($username);
+		foreach ($data1 as $key => $id) {
+			$data1[$key]['wall_link_delete'] =  site_url(array('homepage', 'wallpostdelete', $id['postId']));
+		}
+		//$this->Wallpost->deletepost($postId);
 		$this->load->view('postwall', $data1);
 	}
+	public function wallpostdelete($postId){
+		$this->load->model("Wallpost");
+		$this->Wallpost->deletepost($postId);
+	}
 }
+?>

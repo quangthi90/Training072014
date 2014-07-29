@@ -17,6 +17,10 @@
 			$query=$this->db->get("post");
 			return $query->result_array();
 		}
+		public function deletepost($postId){
+			$this->db->where("postId","$postId");
+			$this->db->delete("post");
+		}
 	}
 	
 ?>
