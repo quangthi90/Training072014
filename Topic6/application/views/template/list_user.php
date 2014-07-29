@@ -25,13 +25,16 @@
 		     <!-- Collect the nav links, forms, and other content for toggling -->
 		     <div class="collapse navbar-collapse navbar-ex1-collapse">
 		     	<ul class='nav nav-pills nav-stacked text-left'>
+		     	<?php foreach ($users as $user) { ?>
+		     		<li><a href="<?php echo $user['wall_link']; ?>"><?php echo $user['fullname']; ?></a> <li>
+		     	<?php } ?>
 		      <?php 
-		      		include("application/models/connect.php");
-					$query = "SELECT username FROM account ";
-					$result = mysql_query($query) or die ("query fail");
-					while ($row = mysql_fetch_array($result)) {
-						echo "<li><a href='site_url('root/application/controllers/Homepage.php'))'>$row[username]</a> <li>";
-					}
+		   //    		include("application/models/connect.php");
+					// $query = "SELECT username FROM account ";
+					// $result = mysql_query($query) or die ("query fail");
+					// while ($row = mysql_fetch_array($result)) {
+					// 	echo "<li><a href='site_url('root/application/controllers/Homepage.php'))'>$row[username]</a> <li>";
+					// }
 		       ?>
 		       </ul>
 		     </div><!-- /.navbar-collapse -->
