@@ -1,5 +1,5 @@
 <?php
-	class user extends CI_Model
+	class User extends CI_Model
 	{
 		public function getAllUsers() {
 			$sQuery = "SELECT username, fullname, avatar, email, birthday FROM Account";

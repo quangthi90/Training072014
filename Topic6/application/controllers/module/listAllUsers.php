@@ -20,7 +20,7 @@ class ListAllUsers extends CI_Controller
 			$aUsers[$key]['wall_link'] = site_url(array('homepage', 'wall', $aUser['username']));
 		}
 
-		$this->load->view('module/listUser.php', array( 'aUsers' => $aUsers));
+		$this->load->view('module/listUsers.php', array( 'aUsers' => $aUsers));
 	}
 }
 ?>
