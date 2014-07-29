@@ -30,7 +30,7 @@
 					$query = "SELECT username FROM account ";
 					$result = mysql_query($query) or die ("query fail");
 					while ($row = mysql_fetch_array($result)) {
-						echo "<li id = 'user' name ='user'><a href='site_url('root/application/controllers/Homepage.php') )'>$row[username]</a> <li>";
+						echo "<li><a href='site_url('root/application/controllers/Homepage.php'))'>$row[username]</a> <li>";
 					}
 		       ?>
 		       </ul>
