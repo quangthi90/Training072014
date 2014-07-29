@@ -1,16 +1,26 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php 
 
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+/**
+ * Homepage - Show Header Homepage
+ * @author: Bommer<lqthi.khtn@gmail.com>
+ * @param: none
+ * @return: template home
+ */
 class Home extends CI_Controller {
 	public function index()
 	{
-		// Load helper
-		$this->load->helper("url");
-		$sResgisterLink = site_url( array('account', 'account', 'register') );
+		// load Controller Header
+		include_once(APPPATH.'controllers/common/header.php');
+    	$clsHeader = new Header();
+		$clsHeader->index();
+		
+		// load Controller Left
+		include_once(APPPATH.'controllers/common/left.php');
+    	$clsLeft = new Left();
+		$clsLeft->index();
 
-		// load base layout
-		$this->load->library('../controllers/common/header');
-		$this->header->index();
-		// $this->load->view('template/header.php');
 		// $this->load->view('template/left.php');
 		// $this->load->view('template/right.php');
 		// $this->load->view('template/header.php');
