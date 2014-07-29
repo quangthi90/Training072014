@@ -13,7 +13,6 @@ class homepage extends CI_Controller {
 		$this->load->view('template/header.php');
 		$this->load->view('template/account/signin_view.php', array('sResgisterLink' => $sResgisterLink));
 		$this->load->view('template/list_user.php');
-		// $this->load->view('content.php');
 		$this->load->model("ListPost");
 		$data['result'] = $this->ListPost->listpost();
 		$this->load->view("viewlistpost", $data);
