@@ -32,7 +32,7 @@
 		{
 			# code...
 			$data['title'] = 'Welcome';
-			$this->load->view('template/header');
+			$this->load->view('template/header', $data);
 			$this->load->view('template/account/welcome_view', $data);
 			$this->load->view('template/footer', $data);
 		}
