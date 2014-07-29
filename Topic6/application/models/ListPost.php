@@ -8,7 +8,6 @@
 		
 		public  function __construct()
 		{
-			
 			$this->load->database();
 		}
 		public function listpost(){

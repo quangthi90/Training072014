@@ -5,19 +5,18 @@
 	class Account extends CI_Controller
 	{
 		
-		function __construct(argument)
+		public function __construct()
 		{
 			# code...
 			parent::__construct();
-			$this->load->model('account_model');
-
-			
+			$this->load->model('account/account_model');
+			$this->load->library('session');			
 		}
 
 		public function index()
 		{
 			# code...
-			if (($this->session ->userdata('username')!= "")) {
+			if (($this->session->userdata('username')!= "")) {
 				# code...
 				$this->welcome();
 			}
