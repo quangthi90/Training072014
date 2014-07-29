@@ -7,8 +7,11 @@ class homepage extends CI_Controller {
     }
 	public function index()
 	{
+		// URL
+		$sResgisterLink = site_url( array('account', 'account', 'register') );
+
 		$this->load->view('template/header.php');
-		$this->load->view('template/account/signin_view.php');
+		$this->load->view('template/account/signin_view.php', array('sResgisterLink' => $sResgisterLink));
 		$this->load->view('template/list_user.php');
 		// $this->load->view('content.php');
 		$this->load->model("ListPost");
