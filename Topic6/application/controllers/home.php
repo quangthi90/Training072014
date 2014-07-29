@@ -1,12 +1,21 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class HomePage extends CI_Controller {
+class Home extends CI_Controller {
 	public function index()
 	{
+		// Load helper
 		$this->load->helper("url");
 		$sResgisterLink = site_url( array('account', 'account', 'register') );
+
+		// load base layout
+		$this->load->library('../controllers/common/header');
+		$this->header->index();
+		// $this->load->view('template/header.php');
+		// $this->load->view('template/left.php');
+		// $this->load->view('template/right.php');
+		// $this->load->view('template/header.php');
 		
-		$this->load->view('template/header.php');
+		/*$this->load->view('template/header.php');
 		$this->load->view('template/account/signin_view.php', array('sResgisterLink' => $sResgisterLink));
 
 		// GET LIST USER
@@ -21,7 +30,7 @@ class HomePage extends CI_Controller {
 		$this->load->model("ListPost");
 		$data['result'] = $this->ListPost->listpost();
 		$this->load->view("viewlistpost", $data);
-		$this->load->view('template/footer.php');
+		$this->load->view('template/footer.php');*/
 	}
 	public function wallpostdelete($postId){
 		$this->load->model("Wallpost");
