@@ -23,9 +23,9 @@ class homepage extends CI_Controller {
 		$this->load->view("viewlistpost", $data);
 		$this->load->view('template/footer.php');
 
-		$this->load->model("Wallpost");
-		$data1['result']= $this->Wallpost->listpost();
-		$this->load->view('postwall', $data1);
+		// $this->load->model("Wallpost");
+		// $data1['result']= $this->Wallpost->listpost();
+		// $this->load->view('postwall', $data1);
 	}
 
 	public function wall( $username ) {
