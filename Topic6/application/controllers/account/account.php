@@ -51,6 +51,48 @@
 			}
 		}
 
+		public function reset_password()
+		{
+			# code...
+			if (isset($_POST['email']) && !empty($_POST['email'])) {
+				# code...
+				$this->load->library('form_validation');
+				//check if its a valid email or not
+				$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+
+				if ($this->form_validation->run() == false) {
+					# code...
+					// email didn't validate, send back to reset password form and show errors
+					$this->load->view('template/header');
+					$this->load->view('template/reset_pass_form', array('error' =>'Please supple a valid email address'));
+					$this->load->view('template/footer');
+				}
+				else{
+					$email = trim($this->input->post('email'));
+					$result = $this->account_model->email_exists($email);
+
+					if ($result) {
+						# code...
+						//if we found the email
+						$this->send_reset_pass_email($email, $result);
+						$this->load->view('template/header');
+						$this->load->view('template/reset_pass_sent', array('email' => $email));
+						$this->load->view('template/footer');
+					}
+					else{
+						$this->load->view('template/header');
+						$this->load->view('template/reset_pass', array('error' => 'Email address not registed'));
+						$this->load->view('template/footer');
+					}
+				}
+			}
+			else{
+					$this->load->view('template/header');
+					$this->load->view('template/reset_pass_sent', array('email' => $email));
+					$this->load->view('template/footer');
+				}
+		}
+
 		public function register()
 		{
 			# code...
