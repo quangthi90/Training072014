@@ -7,17 +7,16 @@
 	/**
 	* 
 	*/
-	class Account_model extends CI_Model
+	class account_model extends CI_Model
 	{
 		
-		function __construct()
+		function __construct(argument)
 		{
 			# code...
 			parent::__construct();
-			$this->load->database();
 		}
 
-		public function login($username, $password)
+		public function login($usename, $password)
 		{
 			# code...
 			$this->db->where("username", $username);

@@ -2,44 +2,41 @@
 	/**
 	* 
 	*/
-	class Account extends CI_Controller
+	class account extends CI_Controller
 	{
 		
-		public function __construct()
+		function __construct(argument)
 		{
 			# code...
 			parent::__construct();
-			$this->load->model('account/account_model');
-			$this->load->library('session');			
+			$this->load->model('account_model');
+			
 		}
 
 		public function index()
 		{
 			# code...
-			if (($this->session->userdata('username')!= "")) {
+			if (($this->session ->userdata('username')!= "")) {
 				# code...
 				$this->welcome();
 			}
 			else{
 				$data['title'] = 'Home';
-				$this->load->view('template/header', $data);
-				$this->load->view('template/account/register_view', $data);
-				$this->load->view('template/footer', $data);
-
+				$this->load->view('header_view', $data);
+				$this->load->view('register_view', $data);
+				$this->load->view('footer_view', $data);
 			}
 		}
 		public function welcome()
 		{
 			# code...
 			$data['title'] = 'Welcome';
-			$this->load->view('template/header', $data);
-			$this->load->view('template/account/welcome_view', $data);
-			$this->load->view('template/footer', $data);
+			$this->load->view('header_view', $data);
+			$this->load->view('welcome_view', $data);
+			$this->load->view('footer', $data);
 		}
 		public function login()
 		{
-			$this->load->helper('form');
-
 			# code...
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');

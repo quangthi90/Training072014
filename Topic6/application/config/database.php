@@ -65,7 +65,5 @@ $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
 // $this->load->model($db);
-
-
 /* End of file database.php */
 /* Location: ./application/config/database.php */
