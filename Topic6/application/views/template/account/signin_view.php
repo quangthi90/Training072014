@@ -21,5 +21,5 @@
 
 	<?php echo form_close(); ?>
 	
-</div>
-</div>
+</div> <!-- end col -->
+</div> <!-- end row -->
