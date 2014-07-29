@@ -10,7 +10,7 @@
 	class account_model extends CI_Model
 	{
 		
-		function __construct(argument)
+		function __construct()
 		{
 			# code...
 			parent::__construct();
