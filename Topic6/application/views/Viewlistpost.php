@@ -1,9 +1,8 @@
-<?php
-	while($result)
-	{
-		echo "<div> <>strong>$result[postTitle]</strong></div>";
-		echo "<div> $result[postContent]</div>";
-		echo "<div> $result[postCreate]</div>";
-		echo "<a href='#'> see more</a>";
-	}
-?>
+
+<ul>
+<?php foreach($result as $post) { ?>
+     
+    <li><?php echo $post["postTitle"]; ?></li>
+     
+<?php } ?>
+</ul>
