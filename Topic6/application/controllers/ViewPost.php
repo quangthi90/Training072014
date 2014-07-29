@@ -13,7 +13,7 @@
 		public function view_post(){
 			$this->load->model("ListPost");
 			$data['result'] = $this->ListPost->listpost();
-			$this->load->view("Viewlistpost", $data);
+			$this->load->view("viewlistpost", $data);
 		}
 	}
 ?>
