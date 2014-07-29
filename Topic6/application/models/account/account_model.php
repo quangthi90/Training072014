@@ -53,5 +53,36 @@
 				);
 			$this->db->insert('account', $data);
 		}
+
+		public function email_exists($email)
+		{
+			# code...
+			$query = "SELECT username, email FROM account WHERE email = '{$email}' LIMIT 1";
+			$result = $this->db->query($query);
+			$row = $result->row();
+
+			return ($result->num_rows()===1 && $row->email) ? $row->username : false;
+		}
+
+		public function verify_reset_password_code($email,$code)
+		{
+			# code...
+			$query = "SELECT username, email FROM account WHERE email = '{$email}' LIMIT 1";
+			$result = $this->db->query($query);
+			$row = $result->row();
+
+			if ($result->num_rows()===1) {
+				# code...
+				return ($code = md5($this->config->item('salt').$row->username))? true:false;
+			}
+			else{
+				return false
+			}
+		}
+
+		public function update_password()
+		{
+			# code...
+		}
 	}
  ?>
