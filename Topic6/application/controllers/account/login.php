@@ -12,9 +12,22 @@
 
 		public function index()
 		{
-			$this->load->view('header');
+			// load Controller Header
+			include_once(APPPATH.'controllers/common/header.php');
+	    	$clsHeader = new Header();
+			$clsHeader->index();
+
+			// load Controller Left
+			include_once(APPPATH.'controllers/common/left.php');
+	    	$clsLeft = new Left();
+			$clsLeft->index();
+
 			$this->load->view('signin_view');
-			$this->load->view('footer');
+			
+			// load Controller Footer
+			include_once(APPPATH.'controllers/common/footer.php');
+	    	$clsFooter = new Footer();
+			$clsFooter->index();
 		}
 
 		public function sign_in()
