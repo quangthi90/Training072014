@@ -9,10 +9,12 @@
 				<small><?php echo $aPost["postCreate"]; ?></small></h5>
 				<input type="hidden" value="<?php echo $aPost['postId']; ?>">
 			    <h3 class="text-uppercase"><strong><?php echo $aPost["postTitle"]; ?></strong></h3>
-			    <a href="postdetail.php" class="pull-right">See more</a><br/>
-			    <a href="<?php echo $aPost['wall_link_delete']; ?>" class="pull-right">Delete</a><br/>
-			    <a href="<?php echo $aPost['wall_link_edit']; ?>" class="pull-right">Edit</a>
 			    <p><?php echo $aPost["postContent"]; ?></p>
+			    <div style="margin-bottom: 10px">
+			    	<a href="postdetail.php" class="pull-right">See more</a><br/>
+				    <a href="<?php echo $aPost['wall_link_delete']; ?>" class="pull-right">Delete</a><br/>
+			    </div>
+			    
 		    </div>
 		<?php } ?>
 <!-- </div> -->
