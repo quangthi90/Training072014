@@ -2,12 +2,14 @@
 	<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
 				<!-- conntent -->
 				<ul>
-			<?php foreach($result as $post) { ?>
-			     <li><?php echo $post["postAuthor"]; ?></li>
-			    <li><?php echo $post["postTitle"]; ?></li>
-			     <li><?php echo $post["postContent"]; ?></li>
-			     <li><?php echo $post["postCreate"]; ?></li>
-			     <li><a href="postdetail.php">see more</a></li>
+			<?php foreach( $aPosts as $aPost ) { ?>
+				<li><input type='hidden' id="idpost" value="<?php echo $aPost['postId']; ?>" /></li>
+			     <li><?php echo $aPost["postAuthor"]; ?></li>
+			    <li><?php echo $aPost["postTitle"]; ?></li>
+			     <li><?php echo $aPost["postContent"]; ?></li>
+			     <li><?php echo $aPost["postCreate"]; ?></li>
+			     <li><a href="<?php echo $aPost['wall_link_delete']; ?>">Delete</a></li>
+			     <li><a href="">see more</a></li>
 			<?php } ?>
 </ul>
 			</div>
