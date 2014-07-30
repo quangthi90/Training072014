@@ -72,24 +72,7 @@
 
 		public function login($username, $password)
 		{
-			# code...
-			$this->db->where("username",$username);
-			$this->db->where("password",$password);
-
- 			$query=$this->db->get("account");
-  			if($query->num_rows()>0){
-   				foreach($query->result() as $rows){
-				    //add all data to session
-				    $newdata = array(
-				      'username'  => $rows->username,
-				      'email'    => $rows->email,
-				      'logged_in'  => TRUE,
-				    );
-				}
-   				$this->session->set_userdata($newdata);
-   				return true;
-  			}
-  			return false;
+			$result = $this->account_model->login($username, $password);
 		}
 
 		public function reset_password()
