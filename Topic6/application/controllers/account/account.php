@@ -10,19 +10,32 @@
 			# code...
 			parent::__construct();
 			$this->load->model('account/account_model');
-			
+			$this->load->library('session');
 		}
 
 		public function index()
 		{
 			# code...
-			if (($this->session ->userdata('username')!= "")) {
+			if (($this->session->userdata('username')!= "")) {
 				# code...
 				$this->welcome();
 			}
 			else{
 				$data['title'] = 'Home';
 				$this->load->view('template/header', $data);
+				$sResgisterLink = site_url( array('account/account', 'register') );
+				$this->load->view('template/account/signin_view.php', array('sResgisterLink' => $sResgisterLink));
+
+				// GET LIST USER
+				$users = array();
+				$this->load->model("user");
+				$users = $this->user->getUsers();
+				foreach ($users as $key => $user) {
+					$users[$key]['wall_link'] = site_url(array('homepage', 'wall', $user['username']));
+				}
+				$this->load->view('template/list_user.php', array( 'users' => $users));
+
+
 				$this->load->view('template/account/register_view', $data);
 				$this->load->view('template/footer', $data);
 			}
@@ -33,8 +46,32 @@
 			$data['title'] = 'Welcome';
 			$this->load->view('template/header', $data);
 			$this->load->view('template/account/welcome_view', $data);
+
+			$users = array();
+			$this->load->model("user");
+			$users = $this->user->getUsers();
+			foreach ($users as $key => $user) {
+				$users[$key]['wall_link'] = site_url(array('homepage', 'wall', $user['username']));
+			}
+			$this->load->view('template/list_user.php', array( 'users' => $users));
+			$username = $this->session->userdata('username');
+		
+			$this->load->model("ListPost");
+			$data['result'] = $this->ListPost->listpost_user($username);
+			 
+			 //Show form add post
+			$this->load->view("template/add_post", $data);
+
+			if(empty($data['result'])) {		 	
+			 	//Show message
+			 	$this->load->view("mss_empty_post");
+		 	}
+			$this->load->view("viewlistpost", $data);
+
+
 			$this->load->view('template/footer', $data);
 		}
+
 		public function login()
 		{
 			# code...
@@ -105,7 +142,7 @@
 			$this->form_validation->set_rules('fullname', 'Fullname', 'trim|required|min_length[6]|max_length[50]');
 			$this->form_validation->set_rules('dob', 'Date of Birth', 'callback_date_check');
 
-			if ($this->form_validation->run()== false) {
+			if ($this->form_validation->run() == false) {
 				# code...
 				$this->index();
 			}
@@ -133,8 +170,8 @@
 				'email' => '',
 				'logged_in' => false,
 				);
+			// $this->session->unset_userdata($newdata);
 			$this->session->unset_userdata($newdata);
-			$this->session->sess_detroy();
 			$this->index();
 		}
 	}

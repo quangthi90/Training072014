@@ -9,10 +9,16 @@
 		{
 			# code...
 			parent::__construct();
+			$this->load->model("ListPost");
 		}
 		public function view_post(){
-			$this->load->model("ListPost");
+			
 			$data['result'] = $this->ListPost->listpost();
+			$this->load->view("viewlistpost", $data);
+		}
+		public function view_post_user($username){
+			$data['result'] = $this->ListPost->listpost_user($username);
+			if(empty($data['result'])) show_404();
 			$this->load->view("viewlistpost", $data);
 		}
 	}
