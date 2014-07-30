@@ -12,9 +12,9 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		// load data for content
-		$this->load->model("mpost");
+		$this->load->model("post");
 
-		$aPosts = $this->mpost->getPosts();
+		$aPosts = $this->post->getPosts();
 
 		// Format list users again---change wall_link
 		foreach ( $aPosts as $key => $aPost) {

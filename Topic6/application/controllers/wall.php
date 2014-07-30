@@ -12,11 +12,11 @@ class Wall extends CI_Controller {
 	public function index($username)
 	{
 		// load data for content
-		$this->load->model("mpost");
-		$aPosts = $this->mpost->getPosts( array('user_wall' => $username) );
+		$this->load->model("post");
+		$aPosts = $this->post->getPosts( array('user_wall' => $username) );
 
 		foreach ( $aPosts as $key => $aPost) {
-			$aPosts[$key]['wall_link_delete'] = site_url(array('post','post', 'delete', $aPost['postId']));
+			$aPosts[$key]['wall_link_delete'] = site_url(array('post','postAction', 'delete', $aPost['postId']));
 		}
 
 		// load Controller Header
