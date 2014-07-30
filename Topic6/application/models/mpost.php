@@ -24,5 +24,12 @@
 			// DELETE POST
 			
 		}
+		public function editPost(){
+
+		}
+
+		public function addPost(){
+			
+		}
 	}
 ?>
