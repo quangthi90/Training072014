@@ -32,7 +32,6 @@ class WallPage extends CI_Controller {
 		$clsLeft->index();
 
 		// Load list Posts template
-		//$this->load->view("module/listPosts", $aData);
 		$this->load->view( "module/listPosts", array('aPosts' => $aPosts) );
 		// load Controller Footer
 		include_once(APPPATH.'controllers/common/footer.php');

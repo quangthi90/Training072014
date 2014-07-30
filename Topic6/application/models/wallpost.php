@@ -8,7 +8,7 @@
 		 * Get list posts by username
 		 * @author: NguyenNga<nguyennga.khtn10@gmail.com>
 		 * @param: string username
-		 * @return: array object Posts
+		 * @return: array object Posts of wall user
 		 */
 		public function listpost($username){
 			$sQuery = "SELECT postId, postAuthor, userWall, postTitle, postContent, postCreate, postUpdate FROM Post WHERE userwall = '$username'";
