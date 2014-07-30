@@ -14,13 +14,11 @@ class Wall extends CI_Controller {
 		// load data for content
 		$this->load->model("post");
 		$aPosts = $this->post->getPosts( array('user_wall' => $username) );
-		/*foreach ( $aPosts as $key => $aPost ) {
-			$aPosts[$key]['wall_link_delete'] =  site_url(array(
-				'homepage', 
-				'wallpostdelete', 
-				$aPost['postId']
-			));
-		}*/
+
+		foreach ( $aPosts as $key => $aPost) {
+			$aPosts[$key]['wall_link_delete'] = site_url(array('post', 'delete', $aPost['postId']));
+		}
+
 		// load Controller Header
 		include_once(APPPATH.'controllers/common/header.php');
     	$clsHeader = new Header();

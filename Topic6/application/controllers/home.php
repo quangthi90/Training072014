@@ -13,7 +13,15 @@ class Home extends CI_Controller {
 	{
 		// load data for content
 		$this->load->model("post");
-		$aData['aPosts'] = $this->post->getPosts();
+
+		$aPosts = $this->post->getPosts();
+
+		// Format list users again---change wall_link
+		foreach ( $aPosts as $key => $aPost) {
+			$aPosts[$key]['wall_link_delete'] = site_url(array('post', 'delete', $aPost['postId']));
+		}
+
+		$aData['aPosts'] = $aPosts;
 
 		// load Controller Header
 		include_once(APPPATH.'controllers/common/header.php');
