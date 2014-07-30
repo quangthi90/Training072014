@@ -20,7 +20,11 @@
 			}
 			else{
 				$data['title'] = 'Home';
-				$this->load->view('template/header', $data);
+
+				include_once(APPPATH.'controllers/common/header.php');
+				$clsHeader = new Header();
+				$clsHeader->index();
+				// $this->load->view('template/header', $data);
 				$sResgisterLink = site_url( array('account/account', 'register') );
 				$this->load->view('template/account/signin_view.php', array('sResgisterLink' => $sResgisterLink));
 
@@ -42,32 +46,37 @@
 		{
 			# code...
 			$data['title'] = 'Welcome';
-			$this->load->view('template/header', $data);
+			// load posts of this
+			$this->load->model("post");
+			$aData['aPosts'] = $this->post->getPosts();
+			
+			include_once(APPPATH.'controllers/common/header.php');
+				$clsHeader = new Header();
+				$clsHeader->index();
 			$this->load->view('template/account/welcome_view', $data);
 
-			$users = array();
-			$this->load->model("user");
-			$users = $this->user->getUsers();
-			foreach ($users as $key => $user) {
-				$users[$key]['wall_link'] = site_url(array('homepage', 'wall', $user['username']));
-			}
-			$this->load->view('template/list_user.php', array( 'users' => $users));
-			$username = $this->session->userdata('username');
+
+			// load Controller Left
+			include_once(APPPATH.'controllers/common/left.php');
+	    	$clsLeft = new Left();
+			$clsLeft->index();
 		
-			$this->load->model("ListPost");
-			$data['result'] = $this->ListPost->listpost_user($username);
-			 
-			 //Show form add post
+			//Show form add post
 			$this->load->view("template/add_post", $data);
 
-			if(empty($data['result'])) {		 	
+			// Load list Posts template
+			$this->load->view("module/listPosts", $aData);
+			 
+			
+			if(empty($aData['aPosts'])) {		 	
 			 	//Show message
 			 	$this->load->view("mss_empty_post");
 		 	}
-			$this->load->view("viewlistpost", $data);
 
-
-			$this->load->view('template/footer', $data);
+			// load Controller Footer
+			include_once(APPPATH.'controllers/common/footer.php');
+	    	$clsFooter = new Footer();
+			$clsFooter->index();
 		}
 
 		public function login($username, $password)

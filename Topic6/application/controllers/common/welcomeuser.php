@@ -7,8 +7,7 @@
 		
 		public function index()
 		{
-			# code...
-			$this->load->view('template/welcome_view.php')
+			$this->load->view('template/welcome_view.php');
 		}
 	}
  ?>
