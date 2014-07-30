@@ -4,13 +4,6 @@
 	*/
 	class Wallpost extends CI_Model
 	{
-		
-		public function __construct()
-		{
-			parent::__construct();
-			$this->load->database();
-		}
-
 		/**
 		 * Get list posts by username
 		 * @author: NguyenNga<nguyennga.khtn10@gmail.com>
@@ -24,10 +17,10 @@
 
 			return $query->result_array();
 		}
-		public function deletepost($postId){
+		/*public function deletepost($postId){
 			$this->db->where("postId","$postId");
 			$this->db->delete("post");
-		}
+		}*/
 	}
 	
 ?>
