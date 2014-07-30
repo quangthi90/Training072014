@@ -7,7 +7,7 @@
 		function __contruct()
 		{
 			parent::__contruct();
-			$this->load->model-('login_model')
+			$this->load->model('login_model');
 		}
 
 		public function index()
