@@ -1,4 +1,9 @@
 <?php
+	/* 
+		show: infomation user
+		Author: June
+		Note: chưa có layout
+	*/
 	if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	//session_start();
 	/**
@@ -20,8 +25,27 @@
 
 
 			 $this->load->model('account/user_info', 'account');
-			 $data['info'] = $this->account->select_user_profile();
+			 $data['info'] = $this->account->selectUserProfile();
 			$this->load->view('account/info_user',$data);
+
+		}
+		public function edit_info(){
+			$this->load->model('account/user_info','account');
+			$data['info'] = $this->account ->selectUserProfile();
+			$this->load->view('account/edit_info',$data);
+
+		}
+		public function insert_info(){
+			// lay gia tri khi nhan submit
+			$data['username'] = $_REQUEST['account'];
+			$data['account'] = $_REQUEST['fullname'];
+			$data['birthday'] = $_REQUEST['birthday'];
+			// insert
+			//$this->load->model('account/user_info','account');
+			//$this->account->updateInfo($data);
+			// update info usr
+			$this->load->view('account/edit_info_suc',$data);
+
 
 		}
 	}
