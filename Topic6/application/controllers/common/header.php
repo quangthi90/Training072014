@@ -11,7 +11,7 @@ class Header extends CI_Controller {
 		// load template
 		$this->load->view('common/header.php');
 
-		if ($this->session->userdata('username')!= ""){
+		if (!$this->session->userdata('username')){
 			// Load modules
 			include_once(APPPATH.'controllers/module/welcomeuser.php');
 		}
