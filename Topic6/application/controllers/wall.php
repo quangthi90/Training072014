@@ -17,6 +17,7 @@ class Wall extends CI_Controller {
 
 		foreach ( $aPosts as $key => $aPost) {
 			$aPosts[$key]['wall_link_delete'] = site_url(array('post','postAction', 'delete', $aPost['postId']));
+			$aPosts[$key]['wall_link_edit'] = site_url(array('post','postAction', 'edit', $aPost['postContent']));
 		}
 
 		// load Controller Header

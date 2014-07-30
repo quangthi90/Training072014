@@ -18,7 +18,8 @@ class Home extends CI_Controller {
 
 		// Format list users again---change wall_link
 		foreach ( $aPosts as $key => $aPost) {
-			$aPosts[$key]['wall_link_delete'] = site_url(array('post', 'post', 'delete', $aPost['postId']));
+			$aPosts[$key]['wall_link_delete'] = site_url(array('post', 'postAction', 'delete', $aPost['postId']));
+			$aPosts[$key]['wall_link_edit'] = site_url(array('post','postAction', 'edit', $aPost['postContent']));
 		}
 
 		$aData['aPosts'] = $aPosts;

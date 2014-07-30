@@ -13,6 +13,7 @@
 			    <div style="margin-bottom: 10px">
 			    	<a href="postdetail.php" class="pull-right">See more</a><br/>
 				    <a href="<?php echo $aPost['wall_link_delete']; ?>" class="pull-right">Delete</a><br/>
+				    <a href="<?php echo $aPost['wall_link_edit']; ?>" class="pull-right">Edit</a>
 			    </div>
 			    
 		    </div>

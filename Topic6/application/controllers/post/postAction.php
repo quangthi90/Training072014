@@ -26,8 +26,14 @@ class PostAction extends CI_Controller
 		// REDIRECT TO HOME PAGE
 	}
 
-	public function edit(){
-		
+	public function edit($postContent){
+		//GET CURRENT USER NAME
+		$aUser = $this->session->userdata('username');
+		echo "<input type='text' id = 'content' value = '$postContent' width = '70px' height = '50px'> ";
+		echo "<input type= 'button' id = 'save' value ='Save'>";
+		// get post from DB
+		$this->load->model("post");
+		$this->post->editPost($postContent, $aUser);
 	}
 }
 ?>
