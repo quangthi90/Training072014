@@ -19,25 +19,21 @@
 		public function login($username, $password)
 		{
 			# code...
-			$this->db->where("username", $username);
-			$this->db->where("password", $password);
+			$this->db->select('username, password');
+			$this->db->from('account');
+			$this->db->where('username, $username');
+			$this->db->where('password, MD5($password)');
+			$this->db->limit(1);
 
-			$query = $this->db->get("account");
-			if ($query->num_rows()>0) {
+			$query = $this->db->get();
+
+			if ($query -> num_rows() ==1) {
 				# code...
-				foreach ($query->result() as $row) {
-					# code...
-					$newdata = array(
-						'username' => $row->username, 
-						'email' => $row->email,
-						'logged_in' => true,
-						);
-				}
-
-				$this->session->set_userdata($newdata);
-				return true;
+				return $query->result();
 			}
-			return false;
+			else{
+				return false;
+			}
 		}
 
 		public function add_account()
