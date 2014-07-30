@@ -17,7 +17,7 @@ class ListAllUsers extends CI_Controller
 
 		// Format list users again---change wall_link
 		foreach ( $aUsers as $key => $aUser ) {
-			$aUsers[$key]['wall_link'] = site_url(array('wallPage', 'index', $aUser['username']));
+			$aUsers[$key]['wall_link'] = site_url(array('wall', 'index', $aUser['username']));
 		}
 
 		$this->load->view('module/listUsers.php', array( 'aUsers' => $aUsers));

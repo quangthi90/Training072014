@@ -12,8 +12,8 @@ class Wall extends CI_Controller {
 	public function index($username)
 	{
 		// load data for content
-		$this->load->model("Wallpost");
-		$aPosts = $this->Wallpost->listpost($username);
+		$this->load->model("post");
+		$aPosts = $this->post->getPosts( array('user_wall' => $username) );
 		/*foreach ( $aPosts as $key => $aPost ) {
 			$aPosts[$key]['wall_link_delete'] =  site_url(array(
 				'homepage', 

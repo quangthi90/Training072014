@@ -38,11 +38,11 @@
 		public function insert_info(){
 			// lay gia tri khi nhan submit
 			$data['username'] = $_REQUEST['account'];
-			$data['account'] = $_REQUEST['fullname'];
+			$data['fullname'] = $_REQUEST['fullname'];
 			$data['birthday'] = $_REQUEST['birthday'];
 			// insert
-			//$this->load->model('account/user_info','account');
-			//$this->account->updateInfo($data);
+			$this->load->model('account/user_info','account');
+			$this->account->updateInfo($data);
 			// update info usr
 			$this->load->view('account/edit_info_suc',$data);
 
