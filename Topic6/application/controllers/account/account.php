@@ -114,23 +114,7 @@
 
 		public function register()
 		{
-			# code...
-			$this->load->library('form_validation');
-
-			$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|max_length[50]|xss_clean');
-			$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[50]');
-			$this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'trim|required|match[password]');
-			$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-			$this->form_validation->set_rules('fullname', 'Fullname', 'trim|required|min_length[6]|max_length[50]');
-			$this->form_validation->set_rules('dob', 'Date of Birth', 'callback_date_check');
-
-			if ($this->form_validation->run() == false) {
-				$this->index();
-			}
-			else{
-				$this->account_model->add_account();
-				$this->index();
-			}
+			$result = $this->register_model->add_account();
 		}
 
 		public function date_check(){
