@@ -1,15 +1,17 @@
-<?php
- echo "$info[birthday]";
-?>
+
+<!-- 
+ author: June
+ 
+-->
 <!DOCTYPE html>
 <div class = "col-md-7" >
-	<form action="http://localhost/training/Topic6/index.php/account/user/insert_info" method="post" accept-charset="utf-8">
+	<form action="http://localhost/training/Topic6/index.php/account/info" method="post" accept-charset="utf-8">
 		<!-- Edit account name -->
 		<div class="form-group">
     		<label for="account" class="col-sm-2 control-label"> Account: </label>
     		<div class="col-sm-10">
       			<input type="text" class="form-control" name = "account" value = "<?php
- echo $info["username"];?>";>
+ echo $info["username"];?>"; disabled>
     		</div>
   		</div>
   		<!-- Edit full name -->
@@ -24,8 +26,8 @@
   		<div class="form-group">
     		<label for="Email" class="col-sm-2 control-label"> Email: </label>
     		<div class="col-sm-10">
-      			<input type="text" class="form-control" name = "emailt" value = "<?php
- echo $info["email"];?>" disabled>
+      			<input type="text" class="form-control" name = "email" value = "<?php
+ echo $info["email"];?>">
     		</div>
   		</div>
   		<!-- Edit birhday-->

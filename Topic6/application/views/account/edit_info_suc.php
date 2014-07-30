@@ -1,6 +1,3 @@
 <script>
-	//alert('hahaha');
+	alert ('Edited your infomartion success!');
 </script>
-<?php
-	echo $username;
-?>
