@@ -12,7 +12,7 @@ class avatar extends CI_Controller {
 	function index()
 	{
 		$this->load->view('account/avatar', array('error' => ' ' ));
-		$model = $this ->load ->model('account/user_profile');
+		$model = $this ->load ->model('account/user');
 	}
 
 	function do_upload()
@@ -34,7 +34,7 @@ class avatar extends CI_Controller {
 		$config['max_size']	= '500';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
-		$config['file_name'] = 'avatar';
+		$config['file_name'] = "$folder_name";
 
 		$this->load->library('upload', $config);
 
