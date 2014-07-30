@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Topic6</title>
-	<base href="<?php echo base_url()?>"  target="_blank"></base>
+	<base href="<?php echo base_url()?>"></base>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.css"/>
 </head>

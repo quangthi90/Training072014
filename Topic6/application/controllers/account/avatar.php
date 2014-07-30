@@ -12,7 +12,7 @@ class avatar extends CI_Controller {
 	function index()
 	{
 		$this->load->view('account/avatar', array('error' => ' ' ));
-		$model = $this ->load ->model('account/user');
+		$model = $this ->load ->model('user');
 	}
 
 	function do_upload()
