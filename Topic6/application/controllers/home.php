@@ -33,10 +33,6 @@ class Home extends CI_Controller {
     	$clsFooter = new Footer();
 		$clsFooter->index();
 
-		//call controller wallpage when lick user
-		//include_once(APPPATH.'controllers/wallPage.php');
-		///$clswallPage = new WallPage();
-		//$clswallPage->wall();
 	}
 }
 ?>
