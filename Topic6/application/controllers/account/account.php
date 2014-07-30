@@ -14,33 +14,19 @@
 
 		public function index()
 		{
-			if (($this->session->userdata('username')!= "")) {
-				# code...
-				$this->welcome();
-			}
-			else{
 				$data['title'] = 'Home';
 
 				include_once(APPPATH.'controllers/common/header.php');
 				$clsHeader = new Header();
 				$clsHeader->index();
-				// $this->load->view('template/header', $data);
-				$sResgisterLink = site_url( array('account/account', 'register') );
-				$this->load->view('template/account/signin_view.php', array('sResgisterLink' => $sResgisterLink));
 
-				// GET LIST USER
-				$users = array();
-				$this->load->model("user");
-				$users = $this->user->getUsers();
-				foreach ($users as $key => $user) {
-					$users[$key]['wall_link'] = site_url(array('homepage', 'wall', $user['username']));
-				}
-				$this->load->view('template/list_user.php', array( 'users' => $users));
-
+				// load Controller Left
+				include_once(APPPATH.'controllers/common/left.php');
+		    	$clsLeft = new Left();
+				$clsLeft->index();
 
 				$this->load->view('template/account/register_view', $data);
 				$this->load->view('template/footer', $data);
-			}
 		}
 		public function welcome()
 		{
@@ -49,11 +35,10 @@
 			// load posts of this
 			$this->load->model("post");
 			$aData['aPosts'] = $this->post->getPosts();
-			
+
 			include_once(APPPATH.'controllers/common/header.php');
 				$clsHeader = new Header();
 				$clsHeader->index();
-			$this->load->view('template/account/welcome_view', $data);
 
 
 			// load Controller Left
@@ -139,7 +124,6 @@
 			$this->form_validation->set_rules('dob', 'Date of Birth', 'callback_date_check');
 
 			if ($this->form_validation->run() == false) {
-				# code...
 				$this->index();
 			}
 			else{

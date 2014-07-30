@@ -12,7 +12,6 @@ class Login extends CI_Controller
 	{
 		// Load helper
 		$this->load->helper("url");
-
 		$sResgisterLink = site_url( array('account', 'account', 'register') );
 		$this->load->view('template/account/signin_view.php', array('sResgisterLink' => $sResgisterLink));
 	}

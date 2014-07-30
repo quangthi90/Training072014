@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "home";
-$route['homepage/wall/(:any)'] = "homepage/wall/$1";
+// $route['home/wall/(:any)'] = "home/wall/$1";
 $route['404_override'] = '';
 
 
