@@ -11,16 +11,18 @@ class Header extends CI_Controller {
 		// load template
 		$this->load->view('common/header.php');
 
-		if (!$this->session->userdata('username')){
-			// Load modules
-			include_once(APPPATH.'controllers/module/welcomeuser.php');
+		if ($this->session->userdata('username')){
+			// Load modules welcomeuser
+			$data['title'] = 'Welcome';
+			$this->load->view('template/account/welcome_view', $data);
 		}
 		else {
-			// Load modules
+			// Load modules login
 			include_once(APPPATH.'controllers/module/login.php');
 	    	$clsLogin = new Login();
 			$clsLogin->index();	
 		}
+		
 	}
 }
 ?>

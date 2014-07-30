@@ -4,24 +4,14 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
  * Homepage - Show Header Homepage
- * @author: Bommer<lqthi.khtn@gmail.com>
+ * @author: SalmDo
  * @param: none
  * @return: template home
  */
-class Home extends CI_Controller {
+class EditUser extends CI_Controller {
 	public function index()
 	{
 		// load data for content
-		$this->load->model("mpost");
-
-		$aPosts = $this->mpost->getPosts();
-
-		// Format list users again---change wall_link
-		foreach ( $aPosts as $key => $aPost) {
-			$aPosts[$key]['wall_link_delete'] = site_url(array('post', 'post', 'delete', $aPost['postId']));
-		}
-
-		$aData['aPosts'] = $aPosts;
 
 		// load Controller Header
 		include_once(APPPATH.'controllers/common/header.php');
@@ -33,14 +23,16 @@ class Home extends CI_Controller {
     	$clsLeft = new Left();
 		$clsLeft->index();
 
-		// Load list Posts template
-		$this->load->view("module/listPosts", $aData);
+		// content edit user
+		include_once(APPPATH.'controllers/account/info.php');
+    	$clsEditUder = new info();
+		$clsEditUder->index();
+
 
 		// load Controller Footer
 		include_once(APPPATH.'controllers/common/footer.php');
     	$clsFooter = new Footer();
 		$clsFooter->index();
-
 	}
 }
 ?>
