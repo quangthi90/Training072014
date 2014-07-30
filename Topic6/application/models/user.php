@@ -25,8 +25,17 @@
 		}
 		// function: update thong tin tai khoan ; author: June
 		public function updateInfo($data){
-		echo 	$this->db->query(" UPDATE account SET  fullname = '" .$data['fullname']. "', birthday = '" .$data['birthday']. "', email = '" .$data['email']. "' WHERE  username = '" .$data['username']. "' ");
+			$this->db->query(" UPDATE account SET  fullname = '" .$data['fullname']. "', birthday = '" .$data['birthday']. "', email = '" .$data['email']. "' WHERE  username = '" .$data['username']. "' ");
 
 		}
+		public function updatePass($data)
+		{
+			$this->db->query("UPDATE account SET password = '" .$data['pass_new']. "' WHERE username = '" .$data['username']. "' ");
+		}
+		public function getPass($data){
+			$result = $this->db->query("SELECT password FROM account WHERE username = '" . $data['username'] . "'");
+			return $result;
+		}
+
 	}
 ?>

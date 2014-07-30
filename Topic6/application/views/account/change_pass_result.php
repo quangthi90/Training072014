@@ -1,30 +1,21 @@
 
 <?php
-	echo $pass_new;
-	echo $pass_cur;
-	if('1' == '1')
+	echo $pass_new. "    ";
+	echo $pass_cur."    ";
+	echo $pass_new_con;
+	echo "select pass ne: ".$pass;
+	if($flag == "1")
 	{
-		echo "<script> alert('axsd'); </script>";
+		echo "<script> alert('Thay đổi mật khẩu thành công!'); </script>";
+	}
+	else {
+		if ($flag == "2")
+			echo "<script> alert(' Mật khẩu xác nhận không đúng'); </script>";
+		else if($flag == '3')
+			echo "<script> alert(' Xin vui lòng nhập đầy đủ mật khẩu'); </script>";	
+			else
+			"<script> alert('Mật khẩu hiện tại không đúng'); </script>";
+			
 	}
 ?>
-<script>
-	var temp = <?php echo $flag; ?>
-	if(temp == '1')
-	{
-		alert(' M?t kh?u m?i kh�ng kh?p nhau!');
-	}
-	else if(temp == '2'){
-		alert("M?t kh?u hi?n t?i kh�ng d�ng. Xin vui l�ng th? l?i!")
-		
-		}
-		else if(temp == '0')
-		{
-			alert("Thay d?i m?t kh?u th�nh c�ng!);
-		}
-		else {
-			alert('k ra j het');
-		}
-		alert(temp);
-		
-</script>
-sjkfbakfbk
+

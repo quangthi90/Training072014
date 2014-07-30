@@ -51,5 +51,6 @@ class avatar extends CI_Controller {
 			$this->load->view('account/change_ava_succ', $data);
 		}
 	}
+	
 }
 ?>
