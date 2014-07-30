@@ -8,39 +8,26 @@
 		function __construct()
 		{
 			parent::__construct();
-			$this->load->model('account/account_model');
+			//$this->load->model('account/account_model');
+			$this->load->model('account/login_model');
 			$this->load->library('session');
 		}
 
 		public function index()
 		{
-			if (($this->session->userdata('username')!= "")) {
-				# code...
-				$this->welcome();
-			}
-			else{
 				$data['title'] = 'Home';
 
 				include_once(APPPATH.'controllers/common/header.php');
 				$clsHeader = new Header();
 				$clsHeader->index();
-				// $this->load->view('template/header', $data);
-				$sResgisterLink = site_url( array('account/account', 'register') );
-				$this->load->view('template/account/signin_view.php', array('sResgisterLink' => $sResgisterLink));
 
-				// GET LIST USER
-				$users = array();
-				$this->load->model("user");
-				$users = $this->user->getUsers();
-				foreach ($users as $key => $user) {
-					$users[$key]['wall_link'] = site_url(array('homepage', 'wall', $user['username']));
-				}
-				$this->load->view('template/list_user.php', array( 'users' => $users));
-
+				// load Controller Left
+				include_once(APPPATH.'controllers/common/left.php');
+		    	$clsLeft = new Left();
+				$clsLeft->index();
 
 				$this->load->view('template/account/register_view', $data);
 				$this->load->view('template/footer', $data);
-			}
 		}
 		public function welcome()
 		{
@@ -49,11 +36,10 @@
 			// load posts of this
 			$this->load->model("post");
 			$aData['aPosts'] = $this->post->getPosts();
-			
+
 			include_once(APPPATH.'controllers/common/header.php');
 				$clsHeader = new Header();
 				$clsHeader->index();
-			$this->load->view('template/account/welcome_view', $data);
 
 
 			// load Controller Left
@@ -81,7 +67,7 @@
 
 		public function login($username, $password)
 		{
-			$result = $this->account_model->login($username, $password);
+			$result = $this->login_model->login_account();
 		}
 
 		public function reset_password()
@@ -128,24 +114,7 @@
 
 		public function register()
 		{
-			# code...
-			$this->load->library('form_validation');
-
-			$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]|max_length[50]|xss_clean');
-			$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[50]');
-			$this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'trim|required|match[password]');
-			$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-			$this->form_validation->set_rules('fullname', 'Fullname', 'trim|required|min_length[6]|max_length[50]');
-			$this->form_validation->set_rules('dob', 'Date of Birth', 'callback_date_check');
-
-			if ($this->form_validation->run() == false) {
-				# code...
-				$this->index();
-			}
-			else{
-				$this->account_model->add_account();
-				$this->index();
-			}
+			$result = $this->register_model->add_account();
 		}
 
 		public function date_check(){
