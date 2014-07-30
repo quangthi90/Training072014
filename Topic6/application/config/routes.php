@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "home";
 $route['homepage/wall/(:any)'] = "homepage/wall/$1";
+$route['post/post/delete/(:any)'] = "post/post/delete/$1";
 $route['404_override'] = '';
 
 

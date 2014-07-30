@@ -12,13 +12,13 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		// load data for content
-		$this->load->model("post");
+		$this->load->model("mpost");
 
-		$aPosts = $this->post->getPosts();
+		$aPosts = $this->mpost->getPosts();
 
 		// Format list users again---change wall_link
 		foreach ( $aPosts as $key => $aPost) {
-			$aPosts[$key]['wall_link_delete'] = site_url(array('post', 'delete', $aPost['postId']));
+			$aPosts[$key]['wall_link_delete'] = site_url(array('post', 'post', 'delete', $aPost['postId']));
 		}
 
 		$aData['aPosts'] = $aPosts;
