@@ -8,7 +8,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  * @param: none
  * @return: template wall
  */
-class WallPage extends CI_Controller {
+class Wall extends CI_Controller {
 	public function index($username)
 	{
 		// load data for content
