@@ -12,8 +12,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		// load data for content
-		$this->load->model("post");
-		$aData['aPosts'] = $this->post->getPosts();
+		
 
 		// load Controller Header
 		include_once(APPPATH.'controllers/common/header.php');
