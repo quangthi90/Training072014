@@ -4,7 +4,7 @@
 		<?php foreach( $aPosts as $aPost ) { ?>
 		     
 		    <div class="col-md-5 list-group-item" style="margin: 5px 10px; margin-left: 30px">
-				<h5><img src="./../assets/img/avatar1.jpg" class="img-circle"/>
+				<h5><img src="<?php APPPATH.'assets/img/avatar1.jpg'?>" class="img-circle"/>
 				<strong><?php echo $aPost["postAuthor"]; ?></strong>
 				<small><?php echo $aPost["postCreate"]; ?></small></h5>
 				<input type="hidden" value="<?php echo $aPost['postId']; ?>">
