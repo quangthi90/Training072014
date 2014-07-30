@@ -10,7 +10,7 @@
 ?>
 
 	<div class="row">
-		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+		<div class="col-md-2 col-lg-2">
 			<nav class="navbar navbar-default" role="navigation" style=" padding-bottom: 10px; margin-top: 10px">
 		     <!-- Brand and toggle get grouped for better mobile display -->
 				<h5 class="text-danger" style="margin-left: 20px">List user</h5>
@@ -40,3 +40,4 @@
 		     </div><!-- /.navbar-collapse -->
 		    </nav>
 		</div>
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">

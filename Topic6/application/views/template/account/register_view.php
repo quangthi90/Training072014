@@ -6,7 +6,7 @@
 		<form action="" method="post">
 			<?php echo validation_errors('<span class="error">'); ?>
 			<?php echo form_open("account/register"); ?>
-			<div class="input-group" style="margin: 10px 5px">
+			<div class="col-xs-5 col-md-5 input-group" style="margin: 10px 5px" >
 				<span class="input-group-addon">User name</span>
 				<input type="text" class="form-control" placeholder="Username"  id="username" name="username" value="<?php echo set_value('username'); ?>"/>
 			</div>

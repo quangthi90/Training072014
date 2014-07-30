@@ -15,7 +15,7 @@
 		</div>
 		<div class="col-md-3">
 			<button type="submit" name="login" class="btn btn-success pull-left" style="padding: 7px 20px; margin: 13px -25px">Login</button>
-			<a href="<?php echo $sResgisterLink; ?>" style="margin-top: 30px" >Register</a>
+			<a href="<?php echo $sResgisterLink; ?>" style="margin: 30px -12px" >Register</a>
 		</div>
 	</div> <!-- /end row -->
 
