@@ -8,7 +8,8 @@
 		function __construct()
 		{
 			parent::__construct();
-			$this->load->model('account/account_model');
+			//$this->load->model('account/account_model');
+			$this->load->model('account/login_model');
 			$this->load->library('session');
 		}
 
@@ -66,7 +67,7 @@
 
 		public function login($username, $password)
 		{
-			$result = $this->account_model->login($username, $password);
+			$result = $this->login_model->login_account();
 		}
 
 		public function reset_password()
