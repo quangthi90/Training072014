@@ -1,1 +1,0 @@
-<h3 class="text-warning"><strong>You don't have any post!</strong></h3>
