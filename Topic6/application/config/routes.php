@@ -39,7 +39,8 @@
 */
 
 $route['default_controller'] = "home";
-$route['post/post/delete/(:any)'] = "post/post/delete/$1";
+$route['post/postAction/delete/(:any)'] = "post/postAction/delete/$1";
+$route['post/postAction/edit/(:any)'] = "post/postAction/edit/$1";
 $route['404_override'] = '';
 
 

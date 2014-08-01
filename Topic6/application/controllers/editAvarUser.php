@@ -8,7 +8,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  * @param: none
  * @return: template home
  */
-class EditUser extends CI_Controller {
+class EditAvarUser extends CI_Controller {
 	public function index()
 	{
 		// load data for content
@@ -23,10 +23,10 @@ class EditUser extends CI_Controller {
     	$clsLeft = new Left();
 		$clsLeft->index();
 
-		// content edit user
-		include_once(APPPATH.'controllers/account/info.php');
-    	$clsEditUder = new info();
-		$clsEditUder->index();
+		// content edit avatar user
+		include_once(APPPATH.'controllers/account/avatar.php');
+    	$clsEditAvar = new avatar();
+		$clsEditAvar->index();
 
 
 		// load Controller Footer
