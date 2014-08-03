@@ -57,7 +57,6 @@ form {
 	display: inline;
 }
 input[type='text'], input[type='password'], textarea {
-	background: #F8F8F8;
 	border: 1px solid #CCCCCC;
 	padding: 3px;
 	margin-left: 0px;
@@ -471,6 +470,7 @@ table.form {
 	margin-bottom: 20px;
 	margin-top: 10px;
 }
+
 table.form tr td:first-child {
 	width: 150px;
 }
@@ -479,7 +479,12 @@ table.form > * > * > td {
 }
 table.form td {
 	padding: 4px;
+	margin-bottom: 5px;
 }
+table.form td input {
+	width: 340px;
+}
+
 input.large-field, select.large-field {
 	width: 300px;
 }
