@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+
 <?php if ($success) { ?>
 <div class="success"><?php echo $success; ?></div>
 <?php } ?>

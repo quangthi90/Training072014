@@ -12,8 +12,9 @@
   <h1><?php echo $heading_title; ?></h1>
   <p><?php echo $text_account_already; ?></p>
   <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
-    <h2><?php echo $text_your_details; ?></h2>
+    
     <div class="content">
+      <h2><?php echo strtoupper($text_your_details); ?></h2>
       <table class="form">
         <tr>
           <td><span class="required">*</span> <?php echo $entry_firstname; ?></td>
@@ -49,8 +50,9 @@
         </tr>
       </table>
     </div>
-    <h2><?php echo $text_your_address; ?></h2>
+    
     <div class="content">
+      <h2><?php echo strtoupper($text_your_address); ?></h2>
       <table class="form">
         <tr>
           <td><?php echo $entry_company; ?></td>
@@ -135,8 +137,9 @@
         </tr>
       </table>
     </div>
-    <h2><?php echo $text_your_password; ?></h2>
+    
     <div class="content">
+      <h2><?php echo strtoupper($text_your_password); ?></h2>
       <table class="form">
         <tr>
           <td><span class="required">*</span> <?php echo $entry_password; ?></td>
@@ -154,8 +157,9 @@
         </tr>
       </table>
     </div>
-    <h2><?php echo $text_newsletter; ?></h2>
+    
     <div class="content">
+      <h2><?php echo strtoupper($text_newsletter); ?></h2>
       <table class="form">
         <tr>
           <td><?php echo $entry_newsletter; ?></td>

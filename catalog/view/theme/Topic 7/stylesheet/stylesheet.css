@@ -5,7 +5,7 @@ html {
 }
 body {
 	background-color: #ffffff;
-	color: #000000;
+	color: #666;
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px;
@@ -14,31 +14,39 @@ body, td, th, input, textarea, select, a {
 	font-size: 12px;
 }
 h1, .welcome {
-	color: #636E75;
+	color: #404048;
 	font: Verdana;
-	margin-top: 0px;
-	margin-bottom: 20px;
-	font-size: 32px;
-	font-weight: normal;
+	margin: 0 0 38px;
+	margin-bottom: 50px;
+	font-size: 20px;
+	font-weight: bold;
 	text-shadow: 0 0 1px rgba(0, 0, 0, .01);
+	text-align: center;
+	text-transform: uppercase;
 }
+
 h2 {
 	color: #000000;
-	font-size: 16px;
+	font-size: 14px;
 	margin-top: 0px;
 	margin-bottom: 5px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #EEEEEE;
 }
+
 p {
 	margin-top: 0px;
 	margin-bottom: 20px;
 }
 a, a:visited, a b {
-	color: #38B0E3;
-	text-decoration: underline;
+	color: #58989e;
+	text-decoration: none;
 	cursor: pointer;
 }
+
 a:hover {
-	text-decoration: none;
+	text-decoration: underline;
+	color: #333;
 }
 a img {
 	border: none;
@@ -54,6 +62,8 @@ input[type='text'], input[type='password'], textarea {
 	padding: 3px;
 	margin-left: 0px;
 	margin-right: 0px;
+	width: 93%;
+	height: 24px;
 }
 select {
 	background: #F8F8F8;
@@ -76,7 +86,7 @@ label {
 }
 #column-right {
 	float: right;
-	width: 180px;
+	width: 200px;
 }
 #content {
 	min-height: 400px;
@@ -331,7 +341,7 @@ label {
 	padding: 0px 5px;
 }
 #menu ul {
-	list-style: none;
+	list-style: none outside none;
 	margin: 0;
 	padding: 0;
 }
@@ -339,7 +349,8 @@ label {
 	position: relative;
 	float: left;
 	z-index: 20;
-	padding: 6px 5px 5px 0px;
+	padding: 7px;
+	border-bottom: 1px solid #Ececec;
 }
 #menu > ul > li:hover {
 }
@@ -459,6 +470,7 @@ table.form {
 	width: 100%;
 	border-collapse: collapse;
 	margin-bottom: 20px;
+	margin-top: 10px;
 }
 table.form tr td:first-child {
 	width: 150px;
@@ -565,32 +577,31 @@ a.button, input.button {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
-	background: url('../image/button.png') repeat-x;
-	-webkit-border-radius: 7px 7px 7px 7px;
-	-moz-border-radius: 7px 7px 7px 7px;
-	-khtml-border-radius: 7px 7px 7px 7px;
-	border-radius: 7px 7px 7px 7px;
+	border-radius: 20px;
 	-webkit-box-shadow: 0px 2px 2px #DDDDDD;
 	-moz-box-shadow: 0px 2px 2px #DDDDDD;
 	box-shadow: 0px 2px 2px #DDDDDD;
+	transition: all 0.2s linear 0s;
+	background-color: #404048;
 }
 a.button {
 	display: inline-block;
 	text-decoration: none;
-	padding: 6px 12px 6px 12px;
+	padding: 7px 15px 7px 15px;
+	margin-top: 80px;
 }
 input.button {
 	margin: 0;
 	border: 0;
 	height: 24px;
-	padding: 0px 12px 0px 12px;
+	padding: 7px 20px 7px 20px;
+	margin-top: 0px;
 }
 a.button:hover, input.button:hover {
 	background-position: 0px -24px;
+	background-color: #6ddee2;
 }
 .buttons {
-	background: #FFFFFF;
-	border: 1px solid #EEEEEE;
 	overflow: auto;
 	padding: 6px;
 	margin-bottom: 20px;
@@ -644,20 +655,19 @@ a.button:hover, input.button:hover {
 }
 /* box */
 .box {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
+
 }
 .box .box-heading {
 	-webkit-border-radius: 7px 7px 0px 0px;
 	-moz-border-radius: 7px 7px 0px 0px;
 	-khtml-border-radius: 7px 7px 0px 0px;
-	border-radius: 7px 7px 0px 0px;
-	border: 1px solid #DBDEE1;
-	background: url('../image/background.png') repeat-x;
+	border-bottom: 1px solid #DBDEE1;
 	padding: 8px 10px 7px 10px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: bold;
-	line-height: 14px;
+	line-height: 55px;
 	color: #333;
 }
 .box .box-content {
@@ -665,11 +675,16 @@ a.button:hover, input.button:hover {
 	-webkit-border-radius: 0px 0px 7px 7px;
 	-moz-border-radius: 0px 0px 7px 7px;
 	-khtml-border-radius: 0px 0px 7px 7px;
-	border-radius: 0px 0px 7px 7px;
-	border-left: 1px solid #DBDEE1;
-	border-right: 1px solid #DBDEE1;
-	border-bottom: 1px solid #DBDEE1;
 	padding: 10px;
+}
+.box-content ul{
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}
+.box-content > ul > li{
+	border-bottom: 1px solid #DBDEE1;
+	padding: 7px 0;
 }
 /* box products */
 .box-product {
@@ -777,7 +792,8 @@ ul.box-filter > li ul {
 	padding: 10px;
 	overflow: auto;
 	margin-bottom: 20px;
-	border: 1px solid #EEEEEE;
+	padding: 30px;
+	background-color: rgba(0,0,0,0.02);
 }
 #content .content .left {
 	float: left;
@@ -1285,19 +1301,30 @@ ul.box-filter > li ul {
 	cursor: pointer;
 }
 .login-content {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	overflow: auto;
 }
 .login-content .left {
 	float: left;
-	width: 48%;
+	width: 40%;
+	background-color: rgba(0, 0, 0, 0.02);
+	padding: 30px;
 }
 .login-content .right {
 	float: right;
-	width: 48%
+	width: 40%;
+	background-color: rgba(0, 0, 0, 0.02);
+	padding: 30px;
 }
 .login-content .left .content, .login-content .right .content {
 	min-height: 190px;
+	line-height: 1.6;
+}
+.login-content .right .content a{
+	bottom: 20px;
+	margin-top: 10px;
+	float: right;
+	right: 3px;
 }
 /* orders */
 .order-list {
