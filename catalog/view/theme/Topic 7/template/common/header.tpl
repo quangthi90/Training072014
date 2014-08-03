@@ -16,7 +16,7 @@
 <?php foreach ($links as $link) { ?>
 <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
 <?php } ?>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/stylesheet.css" />
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -28,10 +28,10 @@
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
 <?php } ?>
 <!--[if IE 7]> 
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ie7.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/ie7.css" />
 <![endif]-->
 <!--[if lt IE 7]>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ie6.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/ie6.css" />
 <script type="text/javascript" src="catalog/view/javascript/DD_belatedPNG_0.0.8a-min.js"></script>
 <script type="text/javascript">
 DD_belatedPNG.fix('#logo img');
@@ -51,10 +51,20 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 <body>
 <div id="container">
 <div id="header">
-<?php echo"This is text"?>
-  <?php if ($logo) { ?>
-  <div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
-  <?php } ?>
+<div id="welcome">
+    <?php if (!$logged) { ?>
+    <?php echo $text_welcome; ?>
+    <?php } else { ?>
+    <?php echo $text_logged; ?>
+    <?php } ?>
+</div>
+   <div class="links">
+   <a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a>
+  <a href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a>
+  <a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>
+  <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>  
+  </div>
+
   <?php echo $language; ?>
   <?php echo $currency; ?>
   <?php echo $cart; ?>
@@ -62,14 +72,8 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
     <div class="button-search"></div>
     <input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
   </div>
-  <div id="welcome">
-    <?php if (!$logged) { ?>
-    <?php echo $text_welcome; ?>
-    <?php } else { ?>
-    <?php echo $text_logged; ?>
-    <?php } ?>
-  </div>
-  <div class="links"><a href="<?php echo $home; ?>"><?php echo $text_home; ?></a><a href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a><a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a><a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a></div>
+  
+ 
 </div>
 <?php if ($categories) { ?>
 <div id="menu">
@@ -97,7 +101,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 <?php } ?>
 <?php if ($error) { ?>
     
-    <div class="warning"><?php echo $error ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
+    <div class="warning"><?php echo $error ?><img src="catalog/view/theme/Topic 7/image/close.png" alt="" class="close" /></div>
     
 <?php } ?>
 <div id="notification"></div>
