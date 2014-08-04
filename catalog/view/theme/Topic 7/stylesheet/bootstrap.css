@@ -4254,7 +4254,7 @@ input[type="submit"].btn.btn-mini {
 
 .tab-content > .active,
 .pill-content > .active {
-  display: block;
+  display: none;
 }
 
 .tabs-below > .nav-tabs {
