@@ -65,9 +65,14 @@ input[type='text'], input[type='password'], textarea {
 	height: 24px;
 }
 select {
-	background: #F8F8F8;
 	border: 1px solid #CCCCCC;
-	padding: 2px;
+	padding: 5px;
+	width: 358px;
+}
+select option{
+	padding-top:5px;
+	padding-bottom: 5px;
+	cursor: pointer;
 }
 label {
 	cursor: pointer;
@@ -482,7 +487,12 @@ table.form td {
 	margin-bottom: 5px;
 }
 table.form td input {
-	width: 340px;
+	width: 350px;
+}
+table.form td input[type="radio"] {
+	width: 0px;
+	margin-left: 5px;
+	padding-right: 5px;
 }
 
 input.large-field, select.large-field {
@@ -615,7 +625,7 @@ a.button:hover, input.button:hover {
 	text-align: left;
 }
 .buttons .right {
-	float: right;
+	float: left;
 	text-align: right;
 }
 .buttons .center {
@@ -673,6 +683,7 @@ a.button:hover, input.button:hover {
 	font-weight: bold;
 	line-height: 55px;
 	color: #333;
+	margin-top: 30px;
 }
 .box .box-content {
 	background: #FFFFFF;
