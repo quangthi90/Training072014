@@ -1,4 +1,4 @@
-$.fn.tabs = function() {
+$.fn.tab = function() {
 	var selector = this;
 	
 	this.each(function() {
