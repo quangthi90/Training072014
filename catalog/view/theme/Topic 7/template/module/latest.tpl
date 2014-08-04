@@ -1,7 +1,8 @@
-<div class="box">
+<!-- <div class="box">
   <div class="box-heading"><?php echo $heading_title; ?></div>
-  <div class="box-content">
-    <div class="box-product">
+  <div class="box-content">-->
+    <div class="tab-pane active" id="newarrival">
+      <div class="box-product">
       <?php foreach ($products as $product) { ?>
       <div>
         <?php if ($product['thumb']) { ?>
@@ -23,6 +24,7 @@
         <div class="cart"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></div>
       </div>
       <?php } ?>
-    </div>
-  </div>
-</div>
+      </div>
+     </div>
+  <!--</div>
+</div> -->
