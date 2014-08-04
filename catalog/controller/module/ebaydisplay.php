@@ -37,7 +37,7 @@ class ControllerModuleEbaydisplay extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/ebaydisplay.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/ebaydisplay.tpl';
 		} else {
-			$this->template = 'default/template/module/ebaydisplay.tpl';
+			$this->template = 'Topic 7/template/module/ebaydisplay.tpl';
 		}
 
 		$this->render();

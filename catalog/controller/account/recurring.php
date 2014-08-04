@@ -98,7 +98,7 @@ class ControllerAccountRecurring extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/recurring_list.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/recurring_list.tpl';
 		} else {
-			$this->template = 'default/template/account/recurring_list.tpl';
+			$this->template = 'Topic 7/template/account/recurring_list.tpl';
 		}
 
 		$this->children = array(
@@ -250,7 +250,7 @@ class ControllerAccountRecurring extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/recurring_info.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/account/recurring_info.tpl';
 			} else {
-				$this->template = 'default/template/account/recurring_info.tpl';
+				$this->template = 'Topic 7/template/account/recurring_info.tpl';
 			}
 
 			$this->children = array(

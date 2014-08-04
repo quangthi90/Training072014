@@ -135,7 +135,7 @@ class ControllerModuleCart extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/cart.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/cart.tpl';
 		} else {
-			$this->template = 'default/template/module/cart.tpl';
+			$this->template = 'Topic 7/template/module/cart.tpl';
 		}
 
 		$this->response->setOutput($this->render());		

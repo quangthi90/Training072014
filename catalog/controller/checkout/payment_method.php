@@ -130,7 +130,7 @@ class ControllerCheckoutPaymentMethod extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/payment_method.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/checkout/payment_method.tpl';
 		} else {
-			$this->template = 'default/template/checkout/payment_method.tpl';
+			$this->template = 'Topic 7/template/checkout/payment_method.tpl';
 		}
 
 		$this->response->setOutput($this->render());

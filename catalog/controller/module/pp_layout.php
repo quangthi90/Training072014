@@ -21,7 +21,7 @@ class ControllerModulePPLayout extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/pp_layout.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/module/pp_layout.tpl';
 			} else {
-				$this->template = 'default/template/module/pp_layout.tpl';
+				$this->template = 'Topic 7/template/module/pp_layout.tpl';
 			}
 
 			$this->data['payment_url'] = $this->url->link('payment/pp_express/express', '', 'SSL');

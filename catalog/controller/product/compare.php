@@ -150,7 +150,7 @@ class ControllerProductCompare extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/compare.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/product/compare.tpl';
 		} else {
-			$this->template = 'default/template/product/compare.tpl';
+			$this->template = 'Topic 7/template/product/compare.tpl';
 		}
 
 		$this->children = array(

@@ -68,7 +68,7 @@ class ControllerPaymentTwoCheckout extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/twocheckout.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/twocheckout.tpl';
 		} else {
-			$this->template = 'default/template/payment/twocheckout.tpl';
+			$this->template = 'Topic 7/template/payment/twocheckout.tpl';
 		}	
 
 		$this->render();

@@ -66,7 +66,7 @@ class ControllerCheckoutCheckout extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/checkout.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/checkout/checkout.tpl';
 		} else {
-			$this->template = 'default/template/checkout/checkout.tpl';
+			$this->template = 'Topic 7/template/checkout/checkout.tpl';
 		}
 
 		$this->children = array(

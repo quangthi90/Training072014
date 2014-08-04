@@ -28,7 +28,7 @@ class ControllerModuleAmazonCheckoutLayout extends Controller {
 				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/amazon_checkout_layout.tpl')) {
 					$this->template = $this->config->get('config_template') . '/template/module/amazon_checkout_layout.tpl';
 				} else {
-					$this->template = 'default/template/module/amazon_checkout_layout.tpl';
+					$this->template = 'Topic 7/template/module/amazon_checkout_layout.tpl';
 				}
 
 				$this->render();

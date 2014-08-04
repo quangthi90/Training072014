@@ -48,7 +48,7 @@ class ControllerPaymentAmazonCheckout extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/amazon_checkout_address.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/amazon_checkout_address.tpl';
 		} else {
-			$this->template = 'default/template/payment/amazon_checkout_address.tpl';
+			$this->template = 'Topic 7/template/payment/amazon_checkout_address.tpl';
 		}
 
 		$this->data['cart'] = $this->url->link('checkout/cart');
@@ -101,7 +101,7 @@ class ControllerPaymentAmazonCheckout extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/amazon_checkout_payment.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/amazon_checkout_payment.tpl';
 		} else {
-			$this->template = 'default/template/payment/amazon_checkout_payment.tpl';
+			$this->template = 'Topic 7/template/payment/amazon_checkout_payment.tpl';
 		}
 
 		$this->children = array(
@@ -490,7 +490,7 @@ class ControllerPaymentAmazonCheckout extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/amazon_checkout_confirm.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/amazon_checkout_confirm.tpl';
 		} else {
-			$this->template = 'default/template/payment/amazon_checkout_confirm.tpl';
+			$this->template = 'Topic 7/template/payment/amazon_checkout_confirm.tpl';
 		}
 
 		$this->children = array(
@@ -666,7 +666,7 @@ class ControllerPaymentAmazonCheckout extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/amazon_checkout_success.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/amazon_checkout_success.tpl';
 		} else {
-			$this->template = 'default/template/payment/amazon_checkout_success.tpl';
+			$this->template = 'Topic 7/template/payment/amazon_checkout_success.tpl';
 		}
 
 		$this->children = array(
@@ -692,7 +692,7 @@ class ControllerPaymentAmazonCheckout extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/amazon_checkout_failure.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/amazon_checkout_failure.tpl';
 		} else {
-			$this->template = 'default/template/payment/amazon_checkout_failure.tpl';
+			$this->template = 'Topic 7/template/payment/amazon_checkout_failure.tpl';
 		}
 
 		$this->children = array(

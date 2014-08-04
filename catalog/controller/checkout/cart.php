@@ -427,7 +427,7 @@ class ControllerCheckoutCart extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/cart.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/checkout/cart.tpl';
 			} else {
-				$this->template = 'default/template/checkout/cart.tpl';
+				$this->template = 'Topic 7/template/checkout/cart.tpl';
 			}
 
 			$this->children = array(
@@ -454,7 +454,7 @@ class ControllerCheckoutCart extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/error/not_found.tpl';
 			} else {
-				$this->template = 'default/template/error/not_found.tpl';
+				$this->template = 'Topic 7/template/error/not_found.tpl';
 			}
 
 			$this->children = array(

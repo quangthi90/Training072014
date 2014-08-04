@@ -81,7 +81,7 @@ class ControllerPaymentPPPayflowIframe extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/pp_payflow_iframe.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/pp_payflow_iframe.tpl';
 		} else {
-			$this->template = 'default/template/payment/pp_payflow_iframe.tpl';
+			$this->template = 'Topic 7/template/payment/pp_payflow_iframe.tpl';
 		}
 
 		$this->render();
@@ -93,7 +93,7 @@ class ControllerPaymentPPPayflowIframe extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/pp_payflow_iframe_return.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/pp_payflow_iframe_return.tpl';
 		} else {
-			$this->template = 'default/template/payment/pp_payflow_iframe_return.tpl';
+			$this->template = 'Topic 7/template/payment/pp_payflow_iframe_return.tpl';
 		}
 
 		$this->response->setOutput($this->render());
@@ -105,7 +105,7 @@ class ControllerPaymentPPPayflowIframe extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/pp_payflow_iframe_cancel.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/pp_payflow_iframe_cancel.tpl';
 		} else {
-			$this->template = 'default/template/payment/pp_payflow_iframe_cancel.tpl';
+			$this->template = 'Topic 7/template/payment/pp_payflow_iframe_cancel.tpl';
 		}
 
 		$this->response->setOutput($this->render());
@@ -117,7 +117,7 @@ class ControllerPaymentPPPayflowIframe extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/pp_payflow_iframe_error.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/pp_payflow_iframe_error.tpl';
 		} else {
-			$this->template = 'default/template/payment/pp_payflow_iframe_error.tpl';
+			$this->template = 'Topic 7/template/payment/pp_payflow_iframe_error.tpl';
 		}
 
 		$this->response->setOutput($this->render());

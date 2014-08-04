@@ -126,7 +126,7 @@ class ControllerPaymentAuthorizeNetSim extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/authorizenet_sim_index.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/authorizenet_sim_index.tpl';
 		} else {
-			$this->template = 'default/template/payment/authorizenet_sim_index.tpl';
+			$this->template = 'Topic 7/template/payment/authorizenet_sim_index.tpl';
 		}	
 
 		$this->render();	
@@ -227,7 +227,7 @@ class ControllerPaymentAuthorizeNetSim extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/authorizenet_sim_callback.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/authorizenet_sim_callback.tpl';
 		} else {
-			$this->template = 'default/template/payment/authorizenet_sim_callback.tpl';
+			$this->template = 'Topic 7/template/payment/authorizenet_sim_callback.tpl';
 		}	
 
 		$this->render();

@@ -92,7 +92,7 @@ class ControllerAccountReturn extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/return_list.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/return_list.tpl';
 		} else {
-			$this->template = 'default/template/account/return_list.tpl';
+			$this->template = 'Topic 7/template/account/return_list.tpl';
 		}
 
 		$this->children = array(
@@ -221,7 +221,7 @@ class ControllerAccountReturn extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/return_info.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/account/return_info.tpl';
 			} else {
-				$this->template = 'default/template/account/return_info.tpl';
+				$this->template = 'Topic 7/template/account/return_info.tpl';
 			}
 
 			$this->children = array(
@@ -282,7 +282,7 @@ class ControllerAccountReturn extends Controller {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/error/not_found.tpl';
 			} else {
-				$this->template = 'default/template/error/not_found.tpl';
+				$this->template = 'Topic 7/template/error/not_found.tpl';
 			}
 
 			$this->children = array(
@@ -553,7 +553,7 @@ class ControllerAccountReturn extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/return_form.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/account/return_form.tpl';
 		} else {
-			$this->template = 'default/template/account/return_form.tpl';
+			$this->template = 'Topic 7/template/account/return_form.tpl';
 		}
 
 		$this->children = array(
@@ -598,7 +598,7 @@ class ControllerAccountReturn extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/success.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/common/success.tpl';
 		} else {
-			$this->template = 'default/template/common/success.tpl';
+			$this->template = 'Topic 7/template/common/success.tpl';
 		}
 
 		$this->children = array(

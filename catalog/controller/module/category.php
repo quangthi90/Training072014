@@ -66,7 +66,7 @@ class ControllerModuleCategory extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/category.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/category.tpl';
 		} else {
-			$this->template = 'default/template/module/category.tpl';
+			$this->template = 'Topic 7/template/module/category.tpl';
 		}
 
 		$this->render();
