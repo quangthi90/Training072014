@@ -722,7 +722,7 @@ a.button:hover, input.button:hover {
 }
 .box-content > ul > li{
 	border-bottom: 1px solid #DBDEE1;
-	padding: 7px 0;
+	padding: 2px 0;
 	list-style-type: none;
 	background: no-repeat;
 }
@@ -1344,21 +1344,41 @@ ul.box-filter > li ul {
 	margin-bottom: 40px;
 	overflow: auto;
 }
+
 .login-content .left {
 	float: left;
 	width: 40%;
 	background-color: rgba(0, 0, 0, 0.02);
 	padding: 30px;
+	margin-bottom: 20px;
 }
+
+.login-content .left .button, .login-content .right .button{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
 .login-content .right {
 	float: right;
 	width: 40%;
 	background-color: rgba(0, 0, 0, 0.02);
 	padding: 30px;
+	margin-bottom: 20px;
 }
-.login-content .left .content, .login-content .right .content {
-	min-height: 190px;
+#content .login-content .left .content,#content .login-content .right .content {
+	min-height: 197px;
 	line-height: 1.6;
+	margin: 0 !important;
+	position: relative;
+	background: no-repeat;
+	padding: 0px;
+}
+#content .login-content .left .content p, .login-content .right .content p{
+	margin-bottom: 12px;
+	margin-top: 12px;
+	line-height: 1.6;
+	margin-left: 0px;
 }
 .login-content .right .content a{
 	bottom: 20px;
@@ -1713,7 +1733,7 @@ ul.box-filter > li ul {
 }
 .page-heading strong{
 	padding:0 20px;
-	background:#F7F7F7;
+	background:#ffffff;
 	font-weight:900;
 }
 
