@@ -1875,5 +1875,13 @@ ul.box-filter > li ul {
 #menu .menu-mega, #menu .cat-mega {
     padding: 5px;
 }
+.dd ul, #currency ul, #language ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+    background: none repeat scroll 0% 0% #EEE;
+    width: 100%;
+}
 /*End Salm Edit code*/
 
