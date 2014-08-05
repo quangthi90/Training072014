@@ -723,6 +723,8 @@ a.button:hover, input.button:hover {
 .box-content > ul > li{
 	border-bottom: 1px solid #DBDEE1;
 	padding: 7px 0;
+	list-style-type: none;
+	background: no-repeat;
 }
 /* box products */
 .box-product {
