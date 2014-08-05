@@ -73,6 +73,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
   <?php echo $language; ?>
   <div class="top-options">
     <?php echo $cart; ?>
+
     <?php echo $currency; ?>
     <div class="links">
       <a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a>
@@ -85,7 +86,12 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
  
 </div>
 <?php if ($categories) { ?>
-<div id="menu">
+<div class="navigation-bar no-home" style="opacity: 1;">
+<div style="width: 163px; opacity: 1;" class="store-logo">
+    <a href="http://localhost/training/index.php?route=common/home" id="logo" style="margin-top:-17.5px;">
+    <img src="http://rgenmodernstore-demo1.rgenesis.com/image/data/demo01_images/logo.png" title="R.Gen - OpenCart Modern Store Design" alt="R.Gen - OpenCart Modern Store Design" height="35" width="163">       </a>
+  </div>
+<div id="menu" style="width: 987px;">
   <ul>
     <?php foreach ($categories as $category) { ?>
     <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
@@ -106,6 +112,8 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
     </li>
     <?php } ?>
   </ul>
+</div>
+</div>
 </div>
 <?php } ?>
 <?php if ($error) { ?>

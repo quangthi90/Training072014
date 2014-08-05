@@ -25,3 +25,8 @@
   </div>
 </form>
 <?php } ?>
+<script type="text/javascript">
+    $('#currency').hover(function(){
+        
+    });
+</script>
