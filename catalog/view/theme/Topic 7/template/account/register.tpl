@@ -1,7 +1,5 @@
 <?php echo $header; ?>
-<?php if ($error_warning) { ?>
-<div class="warning"><?php echo $error_warning; ?></div>
-<?php } ?>
+
 <?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
@@ -10,11 +8,15 @@
     <?php } ?>
   </div>
   <h1><?php echo $heading_title; ?></h1>
+  <?php if ($error_warning) { ?>
+      <div class="warning"><?php echo $error_warning; ?></div>
+      <?php } ?>
   <p><?php echo $text_account_already; ?></p>
   <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
     
     <div class="content">
       <h2><?php echo strtoupper($text_your_details); ?></h2>
+
       <table class="form">
         <tr>
           <td> <?php echo $entry_firstname; ?><span class="required">*</span></td>
@@ -177,24 +179,25 @@
         </tr>
       </table>
     </div>
-    <?php if ($text_agree) { ?>
     <div class="buttons">
-      <div class="right"><?php echo $text_agree; ?>
-        <?php if ($agree) { ?>
-        <input type="checkbox" name="agree" value="1" checked="checked" />
-        <?php } else { ?>
-        <input type="checkbox" name="agree" value="1" />
-        <?php } ?>
-        <input type="submit" value="<?php echo $button_continue; ?>" class="button" />
-      </div>
+      <table class="form">
+        <tbody>
+          <tr>
+            <td></td>
+            <td>
+              <input type="checkbox" name="agree" value="1" />
+              <?php echo $text_agree; ?>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="<?php echo strtoupper($button_continue); ?>" class="button" />
+            </td>
+          </tr>    
+        </tbody>
+      </table>
     </div>
-    <?php } else { ?>
-    <div class="buttons">
-      <div class="right">
-        <input type="submit" value="<?php echo $button_continue; ?>" class="button" />
-      </div>
-    </div>
-    <?php } ?>
   </form>
   <?php echo $content_bottom; ?></div>
 <script type="text/javascript"><!--
