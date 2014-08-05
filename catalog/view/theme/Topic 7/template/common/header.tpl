@@ -53,8 +53,9 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 <?php } ?>
 <?php echo $google_analytics; ?>
 </head>
-<body>
-<div id="container">
+<body class="bx verimg homepage col-n revo-pfs">
+<div id="container" class="menu-bx">
+<div id="header-wrapper" class="head0 ">
 <div id="header">
 <div id="welcome">
     <?php if (!$logged) { ?>
@@ -63,25 +64,34 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
     <?php echo $text_logged; ?>
     <?php } ?>
 </div>
-   <div class="links">
-   <a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a>
-  <a href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a>
-  <a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>
-  <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>  
-  </div>
-
-  <?php echo $language; ?>
-  <?php echo $currency; ?>
-  <?php echo $cart; ?>
   <div id="search">
     <div class="button-search"></div>
+    <span class="search-box">
     <input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
+    </span>
+  </div>
+  <?php echo $language; ?>
+  <div class="top-options">
+    <?php echo $cart; ?>
+
+    <?php echo $currency; ?>
+    <div class="links">
+      <a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a>
+      <a href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a>
+      <a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>
+      <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>  
+    </div>
   </div>
   
  
 </div>
 <?php if ($categories) { ?>
-<div id="menu">
+<div class="navigation-bar no-home" style="opacity: 1;">
+<div style="width: 163px; opacity: 1;" class="store-logo">
+    <a href="http://localhost/training/index.php?route=common/home" id="logo" style="margin-top:-17.5px;">
+    <img src="http://rgenmodernstore-demo1.rgenesis.com/image/data/demo01_images/logo.png" title="R.Gen - OpenCart Modern Store Design" alt="R.Gen - OpenCart Modern Store Design" height="35" width="163">       </a>
+  </div>
+<div id="menu" style="width: 987px;">
   <ul>
     <?php foreach ($categories as $category) { ?>
     <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
@@ -102,6 +112,8 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
     </li>
     <?php } ?>
   </ul>
+</div>
+</div>
 </div>
 <?php } ?>
 <?php if ($error) { ?>

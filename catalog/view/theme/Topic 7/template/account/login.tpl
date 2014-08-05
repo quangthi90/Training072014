@@ -1,7 +1,5 @@
 <?php echo $header; ?>
-<?php if ($success) { ?>
-<div class="success"><?php echo $success; ?></div>
-<?php } ?>
+
 <?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
@@ -10,22 +8,27 @@
     <?php } ?>
   </div>
   <h1 class="page-heading"><strong><?php echo $heading_title; ?></strong></h1>
+  <?php if ($success) { ?>
+<div class="success"><?php echo $success; ?></div>
+<?php } ?>
   <?php if ($error_warning) { ?>
   <div class="warning"><?php echo $error_warning; ?></div>
   <?php } ?>
   <div class="login-content">
     <div class="left">
+     <h2 ><?php echo strtoupper($text_new_customer) ; ?></h2>
       <div class="content">
-         <h2 ><?php echo strtoupper($text_new_customer) ; ?></h2>
+        
         <p><b><?php echo $text_register; ?></b></p>
         <p><?php echo $text_register_account; ?></p>
         <a href="<?php echo $register; ?>" class="button"><?php echo strtoupper($button_continue) ; ?></a></div>
     </div>
     <div class="right">
-      
+      <h2 style="font-size: 14px"><?php echo strtoupper($text_returning_customer); ?></h2>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+      
         <div class="content">
-          <h2 style="font-size: 14px"><?php echo strtoupper($text_returning_customer); ?></h2>
+
           <p><?php echo $text_i_am_returning_customer; ?></p>
           <span><?php echo $entry_email; ?></span><br />
           <input type="text" name="email" value="<?php echo $email; ?>" />
