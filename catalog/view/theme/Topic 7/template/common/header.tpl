@@ -88,13 +88,14 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 <?php if ($categories) { ?>
 <div class="navigation-bar no-home" style="opacity: 1;">
 <div style="width: 163px; opacity: 1;" class="store-logo">
-    <a href="http://localhost/training/index.php?route=common/home" id="logo" style="margin-top:-17.5px;">
+    <a href="http://localhost/training/index.php?route=common/home" id="logo" style="margin-left: -81.5px;
+margin-top: -17.5px;">
     <img src="http://rgenmodernstore-demo1.rgenesis.com/image/data/demo01_images/logo.png" title="R.Gen - OpenCart Modern Store Design" alt="R.Gen - OpenCart Modern Store Design" height="35" width="163">       </a>
   </div>
 <div id="menu" style="width: 987px;">
   <ul>
     <?php foreach ($categories as $category) { ?>
-    <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+    <li><a class="top-lvl" href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
       <?php if ($category['children']) { ?>
       <div>
         <?php for ($i = 0; $i < count($category['children']);) { ?>

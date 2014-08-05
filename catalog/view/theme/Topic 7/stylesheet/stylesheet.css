@@ -39,9 +39,8 @@ p {
 	margin-bottom: 20px;
 }
 a, a:visited, a b {
-	color: #58989e;
-	text-decoration: none;
-	cursor: pointer;
+    color: #58989E;
+    cursor: pointer;
 }
 
 a:hover {
@@ -49,7 +48,7 @@ a:hover {
 	color: #333;
 }
 a img {
-	border: none;
+	border: medium none;
 }
 form {
 	padding: 0;
@@ -112,8 +111,11 @@ label {
 	margin-right: 195px;
 }
 /* header */
-#header {
+#header, .navigation-bar{
 	width: 1180px; /* Salm: Thay doi khi responsive*/
+}
+#header {
+	
 	margin: auto;
 	height: 90px;
 	margin-bottom: 7px;
@@ -380,18 +382,17 @@ text-align: right;
 	display: inline-block;
 	vertical-align: middle;
 	white-space: normal;
+	height: 60px;
 }
 #menu ul {
 	list-style: none outside none;
 	margin: 0;
-	padding: 0;
+    min-height: 60px;
 }
 #menu > ul > li {
 	position: relative;
 	float: left;
 	z-index: 20;
-	padding: 7px;
-	border-bottom: 1px solid #Ececec;
 }
 #menu > ul > li:hover {
 }
@@ -1808,11 +1809,33 @@ ul.box-filter > li ul {
     margin-right: -3px;
 }
 .navigation-bar {
+
     min-height: 60px;
     margin: 0px auto 10px;
     position: relative;
     background-color: #494952;
     opacity: 0;
     white-space: nowrap;
+    margin-top: -25px;
+}
+.head1 .store-logo1 #logo, .store-logo1 #logo, .store-logo {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#menu > ul > li > a.top-lvl {
+    font-family: "Lato",sans-serif;
+    font-weight: 800;
+    line-height: 1.4;
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 23px 10px 0px;
+    min-height: 37px;
+    z-index: 6;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 12px;
+}
 /*End Salm Edit code*/
 
