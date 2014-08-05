@@ -4,11 +4,11 @@ html {
 	padding: 0;
 }
 body {
-	background-color: #ffffff;
-	color: #666;
-	font-family: Arial, Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px;
+	background-color: #D9E6E7;
+	color: #666;
+	font-family: Arial,Helvetica,sans-serif;
 }
 body, td, th, input, textarea, select, a {
 	font-size: 12px;
@@ -84,12 +84,14 @@ label {
 	cursor: pointer;
 }
 /* layout */
+
 #container {
-	width: 980px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
+	background: none repeat scroll 0% 0% #F7F7F7;
 }
+
 #column-left {
 	float: left;
 	width: 180px;
@@ -121,6 +123,15 @@ label {
 	top: 25px;
 	left: 15px;
 }
+
+#header-wrapper {
+    padding-bottom: 1px;
+    padding-top: 1px;
+    position: relative;
+    z-index: 9998;
+    background: none repeat scroll 0% 0% #404048;
+}
+
 #language {
 	position: absolute;
 	top: 15px;
@@ -132,14 +143,6 @@ label {
 #language img {
 	cursor: pointer;
 	margin-right: 5px;
-}
-#currency {
-	width: 75px;
-	position: absolute;
-	top: 15px;
-	left: 425px;
-	color: #999;
-	line-height: 17px;
 }
 #currency a {
 	display: inline-block;
@@ -155,24 +158,18 @@ label {
 	text-decoration: none;
 }
 #header #cart {
-	position: absolute;
-	top: 0px;
-	right: 145px;
-	z-index: 9;
-	min-width: 300px;
+	min-width: 76px;
+	height: 30px;
+	float: right;
+	margin-left: 1px;
+	background-color: #BCBCC5;
 }
 #header #cart .heading {
-	float: right;
-	margin-right: 172px;
-	margin-top: 15px;
-	padding-left: 14px;
-	padding-right: 14px;
-	border-top: 1px solid #FFFFFF;
-	border-left: 1px solid #FFFFFF;
-	border-right: 1px solid #EEEEEE;
-	background: #FFF;
+	height: 30px;
 	position: relative;
 	z-index: 1;
+	overflow: hidden;
+	background-color: #BCBCC5;
 }
 #header #cart .heading h4 {
 	color: #333333;
@@ -186,8 +183,12 @@ label {
 	text-decoration: none;
 }
 #header #cart .heading a span {
-	background: #FFFFFF url('../image/arrow-down.png') 100% 50% no-repeat;
-	padding-right: 15px;
+	padding: 8px 8px 0px 0px;
+	height: 22px;
+	display: block;
+	text-align: right;
+	font-size: 11px;
+	color: #404048;
 }
 #header #cart .content {
 	clear: both;
@@ -277,51 +278,82 @@ label {
 	padding-top: 50px;
 	text-align: center;
 }
+
 #header #search {
 	position: absolute;
 	top: 15px;
 	right: 0px;
-	width: 298px;
+	width: 40px;
+	height: 40px;
 	z-index: 15;
+	overflow: hidden;
+	transition: all 0.2s linear 0s;
 }
+
 #header .button-search {
 	position: absolute;
-	left: 0px;
-	background: url('../image/button-search.png') center center no-repeat;
-	width: 28px;
-	height: 24px;
-	border-right: 1px solid #CCCCCC;
+	right: 5px;
+	top: 5px;
+	width: 30px;
+	height: 30px;
 	cursor: pointer;
+	border-radius: 30px;
+	color: #FFF;
+	box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.25);
+	background: #494952;
+	
+	/**/
 }
 #header #search input {
-	background: #FFF;
-	padding: 1px 1px 1px 33px;
-	width: 262px;
-	height: 21px;
-	border: 1px solid #CCCCCC;
-	-webkit-border-radius: 3px 3px 3px 3px;
-	-moz-border-radius: 3px 3px 3px 3px;
-	-khtml-border-radius: 3px 3px 3px 3px;
-	border-radius: 3px 3px 3px 3px;
-	-webkit-box-shadow: 0px 2px 0px #F0F0F0;
-	-moz-box-shadow: 0px 2px 0px #F0F0F0;
-	box-shadow: 0px 2px 0px #F0F0F0;
+	background:#FFF;
+	margin:5px 0 0 5px;
+	padding:0 15px;
+	width:388px;
+	height:30px;
+	border:none;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	-khtml-border-radius:20px;
+	border-radius:20px;
+	box-shadow:none
 }
+#header #search .search-box{
+    position: absolute;
+    right: 45px;
+    top: 0px;
+    width: 430px;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url('../image/rgen/TranpBg1.png') repeat scroll 0% 0% transparent;
+}
+/*Salm edit*/
 #header #welcome {
-	position: absolute;
-	z-index: 5;
-	width: 298px;
-	text-align: right;
-	color: #999999;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11px;
+	position:absolute;
+	top:8px;
+	left:0px;
+	z-index:5;
+	width:298px;
+	text-align:left;
+	color:#fff
+}
+#header #welcome a{
+	font-weight:bold;
+	color:#6ddee2;
+	font-size:11px;
+	text-decoration:none
 }
 #header .links {
-	position: absolute;
 	font-size: 10px;
-	bottom: 3px;
 	width: 230px;
-	margin-right: 50px;
+	height: 30px;
+	float: right;
+	margin-right: 30px;
 }
 #header .links a {
+text-align: right;
 	float: right;
 	font-size: 11px;
 	min-width: 100px;
@@ -329,6 +361,7 @@ label {
 	text-decoration: none;
 	color: #AFF4F7;
 }
+/*end Salm edit*/
 #header .links a + a {
 	/*margin-left: 8px;*/
 	/*clear: both;*/
@@ -1714,4 +1747,34 @@ ul.box-filter > li ul {
 	background:#F7F7F7;
 	font-weight:900;
 }
+/*Salm Edit code*/
+.dd, #currency, #language {
+    width: 57px;
+    line-height: 17px;
+    background-color: #BCBCC5;
+    float: right;
+    font-family: "Lato",sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #404048;
+    position: relative;
+}
+.dd .dd-hdl,.selected-currency,.selected-language{
+	background: url('../image/arrow-down.png') 80% 50% no-repeat;
+	position:relative;
+	height:23px;
+	display:block;
+	padding:7px 0 0 7px
+}
+.top-options{
+	width:90%
+}
+.top-options{
+	position:absolute;
+	right:65px;
+	z-index:9;
+	top:20px
+}
+/*End Salm Edit code*/
 
