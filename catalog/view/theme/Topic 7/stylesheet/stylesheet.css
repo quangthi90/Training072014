@@ -470,7 +470,7 @@ text-align: right;
 	-moz-border-radius: 5px 5px 5px 5px;
 	-khtml-border-radius: 5px 5px 5px 5px;
 	border-radius: 5px 5px 5px 5px;
-	width: 93%;
+	width: 100%;
 }
 .warning {
 	background: #FFD1D1 url('../image/warning.png') 10px center no-repeat;
@@ -479,7 +479,7 @@ text-align: right;
 	-moz-border-radius: 5px 5px 5px 5px;
 	-khtml-border-radius: 5px 5px 5px 5px;
 	border-radius: 5px 5px 5px 5px;
-	width: 93%;
+	width: 100%;
 }
 .attention {
 	background: #FFF5CC url('../image/attention.png') 10px center no-repeat;
