@@ -15,8 +15,9 @@
   <?php } ?>
   <div class="login-content">
     <div class="left">
-      <h2 ><?php echo strtoupper($text_new_customer) ; ?></h2>
+     <h2 ><?php echo strtoupper($text_new_customer) ; ?></h2>
       <div class="content">
+        
         <p><b><?php echo $text_register; ?></b></p>
         <p><?php echo $text_register_account; ?></p>
         <a href="<?php echo $register; ?>" class="button"><?php echo strtoupper($button_continue) ; ?></a></div>
@@ -24,7 +25,9 @@
     <div class="right">
       <h2 style="font-size: 14px"><?php echo strtoupper($text_returning_customer); ?></h2>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+      
         <div class="content">
+
           <p><?php echo $text_i_am_returning_customer; ?></p>
           <span><?php echo $entry_email; ?></span><br />
           <input type="text" name="email" value="<?php echo $email; ?>" />
