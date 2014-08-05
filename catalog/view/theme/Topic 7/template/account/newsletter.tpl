@@ -5,16 +5,16 @@
     <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
     <?php } ?>
   </div>
-  <h1><?php echo $heading_title; ?></h1>
+  <h1 class="page-heading"><strong><?php echo $heading_title; ?></strong></h1>
   <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
     <div class="content">
       <table class="form">
         <tr>
           <td><?php echo $entry_newsletter; ?></td>
           <td><?php if ($newsletter) { ?>
-            <input type="radio" name="newsletter" value="1" checked="checked" />
+            <input type="radio" name="newsletter" value="1"  />
             <?php echo $text_yes; ?>&nbsp;
-            <input type="radio" name="newsletter" value="0" />
+            <input type="radio" name="newsletter" value="0" checked="checked" />
             <?php echo $text_no; ?>
             <?php } else { ?>
             <input type="radio" name="newsletter" value="1" />
@@ -26,8 +26,8 @@
       </table>
     </div>
     <div class="buttons">
-      <div class="left"><a href="<?php echo $back; ?>" class="button"><?php echo $button_back; ?></a></div>
-      <div class="right"><input type="submit" value="<?php echo $button_continue; ?>" class="button" /></div>
+      <div class="left"><a href="<?php echo $back; ?>" class="button"><?php echo strtoupper($button_back); ?></a></div>
+      <div class="right"><input type="submit" value="<?php echo strtoupper($button_continue); ?>" class="button" /></div>
     </div>
   </form>
   <?php echo $content_bottom; ?></div>
