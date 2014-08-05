@@ -470,7 +470,7 @@ text-align: right;
 	-moz-border-radius: 5px 5px 5px 5px;
 	-khtml-border-radius: 5px 5px 5px 5px;
 	border-radius: 5px 5px 5px 5px;
-	width: 100%;
+	width: 93%;
 }
 .warning {
 	background: #FFD1D1 url('../image/warning.png') 10px center no-repeat;
@@ -479,7 +479,7 @@ text-align: right;
 	-moz-border-radius: 5px 5px 5px 5px;
 	-khtml-border-radius: 5px 5px 5px 5px;
 	border-radius: 5px 5px 5px 5px;
-	width: 100%;
+	width: 93%;
 }
 .attention {
 	background: #FFF5CC url('../image/attention.png') 10px center no-repeat;
@@ -1881,6 +1881,23 @@ ul.box-filter > li ul {
     position: relative;
     text-transform: uppercase;
     font-size: 12px;
+}
+#menu > ul > li .sub-menu {
+    display: none;
+    background: none repeat scroll 0% 0% #4DB8C1;
+    position: absolute;
+    z-index: 25;
+}
+#menu .menu-html-wrp {
+    padding: 5px;
+}
+#menu .menu-html-wrp .menu-html {
+    padding: 15px;
+    background-color: #FFF;
+    white-space: normal;
+}
+#menu .menu-mega, #menu .cat-mega {
+    padding: 5px;
 }
 /*End Salm Edit code*/
 
