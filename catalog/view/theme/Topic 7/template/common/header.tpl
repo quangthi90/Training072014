@@ -53,8 +53,9 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 <?php } ?>
 <?php echo $google_analytics; ?>
 </head>
-<body>
-<div id="container">
+<body class="bx verimg homepage col-n revo-pfs">
+<div id="container" class="menu-bx">
+<div id="header-wrapper" class="head0 ">
 <div id="header">
 <div id="welcome">
     <?php if (!$logged) { ?>
@@ -63,19 +64,22 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
     <?php echo $text_logged; ?>
     <?php } ?>
 </div>
-   <div class="links">
-   <a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a>
-  <a href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a>
-  <a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>
-  <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>  
-  </div>
-
-  <?php echo $language; ?>
-  <?php echo $currency; ?>
-  <?php echo $cart; ?>
   <div id="search">
     <div class="button-search"></div>
+    <span class="search-box">
     <input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
+    </span>
+  </div>
+  <?php echo $language; ?>
+  <div class="top-options">
+    <?php echo $cart; ?>
+    <?php echo $currency; ?>
+    <div class="links">
+      <a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a>
+      <a href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a>
+      <a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a>
+      <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>  
+    </div>
   </div>
   
  
