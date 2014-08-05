@@ -437,6 +437,7 @@ label {
 	-moz-border-radius: 5px 5px 5px 5px;
 	-khtml-border-radius: 5px 5px 5px 5px;
 	border-radius: 5px 5px 5px 5px;
+	width: 93%;
 }
 .warning {
 	background: #FFD1D1 url('../image/warning.png') 10px center no-repeat;
