@@ -457,7 +457,6 @@ text-align: right;
 }
 .success, .warning, .attention, .information {
 	padding: 10px 10px 10px 33px;
-	margin-bottom: 15px;
 	color: #555555;
 	-webkit-border-radius: 5px 5px 5px 5px;
 	-moz-border-radius: 5px 5px 5px 5px;
@@ -663,6 +662,31 @@ a.button {
 	text-decoration: none;
 	padding: 7px 15px 7px 15px;
 }
+
+a.editbutton, a.deletebutton{
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	cursor: pointer;
+	color: #000000;
+	line-height: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	border-radius: 20px;
+	-webkit-box-shadow: 0px 2px 2px #DDDDDD;
+	-moz-box-shadow: 0px 2px 2px #DDDDDD;
+	box-shadow: 0px 2px 2px #DDDDDD;
+	transition: all 0.2s linear 0s;
+	background-color: #ffffff;
+}
+
+a.editbutton:hover, a.deletebutton:hover{
+	background-position: 0px -24px;
+	background-color: #6ddee2;
+	color: #ffffff;
+}
+
 input.button {
 	margin: 0;
 	border: 0;
