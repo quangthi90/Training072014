@@ -1,5 +1,5 @@
 <div class="box">
-  <div class="box-heading"><?php echo $heading_title; ?></div>
+  <div class="box-heading"><?php echo strtoupper($heading_title); ?></div>
   <div class="box-content">
     <ul>
       <?php if (!$logged) { ?>

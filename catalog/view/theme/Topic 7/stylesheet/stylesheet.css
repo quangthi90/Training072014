@@ -439,6 +439,7 @@ label {
 	-moz-border-radius: 5px 5px 5px 5px;
 	-khtml-border-radius: 5px 5px 5px 5px;
 	border-radius: 5px 5px 5px 5px;
+	width: 93%;
 }
 .attention {
 	background: #FFF5CC url('../image/attention.png') 10px center no-repeat;
@@ -493,6 +494,20 @@ table.form td input[type="radio"] {
 	width: 0px;
 	margin-left: 5px;
 	padding-right: 5px;
+}
+table.form td input[type="submit"] {
+	width: 0px;
+	margin-left: 5px;
+	padding: 5px 15px;
+	width: auto;
+	line-height: 14px;
+}
+table.form td input[type="checkbox"] {
+	width: 0px;
+	margin-left: 5px;
+	padding: 10px 7px;
+	width: auto;
+	
 }
 
 input.large-field, select.large-field {
@@ -619,6 +634,7 @@ a.button:hover, input.button:hover {
 	overflow: auto;
 	padding: 6px;
 	margin-bottom: 20px;
+	background-color: #ffffff;
 }
 .buttons .left {
 	float: left;
