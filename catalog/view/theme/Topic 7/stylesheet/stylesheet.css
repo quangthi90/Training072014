@@ -60,9 +60,10 @@ input[type='text'], input[type='password'], textarea {
 	padding: 3px;
 	margin-left: 0px;
 	margin-right: 0px;
-	width: 93%;
 	height: 24px;
+	width: 350px;
 }
+
 select {
 	border: 1px solid #CCCCCC;
 	padding: 5px;
@@ -530,6 +531,10 @@ table.form td {
 table.form td input {
 	width: 350px;
 }
+table.form td input[type="password"]{
+	width: 140px !important;
+}
+
 table.form td input[type="radio"] {
 	width: 0px;
 	margin-left: 5px;
@@ -865,7 +870,6 @@ ul.box-filter > li ul {
 #content .content {
 	padding: 10px;
 	overflow: auto;
-	margin-bottom: 15px;
 	padding: 30px;
 	background-color: rgba(0,0,0,0.02);
 }
