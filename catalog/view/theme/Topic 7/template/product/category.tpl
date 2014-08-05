@@ -68,13 +68,16 @@
   <div class="product-compare"><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></div>
   <div class="product-list">
     <?php foreach ($products as $product) { ?>
-    <div>
+    <div class="prd-block">
+
       <?php if ($product['thumb']) { ?>
       <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
       <?php } ?>
       <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
       <div class="description"><?php echo $product['description']; ?></div>
+      <!-- Price ban dau -->
       <?php if ($product['price']) { ?>
+
       <div class="price">
         <?php if (!$product['special']) { ?>
         <?php echo $product['price']; ?>
@@ -103,7 +106,12 @@
   <?php if (!$categories && !$products) { ?>
   <div class="content"><?php echo $text_empty; ?></div>
   <div class="buttons">
-    <div class="right"><a href="<?php echo $continue; ?>" class="button"><?php echo $button_continue; ?></a></div>
+    <div class="right">
+    <a href="<?php echo $continue; ?>" class="button"><?php echo $button_continue; ?></a>
+    <!-- Price chuyen toi day -->
+    
+
+    </div>
   </div>
   <?php } ?>
   <?php echo $content_bottom; ?></div>
