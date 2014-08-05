@@ -30,8 +30,8 @@ h2 {
 	font-size: 14px;
 	margin-top: 0px;
 	margin-bottom: 5px;
-	padding-bottom: 15px;
-	border-bottom: 1px solid #EEEEEE;
+	padding-bottom: 0px;
+	border-bottom: 1px solid #Ececec;
 }
 
 p {
@@ -73,6 +73,12 @@ select option{
 	padding-top:5px;
 	padding-bottom: 5px;
 	cursor: pointer;
+}
+.scroll{
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	border-radius: 8px;
 }
 label {
 	cursor: pointer;
@@ -617,7 +623,6 @@ a.button {
 	display: inline-block;
 	text-decoration: none;
 	padding: 7px 15px 7px 15px;
-	margin-top: 80px;
 }
 input.button {
 	margin: 0;
@@ -632,8 +637,8 @@ a.button:hover, input.button:hover {
 }
 .buttons {
 	overflow: auto;
-	padding: 6px;
-	margin-bottom: 20px;
+	padding: 20px;
+	margin-bottom: 40px;
 	background-color: #ffffff;
 }
 .buttons .left {
@@ -641,9 +646,11 @@ a.button:hover, input.button:hover {
 	text-align: left;
 }
 .buttons .right {
-	float: left;
+	float: right;
 	text-align: right;
+	margin-right: 10px;
 }
+
 .buttons .center {
 	text-align: center;
 	margin-left: auto;
@@ -822,7 +829,7 @@ ul.box-filter > li ul {
 #content .content {
 	padding: 10px;
 	overflow: auto;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	padding: 30px;
 	background-color: rgba(0,0,0,0.02);
 }
@@ -1698,5 +1705,13 @@ ul.box-filter > li ul {
 }
 .banner div img {
 	margin-bottom: 20px;
+}
+.page-heading, .pagination {
+    background: url("../image/hr.png") repeat-x scroll center center rgba(0, 0, 0, 0);
+}
+.page-heading strong{
+	padding:0 20px;
+	background:#F7F7F7;
+	font-weight:900;
 }
 

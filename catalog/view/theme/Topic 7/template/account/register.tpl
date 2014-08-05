@@ -7,7 +7,7 @@
     <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
     <?php } ?>
   </div>
-  <h1><?php echo $heading_title; ?></h1>
+  <h1 class="page-heading"><strong><?php echo $heading_title; ?></strong></h1>
   <?php if ($error_warning) { ?>
       <div class="warning"><?php echo $error_warning; ?></div>
       <?php } ?>
