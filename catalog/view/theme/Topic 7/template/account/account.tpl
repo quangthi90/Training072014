@@ -9,7 +9,7 @@
     <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
     <?php } ?>
   </div>
-  <h1><?php echo $heading_title; ?></h1>
+  <h1 class="page-heading"><strong><?php echo $heading_title; ?></strong></h1>
   
   <div class="content">
     <h2><?php echo strtoupper($text_my_account); ?></h2>
