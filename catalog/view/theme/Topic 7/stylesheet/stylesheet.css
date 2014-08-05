@@ -920,17 +920,26 @@ ul.box-filter > li ul {
 	text-decoration: none;
 	font-weight: bold;
 }
-.product-list > div {
-	overflow: auto;
-	margin-bottom: 15px;
+
+.product-list .prd-block{
+	min-height: 290px ; 
 }
 .product-list .right {
 	float: right;
 	margin-left: 15px;
+	width: 30%;
+
+}
+.product-list .left {
+	float: left;
+	margin-left: 15px;
+	width: 65%;
+
 }
 .product-list > div + div {
 	border-top: 1px solid #EEEEEE;
 	padding-top: 16px;
+
 }
 .product-list .image {
 	float: left;
@@ -956,7 +965,7 @@ ul.box-filter > li ul {
 .product-list .rating {
 	color: #7B7B7B;
 }
-.product-list .price {
+.product-list .right .price {
 	float: right;
 	height: 50px;
 	margin-left: 8px;
@@ -979,22 +988,30 @@ ul.box-filter > li ul {
 .product-list .cart {
 	margin-bottom: 3px;
 }
-.product-list .wishlist, .product-list .compare {
+.product-list .wishlist, .product-list .compare .moreinfo{
 	margin-bottom: 3px;
+
 }
 .product-list .wishlist a {
-	color: #333333;
+	color:#3399FF;
 	text-decoration: none;
 	padding-left: 18px;
 	display: block;
-	background: url('../image/add.png') left center no-repeat;
+	background:  left center no-repeat;
 }
 .product-list .compare a {
-	color: #333333;
+	color: #3399FF;
 	text-decoration: none;
 	padding-left: 18px;
 	display: block;
-	background: url('../image/add.png') left 60% no-repeat;
+	background: left 60% no-repeat;
+}
+.product-list .moreinfo a{
+	color: #3399FF;
+	text-decoration: none;
+	padding-left: 18px;
+	display: block;
+	background: left 60% no-repeat;
 }
 .product-grid {
 	width: 100%;
