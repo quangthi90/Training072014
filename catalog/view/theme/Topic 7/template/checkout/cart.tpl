@@ -9,16 +9,17 @@
     <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
     <?php } ?>
   </div>
-  <h1 class="page-heading"><strong><?php echo $heading_title; ?></strong>
-    <?php if ($weight) { ?>
+  <h1 class="page-heading"><strong><?php echo $heading_title; ?><?php if ($weight) { ?>
     &nbsp;(<?php echo $weight; ?>)
-    <?php } ?>
+    <?php } ?></strong> 
   </h1>
   <?php if ($success) { ?>
   <div class="success"><?php echo $success; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
   <?php } ?>
   <?php if ($error_warning) { ?>
-  <div class="warning"><?php echo $error_warning; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
+  <div class="warning"><?php echo $error_warning; ?>
+    <img src="catalog/view/theme/default/image/close.png" alt="" class="close" />
+  </div>
   <?php } ?>
   <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
     <div class="cart-info">
