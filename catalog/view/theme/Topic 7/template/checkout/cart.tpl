@@ -26,12 +26,11 @@
       <table>
         <thead>
           <tr>
-            <td class="image"><?php echo $column_image; ?></td>
-            <td class="name"><?php echo $column_name; ?></td>
-            <td class="model"><?php echo $column_model; ?></td>
-            <td class="quantity"><?php echo $column_quantity; ?></td>
-            <td class="price"><?php echo $column_price; ?></td>
-            <td class="total"><?php echo $column_total; ?></td>
+            <td class="image"><?php echo strtoupper($column_name); ?></td>
+            <td class="name"><strong></strong></td>
+            <td class="quantity"><?php echo strtoupper($column_quantity); ?></td>
+            <td class="price"><?php echo strtoupper($column_price); ?></td>
+            <td class="total"><?php echo strtoupper($column_total); ?></td>
           </tr>
         </thead>
         <tbody>

@@ -21,7 +21,7 @@
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/bootstrap-reponsive.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/stylesheet.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/css.css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/cached_fcd11c7a3f81dc721b4715a0bfb8e17b_rgmin.css" />
+
 <link rel="stylesheet" type="text/css" href="">
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/on-dark.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/widget002.css" />
