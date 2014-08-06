@@ -1994,7 +1994,6 @@ a.cart-bt,.cart-bt{
 	width:42px;
 	-webkit-border-radius:42px;
 	border-radius:42px;
-	cursor:pointer;
 	display:inline-block;
 	border:none;
 	font-size:0px;
@@ -2004,10 +2003,22 @@ a.cart-bt,.cart-bt{
 	text-decoration:none;
 	box-shadow:0px 0px 0px 6px rgba(104,85,81,0.25);
 	background-color:#404048;
-	color:#6ddee2;
+	font-family: 'rgenregular';
+	position: relative;
+	line-height: 1;
+	text-indent: 0;
+	text-transform: none;
 }
+
 .wishlist-info .action a{
 	font-size:11px;
+}
+ a.cart-bt:hover{
+	 background-color: #6ddee2;
+    cursor: pointer;
+    color: #ffffff;
+    box-shadow: 0 0 0 6px rgba(109, 222, 226, 0.25) ;
+    text-decoration: none;
 }
 /*End Nga Edit code*/
 
