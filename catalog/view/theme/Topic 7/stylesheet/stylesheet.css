@@ -957,6 +957,29 @@ ul.box-filter > li ul {
 .product-list .prd-block{
 	min-height: 290px ; 
 }
+.product-list .prd-block .price-wrp {
+width: 204px;
+height: 204px;
+position: absolute;
+right: 1px;
+top: 1px;
+background-color: rgba(0,0,0,0.02);
+}
+.product-list .prd-block .info-wrp .price {
+-webkit-border-radius: 100px;
+border-radius: 100px;
+width: 124px;
+height: 89px;
+padding: 35px 0 0 0;
+top: 40px;
+left: 40px;
+margin-left: auto;
+position: absolute;
+z-index: 1;
+font-size: 15px;
+background-color: #6ddee2;
+box-shadow: 0px 0px 0px 10px rgba(109,222,226,0.25);
+}
 .product-list .right {
 	float: right;
 	margin-left: 15px;
