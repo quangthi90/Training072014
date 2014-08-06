@@ -21,7 +21,7 @@ class ControllerCommonHome extends Controller {
 			'common/header'
 		);
 										
-		$this->response->setOutput($this->render());
+		$this->response->setOutput($this->myRender(array('body_class' => 'homepage')));
 	}
 }
 ?>

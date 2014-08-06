@@ -1,6 +1,6 @@
 <?php   
 class ControllerCommonHeader extends Controller {
-	protected function index() {
+	protected function index($args) {
 		$this->data['title'] = $this->document->getTitle();
 
 		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
@@ -134,6 +134,8 @@ class ControllerCommonHeader extends Controller {
 				);
 			}
 		}
+
+		// $this->data['body_class'] = $args['body_class'];
 
 		$this->children = array(
 			'module/language',
