@@ -65,6 +65,8 @@
       </select>
     </div>
   </div>
+  <div class="price-wrp"></div>   
+      <div class="price"></div>
   <div class="product-compare"><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></div>
   <div class="product-list">
     <?php foreach ($products as $product) { ?>
@@ -107,9 +109,12 @@
   <div class="content"><?php echo $text_empty; ?></div>
   <div class="buttons">
     <div class="right">
-    <a href="<?php echo $continue; ?>" class="button"><?php echo $button_continue; ?></a>
+
+      
+        <a href="<?php echo $continue; ?>" class="button"><?php echo $button_continue; ?></a>
     <!-- Price chuyen toi day -->
     
+       
 
     </div>
   </div>

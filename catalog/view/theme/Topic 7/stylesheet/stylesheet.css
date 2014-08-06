@@ -985,6 +985,29 @@ ul.box-filter > li ul {
 .product-list .prd-block{
 	min-height: 290px ; 
 }
+.product-list .prd-block .price-wrp {
+width: 204px;
+height: 204px;
+position: absolute;
+right: 1px;
+top: 1px;
+background-color: rgba(0,0,0,0.02);
+}
+.product-list .prd-block .info-wrp .price {
+-webkit-border-radius: 100px;
+border-radius: 100px;
+width: 124px;
+height: 89px;
+padding: 35px 0 0 0;
+top: 40px;
+left: 40px;
+margin-left: auto;
+position: absolute;
+z-index: 1;
+font-size: 15px;
+background-color: #6ddee2;
+box-shadow: 0px 0px 0px 10px rgba(109,222,226,0.25);
+}
 .product-list .right {
 	float: right;
 	margin-left: 15px;
@@ -1373,47 +1396,88 @@ ul.box-filter > li ul {
 .wishlist-info table {
 	width: 100%;
 	border-collapse: collapse;
-	border-top: 1px solid #DDDDDD;
-	border-left: 1px solid #DDDDDD;
-	border-right: 1px solid #DDDDDD;
-	margin-bottom: 20px;
+	border-left: 1px solid #Ececec;
+	border-right: 1px solid #Ececec;
+	margin-bottom: 0px;
+	border-bottom: 1px solid #Ececec;
 }
 .wishlist-info td {
-	padding: 7px;
+	padding: 15px 10px;
+	border-right: 1px solid #Ececec;
 }
 .wishlist-info thead td {
-	color: #4D4D4D;
+	color: #404048;
 	font-weight: bold;
-	background-color: #F7F7F7;
-	border-bottom: 1px solid #DDDDDD;
+	background-color: #ffffff;
+	border-bottom: 1px solid #Ececec;
+	font-size: 12px;
+	padding: 8px 10px;
 }
 .wishlist-info thead .image {
+	text-align: left;
+	border-right: medium none;
+}
+.wishlist-info thead .name, .wishlist-info thead .model, .wishlist-info thead .stock{
 	text-align: center;
 }
-.wishlist-info thead .name, .wishlist-info thead .model, .wishlist-info thead .stock {
-	text-align: left;
+.wishlist-info thead .stock {
+	width: 80px;
 }
 .wishlist-info thead .quantity, .wishlist-info thead .price, .wishlist-info thead .total, .wishlist-info thead .action {
 	text-align: right;
 }
+.wishlist-info thead .action, .wishlist-info .action{
+	text-align: center;
+	vertical-align: middle;
+	width: 60px;
+}
 .wishlist-info tbody td {
 	vertical-align: top;
-	border-bottom: 1px solid #DDDDDD;
+	border-bottom: 1px solid #Ececec;
 }
 .wishlist-info tbody .image img {
-	border: 1px solid #DDDDDD;
 }
 .wishlist-info tbody .image {
+	text-align: left;
+	width: 100px;
+	border-right: medium none;
+}
+.wishlist-info tbody .image a{
+	padding: 10px;
+	background: #ffffff;
+	display: inline-block;
+	line-height: 0;
 	text-align: center;
 }
-.wishlist-info tbody .name, .wishlist-info tbody .model, .wishlist-info tbody .stock {
+.wishlist-info tbody .name, .wishlist-info tbody .model{
 	text-align: left;
+	vertical-align: middle;
 }
-.wishlist-info tbody .quantity, .wishlist-info tbody .price, .wishlist-info tbody .total, .wishlist-info tbody .action {
+.wishlist-info tbody .name a{
+	color: #404048;
+	font-size: 12px;
+	text-decoration: none;
+	display: inline-block;
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+	margin-bottom: 6px;
+	text-transform: uppercase;;
+}
+.wishlist-info tbody .name a:hover{
+	text-decoration: underline;
+}
+ .wishlist-info tbody .stock,  .wishlist-info tbody .action {
+ 	text-align: center;
+ 	vertical-align: middle;
+ }
+.wishlist-info tbody .quantity, .wishlist-info tbody .price, .wishlist-info tbody .total {
 	text-align: right;
 }
-.wishlist-info tbody .price s {
-	color: #F00;
+.wishlist-info tbody .price {
+	color: #404048;
+	width: 100px;
+	font-size: 12px;
+	vertical-align: middle;
 }
 .wishlist-info tbody .action img {
 	cursor: pointer;
@@ -1814,3 +1878,146 @@ ul.box-filter > li ul {
 	background:#ffffff;
 	font-weight:900;
 }
+/*Salm Edit code*/
+.dd, #currency, #language {
+    width: 57px;
+    line-height: 17px;
+    background-color: #BCBCC5;
+    float: right;
+    font-family: "Lato",sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #404048;
+    position: relative;
+}
+.dd .dd-hdl,.selected-currency,.selected-language{
+	background: url('../image/arrow-down.png') 80% 50% no-repeat;
+	position:relative;
+	height:23px;
+	display:block;
+	padding:7px 0 0 7px
+}
+.top-options{
+	width:90%
+}
+.top-options{
+	position:absolute;
+	right:65px;
+	z-index:9;
+	top:20px
+}
+ .store-logo {
+    min-height: 60px;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+    z-index: 12;
+    display: inline-block;
+    margin-right: -3px;
+}
+.navigation-bar {
+
+    min-height: 60px;
+    margin: 0px auto 10px;
+    position: relative;
+    background-color: #494952;
+    opacity: 0;
+    white-space: nowrap;
+    margin-top: -25px;
+}
+.head1 .store-logo1 #logo, .store-logo1 #logo, .store-logo {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#menu > ul > li > a.top-lvl {
+    font-family: "Lato",sans-serif;
+    font-weight: 800;
+    line-height: 1.4;
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 23px 10px 0px;
+    min-height: 37px;
+    z-index: 6;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+#menu > ul > li .sub-menu {
+    display: none;
+    background: none repeat scroll 0% 0% #4DB8C1;
+    position: absolute;
+    z-index: 25;
+}
+#menu .menu-html-wrp {
+    padding: 5px;
+}
+#menu .menu-html-wrp .menu-html {
+    padding: 15px;
+    background-color: #FFF;
+    white-space: normal;
+}
+#menu .menu-mega, #menu .cat-mega {
+    padding: 5px;
+}
+.dd ul, #currency ul, #language ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+    background: none repeat scroll 0% 0% #EEE;
+    width: 100%;
+}
+/*End Salm Edit code*/
+/*Nga Edit code */
+.wishlist-info thead .action,
+.wishlist-info .action{
+	text-align:center;
+	width:60px;
+	vertical-align:middle;
+}
+.cart-bt:before{
+	font-size:20px;
+	content:'a';
+	top:11px;
+}
+.wishlist-info .action .cart-bt{
+	margin-bottom:10px;
+	font-size:0px;
+	text-indent:-999px;
+}
+a.cart-bt,.cart-bt{
+	height:42px;
+	width:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	display:inline-block;
+	border:none;
+	font-size:0px;
+	line-height:0px;
+	text-indent:-999px;
+	overflow:hidden;
+	text-decoration:none;
+	box-shadow:0px 0px 0px 6px rgba(104,85,81,0.25);
+	background-color:#404048;
+	font-family: 'rgenregular';
+	position: relative;
+	line-height: 1;
+	text-indent: 0;
+	text-transform: none;
+}
+
+.wishlist-info .action a{
+	font-size:11px;
+}
+ a.cart-bt:hover{
+	 background-color: #6ddee2;
+    cursor: pointer;
+    color: #ffffff;
+    box-shadow: 0 0 0 6px rgba(109, 222, 226, 0.25) ;
+    text-decoration: none;
+}
+/*End Nga Edit code*/
+
