@@ -59,14 +59,20 @@
                 - <small><?php echo $text_payment_profile ?>: <?php echo $product['profile_name'] ?></small>
                 <?php endif; ?>
               </div>
+              <strong><?php echo $column_model; ?></strong><?php echo " ";echo $product['model'];?>
+              <br/>
               <?php if ($product['reward']) { ?>
               <small><?php echo $product['reward']; ?></small>
               <?php } ?></td>
-            <td class="model"><?php echo $product['model']; ?></td>
-            <td class="quantity"><input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
+            
+            <td class="quantity">
+              <input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />
               &nbsp;
-              <input type="image" src="catalog/view/theme/default/image/update.png" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />
-              &nbsp;<a href="<?php echo $product['remove']; ?>"><img src="catalog/view/theme/default/image/remove.png" alt="<?php echo $button_remove; ?>" title="<?php echo $button_remove; ?>" /></a></td>
+              <input type="button" class="sml-button" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" value="<?php echo strtoupper($button_update); ?>" />
+              &nbsp;
+              <br/>
+              <a href="<?php echo $product['remove']; ?>"><?php echo $button_remove; ?></a>
+            </td>
             <td class="price"><?php echo $product['price']; ?></td>
             <td class="total"><?php echo $product['total']; ?></td>
           </tr>

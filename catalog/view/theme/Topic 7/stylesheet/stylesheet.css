@@ -1476,8 +1476,10 @@ box-shadow: 0px 0px 0px 10px rgba(109,222,226,0.25);
 .wishlist-info tbody .price {
 	color: #404048;
 	width: 100px;
-	font-size: 12px;
 	vertical-align: middle;
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+	font-weight: 900;
 }
 .wishlist-info tbody .action img {
 	cursor: pointer;
@@ -1688,17 +1690,33 @@ box-shadow: 0px 0px 0px 10px rgba(109,222,226,0.25);
 	text-align: right;
 }
 .cart-info tbody td {
-	vertical-align: top;
+	vertical-align: middle;
 	border-bottom: 1px solid #DDDDDD;
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+	font-weight: 900;
 }
 .cart-info tbody .image img {
 	border: 1px solid #DDDDDD;
 }
+/*Nga Edit*/
 .cart-info tbody .image {
+	text-align: left;
+	width: 100px;
+	border-right: medium none;
+}
+.cart-info tbody .image a{
+	padding: 10px;
+	background: #ffffff;
+	display: inline-block;
+	line-height: 0;
 	text-align: center;
 }
-.cart-info tbody .name, .cart-info tbody .model, .cart-info tbody .quantity {
+/*Nga End Edit*/
+.cart-info tbody .name, .cart-info tbody .model, {
 	text-align: left;
+}
+
 }
 .cart-info tbody .quantity input[type='image'], .cart-info tbody .quantity img {
 	position: relative;
@@ -1707,6 +1725,8 @@ box-shadow: 0px 0px 0px 10px rgba(109,222,226,0.25);
 }
 .cart-info tbody .price, .cart-info tbody .total {
 	text-align: right;
+	width: 118px;
+	color: #887972;
 }
 .cart-info tbody span.stock {
 	color: #F00;
@@ -2018,6 +2038,52 @@ a.cart-bt,.cart-bt{
     color: #ffffff;
     box-shadow: 0 0 0 6px rgba(109, 222, 226, 0.25) ;
     text-decoration: none;
+}
+.cart-info tbody .quantity {
+	text-align: center;
+}
+.cart-info thead .quantity,.cart-info tbody .quantity{
+	width:94px;
+	text-align:center;
+	vertical-align:middle
+}
+.cart-info tbody .quantity input[type="text"]{
+	width:47px;
+	margin-bottom:10px;
+	text-align:center;
+	font-family:'Lato',sans-serif;
+	font-weight:900;
+	font-size:17px;
+	padding:5px 8px;
+}
+input.sml-button,a.sml-button{
+	font-size:10px;
+	height:20px;
+	color:#404048;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius: 10px;
+}
+.button,.sml-button{
+	cursor:pointer;
+	line-height:12px;
+	font-family:'Lato',sans-serif;
+	font-weight:900;
+	font-size:12px;
+	text-transform:uppercase;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	-khtml-border-radius:15px;
+	border-radius:15px;
+	display:inline-block;
+	text-decoration:none !important;
+	margin:0;border:0;
+	color:#404048;
+	background-color:#fff;
+}
+.store-home .banner .clearfix, .product-info h1, .cart-info{
+	margin-top: 5px;
+	background:url("../image/hr.png") repeat-x scroll left bottom rgba(0, 0, 0, 0);
 }
 /*End Nga Edit code*/
 
