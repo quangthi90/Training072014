@@ -91,5 +91,28 @@ abstract class Controller {
 			exit();				
 		}
 	}
+
+		protected function myRender($args = array()) {
+			foreach ($this->children as $child) {
+				$this->data[basename($child)] = $this->getChild($child, $args);
+			}
+
+			if (file_exists(DIR_TEMPLATE . $this->template)) {
+				extract($this->data);
+
+				ob_start();
+
+				require(DIR_TEMPLATE . $this->template);
+
+				$this->output = ob_get_contents();
+
+				ob_end_clean();
+
+				return $this->output;
+			} else {
+				trigger_error('Error: Could not load template ' . DIR_TEMPLATE . $this->template . '!');
+				exit();				
+			}
+		}
 }
 ?>

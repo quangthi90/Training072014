@@ -1,7 +1,12 @@
-<div id="cart">
-  <div class="heading">
-    <a><span class="glyphicon glyphicon-shopping-cart" id="cart-total">$0.00</span></a></div>
-  <div class="content">
+<div class="top-options">
+      <div id="cart">
+        <div class="heading">
+          <a>
+            <span id="cart-total"><?php echo $text_items; ?></span>
+          </a>
+        </div>
+        <div class="content">
+         <b class="cart-arrow"></b>
     <?php if ($products || $vouchers) { ?>
     <div class="mini-cart-info">
       <table>
@@ -51,3 +56,43 @@
     <?php } ?>
   </div>
 </div>
+<script type="text/javascript">
+
+/*function cartChk(){
+    
+  var getTotal = $('.mini-cart-total').find('tr:last').find('td:last').html();
+  var emptyTotal = $('.empty-cart').find('span:last').text();
+
+  if(getTotal != null){
+    $('#cart').find('#cart-total').html(getTotal);
+  }else{
+    $('#cart-total').text(emptyTotal);
+    $('.empty-cart').empty();
+  }
+  if ($(window).width() < 767) {
+    $("#header #cart .content").css({width:$("#container").outerWidth()+'px'});
+    
+  }
+}
+
+cartChk();*/
+
+$(window).on('click', '#cart > .heading a', function() {
+  
+  $('#cart').addClass('active');
+  
+  $('#cart').load('index.php?route=module/cart #cart > *', function(){
+    cartChk();
+    //removePrd();
+
+  });
+
+});
+$(window).on('mouseleave', '#cart', function() {
+  $(this).removeClass('active');
+});
+$(window).on('click', '#cart .cart-close', function() {
+  $("#cart").removeClass('active');
+});
+
+</script>

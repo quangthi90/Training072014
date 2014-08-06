@@ -113,7 +113,7 @@ label {
 }
 /* header */
 #header, .navigation-bar{
-	width: 1180px; /* Salm: Thay doi khi responsive*/
+	width: 980px;
 }
 #header {
 	
@@ -152,10 +152,9 @@ label {
 #currency a {
 	display: inline-block;
 	padding: 2px 4px;
-	border: 1px solid #CCC;
 	color: #999;
 	text-decoration: none;
-	margin-right: 2px;
+	margin-right: 10px;
 	margin-bottom: 2px;
 }
 #currency a b {
@@ -314,7 +313,7 @@ label {
 	margin:5px 0 0 5px;
 	padding:0 15px;
 	width:388px;
-	height:30px;
+	height:45px;
 	border:none;
 	-webkit-border-radius:20px;
 	-moz-border-radius:20px;
