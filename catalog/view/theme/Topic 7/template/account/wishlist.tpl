@@ -16,12 +16,11 @@
     <table>
       <thead>
         <tr>
-          <td class="image"><?php echo $column_image; ?></td>
-          <td class="name"><?php echo $column_name; ?></td>
-          <td class="model"><?php echo $column_model; ?></td>
-          <td class="stock"><?php echo $column_stock; ?></td>
-          <td class="price"><?php echo $column_price; ?></td>
-          <td class="action"><?php echo $column_action; ?></td>
+          <td class="image"><strong><?php echo strtoupper($column_name); ?></strong></td>
+          <td><strong></strong></td>
+          <td class="stock"><strong><?php echo strtoupper($column_stock); ?></strong></td>
+          <td class="price"><strong><?php echo strtoupper($column_price); ?></strong></td>
+          <td class="action"><strong><?php echo strtoupper($column_action); ?></strong></td>
         </tr>
       </thead>
       <?php foreach ($products as $product) { ?>
@@ -30,15 +29,18 @@
           <td class="image"><?php if ($product['thumb']) { ?>
             <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" /></a>
             <?php } ?></td>
-          <td class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></td>
-          <td class="model"><?php echo $product['model']; ?></td>
+          <td class="name">
+            <a href="<?php echo $product['href']; ?>"><strong><?php echo strtoupper($product['name']); ?></strong></a><br/>
+            <strong><?php echo $column_model; ?></strong><?php echo " ";echo $product['model']; ?>
+          </td>
           <td class="stock"><?php echo $product['stock']; ?></td>
           <td class="price"><?php if ($product['price']) { ?>
             <div class="price">
               <?php if (!$product['special']) { ?>
               <?php echo $product['price']; ?>
               <?php } else { ?>
-              <s><?php echo $product['price']; ?></s> <b><?php echo $product['special']; ?></b>
+              <s><?php echo $product['price']; ?></s> <br/>
+              <b><?php echo $product['special']; ?></b>
               <?php } ?>
             </div>
             <?php } ?></td>
