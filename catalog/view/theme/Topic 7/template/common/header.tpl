@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-
-
-
-
 <html style="" id="d" class="wide-ly  gecko ff3 win js js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" xml:lang="en" lang="en" dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
 <head>
 <meta charset="UTF-8" />
@@ -30,6 +26,7 @@
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/on-dark.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/widget002.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/template.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/Topic 7/stylesheet/icons.css" />
 <script type="text/javascript" src="catalog/view/javascript/myscript.js"></script>
 
 <?php foreach ($styles as $style) { ?>
@@ -96,7 +93,6 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
       <a href="<?php echo $account; ?>"><?php echo $text_account; ?></a>  
     </div>
   </div>
-</div>
 <!-- </div> -->    
 </header>
 
@@ -142,5 +138,6 @@ margin-top: -17.5px;">
 <?php if ($error) { ?>
     <div class="warning"><?php echo $error ?><img src="catalog/view/theme/Topic 7/image/close.png" alt="" class="close" /></div>
 <?php } ?>
+</div>
 <div id="notification"></div>
 
