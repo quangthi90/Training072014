@@ -2,12 +2,6 @@
 <?php if ($attention) { ?>
 <div class="attention"><?php echo $attention; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
 <?php } ?>
-<?php if ($success) { ?>
-<div class="success"><?php echo $success; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
-<?php } ?>
-<?php if ($error_warning) { ?>
-<div class="warning"><?php echo $error_warning; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
-<?php } ?>
 <?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content"><?php echo $content_top; ?>
   <div class="breadcrumb">
@@ -15,11 +9,17 @@
     <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
     <?php } ?>
   </div>
-  <h1><?php echo $heading_title; ?>
+  <h1 class="page-heading"><strong><?php echo $heading_title; ?></strong>
     <?php if ($weight) { ?>
     &nbsp;(<?php echo $weight; ?>)
     <?php } ?>
   </h1>
+  <?php if ($success) { ?>
+  <div class="success"><?php echo $success; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
+  <?php } ?>
+  <?php if ($error_warning) { ?>
+  <div class="warning"><?php echo $error_warning; ?><img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>
+  <?php } ?>
   <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
     <div class="cart-info">
       <table>
@@ -202,8 +202,8 @@
     </table>
   </div>
   <div class="buttons">
-    <div class="right"><a href="<?php echo $checkout; ?>" class="button"><?php echo $button_checkout; ?></a></div>
-    <div class="center"><a href="<?php echo $continue; ?>" class="button"><?php echo $button_shopping; ?></a></div>
+    <div class="right"><a href="<?php echo $checkout; ?>" class="button"><?php echo strtoupper($button_checkout); ?></a></div>
+    <div class="center"><a href="<?php echo $continue; ?>" class="button"><?php echo strtoupper($button_shopping); ?></a></div>
   </div>
   <?php echo $content_bottom; ?></div>
 <script type="text/javascript"><!--

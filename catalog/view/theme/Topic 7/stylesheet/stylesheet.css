@@ -39,9 +39,8 @@ p {
 	margin-bottom: 20px;
 }
 a, a:visited, a b {
-	color: #58989e;
-	text-decoration: none;
-	cursor: pointer;
+    color: #58989E;
+    cursor: pointer;
 }
 
 a:hover {
@@ -49,7 +48,7 @@ a:hover {
 	color: #333;
 }
 a img {
-	border: none;
+	border: medium none;
 }
 form {
 	padding: 0;
@@ -61,9 +60,10 @@ input[type='text'], input[type='password'], textarea {
 	padding: 3px;
 	margin-left: 0px;
 	margin-right: 0px;
-	width: 93%;
 	height: 24px;
+	width: 350px;
 }
+
 select {
 	border: 1px solid #CCCCCC;
 	padding: 5px;
@@ -112,8 +112,11 @@ label {
 	margin-right: 195px;
 }
 /* header */
-#header {
+#header, .navigation-bar{
 	width: 1180px; /* Salm: Thay doi khi responsive*/
+}
+#header {
+	
 	margin: auto;
 	height: 90px;
 	margin-bottom: 7px;
@@ -380,18 +383,17 @@ text-align: right;
 	display: inline-block;
 	vertical-align: middle;
 	white-space: normal;
+	height: 60px;
 }
 #menu ul {
 	list-style: none outside none;
 	margin: 0;
-	padding: 0;
+    min-height: 60px;
 }
 #menu > ul > li {
 	position: relative;
 	float: left;
 	z-index: 20;
-	padding: 7px;
-	border-bottom: 1px solid #Ececec;
 }
 #menu > ul > li:hover {
 }
@@ -407,7 +409,7 @@ text-align: right;
 	position: relative;
 }
 #menu > ul > li:hover > a {
-	background: #000000;
+	background: #349fa3;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-khtml-border-radius: 5px;
@@ -455,7 +457,6 @@ text-align: right;
 }
 .success, .warning, .attention, .information {
 	padding: 10px 10px 10px 33px;
-	margin-bottom: 15px;
 	color: #555555;
 	-webkit-border-radius: 5px 5px 5px 5px;
 	-moz-border-radius: 5px 5px 5px 5px;
@@ -529,6 +530,10 @@ table.form td {
 table.form td input {
 	width: 350px;
 }
+table.form td input[type="password"]{
+	width: 140px !important;
+}
+
 table.form td input[type="radio"] {
 	width: 0px;
 	margin-left: 5px;
@@ -657,6 +662,31 @@ a.button {
 	text-decoration: none;
 	padding: 7px 15px 7px 15px;
 }
+
+a.editbutton, a.deletebutton{
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	cursor: pointer;
+	color: #000000;
+	line-height: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	border-radius: 20px;
+	-webkit-box-shadow: 0px 2px 2px #DDDDDD;
+	-moz-box-shadow: 0px 2px 2px #DDDDDD;
+	box-shadow: 0px 2px 2px #DDDDDD;
+	transition: all 0.2s linear 0s;
+	background-color: #ffffff;
+}
+
+a.editbutton:hover, a.deletebutton:hover{
+	background-position: 0px -24px;
+	background-color: #6ddee2;
+	color: #ffffff;
+}
+
 input.button {
 	margin: 0;
 	border: 0;
@@ -864,7 +894,6 @@ ul.box-filter > li ul {
 #content .content {
 	padding: 10px;
 	overflow: auto;
-	margin-bottom: 15px;
 	padding: 30px;
 	background-color: rgba(0,0,0,0.02);
 }
@@ -1848,11 +1877,58 @@ box-shadow: 0px 0px 0px 10px rgba(109,222,226,0.25);
     margin-right: -3px;
 }
 .navigation-bar {
+
     min-height: 60px;
     margin: 0px auto 10px;
     position: relative;
     background-color: #494952;
     opacity: 0;
     white-space: nowrap;
+    margin-top: -25px;
+}
+.head1 .store-logo1 #logo, .store-logo1 #logo, .store-logo {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#menu > ul > li > a.top-lvl {
+    font-family: "Lato",sans-serif;
+    font-weight: 800;
+    line-height: 1.4;
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 23px 10px 0px;
+    min-height: 37px;
+    z-index: 6;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+#menu > ul > li .sub-menu {
+    display: none;
+    background: none repeat scroll 0% 0% #4DB8C1;
+    position: absolute;
+    z-index: 25;
+}
+#menu .menu-html-wrp {
+    padding: 5px;
+}
+#menu .menu-html-wrp .menu-html {
+    padding: 15px;
+    background-color: #FFF;
+    white-space: normal;
+}
+#menu .menu-mega, #menu .cat-mega {
+    padding: 5px;
+}
+.dd ul, #currency ul, #language ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+    background: none repeat scroll 0% 0% #EEE;
+    width: 100%;
+}
 /*End Salm Edit code*/
 
